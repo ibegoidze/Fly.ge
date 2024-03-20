@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       colors: {
         textDark: "#3C3F49",
-        hoverBlue: "#1A73E7",
+        primaryBlue: "#1A73E7",
+        qlesa: "#535353",
       },
     },
   },

@@ -1,4 +1,4 @@
-import Header from "../Components/Global/Header";
+import Header from "../Components/Global/Header/Header";
 
 function Contact() {
   return (
