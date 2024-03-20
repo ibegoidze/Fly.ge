@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import TicketLogo from "../../../assets/Global/images/TicketLogo.png";
 import LanguageDropDown from "./LanguageDropDown";
 import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // SET CURRENT ACTIVE NAVIGATION BLUE
   const getNavLinkClass = (isActive) =>
     isActive
       ? "text-primaryBlue font-medium"
       : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300";
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <header>
       {/* SECTION CONTAINER */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
-          <BurgerMenu />
+          {windowWidth < 1024 ? <BurgerMenu /> : null}
           {/* FLY.GE LOGO */}
           <a href="/" className="flex items-center">
             <img
@@ -59,7 +72,7 @@ const Header = () => {
             <LanguageDropDown />
             {/* BUTTON */}
             <button
-              className="text-blue-500 border border-blue-500 hover:bg-blue-50 px-6 py-3 rounded font-semibold transition ease-in duration-150 "
+              className="text-blue-500 border border-blue-500 hover:bg-blue-50 px-6 py-3 rounded font-semibold transition ease-in duration-150"
               style={{ borderRadius: "8px" }}
             >
               შესვლა
