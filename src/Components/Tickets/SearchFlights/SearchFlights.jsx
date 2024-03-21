@@ -5,9 +5,14 @@ import Car from "../../../assets/Tickets/images/Car.png";
 import OneWay from "./OneWay";
 import Passengers from "./Passengers";
 import EconomyClass from "./EconomyClass";
+import Airports from "./Airports";
+
+import { useTranslation } from "react-i18next";
 
 function SearchFlight() {
   const [activeTab, setActiveTab] = useState("tab1");
+  const { t } = useTranslation();
+
   // SET ACTIVE TAB
   const changeTab = (tab) => {
     setActiveTab(tab);
@@ -19,7 +24,7 @@ function SearchFlight() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* TITLE */}
         <div className="title text-white font-semibold text-3xl py-14">
-          მოგზაურობით მიღებული ბედნიერება
+          {t("Happiness gained from traveling")}
         </div>
         {/* FLIGHT BOOKING CONTAINER */}
         <div className="pb-16">
@@ -43,7 +48,7 @@ function SearchFlight() {
                   }`}
                 />
                 <span className="text-xs lg:text-sm hidden custom:block">
-                  ავიაბილეთები
+                  {t("Tickets")}
                 </span>
               </div>
             </div>
@@ -65,7 +70,7 @@ function SearchFlight() {
                   }`}
                 />
                 <span className="text-xs lg:text-sm hidden custom:block">
-                  სასტუმროები
+                  {t("Hotels")}
                 </span>
               </div>
             </div>
@@ -87,19 +92,24 @@ function SearchFlight() {
                   }`}
                 />
                 <span className="text-xs lg:text-sm hidden custom:block">
-                  მანქანის ქირაობა
+                  {t("Car rental")}
                 </span>
               </div>
             </div>
           </div>
 
           {/* TAB 1 CONTENT */}
-          <div className="bg-white rounded-b-lg rounded-tr-lg p-4">
+          <div className="bg-white rounded-b-lg rounded-tr-lg p-4 ">
             {activeTab === "tab1" && (
-              <div className="px-5 flex items-center">
-                <OneWay />
-                <Passengers />
-                <EconomyClass />
+              <div>
+                <div className="px-5 flex items-center justify-center lg:justify-start">
+                  <OneWay />
+                  <Passengers />
+                  <EconomyClass />
+                </div>
+                <div>
+                  <Airports />
+                </div>
               </div>
             )}
             {/* TAB 2 CONTENT */}

@@ -3,9 +3,12 @@ import { NavLink } from "react-router-dom";
 import TicketLogo from "../../../assets/Global/images/TicketLogo.png";
 import LanguageDropDown from "./LanguageDropDown";
 import BurgerMenu from "./BurgerMenu";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // LANGUAGE TRANSLATION
+  const { t } = useTranslation();
   // SET CURRENT ACTIVE NAVIGATION BLUE
   const getNavLinkClass = (isActive) =>
     isActive
@@ -47,25 +50,26 @@ const Header = () => {
                 to="/"
                 className={({ isActive }) => getNavLinkClass(isActive)}
               >
-                ავიაბილეთები
+                {t("Tickets")}
               </NavLink>
               <NavLink
                 to="/Offers"
                 className={({ isActive }) => getNavLinkClass(isActive)}
               >
-                შეთავაზებები
+                {t("Offers")}
               </NavLink>
+              {/* <h1>{t("Welcome to React")}</h1> */}
               <NavLink
                 to="/Blog"
                 className={({ isActive }) => getNavLinkClass(isActive)}
               >
-                ბლოგი
+                {t("Blog")}
               </NavLink>
               <NavLink
                 to="/Contact"
                 className={({ isActive }) => getNavLinkClass(isActive)}
               >
-                დაგვიკავშირდით
+                {t("Contact")}
               </NavLink>
             </nav>
             {/* LANGUAGE DROPDOWN */}
@@ -75,7 +79,7 @@ const Header = () => {
               className="text-blue-500 border border-blue-500 hover:bg-blue-50 px-6 py-3 rounded font-semibold transition ease-in duration-150"
               style={{ borderRadius: "8px" }}
             >
-              შესვლა
+              {t("Sign in")}
             </button>
           </div>
         </div>

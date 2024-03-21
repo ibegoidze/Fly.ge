@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import LanguageDropDown from "./LanguageDropDown";
+import { useTranslation } from "react-i18next";
 
 function BurgerMenu() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { t } = useTranslation();
 
   // STYLING NAVIGATION
   const getNavLinkClass = (isActive) =>
@@ -54,28 +56,28 @@ function BurgerMenu() {
             className={({ isActive }) => getNavLinkClass(isActive)}
             onClick={() => setIsSidebarOpen(false)}
           >
-            ავიაბილეთები
+            {t("Tickets")}
           </NavLink>
           <NavLink
             to="/Offers"
             className={({ isActive }) => getNavLinkClass(isActive)}
             onClick={() => setIsSidebarOpen(false)}
           >
-            შეთავაზებები
+            {t("Offers")}
           </NavLink>
           <NavLink
             to="/Blog"
             className={({ isActive }) => getNavLinkClass(isActive)}
             onClick={() => setIsSidebarOpen(false)}
           >
-            ბლოგი
+            {t("Blog")}
           </NavLink>
           <NavLink
             to="/Contact"
             className={({ isActive }) => getNavLinkClass(isActive)}
             onClick={() => setIsSidebarOpen(false)}
           >
-            დაგვიკავშირდით
+            {t("Contact")}
           </NavLink>
         </nav>
       </div>

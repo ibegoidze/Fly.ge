@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const EconomyClass = () => {
-  const [selectedClass, setSelectedClass] = useState("ეკონომ კლასი");
+  const { t, ready } = useTranslation();
+  const [selectedClass, setSelectedClass] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   // CLICK OUTSIDE OF COMPONENT CLOSES IT
@@ -16,12 +18,17 @@ const EconomyClass = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  useEffect(() => {
+    if (ready) {
+      setSelectedClass(t("Economy class"));
+    }
+  }, [t, ready]);
   // CLASSES DATA
   const classes = [
-    "ეკონომ კლასი",
-    "პრემიუმ ეკონომ კლასი",
-    "ბიზნეს კლასი",
-    "პირველი კლასი",
+    t("Economy class"),
+    t("Premium class"),
+    t("Business class"),
+    t("First class"),
   ];
   // CHANGE CLASS
   const handleClassChange = (className) => {
@@ -65,7 +72,7 @@ const EconomyClass = () => {
                   <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
                 )}
               </div>
-              <span className="text-sm text-gray-700">{className}</span>
+              <span className="text-sm text-gray-700">{t(className)}</span>
             </div>
           ))}
         </div>

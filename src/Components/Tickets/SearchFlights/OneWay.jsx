@@ -1,45 +1,40 @@
 import React, { useState, useEffect, useRef } from "react";
 import arrowOneWay from "../../../assets/Tickets/images/arrowOneWay.png";
 import arrowTwoWay from "../../../assets/Tickets/images/arrowTwoWay.png";
+import { useTranslation } from "react-i18next";
 
 const Dropdown = () => {
+  const { t, ready } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("ორმხრივი");
+  const [selectedOption, setSelectedOption] = useState(() =>
+    t("Bilateral", { defaultValue: "Bilateral" })
+  );
   const dropdownRef = useRef(null);
 
-  // TOGGLE DROPDOWN
+  // CHANGE STATE WHEN LANGUAGE IS CHANGED
+  useEffect(() => {
+    if (ready) {
+      setSelectedOption(t("Bilateral"));
+    }
+  }, [t, ready]);
+
   const toggleDropdown = () => setIsOpen(!isOpen);
-  // CHANGE OPTIONS
   const switchOption = () => {
     setSelectedOption((currentOption) =>
-      currentOption === "ორმხრივი" ? "ცალმხრივი" : "ორმხრივი"
+      currentOption === t("Bilateral") ? t("Unilateral") : t("Bilateral")
     );
     setIsOpen(false);
   };
-  // CLICK OUTSIDE CLOSES DROPDOWN
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   const getIcon = () =>
-    selectedOption === "ორმხრივი" ? arrowTwoWay : arrowOneWay;
+    selectedOption === t("Bilateral") ? arrowTwoWay : arrowOneWay;
 
   return (
-    // SECTION CONTAINER
     <div
-      className="inline-block text-left relative"
+      className="inline-block text-left relative w-1/6"
       style={{ borderRadius: "0.375rem" }}
       ref={dropdownRef}
     >
-      {/* VISIBLE OPTION */}
       <div
         onClick={toggleDropdown}
         className="cursor-pointer flex items-center justify-between w-40 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
@@ -50,17 +45,16 @@ const Dropdown = () => {
         <img src={getIcon()} alt="Flight Type Icon" className="w-4 mr-2" />
         <span className="flex-1">{selectedOption}</span>
         <span
-          className="material-symbols-outlined transform transition duration-300 ml-2 "
+          className="material-symbols-outlined transform transition duration-300 ml-2"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           arrow_drop_down
         </span>
       </div>
-      {/* DROPDOWN OPTION */}
       <div
         className={`absolute shadow-md z-10 w-40 transition-all ease-in-out duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        } overflow-hidden`}
+        }`}
         style={{
           top: "100%",
           left: 0,
@@ -68,14 +62,19 @@ const Dropdown = () => {
         }}
         onClick={switchOption}
       >
-        <div className="px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center">
+        <div
+          className="px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center"
+          style={{ borderRadius: "0.375rem" }}
+        >
           <img
-            src={selectedOption === "ორმხრივი" ? arrowOneWay : arrowTwoWay}
+            src={selectedOption === t("Bilateral") ? arrowOneWay : arrowTwoWay}
             alt="Option Icon"
             className="w-4 mr-2"
           />
           <span>
-            {selectedOption === "ორმხრივი" ? "ცალმხრივი" : "ორმხრივი"}
+            {selectedOption === t("Bilateral")
+              ? t("Unilateral")
+              : t("Bilateral")}
           </span>
         </div>
       </div>

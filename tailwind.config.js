@@ -15,6 +15,15 @@ module.exports = {
       screens: {
         custom: "830px",
       },
+      animation: {
+        rotate: "rotate360 0.5s forwards",
+      },
+      keyframes: {
+        rotate360: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+      },
     },
   },
   plugins: [],
