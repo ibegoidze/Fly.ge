@@ -6,47 +6,65 @@ const EconomyClass = () => {
   const [selectedClass, setSelectedClass] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-  // CLICK OUTSIDE OF COMPONENT CLOSES IT
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // ON MOBILE RESPONSIVE DROPDOWN OPENS IN CENTER
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // SET DEFAULT SELECTER CLASS WHEN TRANSLATION IS READY
+  useEffect(() => {
+    if (ready) {
+      setSelectedClass(t("Economy class"));
+    }
+  }, [t, ready]);
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  // CLASS SELECTION FROM DROPDOWN
+  const handleClassChange = (className) => {
+    setSelectedClass(className);
+    setIsOpen(false);
+  };
+
+  // CLICK OUTSIDE THE COMPONENT CLOSES THE DROPDOWN
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  useEffect(() => {
-    if (ready) {
-      setSelectedClass(t("Economy class"));
-    }
-  }, [t, ready]);
-  // CLASSES DATA
-  const classes = [
-    t("Economy class"),
-    t("Premium class"),
-    t("Business class"),
-    t("First class"),
-  ];
-  // CHANGE CLASS
-  const handleClassChange = (className) => {
-    setSelectedClass(className);
-    setIsOpen(false);
-  };
 
   return (
-    // SECTION CONTAINER
+    // SELECTOR
     <div className="relative inline-block text-left" ref={dropdownRef}>
-      {/* TOP DIV */}
       <div
-        className="cursor-pointer flex items-center justify-between w-46 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
-        onClick={() => setIsOpen(!isOpen)}
+        className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 py-2 bg-white text-sm font-medium ${
+          isOpen ? "text-blue-500" : "text-gray-700"
+        } hover:bg-gray-50 rounded-md`}
+        onClick={toggleDropdown}
       >
-        <span className="truncate">{selectedClass}</span>
+        {windowWidth > 768 ? (
+          <span className="truncate">{selectedClass}</span>
+        ) : (
+          <span
+            className="material-symbols-outlined text-blue-500"
+            style={{ fontSize: "1rem" }}
+          >
+            flight_class
+          </span>
+        )}
         <span
-          className="material-symbols-outlined transform transition duration-300 ml-2"
+          className="material-symbols-outlined transform transition duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           arrow_drop_down
@@ -54,8 +72,21 @@ const EconomyClass = () => {
       </div>
       {/* DROPDOWN */}
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-60 bg-white shadow-lg rounded-md overflow-hidden">
-          {classes.map((className, index) => (
+        <div
+          className="absolute z-10 mt-1 w-60 bg-white shadow-lg rounded-md overflow-hidden"
+          style={{
+            top: "100%",
+            left: windowWidth <= 768 ? "50%" : undefined,
+            transform: windowWidth <= 768 ? "translateX(-50%)" : undefined,
+            borderRadius: "0 0 0.375rem 0.375rem",
+          }}
+        >
+          {[
+            t("Economy class"),
+            t("Premium class"),
+            t("Business class"),
+            t("First class"),
+          ].map((className) => (
             <div
               key={className}
               className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-50"

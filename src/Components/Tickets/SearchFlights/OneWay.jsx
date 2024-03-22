@@ -9,75 +9,107 @@ const Dropdown = () => {
   const [selectedOption, setSelectedOption] = useState(() =>
     t("Bilateral", { defaultValue: "Bilateral" })
   );
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const dropdownRef = useRef(null);
 
-  // CHANGE STATE WHEN LANGUAGE IS CHANGED
+  // ON MOBILE SIZE DROPDOWN OPENS IN CENTER
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // CURRENT STATE
   useEffect(() => {
     if (ready) {
       setSelectedOption(t("Bilateral"));
     }
   }, [t, ready]);
 
+  // CLICK OUTSIDE CLOSES THE DROPDOWN
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const toggleDropdown = () => setIsOpen(!isOpen);
-  const switchOption = () => {
-    setSelectedOption((currentOption) =>
-      currentOption === t("Bilateral") ? t("Unilateral") : t("Bilateral")
-    );
+  // SWITCH OPTION
+  const switchOption = (option) => {
+    setSelectedOption(option);
     setIsOpen(false);
   };
 
   const getIcon = () =>
     selectedOption === t("Bilateral") ? arrowTwoWay : arrowOneWay;
 
+  const options = [
+    { value: "Bilateral", label: t("Bilateral"), icon: arrowTwoWay },
+    { value: "Unilateral", label: t("Unilateral"), icon: arrowOneWay },
+  ];
+
   return (
-    <div
-      className="inline-block text-left relative w-1/6"
-      style={{ borderRadius: "0.375rem" }}
-      ref={dropdownRef}
-    >
+    // SELECTOR
+    <div className="inline-block text-left relative" ref={dropdownRef}>
       <div
         onClick={toggleDropdown}
-        className="cursor-pointer flex items-center justify-between w-40 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
-        style={{
-          borderRadius: isOpen ? "0.375rem 0.375rem 0 0" : "0.375rem",
-        }}
+        className={`cursor-pointer flex items-center justify-between px-2 lg:px-4 py-2 bg-white text-sm font-medium ${
+          isOpen ? "text-blue-500" : "text-gray-700"
+        } hover:bg-gray-50`}
+        style={{ borderRadius: "0.375rem" }}
       >
-        <img src={getIcon()} alt="Flight Type Icon" className="w-4 mr-2" />
-        <span className="flex-1">{selectedOption}</span>
+        <img
+          src={getIcon()}
+          alt="Flight Type Icon"
+          className="w-4 mr-0 lg:mr-2"
+        />
+        {windowWidth > 768 ? (
+          <span className="flex-1">{selectedOption}</span>
+        ) : null}
         <span
-          className="material-symbols-outlined transform transition duration-300 ml-2"
+          className="material-symbols-outlined transform transition duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           arrow_drop_down
         </span>
       </div>
-      <div
-        className={`absolute shadow-md z-10 w-40 transition-all ease-in-out duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        style={{
-          top: "100%",
-          left: 0,
-          borderRadius: "0 0 0.375rem 0.375rem",
-        }}
-        onClick={switchOption}
-      >
+      {/* DROPDOWN */}
+      {isOpen && (
         <div
-          className="px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center"
-          style={{ borderRadius: "0.375rem" }}
+          className="absolute shadow-md z-10 w-40 transition-all ease-in-out duration-300"
+          style={{
+            top: "100%",
+            left: windowWidth <= 768 ? "50%" : "0",
+            transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
+            borderRadius: "0 0 0.375rem 0.375rem",
+          }}
         >
-          <img
-            src={selectedOption === t("Bilateral") ? arrowOneWay : arrowTwoWay}
-            alt="Option Icon"
-            className="w-4 mr-2"
-          />
-          <span>
-            {selectedOption === t("Bilateral")
-              ? t("Unilateral")
-              : t("Bilateral")}
-          </span>
+          {options
+            .filter((option) => option.label !== selectedOption)
+            .map((option) => (
+              <div
+                key={option.value}
+                className="px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center rounded-lg"
+                onClick={() => switchOption(option.label)}
+              >
+                <img
+                  src={option.icon}
+                  alt={`${option.value} Icon`}
+                  className="w-4 mr-2"
+                />
+                <span>{option.label}</span>
+              </div>
+            ))}
         </div>
-      </div>
+      )}
     </div>
   );
 };

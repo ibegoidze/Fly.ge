@@ -11,6 +11,19 @@ const Passengers = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const { t } = useTranslation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // ON MOBILE RESPONSIVE DROPDOWN OPENS IN CENTER
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // DROPDOWN DATA
   const [passengers, setPassengers] = useState({
@@ -128,17 +141,19 @@ const Passengers = () => {
   };
 
   return (
-    <div className="inline-block text-left relative w-1/6" ref={dropdownRef}>
-      {/* PASSENGER DIV */}
+    // SELECTOR
+    <div className="inline-block text-left relative " ref={dropdownRef}>
       <div
         onClick={toggleDropdown}
-        className="cursor-pointer flex items-center justify-between w-38 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+        className={`cursor-pointer flex items-center justify-between w-38 px-2 lg:px-4 py-2 bg-white text-sm font-medium ${
+          isOpen ? "text-blue-500" : "text-gray-700"
+        } hover:bg-gray-50 rounded-md`}
         style={{ borderRadius: "0.375rem" }}
       >
         <img src={PassengerPic} alt="Passengers" className="w-4 h-4 mr-2" />
-        <span className="flex-1 mr-2">{t("Passenger")}</span>
+        <span className="hidden md:inline flex-1 mr-2">{t("Passenger")}</span>
         <span
-          className="material-symbols-outlined transform transition duration-300"
+          className="material-symbols-outlined transform transition duration-300 ml-0 lg:ml-2"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           arrow_drop_down
@@ -150,7 +165,8 @@ const Passengers = () => {
           className="absolute z-10 w-80 bg-white shadow-md transition-transform transform duration-300 ease-in-out overflow-hidden origin-top"
           style={{
             top: "100%",
-            left: 0,
+            left: windowWidth <= 768 ? "50%" : undefined,
+            transform: windowWidth <= 768 ? "translateX(-50%)" : undefined,
             borderRadius: "0 0 0.375rem 0.375rem",
           }}
         >

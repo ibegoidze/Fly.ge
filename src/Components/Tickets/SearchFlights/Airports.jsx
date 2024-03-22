@@ -70,6 +70,9 @@ const AirportSelector = ({
     return isBelow;
   };
   const isScreenWidthBelow1024 = useScreenWidthBelow(1024);
+  const toggleDropdown = () => {
+    setShowDropdown((prevShowDropdown) => !prevShowDropdown);
+  };
 
   // CREATING FLIGHT SEARCH COMPONENT
   return (
@@ -97,7 +100,7 @@ const AirportSelector = ({
             id={labelKey}
             className="block w-full pl-1 pr-10s py-1 bg-transparent rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             value={searchTerm}
-            onChange={handleChange}
+            onChange={toggleDropdown}
             onFocus={() => setShowDropdown(filteredAirports.length > 0)}
             onBlur={() => setTimeout(() => setShowDropdown(false), 100)}
             placeholder="Search for an airport"
@@ -105,7 +108,7 @@ const AirportSelector = ({
         </div>
         {/* DROPDOWN */}
         {showDropdown && filteredAirports.length > 0 && (
-          <div className="absolute z-10 mt-2 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+          <div className="absolute z-10 mt-3 left-0 right-0 bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
             {filteredAirports.map((airport) => (
               <div
                 key={airport.id}

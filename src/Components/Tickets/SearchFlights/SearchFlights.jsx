@@ -107,7 +107,7 @@ function SearchFlight() {
                   <Passengers />
                   <EconomyClass />
                 </div>
-                <div>
+                <div className="px-5 py-2">
                   <Airports />
                 </div>
               </div>
