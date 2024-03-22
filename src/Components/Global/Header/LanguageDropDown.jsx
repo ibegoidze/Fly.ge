@@ -18,7 +18,7 @@ function LanguageDropDown({ alwaysVisible = false }) {
   const dropdownOptions = [
     { flag: GeoFlag, lang: "ქარ", i18nLang: "ka", alt: "Georgian Flag" },
     { flag: UKFlag, lang: "Eng", i18nLang: "en", alt: "UK Flag" },
-    { flag: GerFlag, lang: "Ger", i18nLang: "de", alt: "German Flag" },
+    { flag: GerFlag, lang: "Deu", i18nLang: "de", alt: "German Flag" },
   ];
 
   // UPDATE LOCAL COMPONENT STATE WHEN REDUX STATE IS CHANGED

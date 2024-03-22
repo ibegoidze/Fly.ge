@@ -32,6 +32,7 @@ const resources = {
       "First class": "First class",
       From: "From",
       To: "To",
+      "Choose the airport": "Choose the airport",
     },
   },
   // GEORGIAN
@@ -64,6 +65,7 @@ const resources = {
       "First class": "პირველი კლასი",
       From: "საიდან",
       To: "სად",
+      "Choose the airport": "აირჩიე აეროპორტი",
     },
   },
   // GERMAN
@@ -97,6 +99,7 @@ const resources = {
       "First class": "Erste klasse",
       From: "Aus",
       To: "Zu",
+      "Choose the airport": "Wählen Sie den Flughafen",
     },
   },
 };

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Plane from "../../../assets/Tickets/images/Plane.png";
 import Hotel from "../../../assets/Tickets/images/Hotel.png";
 import Car from "../../../assets/Tickets/images/Car.png";
+
 import OneWay from "./OneWay";
 import Passengers from "./Passengers";
 import EconomyClass from "./EconomyClass";
 import Airports from "./Airports";
+import DateSelector from "./DateSelector";
 
 import { useTranslation } from "react-i18next";
 
@@ -107,13 +109,14 @@ function SearchFlight() {
                   <Passengers />
                   <EconomyClass />
                 </div>
-                <div className="px-5 py-2">
+                <div className="px-5 py-2 flex gap-4 flex-col lg:flex-row ">
                   <Airports />
+                  <DateSelector />
                 </div>
               </div>
             )}
             {/* TAB 2 CONTENT */}
-            {activeTab === "tab2" && <div>Content for Tab 2</div>}
+            {activeTab === "tab2" && <div></div>}
             {/* TAB 3 CONTENT */}
             {activeTab === "tab3" && <div>Content for Tab 3</div>}
           </div>

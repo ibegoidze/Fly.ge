@@ -70,10 +70,6 @@ const AirportSelector = ({
     return isBelow;
   };
   const isScreenWidthBelow1024 = useScreenWidthBelow(1024);
-  const toggleDropdown = () => {
-    setShowDropdown((prevShowDropdown) => !prevShowDropdown);
-  };
-
   // CREATING FLIGHT SEARCH COMPONENT
   return (
     // SEARCHBAR
@@ -100,10 +96,10 @@ const AirportSelector = ({
             id={labelKey}
             className="block w-full pl-1 pr-10s py-1 bg-transparent rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             value={searchTerm}
-            onChange={toggleDropdown}
+            onChange={handleChange}
             onFocus={() => setShowDropdown(filteredAirports.length > 0)}
             onBlur={() => setTimeout(() => setShowDropdown(false), 100)}
-            placeholder="Search for an airport"
+            placeholder={t("Choose the airport")}
           />
         </div>
         {/* DROPDOWN */}

@@ -11,6 +11,7 @@ module.exports = {
         primaryBlue: "#1A73E7",
         qlesa: "#535353",
         "custom-gray": "#616c81",
+        borderGray: "#cfd8e1",
       },
       screens: {
         custom: "830px",
