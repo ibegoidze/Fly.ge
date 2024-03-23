@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
+import RaceArrows from "../../../assets/Tickets/images/RaceArrows.png";
 
-const DatePicker = ({ selectedDate, onDateSelect, selectedEndDate }) => {
+const DatePicker = ({
+  selectedDate,
+  onDateSelect,
+  selectedEndDate,
+  onCancel,
+  onSubmit,
+}) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [localSelectedDate, setLocalSelectedDate] = useState(selectedDate);
   const [localSelectedEndDate, setLocalSelectedEndDate] =
@@ -69,48 +76,92 @@ const DatePicker = ({ selectedDate, onDateSelect, selectedEndDate }) => {
     return days;
   };
 
+  const navigateMonths = (direction) => {
+    const newMonth = addMonths(currentMonth, direction);
+    setCurrentMonth(newMonth);
+  };
+
+  const calculateNights = () => {
+    if (!localSelectedDate || !localSelectedEndDate) return 0;
+    const startDate = new Date(localSelectedDate);
+    const endDate = new Date(localSelectedEndDate);
+    const timeDiff = endDate - startDate;
+    const daysDiff = timeDiff / (1000 * 3600 * 24);
+    return daysDiff;
+  };
   const currentMonthDays = generateCalendarDays(currentMonth);
   const nextMonth = addMonths(currentMonth, 1);
   const nextMonthDays = generateCalendarDays(nextMonth);
 
   return (
     <div className="bg-white p-4 rounded shadow-lg absolute w-full">
+      <div className="flex justify-between items-center mb-4">
+        {/* Previous Month Button */}
+        <button
+          onClick={() => navigateMonths(-1)}
+          className="text-lg p-2 rounded hover:bg-gray-200"
+        >
+          &lt;
+        </button>
+
+        {/* Current Month Label */}
+        <span className="text-lg font-semibold">
+          {currentMonth.toLocaleString("default", {
+            month: "long",
+            year: "numeric",
+          })}
+        </span>
+
+        {/* Night Counter */}
+        <span className="text-lg font-semibold">
+          {calculateNights()} Nights
+        </span>
+
+        {/* Next Month Label */}
+        <span className="text-lg font-semibold">
+          {nextMonth.toLocaleString("default", {
+            month: "long",
+            year: "numeric",
+          })}
+        </span>
+
+        {/* Next Month Button */}
+        <button
+          onClick={() => navigateMonths(1)}
+          className="text-lg p-2 rounded hover:bg-gray-200"
+        >
+          &gt;
+        </button>
+      </div>
+
       <div className="grid grid-cols-2 gap-4">
         {[currentMonthDays, nextMonthDays].map((monthDays, index) => (
           <div key={index} className="flex flex-col">
-            <div className="text-center font-bold">
-              {index === 0
-                ? currentMonth.toLocaleString("default", {
-                    month: "long",
-                    year: "numeric",
-                  })
-                : nextMonth.toLocaleString("default", {
-                    month: "long",
-                    year: "numeric",
-                  })}
+            <div className="grid grid-cols-7 text-center">
+              {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
+                (day, idx) => (
+                  <div key={idx} className="font-bold">
+                    {day}
+                  </div>
+                )
+              )}
             </div>
-            <div className="grid grid-cols-7 gap-1 mt-2 text-center">
-              {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((day, idx) => (
-                <div key={idx} className="font-bold">
-                  {day}
-                </div>
-              ))}
-            </div>
-            <div className="grid grid-cols-7 gap-1 mt-1">
+            <div className="grid grid-cols-7">
               {monthDays.map((day, idx) => (
                 <div
                   key={idx}
-                  className={`cursor-pointer p-2 rounded-full ${
+                  className={`cursor-pointer ${
                     day
                       ? isSelected(day)
-                        ? "bg-blue-500 text-white"
+                        ? "bg-primaryBlue text-white rounded-sm"
                         : isBetween(day, selectedDate, selectedEndDate)
-                        ? "bg-blue-200"
+                        ? "bg-lightBlue"
                         : !isDisabled(day)
                         ? "text-black hover:bg-blue-100"
                         : "text-gray-400"
                       : "text-gray-400"
-                  }`}
+                  } flex items-center justify-center w-full`}
+                  style={{ width: "100%", height: "2.5rem" }}
                   onClick={() => {
                     if (day && !isDisabled(day)) {
                       const formattedDay = formatDate(day);
@@ -125,6 +176,34 @@ const DatePicker = ({ selectedDate, onDateSelect, selectedEndDate }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="icondiv flex justify-center items-center px-2 py-2 rounded bg-lightBlue">
+            <img src={RaceArrows} alt="Race arrows" />
+          </div>
+          <div className="racediv">From - To</div>
+        </div>
+        <div className="flex justify-end items-center space-x-2">
+          <button
+            className="bg-gray-200 hover:bg-gray-300 text-black  py-2 px-4 rounded"
+            onClick={() => {
+              setLocalSelectedDate(null);
+              setLocalSelectedEndDate(null);
+              onCancel();
+            }}
+          >
+            Cancel
+          </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded"
+            onClick={() => {
+              onSubmit(localSelectedDate, localSelectedEndDate);
+            }}
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </div>
   );
