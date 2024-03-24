@@ -18,7 +18,7 @@ const DateSelector = () => {
     const monthName = d.toLocaleString("en-US", { month: "long" });
     return `${dayName}, ${day} ${monthName}`;
   };
-  // SELECTING THE CALENDAR DATES  // THIS ONE GOT ME REALLY STUCK IDK WHY ITS STUPID
+  // SELECTING THE CALENDAR DATES
   const handleDateSelect = (date) => {
     setDates((prevDates) => {
       const newSelectedDate = new Date(date);
@@ -26,7 +26,7 @@ const DateSelector = () => {
         ? new Date(prevDates.departure)
         : null;
       return currentDepartureDate && newSelectedDate < currentDepartureDate
-        ? { departure: date, return: null }
+        ? (setIsDepartureNext(false), { departure: date, return: null })
         : (() => {
             const currentReturnDate = prevDates.return
               ? new Date(prevDates.return)
