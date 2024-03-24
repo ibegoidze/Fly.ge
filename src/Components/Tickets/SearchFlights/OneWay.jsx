@@ -2,15 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import arrowOneWay from "../../../assets/Tickets/images/arrowOneWay.png";
 import arrowTwoWay from "../../../assets/Tickets/images/arrowTwoWay.png";
 import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import { setDropdownOption } from "../../../Store/SearchFlights/OneWaySlice";
 
-const Dropdown = () => {
-  const { t, ready } = useTranslation();
+const OneWay = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(() =>
-    t("Bilateral", { defaultValue: "Bilateral" })
-  );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const dropdownRef = useRef(null);
+  const dispatch = useDispatch();
+  // REDUX STATE
+  const oneWayState = useSelector((state) => state.oneWay.oneWayState);
 
   // ON MOBILE SIZE DROPDOWN OPENS IN CENTER
   useEffect(() => {
@@ -22,12 +24,10 @@ const Dropdown = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // CURRENT STATE
+  // TRANSLATING INITIAL STATE
   useEffect(() => {
-    if (ready) {
-      setSelectedOption(t("Bilateral"));
-    }
-  }, [t, ready]);
+    dispatch(setDropdownOption(t("Bilateral")));
+  }, [dispatch, t, i18n.language]);
 
   // CLICK OUTSIDE CLOSES THE DROPDOWN
   useEffect(() => {
@@ -42,14 +42,15 @@ const Dropdown = () => {
   }, []);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
-  // SWITCH OPTION
+
+  // SWITCH OPTION - Now updates Redux state
   const switchOption = (option) => {
-    setSelectedOption(option);
+    dispatch(setDropdownOption(option));
     setIsOpen(false);
   };
 
   const getIcon = () =>
-    selectedOption === t("Bilateral") ? arrowTwoWay : arrowOneWay;
+    oneWayState === t("Bilateral") ? arrowTwoWay : arrowOneWay;
 
   const options = [
     { value: "Bilateral", label: t("Bilateral"), icon: arrowTwoWay },
@@ -57,7 +58,6 @@ const Dropdown = () => {
   ];
 
   return (
-    // SELECTOR
     <div className="inline-block text-left relative" ref={dropdownRef}>
       <div
         onClick={toggleDropdown}
@@ -72,7 +72,7 @@ const Dropdown = () => {
           className="w-4 mr-0 lg:mr-2"
         />
         {windowWidth > 768 ? (
-          <span className="flex-1">{selectedOption}</span>
+          <span className="flex-1">{oneWayState}</span>
         ) : null}
         <span
           className="material-symbols-outlined transform transition duration-300"
@@ -81,7 +81,6 @@ const Dropdown = () => {
           arrow_drop_down
         </span>
       </div>
-      {/* DROPDOWN */}
       {isOpen && (
         <div
           className="absolute shadow-md z-10 w-40 transition-all ease-in-out duration-300"
@@ -93,7 +92,7 @@ const Dropdown = () => {
           }}
         >
           {options
-            .filter((option) => option.label !== selectedOption)
+            .filter((option) => option.label !== oneWayState)
             .map((option) => (
               <div
                 key={option.value}
@@ -105,6 +104,7 @@ const Dropdown = () => {
                   alt={`${option.value} Icon`}
                   className="w-4 mr-2"
                 />
+
                 <span>{option.label}</span>
               </div>
             ))}
@@ -114,4 +114,4 @@ const Dropdown = () => {
   );
 };
 
-export default Dropdown;
+export default OneWay;

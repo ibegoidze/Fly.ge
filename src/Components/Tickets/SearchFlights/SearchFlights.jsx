@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Plane from "../../../assets/Tickets/images/Plane.png";
 import Hotel from "../../../assets/Tickets/images/Hotel.png";
 import Car from "../../../assets/Tickets/images/Car.png";
+import SearchIcon from "../../../assets/Tickets/images/search.png";
 
 import OneWay from "./OneWay";
 import Passengers from "./Passengers";
@@ -10,14 +11,23 @@ import Airports from "./Airports";
 import DateSelector from "./DateSelector";
 
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 function SearchFlight() {
   const [activeTab, setActiveTab] = useState("tab1");
   const { t } = useTranslation();
 
+  // TAB 1 STATES
+  const oneWayState = useSelector((state) => state.oneWay.oneWayState);
+
   // SET ACTIVE TAB
   const changeTab = (tab) => {
     setActiveTab(tab);
+  };
+
+  // TAB 1 BUTTON FUNCTION
+  const handleSearchClick = () => {
+    alert(`OneWay state: ${oneWayState}`);
   };
 
   return (
@@ -112,6 +122,26 @@ function SearchFlight() {
                 <div className="px-5 py-2 flex gap-4 flex-col lg:flex-row ">
                   <Airports />
                   <DateSelector />
+                </div>
+                <div className="px-5 py-5 flex justify-between items-end">
+                  <div className="text-sm text-gray-400 font-semibold">
+                    ბილეთების მოძიება, უფასო დაჯავშნა და შეძენა რამდენიმე წუთში
+                  </div>
+                  <div>
+                    <button
+                      onClick={handleSearchClick}
+                      className="bg-blue-500 hover:bg-blue-700 text-lg px-5 py-3 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14 min-h-14"
+                    >
+                      <img
+                        src={SearchIcon}
+                        alt="search icon"
+                        className="h-5 w-5"
+                      />
+                      <span className="hidden md:flex whitespace-nowrap">
+                        ბილეთების ძებნა
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             )}

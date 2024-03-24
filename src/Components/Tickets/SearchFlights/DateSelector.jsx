@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import DatePicker from "./DatePicker";
 import CalendarPic from "../../../assets/Tickets/images/Calendar.png";
+import { useTranslation } from "react-i18next";
 
 const DateSelector = () => {
   const [dates, setDates] = useState({ departure: null, return: null });
@@ -8,6 +9,7 @@ const DateSelector = () => {
   const [selecting, setSelecting] = useState("departure");
   const calendarRef = useRef(null);
   const [isDepartureNext, setIsDepartureNext] = useState(true);
+  const { t } = useTranslation();
 
   // DATES SHOWN IN SELECTORS
   const formatDate = (date) => {
@@ -16,7 +18,7 @@ const DateSelector = () => {
     const dayName = d.toLocaleString("en-US", { weekday: "short" });
     const day = d.getDate();
     const monthName = d.toLocaleString("en-US", { month: "long" });
-    return `${dayName}, ${day} ${monthName}`;
+    return `${t(dayName)}, ${day} ${t(monthName)}`;
   };
   // SELECTING THE CALENDAR DATES
   const handleDateSelect = (date) => {
@@ -91,12 +93,12 @@ const DateSelector = () => {
           }}
         >
           <div className="text-gray-400 text-sm w-full text-left ">
-            Departure
+            {t("Departure")}
           </div>
           <div className="flex justify-between text-black text-md font-semibold pb-2">
             {dates.departure
               ? formatDate(dates.departure)
-              : "Select Departure Date"}
+              : t("Select Departure Date")}
             <img src={CalendarPic} alt="Calendar" className="w-5 h-5" />
           </div>
         </div>
@@ -107,9 +109,11 @@ const DateSelector = () => {
             setSelecting("return");
           }}
         >
-          <div className="text-gray-400 text-sm w-full text-left ">Return</div>
+          <div className="text-gray-400 text-sm w-full text-left ">
+            {t("Return")}
+          </div>
           <div className="flex justify-between text-black text-md font-semibold pb-2">
-            {dates.return ? formatDate(dates.return) : "Select Return Date"}
+            {dates.return ? formatDate(dates.return) : t("Select Return Date")}
             <img src={CalendarPic} alt="Calendar" className="w-5 h-5" />
           </div>
         </div>
@@ -123,6 +127,7 @@ const DateSelector = () => {
               selectedDate={dates.departure}
               selectedEndDate={dates.return}
               onDateSelect={handleDateSelect}
+              isOpen={showCalendar}
               onCancel={handleCancel}
               onSubmit={(departure, returnDate) => {
                 setDates({ departure, return: returnDate });
