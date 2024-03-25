@@ -14,36 +14,14 @@ const OneWay = () => {
   // REDUX STATE
   const oneWayState = useSelector((state) => state.oneWay.oneWayState);
 
-  // ON MOBILE SIZE DROPDOWN OPENS IN CENTER
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   // TRANSLATING INITIAL STATE
   useEffect(() => {
     dispatch(setDropdownOption(t("Bilateral")));
   }, [dispatch, t, i18n.language]);
 
-  // CLICK OUTSIDE CLOSES THE DROPDOWN
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  // SWITCH OPTION - Now updates Redux state
+  // SWITCH OPTION UPDATES REDUX STORE
   const switchOption = (option) => {
     dispatch(setDropdownOption(option));
     setIsOpen(false);
@@ -57,6 +35,27 @@ const OneWay = () => {
     { value: "Unilateral", label: t("Unilateral"), icon: arrowOneWay },
   ];
 
+  // ON MOBILE SIZE DROPDOWN OPENS IN CENTER
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // CLICK OUTSIDE CLOSES THE DROPDOWN
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
     <div className="inline-block text-left relative" ref={dropdownRef}>
       <div

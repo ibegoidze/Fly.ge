@@ -6,6 +6,14 @@ import FromPic from "../../../assets/Tickets/images/From.png";
 import ToPic from "../../../assets/Tickets/images/To.png";
 import { airports } from "../../../static";
 import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setSelectedFromAirport,
+  setSelectedToAirport,
+  setSearchTermFrom,
+  setSearchTermTo,
+  setIsRotating,
+} from "../../../Store/SearchFlights/airportsSlice";
 
 const AirportSelector = ({
   labelKey,
@@ -127,38 +135,41 @@ const AirportSelector = ({
 };
 
 const Airports = () => {
-  const [selectedFromAirport, setSelectedFromAirport] = useState(null);
-  const [selectedToAirport, setSelectedToAirport] = useState(null);
-  const [searchTermFrom, setSearchTermFrom] = useState("");
-  const [searchTermTo, setSearchTermTo] = useState("");
-  const [isRotating, setIsRotating] = useState(false);
+  const dispatch = useDispatch();
+  const {
+    selectedFromAirport,
+    selectedToAirport,
+    searchTermFrom,
+    searchTermTo,
+    isRotating,
+  } = useSelector((state) => state.airports);
 
   // SWITCH ICON
   const handleRotate = () => {
-    selectedFromAirport &&
-      selectedToAirport &&
-      (() => {
-        // SWITCH AIRPORTS
-        setSelectedFromAirport(selectedToAirport);
-        setSelectedToAirport(selectedFromAirport);
-        // SWITCH SEARCH TERMS
-        setSearchTermFrom(searchTermTo);
-        setSearchTermTo(searchTermFrom);
-        // ROTATE SWITCH ICON
-        setIsRotating(true);
-        setTimeout(() => setIsRotating(false), 500);
-      })();
+    if (selectedFromAirport && selectedToAirport) {
+      // Correctly dispatching actions
+      dispatch(setSelectedFromAirport(selectedToAirport));
+      dispatch(setSelectedToAirport(selectedFromAirport));
+      dispatch(setSearchTermFrom(searchTermTo));
+      dispatch(setSearchTermTo(searchTermFrom));
+      dispatch(setIsRotating(true));
+      setTimeout(() => dispatch(setIsRotating(false)), 500);
+    }
   };
 
   // UPDATE THE SELECTED AIRPORT STATE WITH THE NEWLY SELECTED AIRPORT
   const handleAirportSelect = (airport, type) => {
-    const isFromType = type === "From";
-    const updateAirport = isFromType
-      ? setSelectedFromAirport
-      : setSelectedToAirport;
-    const updateSearchTerm = isFromType ? setSearchTermFrom : setSearchTermTo;
-    updateAirport(airport);
-    updateSearchTerm(airport ? `${airport.name} (${airport.id})` : "");
+    if (type === "From") {
+      dispatch(setSelectedFromAirport(airport));
+      dispatch(
+        setSearchTermFrom(airport ? `${airport.name} (${airport.id})` : "")
+      );
+    } else {
+      dispatch(setSelectedToAirport(airport));
+      dispatch(
+        setSearchTermTo(airport ? `${airport.name} (${airport.id})` : "")
+      );
+    }
   };
 
   // CONSOL LOG DATA WHEN BOTH AIRPORTS ARE SELECTED

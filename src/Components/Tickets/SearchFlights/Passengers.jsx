@@ -4,7 +4,12 @@ import AdultPic from "../../../assets/Tickets/images/Adult.svg";
 import ChildPic from "../../../assets/Tickets/images/Child.svg";
 import BabyPic from "../../../assets/Tickets/images/Baby.svg";
 import DisabledManSvg from "../../../assets/Tickets/images/Disabled.svg";
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+  increment,
+  decrement,
+  reset,
+} from "../../../Store/SearchFlights/passengerSlice";
 import { useTranslation } from "react-i18next";
 
 const Passengers = () => {
@@ -12,8 +17,9 @@ const Passengers = () => {
   const dropdownRef = useRef(null);
   const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const dispatch = useDispatch();
+  const passengers = useSelector((state) => state.passengers.passengers);
 
-  // ON MOBILE RESPONSIVE DROPDOWN OPENS IN CENTER
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -25,46 +31,24 @@ const Passengers = () => {
     };
   }, []);
 
-  // DROPDOWN DATA
-  const [passengers, setPassengers] = useState({
-    Adult: { count: 1, description: "From the age of 11", icon: AdultPic },
-    Child: { count: 0, description: "2-11 years old", icon: ChildPic },
-    Newborn: { count: 0, description: "Up to 2 years", icon: BabyPic },
-    Disabled: { count: 0, description: "", icon: DisabledManSvg },
-  });
-
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  // ADD PASSENGER
-  const incrementPassenger = (type) => {
-    setPassengers((prevPassengers) => ({
-      ...prevPassengers,
-      [type]: {
-        ...prevPassengers[type],
-        count: prevPassengers[type].count + 1,
-      },
-    }));
+  // Function placeholder for handleSubmit, if you decide to integrate Redux action for submission.
+  const handleSubmit = () => {
+    console.log(
+      "Submission logic here. Currently, passenger state is already managed in Redux."
+    );
+    setIsOpen(false);
   };
 
-  // REMOVE PASSENGER
-  const decrementPassenger = (type) => {
-    setPassengers((prevPassengers) => ({
-      ...prevPassengers,
-      [type]: {
-        ...prevPassengers[type],
-        count:
-          prevPassengers[type].count > 0 ? prevPassengers[type].count - 1 : 0,
-      },
-    }));
+  const icons = {
+    Adult: AdultPic,
+    Child: ChildPic,
+    Newborn: BabyPic,
+    Disabled: DisabledManSvg,
   };
 
-  // CLICK OUTSIDE CLOSING DROPDOWN
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
+  // CLICK OUTSIDE CLOSES THE DROPDOWN
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -72,77 +56,51 @@ const Passengers = () => {
     };
   }, []);
 
-  // LOG COLLECTED DATA WITH SUBMIT BUTTON
-  const handleSubmit = () => {
-    const summary = Object.entries(passengers).reduce(
-      (acc, [type, { count }]) => {
-        acc[type] = count;
-        return acc;
-      },
-      {}
-    );
-    console.log("Passenger counts:", summary);
-    setIsOpen(false);
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
   };
 
-  // RESET COUNTS WITH CANCEL BUTTON
-  const resetCounts = () => {
-    setPassengers((currentPassengers) => {
-      const resetPassengers = {};
-      Object.keys(currentPassengers).forEach((type) => {
-        resetPassengers[type] = { ...currentPassengers[type], count: 0 };
-      });
-      return resetPassengers;
-    });
-    setIsOpen(false);
-  };
-
-  // RENDER DROPDOWN ELEMENTS
   const renderPassengerOptions = () => {
-    return Object.entries(passengers).map(
-      ([type, { count, description, icon }]) => (
-        // TYPE ADULT BABY CHILD OR DISABLED WITH ICON AND DESCRIPTION
-        <div
-          key={type}
-          className="px-4 py-2 hover:bg-gray-50 flex items-center text-custom-gray"
-        >
-          <img src={icon} alt={`${type} icon`} className="mr-2" />
-          <div className="flex-grow">
-            <span>{t(type)}</span>
-            {description && (
-              <div className="text-gray-400 text-xs">{t(description)}</div>
-            )}
-          </div>
-          {/* DECREASE COUNT AND INCREASE */}
-          <div className="flex items-center">
-            <button
-              onClick={() => decrementPassenger(type)}
-              className="bg-gray-100 rounded-md px-1 py-1 mr-2 flex items-center justify-center active:bg-primaryBlue"
-            >
-              <span className="material-symbols-outlined text-custom-gray w-7 h-7 pt-0.5 active:text-white">
-                remove
-              </span>
-            </button>
-            <span className="bg-white rounded-md font-semibold w-9 h-9 flex items-center justify-center border border-custom-grey">
-              {count}
-            </span>
-            <button
-              onClick={() => incrementPassenger(type)}
-              className="bg-gray-100 rounded-md px-1 py-1 ml-2 flex items-center justify-center active:bg-primaryBlue"
-            >
-              <span className="material-symbols-outlined text-custom-gray w-7 h-7 pt-0.5 active:text-white">
-                add
-              </span>
-            </button>
-          </div>
+    return Object.entries(passengers).map(([type, { count, description }]) => (
+      <div
+        key={type}
+        className="px-4 py-2 hover:bg-gray-50 flex items-center text-custom-gray"
+      >
+        <img src={icons[type]} alt={`${type} icon`} className="mr-2" />
+        <div className="flex-grow">
+          <span>{t(type)}</span>
+          <div className="text-gray-400 text-xs">{t(description)}</div>
         </div>
-      )
-    );
+        <div className="flex items-center">
+          <button
+            onClick={() => dispatch(decrement(type))}
+            className="bg-gray-100 rounded-md px-1 py-1 mr-2 flex items-center justify-center active:bg-primaryBlue"
+          >
+            <span className="material-symbols-outlined text-custom-gray w-7 h-7 pt-0.5 active:text-white">
+              remove
+            </span>
+          </button>
+          <span className="bg-white rounded-md font-semibold w-9 h-9 flex items-center justify-center border border-custom-grey">
+            {count}
+          </span>
+          <button
+            onClick={() => dispatch(increment(type))}
+            className="bg-gray-100 rounded-md px-1 py-1 ml-2 flex items-center justify-center active:bg-primaryBlue"
+          >
+            <span className="material-symbols-outlined text-custom-gray w-7 h-7 pt-0.5 active:text-white">
+              add
+            </span>
+          </button>
+        </div>
+      </div>
+    ));
   };
 
   return (
-    // SELECTOR
-    <div className="inline-block text-left relative " ref={dropdownRef}>
+    <div className="inline-block text-left relative" ref={dropdownRef}>
+      {/* Trigger for dropdown */}
       <div
         onClick={toggleDropdown}
         className={`cursor-pointer flex items-center justify-between w-38 px-2 lg:px-4 py-2 bg-white text-sm font-medium ${
@@ -170,13 +128,13 @@ const Passengers = () => {
             borderRadius: "0 0 0.375rem 0.375rem",
           }}
         >
-          {/* RENDERING PASSANGER TYPES */}
+          {/* RENDERING PASSENGER TYPES */}
           {renderPassengerOptions()}
           {/* BUTTONS */}
           <div className="px-4 py-2 flex justify-between items-center">
             <button
               className="text-sm py-2.5 px-7 bg-transparent hover:bg-gray-100 rounded-md"
-              onClick={resetCounts}
+              onClick={() => dispatch(reset())} // Resets counts using Redux
             >
               {t("Cancel")}
             </button>

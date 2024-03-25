@@ -1,12 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedClass } from "../../../Store/SearchFlights/classSlice";
 
 const EconomyClass = () => {
   const { t, ready } = useTranslation();
-  const [selectedClass, setSelectedClass] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const selectedClass = useSelector((state) => state.class.selectedClass);
+  const dispatch = useDispatch();
+
+  const handleClassChange = (className) => {
+    dispatch(setSelectedClass(className));
+    setIsOpen(false);
+  };
 
   // ON MOBILE RESPONSIVE DROPDOWN OPENS IN CENTER
   useEffect(() => {
@@ -20,17 +29,13 @@ const EconomyClass = () => {
   // SET DEFAULT SELECTER CLASS WHEN TRANSLATION IS READY
   useEffect(() => {
     if (ready) {
-      setSelectedClass(t("Economy class"));
+      dispatch(setSelectedClass(t("Economy class")));
     }
-  }, [t, ready]);
+  }, [dispatch, t, ready]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   // CLASS SELECTION FROM DROPDOWN
-  const handleClassChange = (className) => {
-    setSelectedClass(className);
-    setIsOpen(false);
-  };
 
   // CLICK OUTSIDE THE COMPONENT CLOSES THE DROPDOWN
   useEffect(() => {
