@@ -58,6 +58,18 @@ const resources = {
       October: "October",
       November: "November",
       December: "December",
+      "Search, book and purchase tickets for free in minutes":
+        "Search, book and purchase tickets for free in minutes",
+      "Search for tickets": "Search for tickets",
+      "Search hotels and more...": "Search hotels and more...",
+      Destination: "Destination",
+      "Choose your destination": "Choose your destination",
+      "Check-in Date": "Check-in Date",
+      "Check-out Date": "Check-out Date",
+      "Search Hotels": "Search Hotels",
+      "Search hundreds of rental car sites at once for car rental deals":
+        "Search hundreds of rental car sites at once for car rental deals",
+      "Explore car deals": "Explore car deals",
     },
   },
   // GEORGIAN
@@ -116,6 +128,18 @@ const resources = {
       October: "ოქტომბერი",
       November: "ნოემბერი",
       December: "დეკემბერი",
+      "Search, book and purchase tickets for free in minutes":
+        "ბილეთების მოძიება, უფასო დაჯავშნა და შეძენა რამდენიმე წუთში",
+      "Search for tickets": "ბილეთების ძებნა",
+      "Search hotels and more...": "მოძებნეთ სასტუმროები და სხვა...",
+      Destination: "დანიშნულება",
+      "Choose your destination": "აირჩიე შენი დანიშნულება",
+      "Check-in Date": "შესვლის თარიღი",
+      "Check-out Date": "გამოსვლის თარიღი",
+      "Search Hotels": "მოძებნეთ სასტუმროები",
+      "Search hundreds of rental car sites at once for car rental deals":
+        "მოძებნეთ მანქანის გაქირავების ასობით საიტი ერთდროულად მანქანის დაქირავებისთვის",
+      "Explore car deals": "მანქანის გარიგებები",
     },
   },
   // GERMAN
@@ -175,6 +199,18 @@ const resources = {
       October: "Oktober",
       November: "November",
       December: "Dezember",
+      "Search, book and purchase tickets for free in minutes":
+        "Tickets in wenigen Minuten kostenlos suchen, buchen und kaufen",
+      "Search for tickets": "Tickets suchen",
+      "Search hotels and more...": "Hotels suchen und mehr...",
+      Destination: "Ziel",
+      "Choose your destination": "Wählen Sie Ihr Ziel",
+      "Check-in Date": "Check-in Datum",
+      "Check-out Date": "Überprüfe das Datum",
+      "Search Hotels": "Hotels suchen",
+      "Search hundreds of rental car sites at once for car rental deals":
+        "Durchsuchen Sie Hunderte von Mietwagen-Websites gleichzeitig nach Mietwagenangeboten",
+      "Explore car deals": "Auto-Angebote",
     },
   },
 };
@@ -182,8 +218,8 @@ const resources = {
 // i18next CONFIGURATION
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ka", // DEFAULT
-  fallbackLng: "en", // FALLBACK
+  lng: "ka",
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },

@@ -3,12 +3,19 @@ import Plane from "../../../assets/Tickets/images/Plane.png";
 import Hotel from "../../../assets/Tickets/images/Hotel.png";
 import Car from "../../../assets/Tickets/images/Car.png";
 import SearchIcon from "../../../assets/Tickets/images/search.png";
-
+// TAB 1 COMPONENTS
 import OneWay from "./OneWay";
 import Passengers from "./Passengers";
 import EconomyClass from "./EconomyClass";
 import Airports from "./Airports";
 import DateSelector from "./DateSelector";
+// TAB 2 COMPONENTS
+import HotelDestination from "./HotelDestination";
+import CheckInDate from "./CheckInDate";
+import CheckOutDate from "./CheckOutDate";
+import SearchHotels from "./SearchHotels";
+// TAB 3 COMPONENT
+import CarRental from "./CarRental";
 
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -21,6 +28,7 @@ function SearchFlight() {
   const oneWayState = useSelector((state) => state.oneWay.oneWayState);
   const passengers = useSelector((state) => state.passengers.passengers);
   const selectedClass = useSelector((state) => state.class.selectedClass);
+  const { dates } = useSelector((state) => state.dateSelection);
   const { selectedFromAirport, selectedToAirport } = useSelector(
     (state) => state.airports
   );
@@ -49,19 +57,21 @@ function SearchFlight() {
       ? "First class"
       : selectedClass;
 
-  // TAB 1 BUTTON FUNCTION
+  // TAB 1 BUTTON FUNCTION COLLECT ALL THE DATA IN ALERT
   const handleSearchClick = () => {
     const passengersSummary = Object.entries(passengers)
       .filter(([_, data]) => data.count > 0)
       .map(([type, data]) => `${type}: ${data.count}`)
       .join(", ");
     alert(
-      `OneWay state: ${stateMessage}\nPassengers: ${passengersSummary}\nClass: ${classMessage}\nFrom: ${
+      `Way: ${stateMessage}\nPassengers: ${passengersSummary}\nClass: ${classMessage}\nFrom: ${
         selectedFromAirport ? selectedFromAirport.name : "(not chosen)"
-      } to ${selectedToAirport ? selectedToAirport.name : "(not chosen)"}`
+      } to ${
+        selectedToAirport ? selectedToAirport.name : "(not chosen)"
+      }\n Departure: ${dates.departure}\n Return: ${dates.return} `
     );
   };
-  console.log(selectedFromAirport);
+
   return (
     // SECTION CONTAINER
     <div className="bg-book-flight-cover bg-cover bg-center h-auto w-full">
@@ -76,7 +86,7 @@ function SearchFlight() {
           <div className="flex">
             {/* TAB 1 */}
             <div
-              className={`flex justify-center cursor-pointer w-1/5 md:px-12 px-5 py-6 min-w-20 font-medium text-sm rounded-tl-lg focus:outline-none ${
+              className={`flex justify-center cursor-pointer w-1/5 md:px-12 px-5 py-4 min-w-20 font-medium text-sm rounded-tl-lg focus:outline-none ${
                 activeTab === "tab1"
                   ? "bg-white text-textDark"
                   : "text-white bg-[#0000007A]"
@@ -98,7 +108,7 @@ function SearchFlight() {
             </div>
             {/* TAB 2 */}
             <div
-              className={`flex justify-center cursor-pointer w-1/5 px-5 py-6 min-w-20 font-medium text-sm focus:outline-none ${
+              className={`flex justify-center cursor-pointer w-1/5 px-5 py-4 min-w-20 font-medium text-sm focus:outline-none ${
                 activeTab === "tab2"
                   ? "bg-white text-textDark"
                   : "text-white bg-[#0000007A]"
@@ -120,7 +130,7 @@ function SearchFlight() {
             </div>
             {/* TAB 3 */}
             <div
-              className={`flex justify-center cursor-pointer px-5 py-6 min-w-20 font-medium rounded-tr-lg text-sm focus:outline-none ${
+              className={`flex justify-center cursor-pointer px-5 py-4 min-w-20 font-medium rounded-tr-lg text-sm focus:outline-none ${
                 activeTab === "tab3"
                   ? "bg-white text-textDark"
                   : "text-white bg-[#0000007A]"
@@ -143,9 +153,9 @@ function SearchFlight() {
           </div>
 
           {/* TAB 1 CONTENT */}
-          <div className="bg-white rounded-b-lg rounded-tr-lg p-4 ">
+          <div className="bg-white rounded-b-lg rounded-tr-lg p-4 h-auto lg:h-64">
             {activeTab === "tab1" && (
-              <div>
+              <div className="">
                 <div className="px-5 flex items-center justify-center lg:justify-start">
                   <OneWay />
                   <Passengers />
@@ -157,7 +167,7 @@ function SearchFlight() {
                 </div>
                 <div className="px-5 py-5 flex justify-between items-end">
                   <div className="text-sm text-gray-400 font-semibold">
-                    ბილეთების მოძიება, უფასო დაჯავშნა და შეძენა რამდენიმე წუთში
+                    {t("Search, book and purchase tickets for free in minutes")}
                   </div>
                   <div>
                     <button
@@ -170,7 +180,7 @@ function SearchFlight() {
                         className="h-5 w-5"
                       />
                       <span className="hidden md:flex whitespace-nowrap">
-                        ბილეთების ძებნა
+                        {t("Search for tickets")}
                       </span>
                     </button>
                   </div>
@@ -178,9 +188,29 @@ function SearchFlight() {
               </div>
             )}
             {/* TAB 2 CONTENT */}
-            {activeTab === "tab2" && <div></div>}
+            {activeTab === "tab2" && (
+              <div className="">
+                <div className="px-4 mt-2 text-lg font-semibold text-textDark">
+                  {t("Search hotels and more...")}
+                </div>
+                <div className="p-4 flex flex-col lg:flex-row gap-8">
+                  <HotelDestination />
+                  <div className="flex flex-col gap-5 sm:gap-0 sm:flex-row w-full lg:w-2/4">
+                    <CheckInDate title="Check-in Date" />
+                    <CheckOutDate title="Check-out Date" />
+                  </div>
+                </div>
+                <div className="px-4 py-2">
+                  <SearchHotels />
+                </div>
+              </div>
+            )}
             {/* TAB 3 CONTENT */}
-            {activeTab === "tab3" && <div>Content for Tab 3</div>}
+            {activeTab === "tab3" && (
+              <div className="p-4">
+                <CarRental />
+              </div>
+            )}
           </div>
         </div>
       </div>

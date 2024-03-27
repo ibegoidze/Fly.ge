@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  selectedClass: "ეკონომ კლასი", // Default to empty or 'Economy class' if preferred
+  selectedClass: "ეკონომ კლასი",
 };
 
 export const classSlice = createSlice({
@@ -14,7 +14,6 @@ export const classSlice = createSlice({
   },
 });
 
-// Export the auto-generated action creator
 export const { setSelectedClass } = classSlice.actions;
 
 export default classSlice.reducer;

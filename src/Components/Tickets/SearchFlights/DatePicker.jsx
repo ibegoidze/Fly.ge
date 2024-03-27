@@ -8,7 +8,7 @@ const DatePicker = ({
   selectedDate,
   onDateSelect,
   selectedEndDate,
-  onCancel,
+  onClear,
   onSubmit,
   isOpen,
 }) => {
@@ -112,8 +112,6 @@ const DatePicker = ({
     currentMonth.getMonth() + 1
   );
 
-  // MONTH OPTIONS
-
   // CALCULATE NITGTS NUMBER
   const calculateNights = () => {
     if (!localSelectedDate || !localSelectedEndDate) return 0;
@@ -128,7 +126,6 @@ const DatePicker = ({
   const currentMonthDays = generateCalendarDays(currentMonth);
   const nextMonthDays = generateCalendarDays(nextMonth);
 
-  // MAIN COMPONENT RENDER FUNCTION
   return (
     // MAIN CONTAINER
     <div className="bg-white p-4 rounded shadow-lg absolute w-full">
@@ -233,12 +230,8 @@ const DatePicker = ({
         {/* // CANCEL AND SUBMIT BUTTONS */}
         <div className="flex justify-between md:justify-end items-center space-x-2 w-full ">
           <div
-            className="bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold px-2 py-1 md:py-2 md:px-6 rounded"
-            onClick={() => {
-              setLocalSelectedDate(null);
-              setLocalSelectedEndDate(null);
-              onCancel();
-            }}
+            className="bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
+            onClick={onClear}
           >
             {t("Clear")}
           </div>

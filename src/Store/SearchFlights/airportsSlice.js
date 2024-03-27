@@ -1,4 +1,3 @@
-// src/features/airports/airportsSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 export const airportsSlice = createSlice({

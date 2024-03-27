@@ -16,6 +16,7 @@ module.exports = {
       },
       screens: {
         custom: "830px",
+        xs: "425px",
       },
       animation: {
         rotate: "rotate360 0.5s forwards",

@@ -2,16 +2,24 @@ import React, { useState, useEffect, useRef } from "react";
 import DatePicker from "./DatePicker";
 import CalendarPic from "../../../assets/Tickets/images/Calendar.png";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setDates as setReduxDates,
+  setIsDepartureNext,
+  resetDateSelection,
+} from "../../../Store/SearchFlights/dateSlice";
 
 const DateSelector = () => {
-  const [dates, setDates] = useState({ departure: null, return: null });
   const [showCalendar, setShowCalendar] = useState(false);
   const [selecting, setSelecting] = useState("departure");
   const calendarRef = useRef(null);
-  const [isDepartureNext, setIsDepartureNext] = useState(true);
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const { dates, isDepartureNext } = useSelector(
+    (state) => state.dateSelection
+  );
 
-  // DATES SHOWN IN SELECTORS
+  // FORMATING THE DATE IN SELECTOR
   const formatDate = (date) => {
     if (!date) return "";
     const d = new Date(date);
@@ -20,47 +28,51 @@ const DateSelector = () => {
     const monthName = d.toLocaleString("en-US", { month: "long" });
     return `${t(dayName)}, ${day} ${t(monthName)}`;
   };
-  // SELECTING THE CALENDAR DATES
+
+  // HANDLE DATE SELECTION IN CALENDAR
   const handleDateSelect = (date) => {
-    setDates((prevDates) => {
-      const newSelectedDate = new Date(date);
-      const currentDepartureDate = prevDates.departure
-        ? new Date(prevDates.departure)
-        : null;
-      return currentDepartureDate && newSelectedDate < currentDepartureDate
-        ? (setIsDepartureNext(false), { departure: date, return: null })
-        : (() => {
-            const currentReturnDate = prevDates.return
-              ? new Date(prevDates.return)
-              : null;
-            return selecting === "departure"
-              ? isDepartureNext
-                ? (setIsDepartureNext(false), { departure: date, return: null })
-                : currentDepartureDate && currentReturnDate
-                ? (setIsDepartureNext(true), { departure: date, return: null })
-                : (setIsDepartureNext(true), { ...prevDates, return: date })
-              : !currentDepartureDate && !currentReturnDate
-              ? (isDepartureNext
-                  ? setIsDepartureNext(false)
-                  : setIsDepartureNext(true),
-                {
-                  departure: isDepartureNext ? date : null,
-                  return: isDepartureNext ? null : date,
-                })
-              : newSelectedDate <= currentDepartureDate
-              ? (setIsDepartureNext(false), { departure: date, return: null })
-              : (isDepartureNext
-                  ? setIsDepartureNext(false)
-                  : setIsDepartureNext(true),
-                {
-                  departure: isDepartureNext ? date : prevDates.departure,
-                  return: isDepartureNext ? null : date,
-                });
-          })();
-    });
+    const newSelectedDate = new Date(date);
+    const currentDepartureDate = dates.departure
+      ? new Date(dates.departure)
+      : null;
+    if (currentDepartureDate && newSelectedDate < currentDepartureDate) {
+      dispatch(setIsDepartureNext(false));
+      dispatch(setReduxDates({ departure: date, return: null }));
+    } else {
+      const newDates = (() => {
+        const currentReturnDate = dates.return ? new Date(dates.return) : null;
+        if (selecting === "departure") {
+          if (
+            isDepartureNext ||
+            (!currentDepartureDate && !currentReturnDate)
+          ) {
+            dispatch(setIsDepartureNext(false));
+            return { departure: date, return: null };
+          } else if (currentDepartureDate && currentReturnDate) {
+            dispatch(setIsDepartureNext(true));
+            return { departure: date, return: null };
+          } else {
+            dispatch(setIsDepartureNext(true));
+            return { ...dates, return: date };
+          }
+        } else {
+          if (newSelectedDate <= currentDepartureDate) {
+            dispatch(setIsDepartureNext(false));
+            return { departure: date, return: null };
+          } else {
+            dispatch(setIsDepartureNext(!isDepartureNext));
+            return {
+              departure: isDepartureNext ? date : dates.departure,
+              return: isDepartureNext ? null : date,
+            };
+          }
+        }
+      })();
+      dispatch(setReduxDates(newDates));
+    }
   };
 
-  // CLICK OUTSIDE CLOSES THE DATEPICKER
+  // CLICK OUTSIDE CLOSES THE CALENDAR
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (calendarRef.current && !calendarRef.current.contains(event.target)) {
@@ -70,12 +82,13 @@ const DateSelector = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  useEffect(() => {}, [dates]);
 
-  const handleCancel = () => {
-    setDates({ departure: null, return: null });
+  // CLEAR BUTTON
+  const handleClearDates = () => {
+    dispatch(resetDateSelection());
     setShowCalendar(false);
   };
+
   return (
     <>
       {showCalendar && (
@@ -128,11 +141,11 @@ const DateSelector = () => {
               selectedEndDate={dates.return}
               onDateSelect={handleDateSelect}
               isOpen={showCalendar}
-              onCancel={handleCancel}
               onSubmit={(departure, returnDate) => {
-                setDates({ departure, return: returnDate });
+                dispatch(setReduxDates({ departure, return: returnDate }));
                 setShowCalendar(false);
               }}
+              onClear={handleClearDates}
             />
           </div>
         )}
