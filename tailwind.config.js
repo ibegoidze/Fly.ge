@@ -13,6 +13,7 @@ module.exports = {
         "custom-gray": "#616c81",
         borderGray: "#cfd8e1",
         lightBlue: "#f0f6fd",
+        backgroundGray: "#f4f6f8",
       },
       screens: {
         custom: "830px",

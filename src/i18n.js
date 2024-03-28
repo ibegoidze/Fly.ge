@@ -70,6 +70,20 @@ const resources = {
       "Search hundreds of rental car sites at once for car rental deals":
         "Search hundreds of rental car sites at once for car rental deals",
       "Explore car deals": "Explore car deals",
+      "Flights to Europe": "Flights to Europe",
+      "Low-cost flights from Georgia to Europe":
+        "Low-cost flights from Georgia to Europe",
+      "See all": "See all",
+      Paris: "Paris",
+      London: "London",
+      Berlin: "Berlin",
+      Tbilisi: "Tbilisi",
+      "Feb 2 from $570": "Feb 2 from $570",
+      "Sep 28 from $520": "Sep 28 from $520",
+      "Oct 30 from $520": "Oct 30 from $520",
+      "Oct 30 from $480": "Oct 30 from $480",
+      "Apr 3 from $720": "Apr 3 from $720",
+      Reserve: "Reserve",
     },
   },
   // GEORGIAN
@@ -140,6 +154,20 @@ const resources = {
       "Search hundreds of rental car sites at once for car rental deals":
         "მოძებნეთ მანქანის გაქირავების ასობით საიტი ერთდროულად მანქანის დაქირავებისთვის",
       "Explore car deals": "მანქანის გარიგებები",
+      "Flights to Europe": "ფრენები ევროპის მიმართულებით",
+      "Low-cost flights from Georgia to Europe":
+        "დაბალბიუჯეტიანი ფრენები საქართველოდან ევროპის მიმართულებით",
+      "See all": "ყველას ნახვა",
+      Paris: "პარიზი",
+      London: "ლონდონი",
+      Berlin: "ბერლინი",
+      Tbilisi: "თბილისი",
+      "Feb 2 from $570": "2 თებ ₾570 დან",
+      "Sep 28 from $520": "28 სექ ₾520 დან",
+      "Oct 30 from $520": "30 ოქტ ₾520 დან",
+      "Oct 30 from $480": "30 ოქტ ₾480 დან",
+      "Apr 3 from $720": "3 აპრ ₾720 დან",
+      Reserve: "დაჯავშნა",
     },
   },
   // GERMAN
@@ -211,6 +239,20 @@ const resources = {
       "Search hundreds of rental car sites at once for car rental deals":
         "Durchsuchen Sie Hunderte von Mietwagen-Websites gleichzeitig nach Mietwagenangeboten",
       "Explore car deals": "Auto-Angebote",
+      "Flights to Europe": "Flüge nach Europa“",
+      "Low-cost flights from Georgia to Europe":
+        "Günstige Flüge von Georgien nach Europa",
+      "See all": "Alles sehen",
+      Paris: "Paris",
+      London: "London",
+      Berlin: "Berlin",
+      Tbilisi: "Tiflis",
+      "Feb 2 from $570": "2 Februar ab 570 $",
+      "Sep 28 from $520": "28 September ab 520 $",
+      "Oct 30 from $520": "30 Okt. ab 520 $",
+      "Oct 30 from $480": "30 Okt. ab 480 $",
+      "Apr 3 from $720": "3 April ab 720 $",
+      Reserve: "Reservieren",
     },
   },
 };
