@@ -4,11 +4,18 @@ import { useTranslation } from "react-i18next";
 const Card = ({ imageUrl, city, height, description }) => {
   const { t } = useTranslation();
   return (
-    <div className={`p-4 bg-white rounded `} style={{ height: `${height}px` }}>
-      <div className={`relative rounded overflow-hidden shadow-lg h-full p-5`}>
+    <div
+      className={`p-4 bg-white rounded  shadow-lg`}
+      style={{ height: `${height}px` }}
+    >
+      <div className={`relative rounded overflow-hidden  h-full p-5`}>
         <div
           className="absolute inset-0 flex flex-col justify-end cursor-pointer"
-          style={{ overflow: "hidden" }}
+          style={{
+            overflow: "hidden",
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0))",
+          }}
         >
           {/* Background Image */}
           <div
@@ -25,7 +32,7 @@ const Card = ({ imageUrl, city, height, description }) => {
               </div>
             </div>
 
-            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-7 rounded flex items-center ">
+            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-7 rounded flex items-center">
               {t("Reserve")}
             </button>
           </div>

@@ -34,3 +34,8 @@
   opacity: 1;
   visibility: visible;
 }
+
+.sale-frame {
+  background-image: url("./assets/Tickets/images/SaleBar.png");
+  background-size: 100% 100%;
+}

@@ -1,0 +1,48 @@
+import OfferCard from "./OfferCard";
+import HimalayPic from "../../../assets/Tickets/images/HimalayOffers.png";
+import PraguePic from "../../../assets/Tickets/images/PragueOffers.png";
+import ViennaPic from "../../../assets/Tickets/images/ViennaOffers.png";
+import { useTranslation } from "react-i18next";
+function CustomizedOffers() {
+  const { t } = useTranslation();
+  return (
+    <div className="w-full bg-backgroundGray py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex  justify-between sm:flex-row items-end  mt-5 py-4">
+        <div>
+          <div className="font-bold text-xl text-textDark mb-2">
+            {t("Offers tailored to you")}
+          </div>
+          <div className="font-semibold text-gray-500  sm:flex">
+            {t("All services in one space will make your trip unforgettable")}
+          </div>
+        </div>
+        <div className="text-primaryBlue font-semibold flex items-center gap-1 cursor-pointer whitespace-nowrap">
+          {t("See all")}
+          <span className="material-symbols-outlined ">chevron_right</span>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-5">
+        <OfferCard
+          imageUrl={HimalayPic}
+          sale={"35%"}
+          city={t("Himalay")}
+          price={"$305"}
+        />
+        <OfferCard
+          imageUrl={PraguePic}
+          sale={"45%"}
+          city={t("Prague")}
+          price={"$420"}
+        />{" "}
+        <OfferCard
+          imageUrl={ViennaPic}
+          sale={"45%"}
+          city={t("Vienna")}
+          price={"$505"}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default CustomizedOffers;

@@ -14,6 +14,7 @@ module.exports = {
         borderGray: "#cfd8e1",
         lightBlue: "#f0f6fd",
         backgroundGray: "#f4f6f8",
+        offerBlack: "#3c3f49",
       },
       screens: {
         custom: "830px",
