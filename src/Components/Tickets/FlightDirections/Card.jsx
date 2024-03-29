@@ -19,7 +19,7 @@ const Card = ({ imageUrl, city, height, description }) => {
         >
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-cover bg-black opacity-95 bg-center transition-transform duration-700 ease-in-out transform-gpu scale-200 hover:scale-105"
+            className="absolute inset-0 bg-cover  bg-center transition-transform duration-700 ease-in-out transform-gpu scale-200 hover:scale-105"
             style={{ backgroundImage: `url(${imageUrl})` }}
           ></div>
 

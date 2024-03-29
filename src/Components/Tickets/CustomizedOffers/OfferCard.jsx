@@ -9,9 +9,9 @@ import { useTranslation } from "react-i18next";
 function OfferCard({ imageUrl, sale, city, price }) {
   const { t } = useTranslation();
   return (
-    <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col ">
+    <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl">
       <div
-        className="bg-cover pt-4 bg-center h-72"
+        className="bg-cover pt-4 bg-center h-72 cursor-pointer"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         {" "}
@@ -20,14 +20,14 @@ function OfferCard({ imageUrl, sale, city, price }) {
         </span>
       </div>
       <div className="flex justify-between items-center">
-        <div className="pl-4 flex items-center font-bold text-sm bg-center w-20 h-7 mt-5 sale-frame">
+        <div className="pl-4 flex items-center font-bold text-sm bg-center w-20 h-7 mt-5 sale-frame cursor-pointer">
           {sale}
         </div>
         <div className="flex mt-5 gap-2">
-          <img src={Plane} alt="plane" className="w-8 h-8" />
-          <img src={Car} alt="car" className="w-8 h-8" />
-          <img src={City} alt="buildings" className="w-8 h-8" />
-          <img src={Compass} alt="compass" className="w-8 h-8" />
+          <img src={Plane} alt="plane" className="w-8 h-8 cursor-pointer" />
+          <img src={Car} alt="car" className="w-8 h-8 cursor-pointer" />
+          <img src={City} alt="buildings" className="w-8 h-8 cursor-pointer" />
+          <img src={Compass} alt="compass" className="w-8 h-8 cursor-pointer" />
         </div>
       </div>
       <div className="border-b-2 border-gray-200 border-solid pb-4">
@@ -37,7 +37,7 @@ function OfferCard({ imageUrl, sale, city, price }) {
         </div>
       </div>
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2 mt-4 border border-orange-500 border-solid bg-orange-100 rounded px-2 py-1">
+        <div className="flex items-center gap-2 mt-4 border border-orange-500 border-solid bg-orange-100 rounded px-2 py-1 cursor-pointer">
           <img src={Time} alt="Clock" />
           <span className="text-sm font-semibold text-orange-500">
             5 {t("Days")}
