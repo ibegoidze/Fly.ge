@@ -94,6 +94,9 @@ const resources = {
       "Top offers": "Top offers",
       Days: "Days",
       "Promotional text that helps you": "Promotional text that helps you",
+      "Flights to all directions": "Flights to all directions",
+      "Low-budget flights from Georgia to any direction":
+        "Low-budget flights from Georgia to any direction",
     },
   },
   // GEORGIAN
@@ -188,6 +191,9 @@ const resources = {
       "Top offers": "ტოპ შეთავაზებები",
       Days: "დღე",
       "Promotional text that helps you": "ფრომოუშენ ტექსტი რომელიც გეხმარება",
+      "Flights to all directions": "ფრენები ყველა მიმართულებით",
+      "Low-budget flights from Georgia to any direction":
+        "დაბალბიუჯეტიანი ფრენები საქართველოდან ნებისმიერი მიმართულებით",
     },
   },
   // GERMAN
@@ -283,6 +289,9 @@ const resources = {
       "Top offers": "Top angebote",
       Days: "Tage",
       "Promotional text that helps you": "Werbetext der Ihnen hilft",
+      "Flights to all directions": "Flüge in alle Richtungen",
+      "Low-budget flights from Georgia to any direction":
+        "Günstige Flüge von Georgien in jede Richtung",
     },
   },
 };

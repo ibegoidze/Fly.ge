@@ -9,7 +9,6 @@ module.exports = {
       colors: {
         textDark: "#3C3F49",
         primaryBlue: "#3986ea",
-        qlesa: "#535353",
         "custom-gray": "#616c81",
         borderGray: "#cfd8e1",
         lightBlue: "#f0f6fd",

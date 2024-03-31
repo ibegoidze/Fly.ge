@@ -4,6 +4,8 @@ import EuropeDirection from "../Components/Tickets/FlightDirections/EuropeDirect
 import Partners from "../Components/Tickets/Partners/Partners";
 import CustomizedOffers from "../Components/Tickets/CustomizedOffers/CustomizedOffers";
 import AllDirections from "../Components/Tickets/FlightDirections/AllDirections";
+import ExploreAdventure from "../Components/Tickets/ExploreAdventure/ExploreAdventure";
+import BlogSection from "../Components/Tickets/BlogSection/BlogSection";
 
 function Tickets() {
   return (
@@ -14,6 +16,8 @@ function Tickets() {
       <Partners />
       <CustomizedOffers />
       <AllDirections />
+      <ExploreAdventure />
+      <BlogSection />
     </div>
   );
 }
