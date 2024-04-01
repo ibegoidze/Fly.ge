@@ -112,7 +112,7 @@ const AirportSelector = ({
         </div>
         {/* DROPDOWN */}
         <div
-          className={`transition-all duration-300 absolute z-10 mt-3 left-0 right-0 bg-white shadow-lg max-h-60 overflow-hidden rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm ${
+          className={`transition-all duration-300 absolute z-10 mt-3 left-0 right-0 bg-white shadow-lg max-h-60 overflow-hidden rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm ${
             showDropdown && filteredAirports.length > 0
               ? "opacity-100"
               : "opacity-0"
