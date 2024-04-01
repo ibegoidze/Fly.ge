@@ -33,7 +33,6 @@ const Passengers = () => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  // Function placeholder for handleSubmit, if you decide to integrate Redux action for submission.
   const handleSubmit = () => {
     console.log(
       "Submission logic here. Currently, passenger state is already managed in Redux."
@@ -100,7 +99,7 @@ const Passengers = () => {
 
   return (
     <div className="inline-block text-left relative" ref={dropdownRef}>
-      {/* Trigger for dropdown */}
+      {/* SELECTOR */}
       <div
         onClick={toggleDropdown}
         className={`cursor-pointer flex items-center justify-between w-38 px-2 lg:px-4 py-2 bg-white text-sm font-medium ${
@@ -118,35 +117,35 @@ const Passengers = () => {
         </span>
       </div>
       {/* DROPDOWN */}
-      {isOpen && (
-        <div
-          className="absolute z-10 w-80 bg-white shadow-md transition-transform transform duration-300 ease-in-out overflow-hidden origin-top"
-          style={{
-            top: "100%",
-            left: windowWidth <= 768 ? "50%" : undefined,
-            transform: windowWidth <= 768 ? "translateX(-50%)" : undefined,
-            borderRadius: "0 0 0.375rem 0.375rem",
-          }}
-        >
-          {/* RENDERING PASSENGER TYPES */}
-          {renderPassengerOptions()}
-          {/* BUTTONS */}
-          <div className="px-4 py-2 flex justify-between items-center">
-            <button
-              className="text-sm py-2.5 px-7 bg-transparent hover:bg-gray-100 rounded-md"
-              onClick={() => dispatch(reset())} // Resets counts using Redux
-            >
-              {t("Cancel")}
-            </button>
-            <button
-              className="text-sm py-2.5 px-7 bg-primaryBlue text-white hover:bg-blue-700 rounded-md"
-              onClick={handleSubmit}
-            >
-              {t("Submit")}
-            </button>
-          </div>
+      <div
+        className={`absolute z-10 w-80 bg-white shadow-md transition-all duration-300 overflow-hidden origin-top
+          ${isOpen ? "opacity-100" : "opacity-0"} `}
+        style={{
+          top: "100%",
+          left: windowWidth <= 768 ? "50%" : undefined,
+          transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
+          borderRadius: "0 0 0.375rem 0.375rem",
+          height: isOpen ? "auto" : "0",
+        }}
+      >
+        {/* RENDERING PASSENGER TYPES */}
+        {renderPassengerOptions()}
+        {/* BUTTONS */}
+        <div className="px-4 py-2 flex justify-between items-center">
+          <button
+            className="text-sm py-2.5 px-7 bg-transparent hover:bg-gray-100 rounded-md"
+            onClick={() => dispatch(reset())}
+          >
+            {t("Cancel")}
+          </button>
+          <button
+            className="text-sm py-2.5 px-7 bg-primaryBlue text-white hover:bg-blue-700 rounded-md"
+            onClick={handleSubmit}
+          >
+            {t("Submit")}
+          </button>
         </div>
-      )}
+      </div>
     </div>
   );
 };

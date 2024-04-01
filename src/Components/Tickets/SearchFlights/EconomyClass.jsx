@@ -76,43 +76,44 @@ const EconomyClass = () => {
         </span>
       </div>
       {/* DROPDOWN */}
-      {isOpen && (
-        <div
-          className="absolute z-10 mt-1 w-60 bg-white shadow-lg rounded-md overflow-hidden"
-          style={{
-            top: "100%",
-            left: windowWidth <= 768 ? "50%" : undefined,
-            transform: windowWidth <= 768 ? "translateX(-50%)" : undefined,
-            borderRadius: "0 0 0.375rem 0.375rem",
-          }}
-        >
-          {[
-            t("Economy class"),
-            t("Premium class"),
-            t("Business class"),
-            t("First class"),
-          ].map((className) => (
+      <div
+        className={`absolute z-10 mt-1 w-60 bg-white shadow-lg transition-all duration-300 rounded-md overflow-hidden ${
+          isOpen ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          top: "100%",
+          left: windowWidth <= 768 ? "50%" : undefined,
+          transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
+          borderRadius: "0 0 0.375rem 0.375rem",
+          height: isOpen ? "auto" : "0",
+        }}
+      >
+        {[
+          t("Economy class"),
+          t("Premium class"),
+          t("Business class"),
+          t("First class"),
+        ].map((className) => (
+          <div
+            key={className}
+            className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-50"
+            onClick={() => handleClassChange(className)}
+          >
             <div
-              key={className}
-              className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-50"
-              onClick={() => handleClassChange(className)}
+              className={`rounded-full w-5 h-5 border-2 flex justify-center items-center mr-2 ${
+                selectedClass === className
+                  ? "border-primaryBlue"
+                  : "border-gray-400"
+              }`}
             >
-              <div
-                className={`rounded-full w-5 h-5 border-2 flex justify-center items-center mr-2 ${
-                  selectedClass === className
-                    ? "border-primaryBlue"
-                    : "border-gray-400"
-                }`}
-              >
-                {selectedClass === className && (
-                  <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
-                )}
-              </div>
-              <span className="text-sm text-gray-700">{t(className)}</span>
+              {selectedClass === className && (
+                <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
+              )}
             </div>
-          ))}
-        </div>
-      )}
+            <span className="text-sm text-gray-700">{t(className)}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

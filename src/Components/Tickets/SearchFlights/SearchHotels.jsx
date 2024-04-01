@@ -17,9 +17,9 @@ function SearchHotels() {
   // ALERT COLLECTED DATA
   const alertCurrentDates = () => {
     alert(
-      `Destination: ${hotelDestination}\nCheck-in: ${
+      `Destination: ${hotelDestination}\nCheck-in: 2024-${
         checkInMonth + 1
-      }/${checkInDay}\nCheck-out: ${checkOutMonth + 1}/${checkOutDay}`
+      }-${checkInDay}\nCheck-out: 2024-${checkOutMonth + 1}-${checkOutDay}`
     );
   };
 

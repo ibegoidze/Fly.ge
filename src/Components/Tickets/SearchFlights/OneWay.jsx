@@ -56,6 +56,7 @@ const OneWay = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   return (
     <div className="inline-block text-left relative" ref={dropdownRef}>
       <div
@@ -74,41 +75,40 @@ const OneWay = () => {
           <span className="flex-1">{oneWayState}</span>
         ) : null}
         <span
-          className="material-symbols-outlined transform transition duration-300"
+          className="material-symbols-outlined transform duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           arrow_drop_down
         </span>
       </div>
-      {isOpen && (
-        <div
-          className="absolute shadow-md z-10 w-40 transition-all ease-in-out duration-300"
-          style={{
-            top: "100%",
-            left: windowWidth <= 768 ? "50%" : "0",
-            transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
-            borderRadius: "0 0 0.375rem 0.375rem",
-          }}
-        >
-          {options
-            .filter((option) => option.label !== oneWayState)
-            .map((option) => (
-              <div
-                key={option.value}
-                className="px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center rounded-lg"
-                onClick={() => switchOption(option.label)}
-              >
-                <img
-                  src={option.icon}
-                  alt={`${option.value} Icon`}
-                  className="w-4 mr-2"
-                />
-
-                <span>{option.label}</span>
-              </div>
-            ))}
-        </div>
-      )}
+      <div
+        className={`absolute shadow-md z-10 w-40 bg-white rounded-lg transition-all duration-300 overflow-hidden ${
+          isOpen ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          top: "100%",
+          left: windowWidth <= 768 ? "50%" : "0",
+          transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
+          maxHeight: isOpen ? "10rem" : "0",
+        }}
+      >
+        {options
+          .filter((option) => option.label !== oneWayState)
+          .map((option) => (
+            <div
+              key={option.value}
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center rounded-lg"
+              onClick={() => switchOption(option.label)}
+            >
+              <img
+                src={option.icon}
+                alt={`${option.value} Icon`}
+                className="w-4 mr-2"
+              />
+              <span>{option.label}</span>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

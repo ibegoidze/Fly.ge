@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setDestination } from "../../../Store/SearchFlights/HotelDestinationSlice";
 import destinationIcon from "../../../assets/Tickets/images/destinationIcon.png";
@@ -8,11 +8,19 @@ const HotelDestination = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const hotelDestination = useSelector((state) => state.hotelDestination.value);
+  const { selectedToAirport } = useSelector((state) => state.airports);
+
+  useEffect(() => {
+    if (selectedToAirport && selectedToAirport.name) {
+      dispatch(setDestination(selectedToAirport.city));
+    }
+  }, [selectedToAirport, dispatch]);
 
   // SETS REDUX STATE
   const handleChange = (event) => {
     dispatch(setDestination(event.target.value));
   };
+
   return (
     <div className="w-full lg:w-2/4">
       <div className="text-sm font-semibold text-gray-500 mb-2">

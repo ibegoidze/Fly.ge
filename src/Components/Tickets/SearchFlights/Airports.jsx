@@ -111,24 +111,29 @@ const AirportSelector = ({
           />
         </div>
         {/* DROPDOWN */}
-        {showDropdown && filteredAirports.length > 0 && (
-          <div className="absolute z-10 mt-3 left-0 right-0 bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-            {filteredAirports.map((airport) => (
-              <div
-                key={airport.id}
-                className="flex items-center text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
-                onClick={() => handleSelect(airport)}
-              >
-                <span className="text-md font-semibold mr-1">
-                  {airport.name}
-                </span>
-                <span className="text-xs font-bold text-gray-500 px-2 py-1 rounded">
-                  {airport.id}
-                </span>
-              </div>
-            ))}
-          </div>
-        )}
+        <div
+          className={`transition-all duration-300 absolute z-10 mt-3 left-0 right-0 bg-white shadow-lg max-h-60 overflow-hidden rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm ${
+            showDropdown && filteredAirports.length > 0
+              ? "opacity-100"
+              : "opacity-0"
+          }`}
+          style={{
+            height: showDropdown && filteredAirports.length > 0 ? "auto" : "0",
+          }}
+        >
+          {filteredAirports.map((airport) => (
+            <div
+              key={airport.id}
+              className="flex items-center text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
+              onClick={() => handleSelect(airport)}
+            >
+              <span className="text-md font-semibold mr-1">{airport.name}</span>
+              <span className="text-xs font-bold text-gray-500 px-2 py-1 rounded">
+                {airport.id}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -147,7 +152,6 @@ const Airports = () => {
   // SWITCH ICON
   const handleRotate = () => {
     if (selectedFromAirport && selectedToAirport) {
-      // Correctly dispatching actions
       dispatch(setSelectedFromAirport(selectedToAirport));
       dispatch(setSelectedToAirport(selectedFromAirport));
       dispatch(setSearchTermFrom(searchTermTo));

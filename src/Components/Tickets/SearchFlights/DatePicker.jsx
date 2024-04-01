@@ -236,7 +236,7 @@ const DatePicker = ({
             {t("Clear")}
           </div>
           <div
-            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold  px-2 py-1 md:py-2 md:px-6 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold  px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
             onClick={() => {
               onSubmit(localSelectedDate, localSelectedEndDate);
             }}
