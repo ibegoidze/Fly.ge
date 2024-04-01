@@ -28,6 +28,10 @@ module.exports = {
           to: { transform: "rotate(360deg)" },
         },
       },
+      fontFamily: {
+        "noto-sans-georgian": ['"Noto Sans Georgian"', "sans-serif"],
+      },
+      fontOpticalSizing: ["responsive"],
     },
   },
   plugins: [],

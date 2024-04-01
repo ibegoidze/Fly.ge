@@ -3,7 +3,7 @@ import BlueCover from "../../../assets/Tickets/images/BlueCover.png";
 
 function ExploreAdventure() {
   return (
-    <div className="bg-backgroundGray flex relative py-5 md:py-32 gap-3 justify-center md:justify-start">
+    <div className="bg-backgroundGray flex relative py-5 md:pt-32 md:gap-10 lg:gap-3 justify-center md:justify-start">
       <div className="w-1/2 relative hidden md:flex">
         <img
           src={BlueCover}
@@ -18,7 +18,7 @@ function ExploreAdventure() {
           style={{ left: "60%", transform: "translateX(-50%)" }}
         />
       </div>
-      <div className="w-full flex flex-col justify-center md:justify-start md:w-96  ">
+      <div className="w-full px-12 md:px-0 flex flex-col justify-center md:justify-start md:w-96  ">
         <div className="text-center md:text-start text-lg font-bold text-textDark">
           აღმოაჩინე თავგადასავლები
         </div>

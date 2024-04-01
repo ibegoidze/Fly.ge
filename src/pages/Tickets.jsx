@@ -6,6 +6,7 @@ import CustomizedOffers from "../Components/Tickets/CustomizedOffers/CustomizedO
 import AllDirections from "../Components/Tickets/FlightDirections/AllDirections";
 import ExploreAdventure from "../Components/Tickets/ExploreAdventure/ExploreAdventure";
 import BlogSection from "../Components/Tickets/BlogSection/BlogSection";
+import Footer from "../Components/Global/Footer/Footer";
 
 function Tickets() {
   return (
@@ -18,6 +19,7 @@ function Tickets() {
       <AllDirections />
       <ExploreAdventure />
       <BlogSection />
+      <Footer />
     </div>
   );
 }
