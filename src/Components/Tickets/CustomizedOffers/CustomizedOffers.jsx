@@ -7,16 +7,16 @@ function CustomizedOffers() {
   const { t } = useTranslation();
   return (
     <div className="w-full bg-backgroundGray py-4">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex  justify-between sm:flex-row items-end  mt-5 py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center flex-col sm:justify-between sm:flex-row  sm:mt-5 py-4">
         <div>
-          <div className="font-bold text-xl text-textDark mb-2">
+          <div className="font-bold text-md sm:text-xl text-textDark mb-2 text-center sm:text-start">
             {t("Offers tailored to you")}
           </div>
-          <div className="font-semibold text-gray-500  sm:flex">
+          <div className="font-semibold text-gray-500 hidden sm:flex">
             {t("All services in one space will make your trip unforgettable")}
           </div>
         </div>
-        <div className="text-primaryBlue font-semibold flex items-center gap-1 cursor-pointer whitespace-nowrap">
+        <div className="text-primaryBlue text-sm sm:text-md font-semibold flex justify-end items-end gap-1 cursor-pointer whitespace-nowrap ">
           {t("See all")}
           <span className="material-symbols-outlined ">chevron_right</span>
         </div>

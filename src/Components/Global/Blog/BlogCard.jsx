@@ -20,13 +20,18 @@ function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
         </span>
       </div>
       <div className="font-bold text-lg">{title}</div>
-      <div className="py-2 font-semibold text-gray-400 text-sm border-b-2 pb-5">
+      <div className="py-2 font-semibold text-gray-400 text-sm  pb-5">
         {text}
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex-grow"></div>{" "}
+      <div className="flex justify-between items-center border-t-2">
         <div className="flex gap-4 text-sm pt-3 pb-2 text-gray-400 font-semibold">
-          <div>{seen} ნახვა</div>
-          <div>{comment} კომენტარი</div>
+          <div>
+            {seen} {t("seen")}
+          </div>
+          <div>
+            {comment} {t("comment")}
+          </div>
         </div>
         <img src={BlogFavPic} alt="heart" className="w-7 h-7 cursor-pointer" />
       </div>

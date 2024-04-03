@@ -7,45 +7,49 @@ import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  // LANGUAGE TRANSLATION
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const { t } = useTranslation();
-  // SET CURRENT ACTIVE NAVIGATION BLUE
-  const getNavLinkClass = (isActive) =>
-    isActive
-      ? "text-primaryBlue font-medium"
-      : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300";
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleResize);
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
 
-    // Clean up
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
+
+  const getNavLinkClass = (isActive) =>
+    isActive
+      ? "text-primaryBlue font-medium"
+      : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300";
+
   return (
-    <header>
-      {/* SECTION CONTAINER */}
+    <header className={`sticky top-0 bg-white z-50`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           {windowWidth < 1024 ? <BurgerMenu /> : null}
-          {/* FLY.GE LOGO */}
           <a href="/" className="flex items-center">
             <img
-              className="h-4 w-auto sm:h-6"
+              className="h-4 w-auto sm:h-6 z-10"
               src={TicketLogo}
               alt="Your Logo"
             />
           </a>
-
-          {/* NAV LAN BUTTON CONTAINER */}
           <div className="flex items-center space-x-4">
-            {/* NAVIGATION */}
-            <nav className=" space-x-4 hidden lg:block">
+            <nav className="space-x-4 hidden lg:block">
               <NavLink
                 to="/"
                 className={({ isActive }) => getNavLinkClass(isActive)}
@@ -58,7 +62,6 @@ const Header = () => {
               >
                 {t("Offers")}
               </NavLink>
-              {/* <h1>{t("Welcome to React")}</h1> */}
               <NavLink
                 to="/Blog"
                 className={({ isActive }) => getNavLinkClass(isActive)}
@@ -72,11 +75,9 @@ const Header = () => {
                 {t("Contact")}
               </NavLink>
             </nav>
-            {/* LANGUAGE DROPDOWN */}
             <LanguageDropDown />
-            {/* BUTTON */}
             <button
-              className="text-blue-500 border border-blue-500 hover:bg-blue-50 px-6 py-3 rounded font-semibold transition ease-in duration-150"
+              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-semibold transition ease-in duration-150"
               style={{ borderRadius: "8px" }}
             >
               {t("Sign in")}
