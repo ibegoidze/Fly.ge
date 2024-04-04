@@ -15,16 +15,21 @@ const CheckOutDate = ({ title }) => {
   const { selectedMonth: checkOutMonth, selectedDay: checkOutDay } =
     useSelector((state) => state.checkOut);
   const dropdownRef = useRef(null);
+
   // SELECT MONTH
   const handleMonthSelect = (index) => {
     dispatch(setCheckOutMonth(index));
     setIsMonthOpen(false);
+    setIsDayOpen(false);
   };
+
   // SELECT DAY
   const handleDaySelect = (day) => {
     dispatch(setCheckOutDay(day));
     setIsDayOpen(false);
+    setIsMonthOpen(false);
   };
+
   // EACH MONTH GETS AS MUCH DAYS AS THERE ARE
   const daysInMonth = new Date(
     new Date().getFullYear(),
@@ -32,6 +37,7 @@ const CheckOutDate = ({ title }) => {
     0
   ).getDate();
   const daysArray = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+
   // CLICK OUTSIDE CLOSES THE DROPDOWN
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -59,7 +65,10 @@ const CheckOutDate = ({ title }) => {
             className={`bg-white border border-borderGray rounded-md py-2 px-3 cursor-pointer text-sm flex gap-2 whitespace-nowrap font-semibold ${
               isMonthOpen ? "text-blue-500" : "text-gray-500"
             }`}
-            onClick={() => setIsMonthOpen(!isMonthOpen)}
+            onClick={() => {
+              setIsMonthOpen(!isMonthOpen);
+              setIsDayOpen(false);
+            }}
           >
             {months[checkOutMonth]} {new Date().getFullYear()}
             <span
@@ -95,7 +104,10 @@ const CheckOutDate = ({ title }) => {
               className={`bg-white border border-gray-300 rounded-md py-2 px-4 cursor-pointer text-sm flex items-center h-full font-semibold ${
                 isDayOpen ? "text-blue-500" : "text-gray-500"
               }`}
-              onClick={() => setIsDayOpen(!isDayOpen)}
+              onClick={() => {
+                setIsDayOpen(!isDayOpen);
+                setIsMonthOpen(false);
+              }}
             >
               {checkOutDay}
               <span

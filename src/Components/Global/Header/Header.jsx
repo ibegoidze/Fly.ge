@@ -49,7 +49,7 @@ const Header = () => {
             />
           </a>
           <div className="flex items-center space-x-4">
-            <nav className="space-x-4 hidden lg:block">
+            <nav className="space-x-4 hidden lg:block noto-sans-georgian">
               <NavLink
                 to="/"
                 className={({ isActive }) => getNavLinkClass(isActive)}
@@ -77,7 +77,7 @@ const Header = () => {
             </nav>
             <LanguageDropDown />
             <button
-              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-semibold transition ease-in duration-150"
+              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-semibold transition ease-in duration-150 noto-sans-georgian"
               style={{ borderRadius: "8px" }}
             >
               {t("Sign in")}

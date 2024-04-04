@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 function OfferCard({ imageUrl, sale, city, price }) {
   const { t } = useTranslation();
   return (
-    <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl">
+    <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl ">
       <div
         className="bg-cover pt-4 bg-center h-72 cursor-pointer"
         style={{ backgroundImage: `url(${imageUrl})` }}

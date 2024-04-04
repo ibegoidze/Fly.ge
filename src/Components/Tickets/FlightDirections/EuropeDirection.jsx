@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 function EuropeDirection() {
   const { t } = useTranslation();
   return (
-    <div className="w-full bg-backgroundGray py-4">
+    <div className="w-full bg-backgroundGray py-4 noto-sans-georgian">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center flex-col sm:justify-between sm:flex-row  sm:mt-5 py-4">
         <div>
           <div className="font-bold text-md sm:text-xl text-textDark mb-2 text-center sm:text-start">

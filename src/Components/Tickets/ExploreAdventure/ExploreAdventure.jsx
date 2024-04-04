@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function ExploreAdventure() {
   const { t } = useTranslation();
   return (
-    <div className="bg-backgroundGray flex relative py-5 md:pt-32 md:gap-10 lg:gap-3 justify-center md:justify-start">
+    <div className="bg-backgroundGray flex relative py-5 md:pt-32 md:gap-10 lg:gap-3 justify-center md:justify-start noto-sans-georgian">
       <div className="w-1/2 relative hidden md:flex">
         <img
           src={BlueCover}

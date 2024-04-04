@@ -114,7 +114,9 @@ function LanguageDropDown({ alwaysVisible = false }) {
                   }
                 >
                   <img src={option.flag} alt={option.alt} className="h-6" />
-                  <span className="font-medium">{option.lang}</span>
+                  <span className="font-medium noto-sans-georgian">
+                    {option.lang}
+                  </span>
                 </div>
               )
           )}

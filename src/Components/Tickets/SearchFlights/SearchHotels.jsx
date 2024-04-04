@@ -7,25 +7,26 @@ function SearchHotels() {
   const { t } = useTranslation();
 
   // COLLECT DATA FROM REDUX
-  // const { selectedMonth: checkInMonth, selectedDay: checkInDay } = useSelector(
-  //   (state) => state.checkIn
-  // );
-  // const { selectedMonth: checkOutMonth, selectedDay: checkOutDay } =
-  //   useSelector((state) => state.checkOut);
+  const { selectedMonth: checkInMonth, selectedDay: checkInDay } = useSelector(
+    (state) => state.checkIn
+  );
+  const { selectedMonth: checkOutMonth, selectedDay: checkOutDay } =
+    useSelector((state) => state.checkOut);
   const hotelDestination = useSelector((state) => state.hotelDestination.value);
 
   const city = encodeURIComponent(hotelDestination);
 
-  // const checkin = `2024-${checkInMonth + 1}-${checkInDay}`;
-  // const checkout = `2024-${checkOutMonth + 1}-${checkOutDay}`;
+  const checkin = `2024-${checkInMonth + 1}-${checkInDay}`;
+  const checkout = `2024-${checkOutMonth + 1}-${checkOutDay}`;
 
   const constructBookingURL = () => {
-    return `https://www.booking.com/${city} `;
+    return `https://www.booking.com/searchresults.html?ss=${city}&checkin_year_month_monthday=${checkin}&checkout_year_month_monthday=${checkout}`;
   };
-
+  //https://www.booking.com/searchresults.en-gb.html?ss=Berlin&ssne=Berlin&ssne_untouched=Berlin&efdco=1&label=socnet_fb_fp_20131026berlin&sid=fdebce085025ed6443ad34f3f0d87257&aid=304142&lang=en-gb&sb=1&src_elem=sb&src=city&dest_id=-1746443&dest_type=city&checkin=2024-05-16&checkout=2024-05-25&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure
   const openBookingPage = () => {
     const url = constructBookingURL();
     window.open(url, "_blank");
+    console.log(city, checkin, checkout);
   };
 
   return (
@@ -49,3 +50,29 @@ function SearchHotels() {
 }
 
 export default SearchHotels;
+
+//https://www.booking.com/searchresults.en-gb.html?
+//ss=London&
+//ssne=Batumi&
+//ssne_untouched=Batumi&
+//efdco=1&
+//label=gen173nr-1FCAEoggI46AdIM1gEaFKIAQGYAQm4ARjIAQzYAQHoAQH4AQuIAgGoAgS4At3pubAGwAIB0gIkNTc0MDNlNzEtNDk2Mi00YzJmLWI4ZGItMjBiOWY4MmRmOTVk2AIG4AIB& //////////////
+//sid=fdebce085025ed6443ad34f3f0d87257& 4b34112dc54ccc3d568dbd2d99d3abb7
+//aid=304142&lang=en-gb& //////////////////
+//sb=1&
+//src_elem=sb&
+//src=index&
+//dest_id=-2601889&
+//dest_type=city&
+//ac_position=0&
+//ac_click_type=b&
+//ac_langcode=en&
+//ac_suggestion_list_length=5&
+//search_selected=true&
+//search_pageview_id=f60643af242300e2&
+//ac_meta=GhBmNjA2NDNhZjI0MjMwMGUyIAAoATICZW46BkxvbmRvbkAASgBQAA%3D%3D&
+//checkin=2024-05-08&
+//checkout=2024-05-15&
+//group_adults=2&
+//no_rooms=1&
+//group_children=0

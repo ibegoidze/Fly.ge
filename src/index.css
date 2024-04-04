@@ -39,3 +39,9 @@
   background-image: url("./assets/Tickets/images/SaleBar.png");
   background-size: 100% 100%;
 }
+.noto-sans-georgian {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}

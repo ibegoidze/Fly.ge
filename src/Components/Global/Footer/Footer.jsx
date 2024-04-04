@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 function Footer() {
   const { t } = useTranslation();
   return (
-    <div className="w-full  py-4 pb-10">
+    <div className="w-full  py-4 pb-10 noto-sans-georgian">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 flex gap-5 md:gap-0 pb-5">
           <div className="flex flex-col  w-1/2 whitespace-nowrap">
@@ -126,10 +126,10 @@ function Footer() {
             </span>
           </div>
           <div className="flex gap-3 items-center mx-auto md:mx-0 mt-3 md:mt-0">
-            <img src={youtube} alt="youtube" />
-            <img src={facebook} alt="facebook" />
-            <img src={twitter} alt="twitter" />
-            <img src={linkedin} alt="youtube" />
+            <img src={youtube} alt="youtube" className="cursor-pointer" />
+            <img src={facebook} alt="facebook" className="cursor-pointer" />
+            <img src={twitter} alt="twitter" className="cursor-pointer" />
+            <img src={linkedin} alt="youtube" className="cursor-pointer" />
           </div>
         </div>
       </div>

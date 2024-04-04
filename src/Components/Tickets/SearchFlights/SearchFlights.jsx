@@ -74,10 +74,10 @@ function SearchFlight() {
 
   return (
     // SECTION CONTAINER
-    <div className="bg-book-flight-cover bg-cover bg-center h-auto w-full">
+    <div className="bg-book-flight-cover bg-cover bg-center h-auto w-full noto-sans-georgian">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* TITLE */}
-        <div className="title text-white font-semibold text-3xl py-14">
+        <div className="title text-white font-semibold text-3xl py-14 noto-sans-georgian">
           {t("Happiness gained from traveling")}
         </div>
         {/* FLIGHT BOOKING CONTAINER */}

@@ -50,7 +50,7 @@ function BurgerMenu() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex flex-col">
+        <nav className="flex flex-col noto-sans-georgian">
           <NavLink
             to="/"
             className={({ isActive }) => getNavLinkClass(isActive)}
