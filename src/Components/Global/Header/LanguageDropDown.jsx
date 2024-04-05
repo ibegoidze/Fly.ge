@@ -85,8 +85,10 @@ function LanguageDropDown({ alwaysVisible = false }) {
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         className="flex cursor-pointer items-center space-x-3"
       >
-        <img src={selectedFlag} alt="Selected Flag" className="h-6 w-6" />
-        <span className="font-medium">{selectedLang}</span>
+        <img src={selectedFlag} alt="Selected Flag" className="h-6 w-6 " />
+        <span className="font-semibold  text-sm noto-sans-georgian ">
+          {selectedLang}
+        </span>
       </div>
       {isDropdownOpen && (
         <motion.div
@@ -114,7 +116,7 @@ function LanguageDropDown({ alwaysVisible = false }) {
                   }
                 >
                   <img src={option.flag} alt={option.alt} className="h-6" />
-                  <span className="font-medium noto-sans-georgian">
+                  <span className="font-medium noto-sans-georgian  text-sm">
                     {option.lang}
                   </span>
                 </div>

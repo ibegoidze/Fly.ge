@@ -10,15 +10,16 @@ function OfferCard({ imageUrl, sale, city, price }) {
   const { t } = useTranslation();
   return (
     <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl ">
-      <div
-        className="bg-cover pt-4 bg-center h-72 cursor-pointer"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      >
-        {" "}
-        <span className="bg-offerBlack text-white text-sm font-semibold px-4 py-2 rounded-tr-md rounded-br-md">
+      <div className="relative h-72 overflow-hidden">
+        <div
+          className="bg-cover bg-center h-full w-full cursor-pointer transition-transform duration-700 transform scale-100 hover:scale-105"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        ></div>
+        <span className="absolute top-4 bg-offerBlack text-white text-sm font-semibold px-4 py-2 rounded-tr-md rounded-br-md">
           {t("Top offers")}
         </span>
       </div>
+
       <div className="flex justify-between items-center">
         <div className="pl-4 flex items-center font-bold text-sm bg-center w-20 h-7 mt-5 sale-frame cursor-pointer">
           {sale}

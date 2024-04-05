@@ -33,8 +33,8 @@ const Header = () => {
 
   const getNavLinkClass = (isActive) =>
     isActive
-      ? "text-primaryBlue font-medium"
-      : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300";
+      ? "text-primaryBlue font-semibold"
+      : "text-textDark font-semibold text-gray-500 hover:text-primaryBlue transition duration-300 ";
 
   return (
     <header className={`sticky top-0 bg-white z-50`}>
@@ -49,7 +49,7 @@ const Header = () => {
             />
           </a>
           <div className="flex items-center space-x-4">
-            <nav className="space-x-4 hidden lg:block noto-sans-georgian">
+            <nav className="space-x-4 hidden text-sm  lg:block noto-sans-georgian">
               <NavLink
                 to="/"
                 className={({ isActive }) => getNavLinkClass(isActive)}

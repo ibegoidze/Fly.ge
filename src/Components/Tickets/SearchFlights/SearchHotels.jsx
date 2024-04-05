@@ -20,7 +20,7 @@ function SearchHotels() {
   const checkout = `2024-${checkOutMonth + 1}-${checkOutDay}`;
 
   const constructBookingURL = () => {
-    return `https://www.booking.com/searchresults.html?ss=${city}&checkin_year_month_monthday=${checkin}&checkout_year_month_monthday=${checkout}`;
+    return `https://www.booking.com/${city}`;
   };
   //https://www.booking.com/searchresults.en-gb.html?ss=Berlin&ssne=Berlin&ssne_untouched=Berlin&efdco=1&label=socnet_fb_fp_20131026berlin&sid=fdebce085025ed6443ad34f3f0d87257&aid=304142&lang=en-gb&sb=1&src_elem=sb&src=city&dest_id=-1746443&dest_type=city&checkin=2024-05-16&checkout=2024-05-25&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure
   const openBookingPage = () => {

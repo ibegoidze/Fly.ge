@@ -16,9 +16,13 @@ function CustomizedOffers() {
             {t("All services in one space will make your trip unforgettable")}
           </div>
         </div>
-        <div className="text-primaryBlue text-sm sm:text-md font-semibold flex justify-end items-end gap-1 cursor-pointer whitespace-nowrap ">
-          {t("See all")}
-          <span className="material-symbols-outlined ">chevron_right</span>
+        <div className="text-primaryBlue text-sm sm:text-md font-semibold flex justify-end items-end gap-1 whitespace-nowrap ">
+          <div className="flex text-xs items-center cursor-pointer">
+            {t("See all")}
+            <span className="material-symbols-outlined text-sm">
+              chevron_right
+            </span>
+          </div>
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-5">
