@@ -5,19 +5,17 @@ import { useTranslation } from "react-i18next";
 function ExploreAdventure() {
   const { t } = useTranslation();
   return (
-    <div className="bg-backgroundGray flex relative py-5 md:pt-32 md:gap-10 lg:gap-3 justify-center md:justify-start noto-sans-georgian">
-      <div className="w-1/2 relative hidden md:flex">
+    <div className="bg-backgroundGray flex flex-col-reverse md:flex-row relative py-5 md:pt-32 gap-20 md:gap-10 lg:gap-3 justify-center items-center md:justify-start noto-sans-georgian">
+      <div className="w-full md:w-1/2 relative ">
         <img
           src={BlueCover}
-          style={{ width: "calc(100% - 10px)" }}
           alt="blue background"
-          className=" h-56 sm:h-72 min-h-44"
+          className="h-40 md:h-72 w-full md:w-[calc(100%-10px)] "
         />
         <img
           src={GirlFixed}
           alt="girl"
-          className="absolute bottom-0 h-72 sm:h-96 min-h-44 min-w-64"
-          style={{ left: "60%", transform: "translateX(-50%)" }}
+          className="absolute bottom-0 h-56 md:h-96 min-h-44 min-w-56 left-1/2 transform -translate-x-1/2 md:left-[calc(10%)] lg:left-[calc(30%)] 2xl:left-[calc(50%)] md:transform-none"
         />
       </div>
       <div className="w-full px-15 md:px-0 flex flex-col justify-center md:justify-start md:w-96  ">

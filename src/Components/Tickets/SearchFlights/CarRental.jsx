@@ -5,6 +5,11 @@ import { useTranslation } from "react-i18next";
 
 function CarRental() {
   const { t } = useTranslation();
+
+  const navigateToWebsite = () => {
+    window.open("https://www.myauto.ge/en/", "_blank");
+  };
+
   return (
     <div className="flex flex-col justify-between">
       <div className="font-bold text-textDark">
@@ -20,8 +25,10 @@ function CarRental() {
           <img src={car2} alt="car 2" className="hidden lg:flex" />
         </div>
         <div>
-          {" "}
-          <button className="bg-blue-500 hover:bg-blue-700 text-lg px-6 py-3  rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-16 min-h-14">
+          <button
+            onClick={navigateToWebsite}
+            className="bg-blue-500 hover:bg-blue-700 text-lg px-6 py-3  rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-16 min-h-14"
+          >
             <img src={SearchIcon} alt="search icon" className="h-5 w-5" />
             <span className="hidden md:flex whitespace-nowrap">
               {t("Explore car deals")}

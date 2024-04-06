@@ -42,7 +42,7 @@ const Card = ({ imageUrl, city, height, description }) => {
               hovered ? "opacity-100" : "opacity-0"
             } transition-opacity duration-700`}
           >
-            <div className="px-6 text-white opacity-80 font-semibold">
+            <div className="px-6 text-white opacity-90 font-semibold">
               {t("Tbilisi")}
             </div>
             <img src={planeql} alt="" className="opacity-80 w-1/2 px-6" />

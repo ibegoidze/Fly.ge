@@ -45,19 +45,23 @@ const MonthDropdown = ({ currentMonth, onMonthChange }) => {
           arrow_drop_down
         </span>
       </div>
-      {isOpen && (
-        <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-md shadow-lg">
-          {months.map((month, index) => (
-            <div
-              key={index}
-              className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center text-textDark hover:text-primaryBlue"
-              onClick={() => handleMonthSelect(index)}
-            >
-              {t(`${month}`)}
-            </div>
-          ))}
-        </div>
-      )}
+      <div
+        className={`absolute z-10 w-full bg-white border border-gray-300 rounded-md shadow-lg transition-all duration-500
+        ${isOpen ? "opacity-100" : "opacity-0"}`}
+      >
+        {months.map((month, index) => (
+          <div
+            style={{
+              display: isOpen ? "flex" : "none",
+            }}
+            key={index}
+            className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center text-textDark hover:text-primaryBlue"
+            onClick={() => handleMonthSelect(index)}
+          >
+            {t(`${month}`)}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

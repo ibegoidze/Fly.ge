@@ -130,25 +130,24 @@ const DateSelector = () => {
             <img src={CalendarPic} alt="Calendar" className="w-5 h-5" />
           </div>
         </div>
-        {showCalendar && (
-          <div
-            ref={calendarRef}
-            className="absolute z-20 bg-white shadow-lg rounded-lg w-full lg:w-[calc(100%+10rem)]"
-            style={{ right: "0", top: "0" }}
-          >
-            <DatePicker
-              selectedDate={dates.departure}
-              selectedEndDate={dates.return}
-              onDateSelect={handleDateSelect}
-              isOpen={showCalendar}
-              onSubmit={(departure, returnDate) => {
-                dispatch(setReduxDates({ departure, return: returnDate }));
-                setShowCalendar(false);
-              }}
-              onClear={handleClearDates}
-            />
-          </div>
-        )}
+        <div
+          ref={calendarRef}
+          className={`absolute z-20 bg-white shadow-lg rounded-lg w-full lg:w-[calc(100%+10rem)] transition-all duration-500 ease-in-out transform-gpu 
+          ${showCalendar ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
+          style={{ right: "0", top: "0" }}
+        >
+          <DatePicker
+            selectedDate={dates.departure}
+            selectedEndDate={dates.return}
+            onDateSelect={handleDateSelect}
+            isOpen={showCalendar}
+            onSubmit={(departure, returnDate) => {
+              dispatch(setReduxDates({ departure, return: returnDate }));
+              setShowCalendar(false);
+            }}
+            onClear={handleClearDates}
+          />
+        </div>
       </div>
     </>
   );

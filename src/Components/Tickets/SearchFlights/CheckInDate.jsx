@@ -21,14 +21,14 @@ const CheckInDate = ({ title }) => {
   const handleMonthSelect = (index) => {
     dispatch(setCheckInMonth(index));
     setIsMonthOpen(false);
-    setIsDayOpen(false); 
+    setIsDayOpen(false);
   };
 
   // SELECT DAY
   const handleDaySelect = (day) => {
     dispatch(setCheckInDay(day));
     setIsDayOpen(false);
-    setIsMonthOpen(false); 
+    setIsMonthOpen(false);
   };
 
   // CLICK OUTSIDE CLOSES THE DROPDOWN
@@ -68,7 +68,7 @@ const CheckInDate = ({ title }) => {
             }`}
             onClick={() => {
               setIsMonthOpen(!isMonthOpen);
-              setIsDayOpen(false); 
+              setIsDayOpen(false);
             }}
           >
             {months[checkInMonth]} {new Date().getFullYear()}
@@ -81,23 +81,25 @@ const CheckInDate = ({ title }) => {
               arrow_drop_down
             </span>
           </div>
-          {isMonthOpen && (
-            <div className="absolute top-full left-0 bg-white border border-gray-300 text-sm rounded-md w-full z-30">
-              {months.map((month, index) => (
-                <div
-                  key={index}
-                  className={`cursor-pointer hover:bg-lightBlue py-1 px-3 font-semibold ${
-                    checkInMonth === index
-                      ? "text-primaryBlue"
-                      : "text-gray-500"
-                  }`}
-                  onClick={() => handleMonthSelect(index)}
-                >
-                  {month}
-                </div>
-              ))}
-            </div>
-          )}
+          <div
+            className={`absolute top-full left-0 bg-white border border-gray-300 text-sm rounded-md w-full z-30 transition-all duration-500
+              ${isMonthOpen ? "opacity-100" : "opacity-0"}`}
+          >
+            {months.map((month, index) => (
+              <div
+                style={{
+                  display: isMonthOpen ? "flex" : "none",
+                }}
+                key={index}
+                className={`cursor-pointer hover:bg-lightBlue py-1 px-3 font-semibold ${
+                  checkInMonth === index ? "text-primaryBlue" : "text-gray-500"
+                }`}
+                onClick={() => handleMonthSelect(index)}
+              >
+                {month}
+              </div>
+            ))}
+          </div>
         </div>
         {/* DAY */}
         <div className="relative">
@@ -108,7 +110,7 @@ const CheckInDate = ({ title }) => {
               }`}
               onClick={() => {
                 setIsDayOpen(!isDayOpen);
-                setIsMonthOpen(false); 
+                setIsMonthOpen(false);
               }}
             >
               {checkInDay}
@@ -121,21 +123,25 @@ const CheckInDate = ({ title }) => {
                 arrow_drop_down
               </span>
             </div>
-            {isDayOpen && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white border border-gray-300 rounded-md text-sm grid grid-cols-6 px-1 gap-1 w-32 z-30">
-                {daysArray.map((day) => (
-                  <div
-                    key={day}
-                    className={`cursor-pointer hover:bg-blue-100 px-2 flex justify-center rounded w-full font-semibold text-gray-500 ${
-                      checkInDay === day ? "text-primaryBlue" : ""
-                    }`}
-                    onClick={() => handleDaySelect(day)}
-                  >
-                    {day}
-                  </div>
-                ))}
-              </div>
-            )}
+            <div
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 bg-white border border-gray-300 rounded-md text-sm grid grid-cols-6 w-36 z-30 transition-all duration-300  
+                ${isDayOpen ? "opacity-100 h-auto" : "opacity-0 h-0"}`}
+            >
+              {daysArray.map((day) => (
+                <div
+                  key={day}
+                  className={`cursor-pointer hover:bg-blue-100 px-auto py-1 flex justify-center items-center rounded w-full font-semibold text-gray-500 ${
+                    checkInDay === day ? "text-primaryBlue bg-blue-100" : ""
+                  }`}
+                  style={{
+                    display: isDayOpen ? "flex" : "none",
+                  }}
+                  onClick={() => handleDaySelect(day)}
+                >
+                  {day}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

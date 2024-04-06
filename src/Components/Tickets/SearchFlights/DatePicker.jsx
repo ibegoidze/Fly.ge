@@ -128,7 +128,12 @@ const DatePicker = ({
 
   return (
     // MAIN CONTAINER
-    <div className="bg-white p-4 rounded shadow-lg absolute w-full">
+    <div
+      className="bg-white p-4 rounded shadow-lg absolute w-full"
+      style={{
+        display: isOpen ? "block" : "none",
+      }}
+    >
       {/* TOP CONTROL BAR WITH MONTH NAVIGATION AND NIGHTS COUNTER */}
       <div className="flex justify-between items-center mb-4">
         <button
