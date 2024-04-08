@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import TicketLogo from "../../../assets/Global/images/TicketLogo.png";
 import LanguageDropDown from "./LanguageDropDown";
 import BurgerMenu from "./BurgerMenu";
@@ -10,6 +10,7 @@ const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,6 +37,9 @@ const Header = () => {
       ? "text-primaryBlue font-semibold"
       : "text-textDark font-semibold text-gray-500 hover:text-primaryBlue transition duration-300 ";
 
+  const isTicketsActive =
+    location.pathname === "/" || location.pathname === "/Flights";
+
   return (
     <header className={`sticky top-0 bg-white z-50`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,10 +54,7 @@ const Header = () => {
           </a>
           <div className="flex items-center space-x-4">
             <nav className="space-x-4 hidden text-sm  lg:block noto-sans-georgian">
-              <NavLink
-                to="/"
-                className={({ isActive }) => getNavLinkClass(isActive)}
-              >
+              <NavLink to="/" className={getNavLinkClass(isTicketsActive)}>
                 {t("Tickets")}
               </NavLink>
               <NavLink

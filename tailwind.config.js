@@ -14,6 +14,7 @@ module.exports = {
         lightBlue: "#f0f6fd",
         backgroundGray: "#f4f6f8",
         offerBlack: "#3c3f49",
+        navBg: "#616C81",
       },
       screens: {
         custom: "830px",

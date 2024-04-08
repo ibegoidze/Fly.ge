@@ -134,6 +134,9 @@ const resources = {
       enterYourEmail: "Enter your Email",
       subscribe: "Subscribe",
       "all rights reserved": "all rights reserved",
+      "Travel details": "Travel details",
+      Search: "Search",
+      "Review and payment": "Review and payment",
     },
   },
   // GEORGIAN
@@ -270,6 +273,9 @@ const resources = {
       enterYourEmail: "შეიყვანეთ თქვენი მეილი",
       subscribe: "გამოიწერე",
       "all rights reserved": "ყველა უფლება დაცულია",
+      "Travel details": "მგზავრობის დეტალები",
+      Search: "ძებნა",
+      "Review and payment": "მიმოხილვა და გადახდა",
     },
   },
   // GERMAN
@@ -407,6 +413,9 @@ const resources = {
       enterYourEmail: "geben sie ihre E-Mail ein",
       subscribe: "Abonnieren",
       "all rights reserved": "alle Rechte vorbehalten",
+      "Travel details": "Reisedetails",
+      Search: "Suchen",
+      "Review and payment": "Überprüfung und Zahlung",
     },
   },
 };
