@@ -1,13 +1,20 @@
+import React, { useState } from "react";
 import Airports from "../../Tickets/SearchFlights/Airports";
 import DateSelector from "../../Tickets/SearchFlights/DateSelector";
 import EconomyClass from "../../Tickets/SearchFlights/EconomyClass";
 import OneWay from "../../Tickets/SearchFlights/OneWay";
 import Passengers from "../../Tickets/SearchFlights/Passengers";
 import SearchDropdown from "./SearchDropdown";
-
 import FlightsButton from "./FlightsButton";
+import Results from "./Results";
 
 function Search() {
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearchData = (data) => {
+    setSearchResults(data);
+  };
+
   return (
     <div className="z-10 relative">
       <div className=" bg-white h-auto w-full noto-sans-georgian shadow-lg">
@@ -52,13 +59,15 @@ function Search() {
                 />
               </div>
               <div>
-                {" "}
-                <FlightsButton />
+                {/* FILTER BUTTON */}
+                <FlightsButton onSearchData={handleSearchData} />
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* RESULTS COMPONENT */}
+      <Results searchData={searchResults} />
     </div>
   );
 }

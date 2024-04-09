@@ -1,12 +1,11 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-
+import { flightsData } from "../../../static.js";
 import SearchIcon from "../../../assets/Tickets/images/search.png";
 
-function FlightsButton() {
-  // TAB 1 STATES
+const FlightsButton = ({ onSearchData }) => {
   const oneWayState = useSelector((state) => state.oneWay.oneWayState);
-  const passengers = useSelector((state) => state.passengers.passengers);
   const selectedClass = useSelector((state) => state.class.selectedClass);
   const { dates } = useSelector((state) => state.dateSelection);
   const { selectedFromAirport, selectedToAirport } = useSelector(
@@ -14,12 +13,14 @@ function FlightsButton() {
   );
   const { t } = useTranslation();
 
+  // TRANSLATE CURRENT STATE FROM OTHER LANGUAGES TO ELNGLISH
   const stateMessage =
     oneWayState === "ცალმხრივი"
-      ? "Bilateral"
-      : oneWayState === "Einseitig" || oneWayState === "ორმხრივი"
       ? "Unilateral"
+      : oneWayState === "Einseitig" || oneWayState === "ორმხრივი"
+      ? "Bilateral"
       : oneWayState;
+
   const classMessage =
     selectedClass === "Economy klasse" || selectedClass === "ეკონომ კლასი"
       ? "Economy class"
@@ -33,21 +34,22 @@ function FlightsButton() {
       : selectedClass;
 
   const handleSearchClick = () => {
-    const passengersSummary = Object.entries(passengers)
-      .filter(([_, data]) => data.count > 0)
-      .map(([type, data]) => `${type}: ${data.count}`)
-      .join(", ");
-    alert(
-      `Way: ${stateMessage}\nPassengers: ${passengersSummary}\nClass: ${classMessage}\nFrom: ${
-        selectedFromAirport ? selectedFromAirport.name : "(not chosen)"
-      } to ${
-        selectedToAirport ? selectedToAirport.name : "(not chosen)"
-      }\n Departure: ${dates.departure}\n Return: ${dates.return} `
-    );
+    const filteredData = flightsData.filter((flight) => {
+      return (
+        flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
+        flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
+        flight.departure === dates.departure &&
+        flight.return === dates.return &&
+        flight.way === stateMessage &&
+        flight.class === classMessage
+      );
+    });
+
+    onSearchData(filteredData);
   };
+
   return (
     <div>
-      {" "}
       <button
         onClick={handleSearchClick}
         className="relative bg-blue-500 hover:bg-blue-700 text-md px-6 py-3 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14 min-h-12"
@@ -59,6 +61,6 @@ function FlightsButton() {
       </button>
     </div>
   );
-}
+};
 
 export default FlightsButton;

@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 import FlightsNavigation from "../Components/Flights/Search/FlightsNavigation";
 import Search from "../Components/Flights/Search/Search";
+import Results from "../Components/Flights/Search/Results";
 
 const Flight = () => {
   // TABS
   const [activeTab, setActiveTab] = useState("search");
+  const [searchData, setSearchData] = useState([]);
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+  const handleSearchData = (data) => {
+    setSearchData(data);
   };
 
   return (
@@ -21,7 +26,8 @@ const Flight = () => {
       <div className="tab-content">
         {activeTab === "search" && (
           <div>
-            <Search />
+            <Search onSearchData={handleSearchData} />
+            <Results searchData={searchData} />
           </div>
         )}
         {activeTab === "details" && <div>Details Content</div>}
