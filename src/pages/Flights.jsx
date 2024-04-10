@@ -27,7 +27,7 @@ const Flight = () => {
         {activeTab === "search" && (
           <div>
             <Search onSearchData={handleSearchData} />
-            <Results searchData={searchData} />
+            {/* <Results searchData={searchData} /> */}
           </div>
         )}
         {activeTab === "details" && <div>Details Content</div>}

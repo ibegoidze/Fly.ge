@@ -1,42 +1,46 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import ResultsContainer from "../../../assets/Flights/Search/ResultContainer.png";
+import ResultsDetails from "./ResultsDetails";
+import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
 
 const Results = ({ searchData }) => {
-  const passengers = useSelector((state) => state.passengers.passengers);
-
-  const totalPassengersCount = Object.values(passengers).reduce(
-    (total, passenger) => total + passenger.count,
-    0
-  );
-
   return (
-    <div className="bg-backgroundGray">
+    <div className="bg-backgroundGray pt-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="">
           {searchData.map((flight) => (
             <div
               key={flight.id}
-              className="mb-4 rounded-lg p-4  h-72 "
-              style={{
-                backgroundImage: `url(${ResultsContainer})`,
-                backgroundSize: "100%",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
+              className="mb-4 rounded-lg p-4 bg-white shadow-md   "
             >
               <ul>
                 <li>
-                  <span className="font-semibold">From:</span> {flight.from},
-                  <span className="font-semibold"> To:</span> {flight.to},
-                  <span className="font-semibold"> Departure:</span>{" "}
-                  {flight.departure},
-                  <span className="font-semibold"> Return:</span>{" "}
-                  {flight.return},<span className="font-semibold"> Way:</span>{" "}
-                  {flight.way},<span className="font-semibold"> Class:</span>{" "}
-                  {flight.class},
-                  <span className="font-semibold"> Total Price:</span> $
-                  {flight.price * totalPassengersCount}
+                  <div className="ENTIREDIV">
+                    <div className="TOPPART flex flex-col">
+                      <div className="flex">
+                        <div className="FLIGHINFORMATION flex py-5 w-4/6 bg-white gap-5">
+                          <div className="w-full">
+                            <ResultsDetails
+                              searchData={flight}
+                              isReturn={false}
+                            />
+                            <ResultsDetails
+                              searchData={flight}
+                              isReturn={true}
+                            />
+                          </div>
+                          <img
+                            src={VerticalLine}
+                            className="h-32 w-0.5"
+                            alt=""
+                          />
+                        </div>
+                        <div className="PRICEANDBOOK w-2/6  "></div>
+                      </div>
+                      <div className="IMAGE bg-blue-200 h-16"></div>
+                      <div className="SEEALL bg-yellow-200 h-16"></div>
+                    </div>
+                    <div className="EXTENTION bg-purple-200 h-96"></div>
+                  </div>
                 </li>
               </ul>
             </div>
