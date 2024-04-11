@@ -19,10 +19,10 @@ function ExploreAdventure() {
         />
       </div>
       <div className="w-full px-15 md:px-0 flex flex-col justify-center md:justify-start md:w-96  ">
-        <div className="text-center md:text-start text-lg font-bold text-textDark">
+        <div className="text-center md:text-start text-lg font-semibold text-textDark">
           {t("Discover adventures")}
         </div>
-        <div className="text-sm text-center md:text-start text-gray-500 font-semibold px-5 md:px-0">
+        <div className="text-sm text-center md:text-start text-gray-500 font-medium px-5 md:px-0">
           {t(
             "Helping you create a variety of adventures in your life and Simplifying the search and decision process is our mission. If Traveling is your nature, you often have to visit different countries or If you are looking for special moments, places to discover and Marking on the personal map, unforgettable shots in your life and It will be imprinted as memories, get to know our blog - discover and bookmark A new location on the travel map, get to know the culture of the peoples of the world and Choose the most interesting for you."
           )}

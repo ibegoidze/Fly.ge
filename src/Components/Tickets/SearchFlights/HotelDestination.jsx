@@ -23,7 +23,7 @@ const HotelDestination = () => {
 
   return (
     <div className="w-full lg:w-2/4">
-      <div className="text-sm font-semibold text-gray-500 mb-2">
+      <div className="text-sm font-medium text-gray-500 mb-2">
         {t("Destination")}
       </div>
       <div className="flex items-center border rounded-md border-borderGray border-solid  py-1 px-2">
@@ -34,7 +34,7 @@ const HotelDestination = () => {
           placeholder={t("Choose your destination")}
           value={hotelDestination}
           onChange={handleChange}
-          className="outline-none py-2 text-sm font-semibold w-full "
+          className="outline-none py-2 text-sm font-medium w-full "
         />
       </div>
     </div>

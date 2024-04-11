@@ -17,80 +17,80 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 flex gap-5 md:gap-0 pb-5">
           <div className="flex flex-col  w-1/2 whitespace-nowrap">
-            <div className="text-lg font-bold text-gray-500 pb-4 whitespace-normal">
+            <div className="text-lg font-semibold text-gray-500 pb-4 whitespace-normal">
               {t("network")}
             </div>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("airlines")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("airports")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("regions")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("countries")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("cities")}
             </span>
           </div>
           <div className="flex flex-col  w-1/2 whitespace-nowrap">
-            <div className="text-lg font-bold text-gray-500 pb-4 ">
+            <div className="text-lg font-semibold text-gray-500 pb-4 ">
               {t("company")}
             </div>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("whyUs")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("aboutUs")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("benefits")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("start")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("plans")}
             </span>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col md:flex-row">
           <div className=" flex-col  md:w-1/2 hidden md:flex">
-            <div className="text-lg font-bold text-gray-500 pb-4 ">
+            <div className="text-lg font-semibold text-gray-500 pb-4 ">
               {t("help")}
             </div>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("helpCenter")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("covidSupport")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("pressCenter")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("termsAndConditions")}
             </span>
-            <span className="text-sm font-semibold text-gray-400 pb-4 cursor-pointer ">
+            <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
               • {t("confidentiality")}
             </span>
           </div>
           <div className="flex flex-col gap-3  md:w-1/2">
-            <div className="text-lg font-bold text-gray-500 pb-4 ">
+            <div className="text-lg font-semibold text-gray-500 pb-4 ">
               {t("contact")}
             </div>
-            <div className="px-7 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-semibold text-gray-500 gap-5">
+            <div className="px-3 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-medium text-gray-500 gap-5">
               <img src={chatPice} alt="chat" />
               <span className="pr-16">{t("textUs")}</span>
             </div>
-            <div className="px-7 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-semibold text-gray-500 gap-5">
+            <div className="px-3 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-medium text-gray-500 gap-5">
               <img src={mailPic} alt="chat" />
               <span className="pr-16">fly@contact.ge</span>
             </div>
-            <div className="px-7 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-semibold text-gray-500 gap-5">
+            <div className="px-3 py-2 flex items-center bg-backgroundGray rounded-md text-sm font-medium text-gray-500 gap-5">
               <img src={phonePic} alt="chat" />
               <span className="">+995 525 123 320</span>
             </div>
@@ -101,7 +101,7 @@ function Footer() {
         <div className=" border-t border-b border-gray-200 py-5 w-full flex flex-col md:flex-row justify-between gap-5">
           <div className="flex  md:w-1/2 gap-5">
             <img src={mailBoxPic} alt="mailbox" className="hidden sm:flex " />
-            <div className="text-sm font-semibold text-gray-400">
+            <div className="text-sm font-medium text-gray-400">
               {t("subscribeText")}
             </div>
           </div>
@@ -109,11 +109,11 @@ function Footer() {
             <input
               type="text"
               id="subscribe"
-              className="outline-none focus:ring-0 border border-solid border-gray-300 transition-all duration-300 px-3 rounded w-2/3 text-sm text-gray-500 font-semibold"
+              className="outline-none focus:ring-0 border border-solid border-gray-300 transition-all duration-300 px-3 rounded w-2/3 text-sm text-gray-500 font-medium"
               placeholder={t("enterYourEmail")}
             />
 
-            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-7 rounded flex items-center">
+            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-2 px-7 rounded flex items-center">
               {t("subscribe")}
             </button>
           </div>
@@ -121,7 +121,7 @@ function Footer() {
         <div className="mt-7 flex flex-col md:flex-row justify-between">
           <div className="flex flex-col md:flex-row gap-5 items-center justify-between">
             <img src={TicketLogo} alt="Logo" />
-            <span className="text-sm font-semibold text-gray-400">
+            <span className="text-sm font-medium text-gray-400">
               FLY.GE 2021 {t("all rights reserved")}
             </span>
           </div>

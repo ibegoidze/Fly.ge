@@ -1,4 +1,4 @@
-import BlueLine from "../../../assets/Flights/Search/BlueLine.png";
+import BlueLine from "../../../assets/Flights/Search/LightLine.png";
 import BlueDot from "../../../assets/Flights/Search/BlueDot.png";
 import PlaneLogo from "../../../assets/Flights/Search/PlaneLogo.png";
 import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
@@ -15,7 +15,7 @@ function ResultsDetails({ searchData, isReturn }) {
   return (
     <div className="flex justify-around items-start mb-5">
       {/* IMAGE DIV */}
-      <div className="flex-none">
+      <div className="flex-none hidden sm:flex">
         <img
           src={isReturn ? DuckPic : PegasusPic}
           alt={isReturn ? "duck" : "pegasus"}

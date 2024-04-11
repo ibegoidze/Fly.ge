@@ -42,7 +42,7 @@ const Card = ({ imageUrl, city, height, description }) => {
               hovered ? "opacity-100" : "opacity-0"
             } transition-opacity duration-700`}
           >
-            <div className="px-6 text-white opacity-90 font-semibold">
+            <div className="px-6 text-white opacity-90 font-medium">
               {t("Tbilisi")}
             </div>
             <img src={planeql} alt="" className="opacity-80 w-1/2 px-6" />
@@ -50,13 +50,13 @@ const Card = ({ imageUrl, city, height, description }) => {
 
           <div className="text-white px-6 py-4 flex justify-between items-end">
             <div>
-              <div className="font-bold text-lg opacity-90">{city}</div>
-              <div className="text-sm font-semibold opacity-85">
+              <div className="font-semibold text-lg opacity-90">{city}</div>
+              <div className="text-sm font-medium opacity-85">
                 {description}
               </div>
             </div>
 
-            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-7 rounded flex items-center">
+            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-2 px-7 rounded flex items-center">
               {t("Reserve")}
             </button>
           </div>

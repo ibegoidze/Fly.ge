@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Airports from "../../Tickets/SearchFlights/Airports";
 import DateSelector from "../../Tickets/SearchFlights/DateSelector";
 import EconomyClass from "../../Tickets/SearchFlights/EconomyClass";
@@ -8,11 +8,15 @@ import SearchDropdown from "./SearchDropdown";
 import FlightsButton from "./FlightsButton";
 import Results from "./Results";
 
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
+
 function Search() {
-  const [searchResults, setSearchResults] = useState([]);
+  const dispatch = useDispatch();
+  const searchResults = useSelector((state) => state.searchResults);
 
   const handleSearchData = (data) => {
-    setSearchResults(data);
+    dispatch(setSearchResults(data));
   };
 
   return (
@@ -52,7 +56,7 @@ function Search() {
                 <SearchDropdown
                   selectorText="Times"
                   dropdownOptions={[
-                    "No transfer qles",
+                    "No transfer",
                     "One transfer",
                     "Couple transfer",
                   ]}

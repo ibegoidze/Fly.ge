@@ -152,7 +152,7 @@ const DatePicker = ({
           />
         </div>
         {/* NUMBER OF NIGHTS */}
-        <span className="hidden text-md font-semibold md:flex items-center  bg-primaryBlue text-white p-2.5 rounded gap-2 cursor-pointer">
+        <span className="hidden text-md font-medium md:flex items-center  bg-primaryBlue text-white p-2.5 rounded gap-2 cursor-pointer">
           <img src={NightsPic} alt="Bed" /> {calculateNights()} {t("Nights")}
         </span>
         {/* // NEXT MONTH SELECTOR */}
@@ -185,7 +185,7 @@ const DatePicker = ({
               <div className="grid grid-cols-7 text-center">
                 {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
                   (day, idx) => (
-                    <div key={idx} className="text-gray-300 font-semibold mb-5">
+                    <div key={idx} className="text-gray-300 font-medium mb-5">
                       {day}
                     </div>
                   )
@@ -196,7 +196,7 @@ const DatePicker = ({
                 {monthDays.map((day, idx) => (
                   <div
                     key={idx}
-                    className={`cursor-pointer font-semibold ${
+                    className={`cursor-pointer font-medium ${
                       day
                         ? isSelected(day)
                           ? "bg-primaryBlue text-white rounded-sm"
@@ -230,18 +230,18 @@ const DatePicker = ({
           <div className="icondiv flex justify-center items-center px-2 py-2 rounded bg-lightBlue">
             <img src={RaceArrows} alt="Race arrows" />
           </div>
-          <div className="text-primaryBlue font-semibold w-32">From - To</div>
+          <div className="text-primaryBlue font-medium w-32">From - To</div>
         </div>
         {/* // CANCEL AND SUBMIT BUTTONS */}
         <div className="flex justify-between md:justify-end items-center space-x-2 w-full ">
           <div
-            className="bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
+            className="bg-gray-200 hover:bg-gray-300 text-gray-500 font-medium px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
             onClick={onClear}
           >
             {t("Clear")}
           </div>
           <div
-            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold  px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-medium  px-2 py-1 md:py-2 md:px-6 rounded cursor-pointer"
             onClick={() => {
               onSubmit(localSelectedDate, localSelectedEndDate);
             }}

@@ -34,8 +34,8 @@ const Header = () => {
 
   const getNavLinkClass = (isActive) =>
     isActive
-      ? "text-primaryBlue font-semibold"
-      : "text-textDark font-semibold text-gray-500 hover:text-primaryBlue transition duration-300 ";
+      ? "text-primaryBlue font-medium"
+      : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300 ";
 
   const isTicketsActive =
     location.pathname === "/" || location.pathname === "/Flights";
@@ -78,7 +78,7 @@ const Header = () => {
             </nav>
             <LanguageDropDown />
             <button
-              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-semibold transition ease-in duration-150 noto-sans-georgian"
+              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-medium transition ease-in duration-150 noto-sans-georgian"
               style={{ borderRadius: "8px" }}
             >
               {t("Sign in")}

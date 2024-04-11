@@ -11,7 +11,7 @@ function Partners() {
   return (
     <div className="w-full bg-backgroundGray py-4 noto-sans-georgian">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col mt-5 py-4">
-        <div className="text-xl font-bold text-textDark pb-10">
+        <div className="text-xl font-semibold text-textDark pb-10">
           {t("Partner airline companies")}{" "}
         </div>
         <div className="flex flex-col sm:flex-row gap-5">

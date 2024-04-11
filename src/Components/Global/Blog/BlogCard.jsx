@@ -11,11 +11,11 @@ function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
       >
         {" "}
       </div>
-      <div className="flex gap-3 text-sm py-3">
-        <span className="bg-backgroundGray px-2 py-1.5 rounded font-semibold text-gray-500 cursor-pointer">
+      <div className="flex flex-col xs:flex-row gap-3 text-sm py-3">
+        <span className="bg-backgroundGray text-xs px-2 py-1.5  rounded font-semibold text-gray-500 cursor-pointer">
           {technology}
         </span>
-        <span className="bg-backgroundGray px-2 py-1.5 rounded font-semibold text-gray-500 cursor-pointer">
+        <span className="bg-backgroundGray text-xs px-2 py-1.5  rounded font-semibold text-gray-500 cursor-pointer">
           {technology}
         </span>
       </div>

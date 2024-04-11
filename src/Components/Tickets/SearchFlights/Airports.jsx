@@ -127,7 +127,7 @@ const AirportSelector = ({
               className="flex items-center text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
               onClick={() => handleSelect(airport)}
             >
-              <span className="text-md font-semibold mr-1">{airport.name}</span>
+              <span className="text-md font-medium mr-1">{airport.name}</span>
               <span className="text-xs font-bold text-gray-500 px-2 py-1 rounded">
                 {airport.id}
               </span>

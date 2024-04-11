@@ -86,7 +86,7 @@ function LanguageDropDown({ alwaysVisible = false }) {
         className="flex cursor-pointer items-center space-x-3"
       >
         <img src={selectedFlag} alt="Selected Flag" className="h-6 w-6 " />
-        <span className="font-semibold  text-sm noto-sans-georgian ">
+        <span className="font-medium  text-sm noto-sans-georgian ">
           {selectedLang}
         </span>
       </div>

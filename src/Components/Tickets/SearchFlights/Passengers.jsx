@@ -81,7 +81,7 @@ const Passengers = () => {
               remove
             </span>
           </button>
-          <span className="bg-white rounded-md font-semibold w-9 h-9 flex items-center justify-center border border-custom-grey">
+          <span className="bg-white rounded-md font-medium w-9 h-9 flex items-center justify-center border border-custom-grey">
             {count}
           </span>
           <button

@@ -108,7 +108,7 @@ const DateSelector = () => {
           <div className="text-gray-400 text-sm w-full text-left ">
             {t("Departure")}
           </div>
-          <div className="flex justify-between text-black text-md font-semibold pb-2">
+          <div className="flex justify-between text-black text-md font-medium pb-2">
             {dates.departure
               ? formatDate(dates.departure)
               : t("Select Departure Date")}
@@ -125,7 +125,7 @@ const DateSelector = () => {
           <div className="text-gray-400 text-sm w-full text-left ">
             {t("Return")}
           </div>
-          <div className="flex justify-between text-black text-md font-semibold pb-2">
+          <div className="flex justify-between text-black text-md font-medium pb-2">
             {dates.return ? formatDate(dates.return) : t("Select Return Date")}
             <img src={CalendarPic} alt="Calendar" className="w-5 h-5" />
           </div>
@@ -134,7 +134,7 @@ const DateSelector = () => {
           ref={calendarRef}
           className={`absolute z-20 bg-white shadow-lg rounded-lg w-full lg:w-[calc(100%+10rem)] transition-all duration-500 ease-in-out transform-gpu 
           ${showCalendar ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
-          style={{ right: "0", top: "0" }}
+          style={{ right: "0", top: "67px" }}
         >
           <DatePicker
             selectedDate={dates.departure}
