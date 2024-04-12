@@ -8,6 +8,7 @@ import dateSelectionReducer from "./SearchFlights/dateSlice";
 import hotelDestinationReducer from "./SearchFlights/HotelDestinationSlice";
 import { checkInSlice, checkOutSlice } from "./SearchFlights/checkSlice";
 import searchResultsReducer from "./SearchFlights/searchResults";
+import passengerSummaryReducer from "./SearchFlights/currentPassengersSlice";
 
 export const store = configureStore({
   reducer: {
@@ -21,5 +22,6 @@ export const store = configureStore({
     checkIn: checkInSlice.reducer,
     checkOut: checkOutSlice.reducer,
     searchResults: searchResultsReducer,
+    passengerSummary: passengerSummaryReducer,
   },
 });

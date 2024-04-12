@@ -4,7 +4,7 @@ import PlaneLogo from "../../../assets/Flights/Search/PlaneLogo.png";
 import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 import DuckPic from "../../../assets/Flights/Search/Duck.png";
 
-function ResultsDetails({ searchData, isReturn }) {
+function ResultsDetails({ flightsData, isReturn }) {
   // FORMAT DATE FROM NUMBERS TO DAY AND MONTH NAME
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -13,7 +13,7 @@ function ResultsDetails({ searchData, isReturn }) {
   };
 
   return (
-    <div className="flex justify-around items-start mb-5">
+    <div className="flex justify-between items-start mb-7 px-5">
       {/* IMAGE DIV */}
       <div className="flex-none hidden sm:flex">
         <img
@@ -23,8 +23,8 @@ function ResultsDetails({ searchData, isReturn }) {
       </div>
       {/* DATE */}
       <div className="flex-none flex w-20 flex-col justify-center">
-        <div className="font-semibold text-gray-500">
-          {formatDate(isReturn ? searchData.return : searchData.departure)}
+        <div className="font-medium text-gray-500">
+          {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>
         <span className="text-sm font-medium text-gray-500">
           {isReturn ? "Return" : "Departure"}
@@ -32,17 +32,17 @@ function ResultsDetails({ searchData, isReturn }) {
       </div>
       {/* TIME / CITY */}
       <div className="flex-none flex flex-col w-20 justify-center">
-        <div className="font-semibold text-textDark">
+        <div className="font-medium text-textDark">
           {isReturn ? "09:30" : "07:00"}
         </div>
         <div className="text-sm font-medium text-gray-500">
-          {isReturn ? searchData.to : searchData.from}
+          {isReturn ? flightsData.to : flightsData.from}
         </div>
       </div>
       {/* FLIGHT LINE */}
-      <div className="flex flex-col justify-start flex-none gap-2">
-        <div className="DEPARTURE">
-          <div className="flex items-end justify-center">
+      <div className="flex  justify-start flex-none gap-2">
+        <div className="DEPARTURE ">
+          <div className="flex items-end justify-center ">
             <div>
               <img
                 src={PlaneLogo}
@@ -52,7 +52,7 @@ function ResultsDetails({ searchData, isReturn }) {
                   top: "2px",
                 }}
               />
-              <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-semibold">
+              <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
                 1 transfer :
               </span>
             </div>
@@ -63,11 +63,11 @@ function ResultsDetails({ searchData, isReturn }) {
               alt="blue line"
             />
             <div className="flex items-center justify-center">
-              <span className="mb-8 absolute text-xs text-gray-500 font-semibold">
+              <span className="mb-8 absolute text-xs text-gray-500 font-medium">
                 3 hr, 20
               </span>
               <img src={BlueDot} alt="blue line" />
-              <span className="mt-9 absolute text-xs text-gray-400 font-semibold">
+              <span className="mt-9 absolute text-xs text-gray-400 font-medium">
                 DIRECT
               </span>
             </div>
@@ -80,15 +80,15 @@ function ResultsDetails({ searchData, isReturn }) {
             <img src={BlueDot} alt="blue line" />
           </div>
         </div>
-      </div>
-      {/* TIME / CITY */}
-      <div className="flex flex-col justify-center w-20">
-        <div className="font-semibold text-textDark">
-          {isReturn ? "11:00" : "09:10"}
+        {/* TIME / CITY */}
+        <div className="flex flex-col justify-center w-20">
+          <div className="font-medium text-textDark">
+            {isReturn ? "11:00" : "09:10"}
+          </div>
+          <span className="text-sm font-medium text-gray-500">
+            {isReturn ? flightsData.from : flightsData.to}
+          </span>
         </div>
-        <span className="text-sm font-medium text-gray-500">
-          {isReturn ? searchData.from : searchData.to}
-        </span>
       </div>
     </div>
   );

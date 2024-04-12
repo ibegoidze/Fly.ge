@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import Plane from "../../../assets/Tickets/images/Plane.png";
 import Hotel from "../../../assets/Tickets/images/Hotel.png";
 import Car from "../../../assets/Tickets/images/Car.png";
-import SearchIcon from "../../../assets/Tickets/images/search.png";
 // TAB 1 COMPONENTS
 import OneWay from "./OneWay";
 import Passengers from "./Passengers";
 import EconomyClass from "./EconomyClass";
 import Airports from "./Airports";
 import DateSelector from "./DateSelector";
+import SearchButton from "./SearchButton";
+
 // TAB 2 COMPONENTS
 import HotelDestination from "./HotelDestination";
 import CheckInDate from "./CheckInDate";
@@ -17,67 +18,15 @@ import SearchHotels from "./SearchHotels";
 // TAB 3 COMPONENT
 import CarRental from "./CarRental";
 // GLOBAL
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { flightsData } from "../../../static.js";
-import { setSearchResults } from "../../../Store/SearchFlights/searchResults.js";
 
 function SearchFlight() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("tab1");
-
-  // STATE USED TO FILTER
-  const oneWayState = useSelector((state) => state.oneWay.oneWayState);
-  const selectedClass = useSelector((state) => state.class.selectedClass);
-  const { dates } = useSelector((state) => state.dateSelection);
-  const { selectedFromAirport, selectedToAirport } = useSelector(
-    (state) => state.airports
-  );
 
   // CHANGE ACTIVE TAB
   const changeTab = (tab) => {
     setActiveTab(tab);
-  };
-
-  // SEARCH FILTERED DATA AND MOVE TO FLIGHTS PAGE
-  const handleSearchClick = () => {
-    // TRANSLATE CURRENT STATES TO ENGLIS
-    const stateMessage =
-      oneWayState === "ცალმხრივი"
-        ? "Unilateral"
-        : oneWayState === "Einseitig" || oneWayState === "ორმხრივი"
-        ? "Bilateral"
-        : oneWayState;
-    const classMessage =
-      selectedClass === "Economy klasse" || selectedClass === "ეკონომ კლასი"
-        ? "Economy class"
-        : selectedClass === "Premium klasse" ||
-          selectedClass === "პრემიუმ ეკონომ კლასი"
-        ? "Premium class"
-        : selectedClass === "Business klasse" ||
-          selectedClass === "ბიზნეს კლასი"
-        ? "Business class"
-        : selectedClass === "Erste klasse" || selectedClass === "პირველი კლასი"
-        ? "First class"
-        : selectedClass;
-    //  FILTER STATIC DATA
-    const filteredData = flightsData.filter((flight) => {
-      return (
-        flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
-        flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
-        flight.departure === dates.departure &&
-        flight.return === dates.return &&
-        flight.way === stateMessage &&
-        flight.class === classMessage
-      );
-    });
-    // SET FILTERED DATA AS A RESULT
-    dispatch(setSearchResults(filteredData));
-    // NAVIGATE TO FLIGHTS PAGE
-    navigate("/Flights");
   };
 
   return (
@@ -177,21 +126,7 @@ function SearchFlight() {
                   <div className="text-sm text-gray-400 font-medium">
                     {t("Search, book and purchase tickets for free in minutes")}
                   </div>
-                  <div>
-                    <button
-                      onClick={handleSearchClick}
-                      className="bg-blue-500 hover:bg-blue-700 text-lg px-5 py-3 rounded-md text-white font-medium flex items-center justify-center gap-4 min-w-14 min-h-14"
-                    >
-                      <img
-                        src={SearchIcon}
-                        alt="search icon"
-                        className="h-5 w-5"
-                      />
-                      <span className="hidden md:flex whitespace-nowrap">
-                        {t("Search for tickets")}
-                      </span>
-                    </button>
-                  </div>
+                  <SearchButton />
                 </div>
               </div>
             )}

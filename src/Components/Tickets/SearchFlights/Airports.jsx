@@ -183,7 +183,6 @@ const Airports = () => {
         from: selectedFromAirport.name,
         to: selectedToAirport.name,
       };
-      console.log("Flight data:", flightData);
     }
   }, [selectedFromAirport, selectedToAirport]);
 

@@ -13,12 +13,11 @@ import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
 
 function Search() {
   const dispatch = useDispatch();
-  const searchResults = useSelector((state) => state.searchResults);
+  const flightsData = useSelector((state) => state.searchResults);
 
   const handleSearchData = (data) => {
     dispatch(setSearchResults(data));
   };
-
   return (
     <div className="z-10 relative">
       <div className=" bg-white h-auto w-full noto-sans-georgian shadow-lg">
@@ -71,7 +70,7 @@ function Search() {
         </div>
       </div>
       {/* RESULTS COMPONENT */}
-      <Results searchData={searchResults} />
+      <Results flightsData={flightsData} />
     </div>
   );
 }

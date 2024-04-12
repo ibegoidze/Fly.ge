@@ -34,9 +34,6 @@ const Passengers = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleSubmit = () => {
-    console.log(
-      "Submission logic here. Currently, passenger state is already managed in Redux."
-    );
     setIsOpen(false);
   };
 

@@ -26,7 +26,6 @@ function SearchHotels() {
   const openBookingPage = () => {
     const url = constructBookingURL();
     window.open(url, "_blank");
-    console.log(city, checkin, checkout);
   };
 
   return (
