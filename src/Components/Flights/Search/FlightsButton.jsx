@@ -15,6 +15,8 @@ const FlightsButton = ({ onSearchData }) => {
     (state) => state.airports
   );
   const { t } = useTranslation();
+  const transferFilter = useSelector((state) => state.transferFilter);
+  console.log(transferFilter);
 
   // CALCULATE PASSENGERS SUMMARY FOR PRICE
   const calculatePassengerCountSummary = () => {
@@ -53,14 +55,15 @@ const FlightsButton = ({ onSearchData }) => {
         flight.departure === dates.departure &&
         flight.return === dates.return &&
         flight.way === stateMessage &&
-        flight.class === classMessage
+        flight.class === classMessage &&
+        (transferFilter === "Any" || flight.transfer === transferFilter)
       );
     });
 
     // UPDATE PASSENGERS SUMMARY
     const summary = calculatePassengerCountSummary();
     dispatch(setPassengerCountSummary(summary));
-    // PASS INFO TO PARETN TO DISPLAY IT IN RESULTS
+    // PASS INFO TO PARENT TO DISPLAY IT IN RESULTS
     onSearchData(filteredData, summary);
   };
 

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import ResultsDetails from "./ResultsDetails";
+import DirectFlight from "./DirectFlight";
 import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
 import BookButton from "./BookButton";
 import Line from "./Line";
+import TransferedFlight from "./TransferedFlight";
 
 const Results = ({ flightsData }) => {
   const [openFlightId, setOpenFlightId] = useState(null);
@@ -10,7 +11,6 @@ const Results = ({ flightsData }) => {
   const toggleExtension = (flightId) => {
     setOpenFlightId(openFlightId === flightId ? null : flightId);
   };
-
   return (
     <div className="bg-backgroundGray pt-10 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,14 +27,44 @@ const Results = ({ flightsData }) => {
                       <div className="flex">
                         <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
                           <div className="w-full">
-                            <ResultsDetails
-                              flightsData={flight}
-                              isReturn={false}
-                            />
-                            <ResultsDetails
-                              flightsData={flight}
-                              isReturn={true}
-                            />
+                            {flight.transfer > 1 ? (
+                              // CONDITIONALLY RENDER TRANSFEREDFLIGHTS IF TRANSFER IS MORE THAN 1
+                              <>
+                                {flight.transferWay === "departure" ? (
+                                  <TransferedFlight
+                                    flightsData={flight}
+                                    isReturn={false}
+                                  />
+                                ) : (
+                                  <DirectFlight
+                                    flightsData={flight}
+                                    isReturn={false}
+                                  />
+                                )}
+                                {flight.transferWay === "return" ? (
+                                  <TransferedFlight
+                                    flightsData={flight}
+                                    isReturn={true}
+                                  />
+                                ) : (
+                                  <DirectFlight
+                                    flightsData={flight}
+                                    isReturn={true}
+                                  />
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <DirectFlight
+                                  flightsData={flight}
+                                  isReturn={false}
+                                />
+                                <DirectFlight
+                                  flightsData={flight}
+                                  isReturn={true}
+                                />
+                              </>
+                            )}
                           </div>
                           <img
                             src={VerticalLine}

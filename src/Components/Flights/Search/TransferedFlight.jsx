@@ -4,7 +4,7 @@ import PlaneLogo from "../../../assets/Flights/Search/PlaneLogo.png";
 import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 import DuckPic from "../../../assets/Flights/Search/Duck.png";
 
-function ResultsDetails({ flightsData, isReturn }) {
+function TransferedFlight({ flightsData, isReturn }) {
   // FORMAT DATE FROM NUMBERS TO DAY AND MONTH NAME
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -53,7 +53,9 @@ function ResultsDetails({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                1 transfer :
+                {flightsData.transferCity.length > 0
+                  ? `${flightsData.transferCity.length} Transfer`
+                  : "Direct"}
               </span>
             </div>
             <img
@@ -68,12 +70,24 @@ function ResultsDetails({ flightsData, isReturn }) {
               </span>
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
-                DIRECT
+                {flightsData.transferCity ? flightsData.transferCity[0] : "TUR"}
               </span>
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-20 relative"
+              className="h-0.5 w-7 relative"
+              style={{ bottom: "5px" }}
+              alt="blue line"
+            />
+            <div className="flex items-center justify-center">
+              <img src={BlueDot} alt="blue line" />
+              <span className="mt-9 absolute text-xs text-gray-400 font-medium">
+                {flightsData.transferCity ? flightsData.transferCity[1] : "DIR"}
+              </span>
+            </div>
+            <img
+              src={BlueLine}
+              className="h-0.5 w-10 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -94,4 +108,4 @@ function ResultsDetails({ flightsData, isReturn }) {
   );
 }
 
-export default ResultsDetails;
+export default TransferedFlight;

@@ -10,6 +10,7 @@ import Results from "./Results";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
+import TransferFilter from "./TransferFilter";
 
 function Search() {
   const dispatch = useDispatch();
@@ -35,15 +36,8 @@ function Search() {
             <div className="sm:px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-400 font-semibold flex gap-2">
                 {" "}
-                <SearchDropdown
-                  selectorText="Transfer"
-                  dropdownOptions={[
-                    "No transfer",
-                    "One transfer",
-                    "Couple transfer",
-                  ]}
-                />
-                <SearchDropdown
+                <TransferFilter selectorText="Transfer" />
+                {/* <SearchDropdown
                   selectorText="Airlines"
                   dropdownOptions={[
                     "Pegasus",
@@ -59,7 +53,7 @@ function Search() {
                     "One transfer",
                     "Couple transfer",
                   ]}
-                />
+                /> */}
               </div>
               <div>
                 {/* FILTER BUTTON */}
