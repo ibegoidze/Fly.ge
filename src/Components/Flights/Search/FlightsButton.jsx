@@ -16,7 +16,6 @@ const FlightsButton = ({ onSearchData }) => {
   );
   const { t } = useTranslation();
   const transferFilter = useSelector((state) => state.transferFilter);
-  console.log(transferFilter);
 
   // CALCULATE PASSENGERS SUMMARY FOR PRICE
   const calculatePassengerCountSummary = () => {
