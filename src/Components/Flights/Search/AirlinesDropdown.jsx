@@ -1,76 +1,75 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Switch from "@mui/material/Switch";
+import {
+  toggleDropdown,
+  toggleAllAirlines,
+  toggleAirlineSelection,
+  closeDropdown,
+} from "../../../Store/SearchFlights/airlinesSlice";
 
 const AirlinesDropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const isOpen = useSelector((state) => state.airlines.isOpen);
+  const selectedAirlines = useSelector(
+    (state) => state.airlines.selectedAirlines
+  );
+  const windowWidth = useSelector((state) => state.airlines.windowWidth);
+  const selectorRef = useSelector((state) => state.airlines.selectorRef);
+  const dispatch = useDispatch();
+
   const dropdownRef = useRef(null);
-  const selectorRef = useRef(null);
-  const [selectedAirlines, setSelectedAirlines] = useState([]);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Initialize windowWidth
-  const [isSelected, setIsSelected] = useState(false);
-  const label = { inputProps: { "aria-label": "Switch demo" } };
 
-  // TOGGLE DROPDOWN VISIBILITY
-  const toggleDropdown = () => setIsOpen((prevState) => !prevState);
-
-  // HANDLE WINDOW RESIZE
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth); // Update windowWidth on resize
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // HANDLE CLICK OUTSIDE DROPDOWN
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
         dropdownRef.current &&
+        selectorRef &&
+        selectorRef.current &&
         !dropdownRef.current.contains(event.target) &&
         event.target !== selectorRef.current
       ) {
-        setIsOpen(false);
+        dispatch(closeDropdown());
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [selectorRef]);
+  }, [dispatch, selectorRef]);
 
-  // Handle airline selection
-  const handleAirlineSelection = (airline) => {
-    setSelectedAirlines((prev) =>
-      prev.includes(airline)
-        ? prev.filter((selectedAirline) => selectedAirline !== airline)
-        : [...prev, airline]
-    );
-  };
-
-  // Toggle switch to select/deselect all airlines
   const toggleSwitch = () => {
-    if (isSelected) {
-      // Deselect all airlines
-      setIsSelected(false);
-      setSelectedAirlines([]);
-    } else {
-      // Select all airlines
-      setIsSelected(true);
-      setSelectedAirlines(["Airline 1", "Airline 2", "Airline 3"]);
-    }
+    dispatch(toggleAllAirlines());
   };
+
+  const handleAirlineSelection = (airline) => {
+    dispatch(toggleAirlineSelection(airline));
+  };
+
+  const airlines = [
+    "Pegasus",
+    "Turkish Airlines",
+    "Wizzair",
+    "Georgian Airways",
+    "Ryanair",
+    "Emirates",
+    "Lufthansa",
+    "Delta Air Lines",
+    "British Airways",
+    "Air France",
+    "Qatar Airways",
+    "Singapore Airlines",
+  ];
 
   return (
     <div className="relative">
       {/* SELECTOR */}
       <div
         ref={selectorRef}
-        className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 ${
+        className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 overflow-y-hidden ${
           isOpen ? "text-blue-500" : "text-gray-600"
         } bg-gray-100 text-sm font-medium ${
           isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
         } `}
-        onClick={toggleDropdown}
+        onClick={() => dispatch(toggleDropdown())}
       >
         Airlines
         <span
@@ -83,64 +82,44 @@ const AirlinesDropdown = () => {
       {/* DROPDOWN */}
       <div
         ref={dropdownRef}
-        className={`absolute z-20 w-52 h-96 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-hidden whitespace-nowrap ${
+        className={`absolute z-20 w-52 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden  ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         style={{
           left: windowWidth <= 768 ? "50%" : undefined,
           transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
           borderRadius: "0 0 0.375rem 0.375rem",
-          maxHeight: "200px",
-          overflowY: "auto",
+          overflow: "hidden",
         }}
       >
-        {/* CHECKBOX OPTIONS */}
-        <div className="flex justify-between items-center px-4">
-          <div>All Airlines</div>
-          <Switch
-            value="checkedA"
-            inputProps={{ "aria-label": "Switch A" }}
-            className="text-red-200"
-            onClick={toggleSwitch}
-            // color="gray-200"
-          />
-        </div>
-        <div className="flex flex-col px-4 py-2">
-          <div
-            className="flex items-center cursor-pointer"
-            onClick={() => handleAirlineSelection("Airline 1")}
-          >
-            <input
-              type="checkbox"
-              className="form-checkbox h-4 w-4 text-primaryBlue mr-2"
-              checked={selectedAirlines.includes("Airline 1")}
-              onChange={() => {}}
+        <div className="h-96" style={{ maxHeight: "250px" }}>
+          {/* CHECKBOX OPTIONS */}
+          <div className="flex justify-between items-center px-4">
+            <div>All Airlines</div>
+            <Switch
+              value="checkedA"
+              inputProps={{ "aria-label": "Switch A" }}
+              className="text-red-200"
+              checked={selectedAirlines.length === airlines.length}
+              onChange={toggleSwitch}
             />
-            <span className="text-sm text-gray-600">Airline 1</span>
           </div>
-          <div
-            className="flex items-center cursor-pointer"
-            onClick={() => handleAirlineSelection("Airline 2")}
-          >
-            <input
-              type="checkbox"
-              className="form-checkbox h-4 w-4 text-primaryBlue mr-2"
-              checked={selectedAirlines.includes("Airline 2")}
-              onChange={() => {}}
-            />
-            <span className="text-sm text-gray-600">Airline 2</span>
-          </div>
-          <div
-            className="flex items-center cursor-pointer"
-            onClick={() => handleAirlineSelection("Airline 3")}
-          >
-            <input
-              type="checkbox"
-              className="form-checkbox h-4 w-4 text-primaryBlue mr-2"
-              checked={selectedAirlines.includes("Airline 3")}
-              onChange={() => {}}
-            />
-            <span className="text-sm text-gray-600">Airline 3</span>
+          <div className="flex flex-col px-4 py-2 gap-4 h-52 overflow-y-auto custom-scrollbar w-[calc(100%-4px)]">
+            {airlines.map((airline, index) => (
+              <div
+                key={index}
+                className="flex items-center cursor-pointer"
+                onClick={() => handleAirlineSelection(airline)}
+              >
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-primaryBlue mr-3"
+                  checked={selectedAirlines.includes(airline)}
+                  onChange={() => {}}
+                />
+                <span className="text-sm text-gray-600">{airline}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

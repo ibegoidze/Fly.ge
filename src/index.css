@@ -45,3 +45,20 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
+/* SCROLLBAR IN AIRLINES DROPDOWN FLIGHTS PAGE */
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  padding-right: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c6cbd1;
+  border-radius: 8px;
+  max-height: 50px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #e9edf1;
+}

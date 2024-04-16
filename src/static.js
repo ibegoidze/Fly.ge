@@ -889,7 +889,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 890,
   },
   {
@@ -902,7 +902,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 1040,
   },
   {
@@ -915,7 +915,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 530,
   },
   {
@@ -928,7 +928,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 770,
   },
   {
@@ -941,7 +941,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 910,
   },
   {
@@ -954,7 +954,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 1080,
   },
   {
@@ -967,7 +967,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 540,
   },
   {
@@ -980,7 +980,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 790,
   },
   {
@@ -993,7 +993,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 940,
   },
   {
@@ -1006,7 +1006,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 1110,
   },
   {
@@ -1019,7 +1019,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 550,
   },
   {
@@ -1032,7 +1032,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 800,
   },
   {
@@ -1045,7 +1045,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 950,
   },
   {
@@ -1058,7 +1058,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 1120,
   },
   {
@@ -1071,7 +1071,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 570,
   },
   {
@@ -1084,7 +1084,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 820,
   },
   {
@@ -1097,7 +1097,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 950,
   },
   {
@@ -1109,7 +1109,7 @@ export const flightsData = [
     way: "Bilateral",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 450,
   },
   {
@@ -1122,7 +1122,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "1",
     transferWay: "return",
-    transferCity: ["TUR"],
+    transferCity: ["AMS"],
     price: 1300,
   },
   {
@@ -1738,7 +1738,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -1751,7 +1751,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -1764,7 +1764,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -1777,7 +1777,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -1790,7 +1790,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -1803,7 +1803,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -1816,7 +1816,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -1829,7 +1829,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -1842,7 +1842,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -1855,7 +1855,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -1868,7 +1868,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -1881,7 +1881,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -1894,7 +1894,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -1907,7 +1907,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -1920,7 +1920,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -1933,7 +1933,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -1946,7 +1946,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "departure",
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -1959,8 +1959,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -1973,8 +1972,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -1987,8 +1985,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -2001,8 +1998,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -2015,8 +2011,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -2029,8 +2024,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 950,
   },
   {
@@ -2043,8 +2037,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1100,
   },
   {
@@ -2057,8 +2050,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 1500,
   },
   {
@@ -2071,8 +2063,7 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
-    transferCity: ["TUR", "BER"],
+    transferCity: ["SPA", "FRA"],
     price: 800,
   },
   {
@@ -2085,7 +2076,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 950,
   },
@@ -2099,7 +2089,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1100,
   },
@@ -2113,7 +2102,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1500,
   },
@@ -2127,7 +2115,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 800,
   },
@@ -2141,7 +2128,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 950,
   },
@@ -2155,7 +2141,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1100,
   },
@@ -2169,7 +2154,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1500,
   },
@@ -2183,7 +2167,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 800,
   },
@@ -2197,7 +2180,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 950,
   },
@@ -2211,7 +2193,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1100,
   },
@@ -2225,7 +2206,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1500,
   },
@@ -2239,7 +2219,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 800,
   },
@@ -2253,7 +2232,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 950,
   },
@@ -2267,7 +2245,6 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1100,
   },
