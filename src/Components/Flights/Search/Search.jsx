@@ -12,6 +12,7 @@ import AirlinesDropdown from "./AirlinesDropdown";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
+import TimeDropdown from "./TimeDropdown";
 
 function Search() {
   const dispatch = useDispatch();
@@ -39,23 +40,7 @@ function Search() {
                 {" "}
                 <TransferDropdown selectorText="Transfer" />
                 <AirlinesDropdown />
-                {/* <SearchDropdown
-                  selectorText="Airlines"
-                  dropdownOptions={[
-                    "Pegasus",
-                    "Georgian Airways",
-                    "Wizzair",
-                    "Turkish Airlines",
-                  ]}
-                />
-                <SearchDropdown
-                  selectorText="Times"
-                  dropdownOptions={[
-                    "No transfer",
-                    "One transfer",
-                    "Couple transfer",
-                  ]}
-                /> */}
+                <TimeDropdown />
               </div>
               <div>
                 {/* FILTER BUTTON */}

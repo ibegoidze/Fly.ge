@@ -14,6 +14,10 @@ const FlightsButton = ({ onSearchData }) => {
   const { selectedFromAirport, selectedToAirport } = useSelector(
     (state) => state.airports
   );
+  const selectedAirlines = useSelector(
+    (state) => state.airlines.selectedAirlines
+  );
+
   const { t } = useTranslation();
   const transferFilter = useSelector((state) => state.transferFilter);
 
@@ -48,6 +52,8 @@ const FlightsButton = ({ onSearchData }) => {
   // CLICK TO FILTER AND DISPLAY IN RESULTS
   const handleSearchClick = () => {
     const filteredData = flightsData.filter((flight) => {
+      const { departure, return: returnAirlines } = flight.airlines;
+      const selectedAirlinesSet = new Set([...selectedAirlines]);
       return (
         flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
         flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
@@ -55,7 +61,9 @@ const FlightsButton = ({ onSearchData }) => {
         flight.return === dates.return &&
         flight.way === stateMessage &&
         flight.class === classMessage &&
-        (transferFilter === "Any" || flight.transfer === transferFilter)
+        (transferFilter === "Any" || flight.transfer === transferFilter) &&
+        (selectedAirlinesSet.has(departure) ||
+          selectedAirlinesSet.has(returnAirlines))
       );
     });
 

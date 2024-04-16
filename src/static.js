@@ -47,6 +47,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "4",
     price: 400,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 2,
@@ -58,6 +62,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 350,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 3,
@@ -69,6 +77,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 600,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 4,
@@ -80,6 +92,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 700,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 5,
@@ -91,6 +107,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 80,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 6,
@@ -102,6 +122,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 450,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 7,
@@ -113,6 +137,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 650,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 8,
@@ -124,6 +152,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 750,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 9,
@@ -135,6 +167,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 850,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 10,
@@ -146,6 +182,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 500,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 11,
@@ -157,6 +197,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 750,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 12,
@@ -167,7 +211,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 840,
+    price: 850,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 13,
@@ -179,6 +227,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 970,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 14,
@@ -190,6 +242,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 550,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 15,
@@ -201,6 +257,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 450,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 16,
@@ -212,6 +272,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 720,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 17,
@@ -223,6 +287,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 880,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 18,
@@ -234,6 +302,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 19,
@@ -245,6 +317,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 490,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 20,
@@ -256,6 +332,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 470,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 21,
@@ -267,6 +347,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 780,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 22,
@@ -278,6 +362,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 870,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 23,
@@ -289,6 +377,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 990,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 24,
@@ -300,6 +392,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 570,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 25,
@@ -311,6 +407,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 460,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 26,
@@ -322,6 +422,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 730,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 27,
@@ -333,6 +437,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 890,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 28,
@@ -344,6 +452,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 960,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 29,
@@ -355,6 +467,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 490,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 30,
@@ -366,6 +482,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 480,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
 
   {
@@ -378,6 +498,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 850,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 32,
@@ -389,6 +513,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 33,
@@ -400,6 +528,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1050,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 34,
@@ -411,6 +543,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 650,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 35,
@@ -422,6 +558,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 550,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
 
   {
@@ -434,6 +574,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 900,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 37,
@@ -445,6 +589,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1000,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 38,
@@ -456,6 +604,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 39,
@@ -467,6 +619,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 700,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 40,
@@ -478,6 +634,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 600,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 41,
@@ -489,6 +649,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 440,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 42,
@@ -500,6 +664,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 590,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 43,
@@ -511,6 +679,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 730,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 44,
@@ -522,6 +694,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 880,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 45,
@@ -533,6 +709,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 450,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 46,
@@ -544,6 +724,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 610,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 47,
@@ -555,6 +739,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 750,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 48,
@@ -566,6 +754,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 900,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 49,
@@ -577,6 +769,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 460,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 50,
@@ -588,6 +784,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 630,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 51,
@@ -599,6 +799,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 770,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 52,
@@ -610,6 +814,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 920,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 53,
@@ -621,6 +829,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 470,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 54,
@@ -632,6 +844,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 650,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 55,
@@ -643,6 +859,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 790,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 56,
@@ -654,6 +874,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 940,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 57,
@@ -665,6 +889,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 480,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 58,
@@ -676,6 +904,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 670,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 59,
@@ -687,6 +919,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 810,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 60,
@@ -698,6 +934,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 960,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 61,
@@ -709,6 +949,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 490,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 62,
@@ -722,6 +966,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 690,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 63,
@@ -735,6 +983,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 830,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 64,
@@ -748,6 +1000,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 980,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 65,
@@ -761,6 +1017,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 500,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 66,
@@ -774,6 +1034,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 710,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 67,
@@ -787,6 +1051,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 850,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 68,
@@ -800,6 +1068,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1000,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 69,
@@ -813,6 +1085,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 510,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 70,
@@ -826,6 +1102,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 730,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 71,
@@ -839,6 +1119,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 870,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 72,
@@ -852,6 +1136,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1020,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 73,
@@ -865,6 +1153,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 520,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 74,
@@ -878,6 +1170,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 750,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 75,
@@ -891,6 +1187,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 890,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 76,
@@ -904,6 +1204,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 1040,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 77,
@@ -917,6 +1221,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 530,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 78,
@@ -930,6 +1238,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 770,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 79,
@@ -943,6 +1255,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 910,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 80,
@@ -956,6 +1272,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 1080,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 81,
@@ -969,6 +1289,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 540,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 82,
@@ -982,6 +1306,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 790,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 83,
@@ -995,6 +1323,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 940,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 84,
@@ -1008,6 +1340,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 1110,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 85,
@@ -1021,6 +1357,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 550,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 86,
@@ -1034,6 +1374,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 800,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 87,
@@ -1047,6 +1391,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 950,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 88,
@@ -1060,6 +1408,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 1120,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 89,
@@ -1073,6 +1425,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 570,
+    airlines: {
+      departure: "Pegasus",
+      return: "Turkish Airlines",
+    },
   },
   {
     id: 90,
@@ -1086,6 +1442,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 820,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 91,
@@ -1099,6 +1459,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 92,
@@ -1111,6 +1475,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 450,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 93,
@@ -1124,6 +1492,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["AMS"],
     price: 1300,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 94,
@@ -1137,6 +1509,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 850,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 95,
@@ -1150,6 +1526,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 96,
@@ -1163,6 +1543,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 97,
@@ -1176,6 +1560,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 98,
@@ -1189,6 +1577,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 99,
@@ -1202,6 +1594,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 100,
@@ -1215,6 +1611,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 101,
@@ -1228,6 +1628,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 102,
@@ -1241,6 +1645,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 103,
@@ -1254,6 +1662,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 104,
@@ -1267,6 +1679,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 105,
@@ -1280,6 +1696,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 106,
@@ -1293,6 +1713,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 107,
@@ -1306,6 +1730,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 108,
@@ -1319,6 +1747,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 109,
@@ -1332,6 +1764,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 110,
@@ -1345,6 +1781,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 111,
@@ -1358,6 +1798,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 112,
@@ -1371,6 +1815,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 113,
@@ -1384,6 +1832,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 114,
@@ -1397,6 +1849,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 115,
@@ -1410,6 +1866,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 116,
@@ -1423,6 +1883,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 117,
@@ -1436,6 +1900,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 118,
@@ -1449,6 +1917,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 119,
@@ -1462,6 +1934,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 120,
@@ -1475,6 +1951,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 121,
@@ -1488,6 +1968,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 122,
@@ -1501,6 +1985,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 123,
@@ -1514,6 +2002,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 124,
@@ -1527,6 +2019,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 125,
@@ -1540,6 +2036,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 126,
@@ -1553,6 +2053,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 127,
@@ -1566,6 +2070,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 128,
@@ -1579,6 +2087,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 129,
@@ -1593,6 +2105,10 @@ export const flightsData = [
 
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 130,
@@ -1607,6 +2123,10 @@ export const flightsData = [
 
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 131,
@@ -1618,9 +2138,12 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 132,
@@ -1632,9 +2155,12 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 133,
@@ -1646,9 +2172,12 @@ export const flightsData = [
     class: "Economy class",
     transfer: "2",
     transferWay: "return",
-
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 134,
@@ -1662,6 +2191,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 135,
@@ -1675,6 +2208,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 136,
@@ -1688,6 +2225,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 137,
@@ -1701,6 +2242,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 138,
@@ -1714,6 +2259,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 139,
@@ -1727,6 +2276,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 140,
@@ -1740,6 +2293,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 141,
@@ -1753,6 +2310,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 142,
@@ -1766,6 +2327,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 143,
@@ -1779,6 +2344,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 144,
@@ -1792,6 +2361,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 145,
@@ -1805,6 +2378,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 146,
@@ -1818,6 +2395,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 147,
@@ -1831,6 +2412,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 148,
@@ -1844,6 +2429,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 149,
@@ -1857,6 +2446,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 150,
@@ -1870,6 +2463,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 151,
@@ -1883,6 +2480,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 152,
@@ -1896,6 +2497,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 153,
@@ -1909,6 +2514,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 154,
@@ -1922,6 +2531,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 155,
@@ -1935,6 +2548,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 156,
@@ -1948,6 +2565,10 @@ export const flightsData = [
     transferWay: "departure",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 157,
@@ -1961,6 +2582,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 158,
@@ -1974,6 +2599,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 159,
@@ -1987,6 +2616,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 160,
@@ -2000,6 +2633,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 161,
@@ -2013,6 +2650,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 162,
@@ -2026,6 +2667,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 163,
@@ -2039,6 +2684,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 164,
@@ -2052,6 +2701,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 165,
@@ -2065,6 +2718,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["SPA", "FRA"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 166,
@@ -2078,6 +2735,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 167,
@@ -2091,6 +2752,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 168,
@@ -2104,6 +2769,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 169,
@@ -2117,6 +2786,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 170,
@@ -2130,6 +2803,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 171,
@@ -2143,6 +2820,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 172,
@@ -2156,6 +2837,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 173,
@@ -2169,6 +2854,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 174,
@@ -2182,6 +2871,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 175,
@@ -2195,6 +2888,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 176,
@@ -2208,6 +2905,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1500,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 177,
@@ -2221,6 +2922,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 178,
@@ -2234,6 +2939,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 179,
@@ -2247,6 +2956,10 @@ export const flightsData = [
     transferWay: "return",
     transferCity: ["TUR", "BER"],
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 180,
@@ -2257,7 +2970,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1550,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 181,
@@ -2269,6 +2986,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 182,
@@ -2280,6 +3001,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 183,
@@ -2291,6 +3016,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 184,
@@ -2301,7 +3030,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1550,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 185,
@@ -2313,6 +3046,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 186,
@@ -2324,6 +3061,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 187,
@@ -2335,6 +3076,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 188,
@@ -2345,7 +3090,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1530,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 189,
@@ -2357,6 +3106,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 190,
@@ -2368,6 +3121,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 191,
@@ -2379,6 +3136,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 192,
@@ -2389,7 +3150,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1510,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 193,
@@ -2401,6 +3166,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 194,
@@ -2412,6 +3181,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 195,
@@ -2423,6 +3196,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 196,
@@ -2433,7 +3210,11 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1505,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 197,
@@ -2445,6 +3226,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 800,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 198,
@@ -2456,6 +3241,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 950,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 199,
@@ -2467,6 +3256,10 @@ export const flightsData = [
     class: "Economy class",
     transfer: "none",
     price: 1100,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
   {
     id: 200,
@@ -2477,6 +3270,10 @@ export const flightsData = [
     way: "Bilateral",
     class: "Economy class",
     transfer: "none",
-    price: 1500,
+    price: 1590,
+    airlines: {
+      departure: "Turkish Airlines",
+      return: "Pegasus",
+    },
   },
 ];

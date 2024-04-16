@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react"; // USESTATE FOR MANAGING OPEN/CLOSE STATE
 import { useSelector, useDispatch } from "react-redux";
 import Switch from "@mui/material/Switch";
 import {
@@ -9,7 +9,7 @@ import {
 } from "../../../Store/SearchFlights/airlinesSlice";
 
 const AirlinesDropdown = () => {
-  const isOpen = useSelector((state) => state.airlines.isOpen);
+  const [isOpen, setIsOpen] = useState(false);
   const selectedAirlines = useSelector(
     (state) => state.airlines.selectedAirlines
   );
@@ -19,22 +19,18 @@ const AirlinesDropdown = () => {
 
   const dropdownRef = useRef(null);
 
+  // CLICK OUTSIDE CLOSES DROPDOWN
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        selectorRef &&
-        selectorRef.current &&
-        !dropdownRef.current.contains(event.target) &&
-        event.target !== selectorRef.current
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         dispatch(closeDropdown());
+        setIsOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [dispatch, selectorRef]);
+  }, [dispatch]);
 
   const toggleSwitch = () => {
     dispatch(toggleAllAirlines());
@@ -43,7 +39,7 @@ const AirlinesDropdown = () => {
   const handleAirlineSelection = (airline) => {
     dispatch(toggleAirlineSelection(airline));
   };
-
+  const toggleDropdown = () => (isOpen ? setIsOpen(false) : setIsOpen(true));
   const airlines = [
     "Pegasus",
     "Turkish Airlines",
@@ -58,7 +54,7 @@ const AirlinesDropdown = () => {
     "Qatar Airways",
     "Singapore Airlines",
   ];
-
+  console.log("Selected Airlines:", selectedAirlines);
   return (
     <div className="relative">
       {/* SELECTOR */}
@@ -69,7 +65,7 @@ const AirlinesDropdown = () => {
         } bg-gray-100 text-sm font-medium ${
           isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
         } `}
-        onClick={() => dispatch(toggleDropdown())}
+        onClick={toggleDropdown}
       >
         Airlines
         <span
@@ -97,6 +93,7 @@ const AirlinesDropdown = () => {
           <div className="flex justify-between items-center px-4">
             <div>All Airlines</div>
             <Switch
+              id="Switch"
               value="checkedA"
               inputProps={{ "aria-label": "Switch A" }}
               className="text-red-200"
@@ -112,12 +109,15 @@ const AirlinesDropdown = () => {
                 onClick={() => handleAirlineSelection(airline)}
               >
                 <input
+                  id={airline}
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-primaryBlue mr-3"
                   checked={selectedAirlines.includes(airline)}
                   onChange={() => {}}
                 />
-                <span className="text-sm text-gray-600">{airline}</span>
+                <span className="text-sm text-gray-600 font-medium ">
+                  {airline}
+                </span>
               </div>
             ))}
           </div>

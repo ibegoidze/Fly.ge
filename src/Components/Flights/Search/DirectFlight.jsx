@@ -21,14 +21,22 @@ function DirectFlight({ flightsData, isReturn }) {
     }
   };
 
+  // CONDITIONALLY SELECT IMAGE BASED ON FLIGHT DATA AND ISRETURN PROP
+  const selectImage = () => {
+    if (!isReturn) {
+      return flightsData.airlines.departure === "Pegasus"
+        ? DuckPic
+        : PegasusPic;
+    } else {
+      return flightsData.airlines.return === "Pegasus" ? DuckPic : PegasusPic;
+    }
+  };
+
   return (
     <div className="flex justify-between items-start mb-7 px-5">
       {/* IMAGE DIV */}
       <div className="flex-none hidden sm:flex">
-        <img
-          src={isReturn ? DuckPic : PegasusPic}
-          alt={isReturn ? "duck" : "pegasus"}
-        />
+        <img src={selectImage()} alt={isReturn ? "duck" : "pegasus"} />
       </div>
       {/* DATE */}
       <div className="flex-none flex w-20 flex-col justify-center">
