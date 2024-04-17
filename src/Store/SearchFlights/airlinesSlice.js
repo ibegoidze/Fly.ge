@@ -1,4 +1,3 @@
-// airlinesSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -32,7 +31,11 @@ export const airlinesSlice = createSlice({
       state.isOpen = false;
     },
     toggleAllAirlines: (state) => {
-      if (state.selectedAirlines.length === 0) {
+      if (
+        state.selectedAirlines.length === 0 ||
+        state.selectedAirlines.length !== initialState.selectedAirlines.length
+      ) {
+        // IF NO AIRLINES ARE SELECTED OR NOT ALL AIRLINES ARE SELECTED SELECT ALL
         state.selectedAirlines = [
           "Pegasus",
           "Turkish Airlines",
@@ -48,6 +51,7 @@ export const airlinesSlice = createSlice({
           "Singapore Airlines",
         ];
       } else {
+        // OTHERWISE, CLEAR ALL SELECTED AIRLINES
         state.selectedAirlines = [];
       }
     },

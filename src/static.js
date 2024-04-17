@@ -45,11 +45,11 @@ export const flightsData = [
     return: "2024-04-27",
     way: "Bilateral",
     class: "Economy class",
-    transfer: "4",
+    transfer: "none",
     price: 400,
     airlines: {
-      departure: "Pegasus",
-      return: "Turkish Airlines",
+      departure: "Turkish Airlines",
+      return: "Pegasus",
     },
   },
   {

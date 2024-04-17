@@ -1,12 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
-import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import Typography from "@mui/material/Typography";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setDepartureTime,
+  setReturnTime,
+} from "../../../Store/SearchFlights/timesSlice";
 
 const TimeDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [sliderValue, setSliderValue] = useState(0); // Initial slider value
   const dropdownRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const { departureTime, returnTime } = useSelector((state) => state.times);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -25,20 +30,27 @@ const TimeDropdown = () => {
     };
   }, []);
 
-  const handleSliderChange = (event, newValue) => {
-    setSliderValue(newValue);
+  const handleDepartureChange = (event, newValue) => {
+    dispatch(setDepartureTime(newValue));
+  };
+
+  const handleReturnChange = (event, newValue) => {
+    dispatch(setReturnTime(newValue));
   };
 
   const formatHour = (value) => {
-    const hour = Math.floor(value / 60);
-    return `${hour < 10 ? "0" + hour : hour}:00`;
+    return `${value < 10 ? "0" + value : value}:00`;
   };
 
   return (
     <div className="relative" ref={dropdownRef}>
       {/* SELECTOR */}
       <div
-        className="cursor-pointer flex items-center justify-between w-32 px-2 lg:px-4 overflow-y-hidden text-gray-600 bg-gray-100 text-sm font-medium rounded-md py-2"
+        className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 ${
+          isOpen ? "text-blue-500" : "text-gray-600"
+        } bg-gray-100 text-sm font-medium ${
+          isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
+        } `}
         onClick={toggleDropdown}
       >
         Time
@@ -50,45 +62,59 @@ const TimeDropdown = () => {
         </span>
       </div>
       {/* DROPDOWN */}
-      {isOpen && (
-        <div className="absolute z-20 w-52 h-52 shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden">
-          <Box sx={{ p: 2 }}>
-            <Slider
-              className="w-full mt-16"
-              aria-label="Time"
-              defaultValue={sliderValue}
-              value={sliderValue}
-              onChange={handleSliderChange}
-              valueLabelDisplay="auto"
-              ValueLabelComponent={(props) => (
-                <ValueLabel {...props} formatHour={formatHour} />
-              )}
-              step={60}
-              min={0}
-              max={1440}
-            />
-          </Box>
+      <div
+        className={`absolute z-20 w-72 shadow-sm bg-gray-100 rounded-md overflow-y-hidden transition-all duration-300
+    ${isOpen ? "max-h-52 opacity-100" : "max-h-0 opacity-0"}
+  `}
+        style={{ borderRadius: "0 0.375rem 0.375rem 0.375rem" }}
+      >
+        <div className="text-sm text-gray-500 flex items-center gap-2 px-6 pt-5">
+          Departure <span>-</span> Return
         </div>
-      )}
+        <div className="px-6 py-5 ">
+          <div className="mb-4">
+            <div className="flex items-center mb-3">
+              <span className="text-gray-400 font-medium flex mx-1">
+                Departure -{" "}
+              </span>
+              <span className="text-primaryBlue font-medium">
+                {formatHour(departureTime[0])} - {formatHour(departureTime[1])}
+              </span>
+            </div>
+            <Slider
+              size="small"
+              value={departureTime}
+              step={2}
+              onChange={handleDepartureChange}
+              valueLabelDisplay="auto"
+              valueLabelFormat={formatHour}
+              min={0}
+              max={24}
+            />
+          </div>
+          <div>
+            <div className="flex items-center mb-3">
+              <span className="text-gray-400 font-medium flex mx-1">
+                Return -{" "}
+              </span>
+              <span className="text-primaryBlue font-medium">
+                {formatHour(returnTime[0])} - {formatHour(returnTime[1])}
+              </span>
+            </div>
+            <Slider
+              size="small"
+              value={returnTime}
+              step={2}
+              onChange={handleReturnChange}
+              valueLabelDisplay="auto"
+              valueLabelFormat={formatHour}
+              min={0}
+              max={24}
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  );
-};
-
-const ValueLabel = ({ children, open, value, formatHour }) => {
-  return (
-    <Typography
-      component="span"
-      sx={{
-        left: `${(value / 1440) * 100}%`,
-        position: "absolute",
-        top: -30,
-        transform: "translateX(-50%)",
-        whiteSpace: "nowrap",
-      }}
-      className={open ? "MuiSlider-valueLabelOpen" : ""}
-    >
-      {formatHour(value)}
-    </Typography>
   );
 };
 

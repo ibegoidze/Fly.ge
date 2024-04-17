@@ -11,6 +11,7 @@ import searchResultsReducer from "./SearchFlights/searchResults";
 import passengerSummaryReducer from "./SearchFlights/currentPassengersSlice";
 import transferReducer from "./SearchFlights/transferSlice";
 import airlinesReducer from "./SearchFlights/airlinesSlice";
+import timesReducer from "./SearchFlights/timesSlice";
 
 export const store = configureStore({
   reducer: {
@@ -27,5 +28,6 @@ export const store = configureStore({
     passengerSummary: passengerSummaryReducer,
     transferFilter: transferReducer,
     airlines: airlinesReducer,
+    times: timesReducer,
   },
 });
