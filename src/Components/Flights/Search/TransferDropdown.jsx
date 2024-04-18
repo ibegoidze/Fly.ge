@@ -74,9 +74,8 @@ const TransferDropdown = ({ selectorText }) => {
         style={{
           left: windowWidth <= 768 ? "50%" : undefined,
           transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
-          borderRadius: "0 0 0.375rem 0.375rem",
+          borderRadius: "0 0.375rem 0.375rem 0.375rem",
           maxHeight: "200px",
-          overflowY: "auto",
         }}
       >
         {/* OPTIONS */}

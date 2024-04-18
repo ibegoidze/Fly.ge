@@ -75,44 +75,49 @@ const AirlinesDropdown = () => {
         </span>
       </div>
       {/* DROPDOWN */}
-      {isOpen && (
-        <div className="absolute z-20 w-52 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden">
-          <div className="h-96" style={{ maxHeight: "250px" }}>
-            {/* CHECKBOX OPTIONS */}
-            <div className="flex justify-between items-center px-4">
-              <div>All Airlines</div>
-              <Switch
-                id="Switch"
-                value="checkedA"
-                inputProps={{ "aria-label": "Switch A" }}
-                className="text-red-200"
-                checked={selectedAirlines.length === airlines.length}
-                onChange={toggleSwitch}
-              />
-            </div>
-            <div className="flex flex-col px-4 py-2 gap-4 h-52 overflow-y-auto custom-scrollbar w-[calc(100%-4px)]">
-              {airlines.map((airline, index) => (
-                <div
-                  key={index}
-                  className="flex items-center cursor-pointer"
-                  onClick={() => handleAirlineSelection(airline)}
-                >
-                  <input
-                    id={airline}
-                    type="checkbox"
-                    className="form-checkbox h-4 w-4 text-primaryBlue mr-3"
-                    checked={selectedAirlines.includes(airline)}
-                    onChange={() => {}}
-                  />
-                  <span className="text-sm text-gray-600 font-medium ">
-                    {airline}
-                  </span>
-                </div>
-              ))}
-            </div>
+      <div
+        className={`absolute z-20 w-52 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden 
+        ${isOpen ? "pacity-100" : "opacity-0 pointer-events-none"}`}
+        style={{
+          maxHeight: "250px",
+          borderRadius: "0 0.375rem 0.375rem 0.375rem",
+        }}
+      >
+        <div className="h-96" style={{ maxHeight: "250px" }}>
+          {/* CHECKBOX OPTIONS */}
+          <div className="flex justify-between items-center px-4">
+            <div>All Airlines</div>
+            <Switch
+              id="Switch"
+              value="checkedA"
+              inputProps={{ "aria-label": "Switch A" }}
+              className="text-red-200"
+              checked={selectedAirlines.length === airlines.length}
+              onChange={toggleSwitch}
+            />
+          </div>
+          <div className="flex flex-col px-4 py-2 gap-4 h-52 overflow-y-auto custom-scrollbar w-[calc(100%-4px)]">
+            {airlines.map((airline, index) => (
+              <div
+                key={index}
+                className="flex items-center cursor-pointer"
+                onClick={() => handleAirlineSelection(airline)}
+              >
+                <input
+                  id={airline}
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-primaryBlue mr-3"
+                  checked={selectedAirlines.includes(airline)}
+                  onChange={() => {}}
+                />
+                <span className="text-sm text-gray-600 font-medium ">
+                  {airline}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

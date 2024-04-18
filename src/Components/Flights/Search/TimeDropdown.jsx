@@ -6,11 +6,18 @@ import {
   setReturnTime,
 } from "../../../Store/SearchFlights/timesSlice";
 
+import DeparturePlane from "../../../assets/Tickets/images/AirportFrom.png";
+import ReturnPlane from "../../../assets/Tickets/images/AirportTo.png";
+import Arrows from "../../../assets/Flights/Search/twoWayArrow.png";
+
 const TimeDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const dispatch = useDispatch();
 
+  const { selectedFromAirport, selectedToAirport } = useSelector(
+    (state) => state.airports
+  );
   const { departureTime, returnTime } = useSelector((state) => state.times);
 
   const toggleDropdown = () => {
@@ -41,7 +48,6 @@ const TimeDropdown = () => {
   const formatHour = (value) => {
     return `${value < 10 ? "0" + value : value}:00`;
   };
-
   return (
     <div className="relative" ref={dropdownRef}>
       {/* SELECTOR */}
@@ -63,17 +69,21 @@ const TimeDropdown = () => {
       </div>
       {/* DROPDOWN */}
       <div
-        className={`absolute z-20 w-72 shadow-sm bg-gray-100 rounded-md overflow-y-hidden transition-all duration-300
-    ${isOpen ? "max-h-52 opacity-100" : "max-h-0 opacity-0"}
-  `}
-        style={{ borderRadius: "0 0.375rem 0.375rem 0.375rem" }}
+        className={`absolute z-20 w-80 shadow-sm bg-gray-100 rounded-md overflow-y-hidden transition-all duration-300
+        ${isOpen ? "pacity-100" : "opacity-0 pointer-events-none"}`}
+        style={{
+          borderRadius: "0 0.375rem 0.375rem 0.375rem",
+          maxHeight: "250px",
+        }}
       >
-        <div className="text-sm text-gray-500 flex items-center gap-2 px-6 pt-5">
-          Departure <span>-</span> Return
+        <div className="text-md font-medium text-gray-500 flex items-center gap-2 px-6 pt-5">
+          {selectedFromAirport?.city || "Departure"} <img src={Arrows} alt="" />{" "}
+          {selectedToAirport?.city || "Return"}
         </div>
         <div className="px-6 py-5 ">
           <div className="mb-4">
             <div className="flex items-center mb-3">
+              <img src={DeparturePlane} alt="" className="mr-2" />
               <span className="text-gray-400 font-medium flex mx-1">
                 Departure -{" "}
               </span>
@@ -94,6 +104,7 @@ const TimeDropdown = () => {
           </div>
           <div>
             <div className="flex items-center mb-3">
+              <img src={ReturnPlane} alt="" className="mr-2" />
               <span className="text-gray-400 font-medium flex mx-1">
                 Return -{" "}
               </span>

@@ -11,6 +11,23 @@ function TransferedFlight({ flightsData, isReturn }) {
     const options = { day: "numeric", month: "long" };
     return date.toLocaleDateString("en-US", options);
   };
+  // FUNCTION TO FORMAT TIME FROM NUMBERS TO "hh:mm" FORMAT
+  const formatTime = (hour) => {
+    const hours = Math.floor(hour); // Extract integer part for hours
+    const minutes = Math.round((hour - hours) * 60); // Calculate minutes
+
+    // Format hours and minutes with leading zeros if necessary
+    const formattedHours = hours.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    });
+    const formattedMinutes = minutes.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    });
+
+    return `${formattedHours}:${formattedMinutes}`;
+  };
 
   return (
     <div className="flex justify-between items-start mb-7 px-5">
@@ -33,7 +50,9 @@ function TransferedFlight({ flightsData, isReturn }) {
       {/* TIME / CITY */}
       <div className="flex-none flex flex-col w-20 justify-center">
         <div className="font-medium text-textDark">
-          {isReturn ? "09:30" : "07:00"}
+          {isReturn
+            ? formatTime(flightsData.retStartTime)
+            : formatTime(flightsData.depStartTime)}
         </div>
         <div className="text-sm font-medium text-gray-500">
           {isReturn ? flightsData.to : flightsData.from}
@@ -97,7 +116,9 @@ function TransferedFlight({ flightsData, isReturn }) {
         {/* TIME / CITY */}
         <div className="flex flex-col justify-center w-20">
           <div className="font-medium text-textDark">
-            {isReturn ? "11:00" : "09:10"}
+            {isReturn
+              ? formatTime(flightsData.retEndTime)
+              : formatTime(flightsData.depEndTime)}
           </div>
           <span className="text-sm font-medium text-gray-500">
             {isReturn ? flightsData.from : flightsData.to}

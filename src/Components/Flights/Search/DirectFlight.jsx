@@ -31,6 +31,29 @@ function DirectFlight({ flightsData, isReturn }) {
       return flightsData.airlines.return === "Pegasus" ? DuckPic : PegasusPic;
     }
   };
+  const formatTime = (hour) => {
+    const hourString = hour.toString();
+    const integerPart = Math.floor(hour);
+    const decimalPart = hour - integerPart;
+
+    let formattedHour = "";
+    let formattedMinute = "";
+
+    if (hourString.length === 1 || integerPart < 10) {
+      formattedHour = `0${integerPart}`;
+    } else {
+      formattedHour = integerPart.toString();
+    }
+
+    if (decimalPart === 0) {
+      formattedMinute = "00";
+    } else {
+      const decimalMinute = Math.round(decimalPart * 10);
+      formattedMinute = `${decimalMinute}0`.padStart(2, "0");
+    }
+
+    return `${formattedHour}:${formattedMinute}`;
+  };
 
   return (
     <div className="flex justify-between items-start mb-7 px-5">
@@ -50,7 +73,9 @@ function DirectFlight({ flightsData, isReturn }) {
       {/* TIME / CITY */}
       <div className="flex-none flex flex-col w-20 justify-center">
         <div className="font-medium text-textDark">
-          {isReturn ? "09:30" : "07:00"}
+          {isReturn
+            ? formatTime(flightsData.retStartTime)
+            : formatTime(flightsData.depStartTime)}
         </div>
         <div className="text-sm font-medium text-gray-500">
           {isReturn ? flightsData.to : flightsData.from}
@@ -104,7 +129,9 @@ function DirectFlight({ flightsData, isReturn }) {
         {/* TIME / CITY */}
         <div className="flex flex-col justify-center w-20">
           <div className="font-medium text-textDark">
-            {isReturn ? "11:00" : "09:10"}
+            {isReturn
+              ? formatTime(flightsData.retEndTime)
+              : formatTime(flightsData.depEndTime)}
           </div>
           <span className="text-sm font-medium text-gray-500">
             {isReturn ? flightsData.from : flightsData.to}
