@@ -11,23 +11,48 @@ function TransferedFlight({ flightsData, isReturn }) {
     const options = { day: "numeric", month: "long" };
     return date.toLocaleDateString("en-US", options);
   };
+
   // FUNCTION TO FORMAT TIME FROM NUMBERS TO "hh:mm" FORMAT
   const formatTime = (hour) => {
-    const hours = Math.floor(hour); // Extract integer part for hours
-    const minutes = Math.round((hour - hours) * 60); // Calculate minutes
-
-    // Format hours and minutes with leading zeros if necessary
-    const formattedHours = hours.toLocaleString("en-US", {
-      minimumIntegerDigits: 2,
-      useGrouping: false,
-    });
-    const formattedMinutes = minutes.toLocaleString("en-US", {
-      minimumIntegerDigits: 2,
-      useGrouping: false,
-    });
-
-    return `${formattedHours}:${formattedMinutes}`;
+    const integerPart = Math.floor(hour);
+    const formattedHour =
+      integerPart < 10 ? `0${integerPart}` : `${integerPart}`;
+    const decimalMinute = Math.round((hour - integerPart) * 10);
+    const formattedMinute =
+      decimalMinute === 0 ? "00" : `${decimalMinute}0`.padStart(2, "0");
+    return `${formattedHour}:${formattedMinute}`;
   };
+
+  // FORMAT FLIGHT TIME
+  const formatFlightTime = (startTime, endTime) => {
+    const startHour = Math.floor(startTime);
+    const startMinute = Math.round((startTime - startHour) * 60);
+    const endHour = Math.floor(endTime);
+    const endMinute = Math.round((endTime - endHour) * 60);
+
+    const totalHours = endHour - startHour;
+    const totalMinutes = endMinute - startMinute;
+
+    const formattedHours = totalHours > 0 ? `${totalHours} hours` : "";
+    const formattedMinutes =
+      totalMinutes > 0 ? `${totalMinutes} ` : totalHours > 0 ? "0" : "";
+
+    return `${formattedHours}${
+      formattedHours && formattedMinutes ? ", " : ""
+    }${formattedMinutes}`;
+  };
+
+  // FLIGHT TIME IN DEPARTURE
+  const depFlightTime = formatFlightTime(
+    flightsData.depStartTime,
+    flightsData.depEndTime
+  );
+
+  // FLIGHT TIME IN RETURN
+  const retFlightTime = formatFlightTime(
+    flightsData.retStartTime,
+    flightsData.retEndTime
+  );
 
   return (
     <div className="flex justify-between items-start mb-7 px-5">
@@ -85,8 +110,9 @@ function TransferedFlight({ flightsData, isReturn }) {
             />
             <div className="flex items-center justify-center">
               <span className="mb-8 absolute text-xs text-gray-500 font-medium">
-                3 hr, 20
+                {isReturn ? retFlightTime : depFlightTime}
               </span>
+
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
                 {flightsData.transferCity ? flightsData.transferCity[0] : "TUR"}
