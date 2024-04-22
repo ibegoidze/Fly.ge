@@ -23,37 +23,6 @@ function TransferedFlight({ flightsData, isReturn }) {
     return `${formattedHour}:${formattedMinute}`;
   };
 
-  // FORMAT FLIGHT TIME
-  const formatFlightTime = (startTime, endTime) => {
-    const startHour = Math.floor(startTime);
-    const startMinute = Math.round((startTime - startHour) * 60);
-    const endHour = Math.floor(endTime);
-    const endMinute = Math.round((endTime - endHour) * 60);
-
-    const totalHours = endHour - startHour;
-    const totalMinutes = endMinute - startMinute;
-
-    const formattedHours = totalHours > 0 ? `${totalHours} hours` : "";
-    const formattedMinutes =
-      totalMinutes > 0 ? `${totalMinutes} ` : totalHours > 0 ? "0" : "";
-
-    return `${formattedHours}${
-      formattedHours && formattedMinutes ? ", " : ""
-    }${formattedMinutes}`;
-  };
-
-  // FLIGHT TIME IN DEPARTURE
-  const depFlightTime = formatFlightTime(
-    flightsData.depStartTime,
-    flightsData.depEndTime
-  );
-
-  // FLIGHT TIME IN RETURN
-  const retFlightTime = formatFlightTime(
-    flightsData.retStartTime,
-    flightsData.retEndTime
-  );
-
   return (
     <div className="flex justify-between items-start mb-7 px-5">
       {/* IMAGE DIV */}
@@ -110,7 +79,9 @@ function TransferedFlight({ flightsData, isReturn }) {
             />
             <div className="flex items-center justify-center">
               <span className="mb-8 absolute text-xs text-gray-500 font-medium">
-                {isReturn ? retFlightTime : depFlightTime}
+                {isReturn
+                  ? flightsData.retFlightTime
+                  : flightsData.depFlightTime}
               </span>
 
               <img src={BlueDot} alt="blue line" />

@@ -4,13 +4,10 @@ import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
 import BookButton from "./BookButton";
 import Line from "./Line";
 import TransferedFlight from "./TransferedFlight";
+import { useSelector } from "react-redux";
+import SeeAllBar from "./SeeAllBar";
 
 const Results = ({ flightsData }) => {
-  const [openFlightId, setOpenFlightId] = useState(null);
-
-  const toggleExtension = (flightId) => {
-    setOpenFlightId(openFlightId === flightId ? null : flightId);
-  };
   return (
     <div className="bg-backgroundGray pt-10 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,33 +74,8 @@ const Results = ({ flightsData }) => {
                         </div>
                       </div>
                       <Line />
-                      <div className="SEEALL h-12 flex justify-between px-5 items-center cursor-pointer">
-                        <div className="flex gap-5">
-                          <div className="rounded-full bg-gray-50 border px-4 py-1.5 font-medium text-sm text-gray-500 ">
-                            class
-                          </div>
-                          <div className="rounded-full bg-gray-50 border px-4 py-1.5 font-medium text-sm text-gray-500 ">
-                            passengers
-                          </div>
-                          <div className="rounded-full bg-gray-50 border px-4 py-1.5 font-medium text-sm text-gray-500 ">
-                            luggage
-                          </div>
-                        </div>
-                        <div
-                          className="SEEALL h-12 flex justify-end items-center text-sm font-medium text-primaryBlue"
-                          onClick={() => toggleExtension(flight.id)}
-                        >
-                          See all
-                        </div>
-                      </div>
+                      <SeeAllBar flightsData={flight} />
                     </div>
-                    <div
-                      className={`EXTENTION bg-purple-200 ${
-                        openFlightId === flight.id
-                          ? "transition-all ease-in duration-300 h-96 "
-                          : "transition-all ease-out duration-300 h-0"
-                      }`}
-                    ></div>
                   </div>
                 </li>
               </ul>
