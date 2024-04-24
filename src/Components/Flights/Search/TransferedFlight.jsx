@@ -5,22 +5,26 @@ import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 import DuckPic from "../../../assets/Flights/Search/Duck.png";
 
 function TransferedFlight({ flightsData, isReturn }) {
-  // FORMAT DATE FROM NUMBERS TO DAY AND MONTH NAME
+  // FORMAT DATE
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    const options = { day: "numeric", month: "long" };
-    return date.toLocaleDateString("en-US", options);
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "long" });
+    return `${day} ${month}`;
   };
 
-  // FUNCTION TO FORMAT TIME FROM NUMBERS TO "hh:mm" FORMAT
-  const formatTime = (hour) => {
-    const integerPart = Math.floor(hour);
-    const formattedHour =
-      integerPart < 10 ? `0${integerPart}` : `${integerPart}`;
-    const decimalMinute = Math.round((hour - integerPart) * 10);
-    const formattedMinute =
-      decimalMinute === 0 ? "00" : `${decimalMinute}0`.padStart(2, "0");
-    return `${formattedHour}:${formattedMinute}`;
+  // CALCULATE TIME DIFFERENCE
+  const calculateTimeDifference = (start, end) => {
+    const startTime = new Date(`2024-01-01 ${start}`);
+    const endTime = new Date(`2024-01-01 ${end}`);
+    const difference = endTime.getTime() - startTime.getTime();
+    const hours = Math.floor(difference / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    if (minutes === 0) {
+      return `${hours}hr`;
+    } else {
+      return `${hours}hr, ${minutes}`;
+    }
   };
 
   return (
@@ -44,9 +48,7 @@ function TransferedFlight({ flightsData, isReturn }) {
       {/* TIME / CITY */}
       <div className="flex-none flex flex-col w-20 justify-center">
         <div className="font-medium text-textDark">
-          {isReturn
-            ? formatTime(flightsData.retStartTime)
-            : formatTime(flightsData.depStartTime)}
+          {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
         </div>
         <div className="text-sm font-medium text-gray-500">
           {isReturn ? flightsData.to : flightsData.from}
@@ -80,8 +82,14 @@ function TransferedFlight({ flightsData, isReturn }) {
             <div className="flex items-center justify-center">
               <span className="mb-8 absolute text-xs text-gray-500 font-medium">
                 {isReturn
-                  ? flightsData.retFlightTime
-                  : flightsData.depFlightTime}
+                  ? calculateTimeDifference(
+                      flightsData.retStartTime,
+                      flightsData.retEndTime
+                    )
+                  : calculateTimeDifference(
+                      flightsData.depStartTime,
+                      flightsData.depEndTime
+                    )}
               </span>
 
               <img src={BlueDot} alt="blue line" />
@@ -113,9 +121,7 @@ function TransferedFlight({ flightsData, isReturn }) {
         {/* TIME / CITY */}
         <div className="flex flex-col justify-center w-20">
           <div className="font-medium text-textDark">
-            {isReturn
-              ? formatTime(flightsData.retEndTime)
-              : formatTime(flightsData.depEndTime)}
+            {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
           </div>
           <span className="text-sm font-medium text-gray-500">
             {isReturn ? flightsData.from : flightsData.to}

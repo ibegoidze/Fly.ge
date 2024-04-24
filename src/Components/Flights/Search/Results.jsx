@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import DirectFlight from "./DirectFlight";
 import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
 import BookButton from "./BookButton";
 import Line from "./Line";
 import TransferedFlight from "./TransferedFlight";
-import { useSelector } from "react-redux";
 import SeeAllBar from "./SeeAllBar";
 
 const Results = ({ flightsData }) => {

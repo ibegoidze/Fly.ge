@@ -17,7 +17,7 @@ const FlightsButton = ({ onSearchData }) => {
   const selectedAirlines = useSelector(
     (state) => state.airlines.selectedAirlines
   );
-  const { departureTime, returnTime } = useSelector((state) => state.times);
+  // const { departureTime, returnTime } = useSelector((state) => state.times);
   const { t } = useTranslation();
   const transferFilter = useSelector((state) => state.transferFilter);
 
@@ -52,12 +52,11 @@ const FlightsButton = ({ onSearchData }) => {
   // CLICK TO FILTER AND DISPLAY IN RESULTS
   const handleSearchClick = () => {
     const filteredData = flightsData.filter((flight) => {
-      const { depStartTime, retStartTime } = flight;
-      console.log(depStartTime, retStartTime);
-      const isDepartureTimeInRange =
-        depStartTime >= departureTime[0] && depStartTime < departureTime[1];
-      const isReturnTimeInRange =
-        retStartTime >= returnTime[0] && retStartTime <= returnTime[1];
+      // const { depStartTime, retStartTime } = flight.times;
+      // const isDepartureTimeInRange =
+      //   depStartTime >= departureTime[0] && depStartTime < departureTime[1];
+      // const isReturnTimeInRange =
+      //   retStartTime >= returnTime[0] && retStartTime <= returnTime[1];
 
       const { departure, return: returnAirlines } = flight.airlines;
       const selectedAirlinesSet = new Set([...selectedAirlines]);
@@ -70,9 +69,9 @@ const FlightsButton = ({ onSearchData }) => {
         flight.class === classMessage &&
         (transferFilter === "Any" || flight.transfer === transferFilter) &&
         (selectedAirlinesSet.has(departure) ||
-          selectedAirlinesSet.has(returnAirlines)) &&
-        isDepartureTimeInRange &&
-        isReturnTimeInRange
+          selectedAirlinesSet.has(returnAirlines))
+        // isDepartureTimeInRange &&
+        // isReturnTimeInRange
       );
     });
 

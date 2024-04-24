@@ -32,7 +32,7 @@ function SeeAllBar({ flightsData }) {
         </div>
       </div>
       <div
-        className={`EXTENTION  overflow-hidden transition-all ease-in duration-300 ${
+        className={`EXTENTION  overflow-hidden transition-all ease-in duration-500 delay-0 ${
           openFlightId === flightsData.id ? "max-h-screen" : "max-h-0"
         }`}
       >
