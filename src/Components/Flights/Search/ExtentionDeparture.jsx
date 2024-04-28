@@ -2,6 +2,7 @@ import TurkishAirlinesLogo from "../../../assets/Flights/Search/TurkishExtention
 import Circle from "../../../assets/Flights/Search/ExCircle.png";
 import Line from "../../../assets/Flights/Search/ExLine.png";
 import Clock from "../../../assets/Flights/Search/Clock.png";
+import Luggage from "./Luggage";
 
 function ExtentionDeparture({ flightsData }) {
   // FORMAT DATE
@@ -54,7 +55,7 @@ function ExtentionDeparture({ flightsData }) {
           <div className="font-medium text-gray-500 text-sm">
             {formatDate(departure)}
           </div>
-          <div className="h-full flex items-center">
+          <div className="h-full flex w-20 items-center">
             <img src={TurkishAirlinesLogo} alt="" />
           </div>
         </div>
@@ -69,13 +70,14 @@ function ExtentionDeparture({ flightsData }) {
           {/* DEP START TIME AND CITY */}
           <div>
             <span className="text-textDark font-semibold">{depStartTime}</span>{" "}
-            {from} international airport
+            {from} international airport {` (${flightsData.fromCityId})`}
           </div>
           {/* TIME BETWEEN DEP START AND DEPEND OR FIRST TRANSFER */}
-          <div className="text-sm">
+          <div className="text-sm flex items-center gap-5">
             {transferWay === "departure"
               ? calculateTimeDifference(depStartTime, firstTransferStart)
               : calculateTimeDifference(depStartTime, depEndTime)}
+            <Luggage flightsData={flightsData} small={true} />
           </div>
           {/* DEPEND OR FIRST TRANSFER */}
           <div>
@@ -97,7 +99,11 @@ function ExtentionDeparture({ flightsData }) {
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5">
             <div className="flex">
               <img src={Clock} alt="" className="mr-3" />
-              {calculateTimeDifference(firstTransferStart, firstTransferEnd)}
+              {calculateTimeDifference(
+                firstTransferStart,
+                firstTransferEnd
+              )}{" "}
+              {transferCity[0]}
             </div>
           </div>
         ) : (
@@ -110,7 +116,7 @@ function ExtentionDeparture({ flightsData }) {
         {transferWay === "departure" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINE LOGO */}
-            <div className="AIRLINELOGO flex flex-col justify-center mr-14">
+            <div className="AIRLINELOGO w-20 flex flex-col justify-center mr-14">
               <img src={TurkishAirlinesLogo} alt="" />
             </div>
             {/* LINE */}
@@ -128,13 +134,14 @@ function ExtentionDeparture({ flightsData }) {
                 {transferCity[0]} international airport
               </div>
               {/* TIME BETWEEN FIRST TRANSFER START AND END */}
-              <div>
+              <div className="flex items-center gap-5">
                 {transfer === "1"
                   ? calculateTimeDifference(firstTransferEnd, depEndTime)
                   : calculateTimeDifference(
                       firstTransferEnd,
                       secondTransferStart
                     )}
+                <Luggage flightsData={flightsData} small={true} />
               </div>
               {/* FIRST TRANSFER END */}
               <div>
@@ -168,7 +175,8 @@ function ExtentionDeparture({ flightsData }) {
             <div className="flex">
               <img src={Clock} alt="" className="mr-3" />
               {calculateTimeDifference(secondTransferStart, secondTransferEnd)}
-            </div>
+            </div>{" "}
+            {transferCity[1]}
           </div>
         ) : (
           <div></div>
@@ -176,7 +184,7 @@ function ExtentionDeparture({ flightsData }) {
         {transferWay === "departure" && transfer === "2" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINES LOGO */}
-            <div className="AIRLINELOGO flex flex-col justify-center mr-14">
+            <div className="AIRLINELOGO w-20 flex flex-col justify-center mr-14">
               <img src={TurkishAirlinesLogo} alt="" />
             </div>
             {/* LINE */}
@@ -194,8 +202,9 @@ function ExtentionDeparture({ flightsData }) {
                 {transferCity[1]} international airport
               </div>
               {/* TIME BETWEEN SECOND TRANSFER */}
-              <div>
+              <div className="flex items-center gap-5">
                 {calculateTimeDifference(secondTransferEnd, depEndTime)}
+                <Luggage flightsData={flightsData} small={true} />
               </div>
               {/* SECOND TRANSFER END */}
               <div>

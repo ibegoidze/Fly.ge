@@ -52,7 +52,7 @@ function ExtentionDetails({ flightsData }) {
           <div className="font-medium text-gray-500 text-sm">
             {formatDate(flightsData.return)}
           </div>
-          <div className="h-full flex items-center">
+          <div className="h-full flex items-center w-20">
             <img src={DuckLines} alt="" />
           </div>
         </div>
@@ -95,7 +95,11 @@ function ExtentionDetails({ flightsData }) {
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5">
             <div className="flex">
               <img src={Clock} alt="" className="mr-3" />
-              {calculateTimeDifference(firstTransferStart, firstTransferEnd)}
+              {calculateTimeDifference(
+                firstTransferStart,
+                firstTransferEnd
+              )}{" "}
+              {transferCity[0]}
             </div>
           </div>
         ) : (
@@ -107,7 +111,7 @@ function ExtentionDetails({ flightsData }) {
         {transferWay === "return" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINE LOGO */}
-            <div className="AIRLINELOGO flex flex-col justify-center mr-14">
+            <div className="AIRLINELOGO flex flex-col w-20 justify-center mr-14">
               <img src={DuckLines} alt="" />
             </div>
             {/* LINE */}
@@ -164,7 +168,11 @@ function ExtentionDetails({ flightsData }) {
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28">
             <div className="flex">
               <img src={Clock} alt="" className="mr-3" />
-              {calculateTimeDifference(secondTransferStart, secondTransferEnd)}
+              {calculateTimeDifference(
+                secondTransferStart,
+                secondTransferEnd
+              )}{" "}
+              {transferCity[1]}
             </div>
           </div>
         ) : (
@@ -173,7 +181,7 @@ function ExtentionDetails({ flightsData }) {
         {transferWay === "return" && transfer === "2" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINES LOGO */}
-            <div className="AIRLINELOGO flex flex-col justify-center mr-14">
+            <div className="AIRLINELOGO flex flex-col w-20 justify-center mr-14">
               <img src={DuckLines} alt="" />
             </div>
             {/* LINE */}

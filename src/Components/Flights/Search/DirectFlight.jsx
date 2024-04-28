@@ -67,8 +67,11 @@ function DirectFlight({ flightsData, isReturn }) {
         <div className="font-medium text-textDark">
           {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
         </div>
-        <div className="text-sm font-medium text-gray-500">
-          {isReturn ? flightsData.to : flightsData.from}
+        <div className="text-sm font-medium text-gray-500 flex gap-1">
+          {isReturn ? flightsData.to : flightsData.from}{" "}
+          <span>{` (${
+            isReturn ? flightsData.toCityId : flightsData.fromCityId
+          }) `}</span>
         </div>
       </div>
       {/* FLIGHT LINE */}
@@ -129,8 +132,11 @@ function DirectFlight({ flightsData, isReturn }) {
           <div className="font-medium text-textDark">
             {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
           </div>
-          <span className="text-sm font-medium text-gray-500">
+          <span className="text-sm font-medium text-gray-500 flex gap-1">
             {isReturn ? flightsData.from : flightsData.to}
+            <span>{` (${
+              isReturn ? flightsData.fromCityId : flightsData.toCityId
+            }) `}</span>
           </span>
         </div>
       </div>

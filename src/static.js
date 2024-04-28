@@ -40,7 +40,9 @@ export const flightsData = [
   {
     id: 1,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -56,6 +58,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "GER"],
+    transferCityNames: ["Turkey", "Germany"],
     price: 400,
     airlines: {
       departure: "Turkish Airlines",
@@ -65,7 +68,9 @@ export const flightsData = [
   {
     id: 2,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -84,7 +89,9 @@ export const flightsData = [
   {
     id: 3,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -103,7 +110,9 @@ export const flightsData = [
   {
     id: 4,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -122,7 +131,9 @@ export const flightsData = [
   {
     id: 5,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -141,7 +152,9 @@ export const flightsData = [
   {
     id: 6,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -179,7 +192,9 @@ export const flightsData = [
   {
     id: 8,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -198,7 +213,9 @@ export const flightsData = [
   {
     id: 9,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -217,7 +234,9 @@ export const flightsData = [
   {
     id: 10,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -236,7 +255,9 @@ export const flightsData = [
   {
     id: 11,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -255,7 +276,9 @@ export const flightsData = [
   {
     id: 12,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -274,7 +297,9 @@ export const flightsData = [
   {
     id: 13,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -293,7 +318,9 @@ export const flightsData = [
   {
     id: 14,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -312,7 +339,9 @@ export const flightsData = [
   {
     id: 15,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -331,7 +360,9 @@ export const flightsData = [
   {
     id: 16,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -350,7 +381,9 @@ export const flightsData = [
   {
     id: 17,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -369,7 +402,9 @@ export const flightsData = [
   {
     id: 18,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -388,7 +423,9 @@ export const flightsData = [
   {
     id: 19,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -407,7 +444,9 @@ export const flightsData = [
   {
     id: 20,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -426,7 +465,9 @@ export const flightsData = [
   {
     id: 21,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -445,7 +486,9 @@ export const flightsData = [
   {
     id: 22,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -464,7 +507,9 @@ export const flightsData = [
   {
     id: 23,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -483,7 +528,9 @@ export const flightsData = [
   {
     id: 24,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -502,7 +549,9 @@ export const flightsData = [
   {
     id: 25,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -521,7 +570,9 @@ export const flightsData = [
   {
     id: 26,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -540,7 +591,9 @@ export const flightsData = [
   {
     id: 27,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -559,7 +612,9 @@ export const flightsData = [
   {
     id: 28,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -578,7 +633,9 @@ export const flightsData = [
   {
     id: 29,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -597,7 +654,9 @@ export const flightsData = [
   {
     id: 30,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -617,7 +676,9 @@ export const flightsData = [
   {
     id: 31,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -636,7 +697,9 @@ export const flightsData = [
   {
     id: 32,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -655,7 +718,9 @@ export const flightsData = [
   {
     id: 33,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -674,7 +739,9 @@ export const flightsData = [
   {
     id: 34,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -693,7 +760,9 @@ export const flightsData = [
   {
     id: 35,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -713,7 +782,9 @@ export const flightsData = [
   {
     id: 36,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -732,7 +803,9 @@ export const flightsData = [
   {
     id: 37,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -751,7 +824,9 @@ export const flightsData = [
   {
     id: 38,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -770,7 +845,9 @@ export const flightsData = [
   {
     id: 39,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -789,7 +866,9 @@ export const flightsData = [
   {
     id: 40,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -808,7 +887,9 @@ export const flightsData = [
   {
     id: 41,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -827,7 +908,9 @@ export const flightsData = [
   {
     id: 42,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -846,7 +929,9 @@ export const flightsData = [
   {
     id: 43,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -865,7 +950,9 @@ export const flightsData = [
   {
     id: 44,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -884,7 +971,9 @@ export const flightsData = [
   {
     id: 45,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -903,7 +992,9 @@ export const flightsData = [
   {
     id: 46,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -922,7 +1013,9 @@ export const flightsData = [
   {
     id: 47,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -941,7 +1034,9 @@ export const flightsData = [
   {
     id: 48,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -960,7 +1055,9 @@ export const flightsData = [
   {
     id: 49,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -979,7 +1076,9 @@ export const flightsData = [
   {
     id: 50,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -998,7 +1097,9 @@ export const flightsData = [
   {
     id: 51,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1017,7 +1118,9 @@ export const flightsData = [
   {
     id: 52,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1036,7 +1139,9 @@ export const flightsData = [
   {
     id: 53,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1055,7 +1160,9 @@ export const flightsData = [
   {
     id: 54,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1074,7 +1181,9 @@ export const flightsData = [
   {
     id: 55,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1093,7 +1202,9 @@ export const flightsData = [
   {
     id: 56,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1112,7 +1223,9 @@ export const flightsData = [
   {
     id: 57,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1131,7 +1244,9 @@ export const flightsData = [
   {
     id: 58,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1150,7 +1265,9 @@ export const flightsData = [
   {
     id: 59,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1169,7 +1286,9 @@ export const flightsData = [
   {
     id: 60,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1188,7 +1307,9 @@ export const flightsData = [
   {
     id: 61,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1207,7 +1328,9 @@ export const flightsData = [
   {
     id: 62,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1221,6 +1344,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 6900,
     airlines: {
       departure: "Pegasus",
@@ -1230,7 +1354,9 @@ export const flightsData = [
   {
     id: 63,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1244,6 +1370,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 830,
     airlines: {
       departure: "Pegasus",
@@ -1253,7 +1380,9 @@ export const flightsData = [
   {
     id: 64,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1267,6 +1396,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 980,
     airlines: {
       departure: "Pegasus",
@@ -1276,7 +1406,9 @@ export const flightsData = [
   {
     id: 65,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1290,6 +1422,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 500,
     airlines: {
       departure: "Pegasus",
@@ -1299,7 +1432,9 @@ export const flightsData = [
   {
     id: 66,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1313,6 +1448,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 710,
     airlines: {
       departure: "Pegasus",
@@ -1322,7 +1458,9 @@ export const flightsData = [
   {
     id: 67,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1336,6 +1474,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 850,
     airlines: {
       departure: "Pegasus",
@@ -1345,7 +1484,9 @@ export const flightsData = [
   {
     id: 68,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1359,6 +1500,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1000,
     airlines: {
       departure: "Pegasus",
@@ -1368,7 +1510,9 @@ export const flightsData = [
   {
     id: 69,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1382,6 +1526,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 510,
     airlines: {
       departure: "Pegasus",
@@ -1391,7 +1536,9 @@ export const flightsData = [
   {
     id: 70,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1405,6 +1552,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 730,
     airlines: {
       departure: "Pegasus",
@@ -1414,7 +1562,9 @@ export const flightsData = [
   {
     id: 71,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1428,6 +1578,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 870,
     airlines: {
       departure: "Pegasus",
@@ -1437,7 +1588,9 @@ export const flightsData = [
   {
     id: 72,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1451,6 +1604,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1020,
     airlines: {
       departure: "Pegasus",
@@ -1460,7 +1614,9 @@ export const flightsData = [
   {
     id: 73,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1474,6 +1630,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 520,
     airlines: {
       departure: "Pegasus",
@@ -1483,7 +1640,9 @@ export const flightsData = [
   {
     id: 74,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1497,6 +1656,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 750,
     airlines: {
       departure: "Pegasus",
@@ -1506,7 +1666,9 @@ export const flightsData = [
   {
     id: 75,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1520,6 +1682,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 890,
     airlines: {
       departure: "Pegasus",
@@ -1529,7 +1692,9 @@ export const flightsData = [
   {
     id: 76,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1543,6 +1708,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1040,
     airlines: {
       departure: "Pegasus",
@@ -1552,7 +1718,9 @@ export const flightsData = [
   {
     id: 77,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1566,6 +1734,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 530,
     airlines: {
       departure: "Pegasus",
@@ -1575,7 +1744,9 @@ export const flightsData = [
   {
     id: 78,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1589,6 +1760,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 770,
     airlines: {
       departure: "Pegasus",
@@ -1598,7 +1770,9 @@ export const flightsData = [
   {
     id: 79,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1612,6 +1786,7 @@ export const flightsData = [
     firstTransferStart: "10:00",
     firstTransferEnd: "12:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 910,
     airlines: {
       departure: "Pegasus",
@@ -1621,7 +1796,9 @@ export const flightsData = [
   {
     id: 80,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1635,6 +1812,7 @@ export const flightsData = [
     firstTransferStart: "12:00",
     firstTransferEnd: "13:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1080,
     airlines: {
       departure: "Pegasus",
@@ -1644,7 +1822,9 @@ export const flightsData = [
   {
     id: 81,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1658,6 +1838,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 540,
     airlines: {
       departure: "Pegasus",
@@ -1667,7 +1848,9 @@ export const flightsData = [
   {
     id: 82,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1681,6 +1864,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 790,
     airlines: {
       departure: "Pegasus",
@@ -1690,7 +1874,9 @@ export const flightsData = [
   {
     id: 83,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1704,6 +1890,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 940,
     airlines: {
       departure: "Pegasus",
@@ -1713,7 +1900,9 @@ export const flightsData = [
   {
     id: 84,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1727,6 +1916,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1110,
     airlines: {
       departure: "Pegasus",
@@ -1736,7 +1926,9 @@ export const flightsData = [
   {
     id: 85,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1750,6 +1942,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 550,
     airlines: {
       departure: "Pegasus",
@@ -1759,7 +1952,9 @@ export const flightsData = [
   {
     id: 86,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1773,6 +1968,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 800,
     airlines: {
       departure: "Pegasus",
@@ -1782,7 +1978,9 @@ export const flightsData = [
   {
     id: 87,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1796,6 +1994,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 950,
     airlines: {
       departure: "Pegasus",
@@ -1805,7 +2004,9 @@ export const flightsData = [
   {
     id: 88,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1819,6 +2020,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1120,
     airlines: {
       departure: "Pegasus",
@@ -1828,7 +2030,9 @@ export const flightsData = [
   {
     id: 89,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1842,6 +2046,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 570,
     airlines: {
       departure: "Pegasus",
@@ -1851,7 +2056,9 @@ export const flightsData = [
   {
     id: 90,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1865,6 +2072,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 820,
     airlines: {
       departure: "Turkish Airlines",
@@ -1874,7 +2082,9 @@ export const flightsData = [
   {
     id: 91,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1888,6 +2098,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -1897,7 +2108,9 @@ export const flightsData = [
   {
     id: 92,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1911,6 +2124,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1300,
     airlines: {
       departure: "Turkish Airlines",
@@ -1920,7 +2134,9 @@ export const flightsData = [
   {
     id: 93,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1934,6 +2150,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["AMS"],
+    transferCityNames: ["Amsterdam"],
     price: 1300,
     airlines: {
       departure: "Turkish Airlines",
@@ -1943,7 +2160,9 @@ export const flightsData = [
   {
     id: 94,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1957,6 +2176,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 850,
     airlines: {
       departure: "Turkish Airlines",
@@ -1966,7 +2186,9 @@ export const flightsData = [
   {
     id: 95,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -1980,6 +2202,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -1989,7 +2212,9 @@ export const flightsData = [
   {
     id: 96,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2003,6 +2228,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2012,7 +2238,9 @@ export const flightsData = [
   {
     id: 97,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2026,6 +2254,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2035,7 +2264,9 @@ export const flightsData = [
   {
     id: 98,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2049,6 +2280,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2058,7 +2290,9 @@ export const flightsData = [
   {
     id: 99,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2072,6 +2306,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2081,7 +2316,9 @@ export const flightsData = [
   {
     id: 100,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2095,6 +2332,7 @@ export const flightsData = [
     firstTransferStart: "15:00",
     firstTransferEnd: "16:30",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2104,7 +2342,9 @@ export const flightsData = [
   {
     id: 101,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2118,6 +2358,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2127,7 +2368,9 @@ export const flightsData = [
   {
     id: 102,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2141,6 +2384,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2150,7 +2394,9 @@ export const flightsData = [
   {
     id: 103,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2164,6 +2410,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2173,7 +2420,9 @@ export const flightsData = [
   {
     id: 104,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2187,6 +2436,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2196,7 +2446,9 @@ export const flightsData = [
   {
     id: 105,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2210,6 +2462,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2219,7 +2472,9 @@ export const flightsData = [
   {
     id: 106,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2233,6 +2488,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2242,7 +2498,9 @@ export const flightsData = [
   {
     id: 107,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2256,6 +2514,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2265,7 +2524,9 @@ export const flightsData = [
   {
     id: 108,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2279,6 +2540,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2288,7 +2550,9 @@ export const flightsData = [
   {
     id: 109,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2302,6 +2566,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2311,7 +2576,9 @@ export const flightsData = [
   {
     id: 110,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2325,6 +2592,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2334,7 +2602,9 @@ export const flightsData = [
   {
     id: 111,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2348,6 +2618,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2357,7 +2628,9 @@ export const flightsData = [
   {
     id: 112,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2371,6 +2644,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2380,7 +2654,9 @@ export const flightsData = [
   {
     id: 113,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2394,6 +2670,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2403,7 +2680,9 @@ export const flightsData = [
   {
     id: 114,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2417,6 +2696,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2426,7 +2706,9 @@ export const flightsData = [
   {
     id: 115,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2440,6 +2722,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2449,7 +2732,9 @@ export const flightsData = [
   {
     id: 116,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2463,6 +2748,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2472,7 +2758,9 @@ export const flightsData = [
   {
     id: 117,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2486,6 +2774,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2495,7 +2784,9 @@ export const flightsData = [
   {
     id: 118,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2509,6 +2800,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2518,7 +2810,9 @@ export const flightsData = [
   {
     id: 119,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2532,6 +2826,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2541,7 +2836,9 @@ export const flightsData = [
   {
     id: 120,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2555,6 +2852,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2564,7 +2862,9 @@ export const flightsData = [
   {
     id: 121,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2578,6 +2878,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2587,7 +2888,9 @@ export const flightsData = [
   {
     id: 122,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2601,6 +2904,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2610,7 +2914,9 @@ export const flightsData = [
   {
     id: 123,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2624,6 +2930,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2633,7 +2940,9 @@ export const flightsData = [
   {
     id: 124,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2647,6 +2956,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2656,7 +2966,9 @@ export const flightsData = [
   {
     id: 125,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2670,6 +2982,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2679,7 +2992,9 @@ export const flightsData = [
   {
     id: 126,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2693,6 +3008,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2702,7 +3018,9 @@ export const flightsData = [
   {
     id: 127,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2716,6 +3034,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2725,7 +3044,9 @@ export const flightsData = [
   {
     id: 128,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2739,6 +3060,7 @@ export const flightsData = [
     firstTransferStart: "14:30",
     firstTransferEnd: "16:40",
     transferCity: ["TUR"],
+    transferCityNames: ["Turkey"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2748,7 +3070,9 @@ export const flightsData = [
   {
     id: 129,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2764,6 +3088,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2773,7 +3098,9 @@ export const flightsData = [
   {
     id: 130,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2790,6 +3117,7 @@ export const flightsData = [
     secondTransferEnd: "16:00",
 
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2799,7 +3127,9 @@ export const flightsData = [
   {
     id: 131,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2815,6 +3145,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -2824,7 +3155,9 @@ export const flightsData = [
   {
     id: 132,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2840,6 +3173,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2849,7 +3183,9 @@ export const flightsData = [
   {
     id: 133,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2865,6 +3201,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2874,7 +3211,9 @@ export const flightsData = [
   {
     id: 134,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2890,6 +3229,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2899,7 +3239,9 @@ export const flightsData = [
   {
     id: 135,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2915,6 +3257,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1102,
     airlines: {
       departure: "Turkish Airlines",
@@ -2924,7 +3267,9 @@ export const flightsData = [
   {
     id: 136,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2940,6 +3285,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -2949,7 +3295,9 @@ export const flightsData = [
   {
     id: 137,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2965,6 +3313,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -2974,7 +3323,9 @@ export const flightsData = [
   {
     id: 138,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-05",
     return: "2024-05-11",
     way: "Bilateral",
@@ -2990,6 +3341,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -2999,7 +3351,9 @@ export const flightsData = [
   {
     id: 139,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3015,6 +3369,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3024,7 +3379,9 @@ export const flightsData = [
   {
     id: 140,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3040,6 +3397,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3049,7 +3407,9 @@ export const flightsData = [
   {
     id: 141,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3065,6 +3425,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3074,7 +3435,9 @@ export const flightsData = [
   {
     id: 142,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3090,6 +3453,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3099,7 +3463,9 @@ export const flightsData = [
   {
     id: 143,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3115,6 +3481,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3124,7 +3491,9 @@ export const flightsData = [
   {
     id: 144,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3140,6 +3509,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3149,7 +3519,9 @@ export const flightsData = [
   {
     id: 145,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3165,6 +3537,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3174,7 +3547,9 @@ export const flightsData = [
   {
     id: 146,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3190,6 +3565,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3199,7 +3575,9 @@ export const flightsData = [
   {
     id: 147,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3215,6 +3593,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3224,7 +3603,9 @@ export const flightsData = [
   {
     id: 148,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3240,6 +3621,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3249,7 +3631,9 @@ export const flightsData = [
   {
     id: 149,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3265,6 +3649,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3274,7 +3659,9 @@ export const flightsData = [
   {
     id: 150,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3290,6 +3677,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3299,7 +3687,9 @@ export const flightsData = [
   {
     id: 151,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3315,6 +3705,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3324,7 +3715,9 @@ export const flightsData = [
   {
     id: 152,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3340,6 +3733,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3349,7 +3743,9 @@ export const flightsData = [
   {
     id: 153,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3365,6 +3761,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3374,7 +3771,9 @@ export const flightsData = [
   {
     id: 154,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3390,6 +3789,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3399,7 +3799,9 @@ export const flightsData = [
   {
     id: 155,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3415,6 +3817,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3424,7 +3827,9 @@ export const flightsData = [
   {
     id: 156,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3440,6 +3845,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:10",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3449,7 +3855,9 @@ export const flightsData = [
   {
     id: 157,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3465,6 +3873,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3474,7 +3883,9 @@ export const flightsData = [
   {
     id: 158,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3490,6 +3901,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3499,7 +3911,9 @@ export const flightsData = [
   {
     id: 159,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3515,6 +3929,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3524,7 +3939,9 @@ export const flightsData = [
   {
     id: 160,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3540,6 +3957,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3549,7 +3967,9 @@ export const flightsData = [
   {
     id: 161,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3565,6 +3985,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3574,7 +3995,9 @@ export const flightsData = [
   {
     id: 162,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3590,6 +4013,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3599,7 +4023,9 @@ export const flightsData = [
   {
     id: 163,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3615,6 +4041,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3624,7 +4051,9 @@ export const flightsData = [
   {
     id: 164,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3640,6 +4069,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3649,7 +4079,9 @@ export const flightsData = [
   {
     id: 165,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3665,6 +4097,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["SPA", "FRA"],
+    transferCityNames: ["Spain", "France"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3674,7 +4107,9 @@ export const flightsData = [
   {
     id: 166,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3690,6 +4125,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3699,7 +4135,9 @@ export const flightsData = [
   {
     id: 167,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3715,6 +4153,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3724,7 +4163,9 @@ export const flightsData = [
   {
     id: 168,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3740,6 +4181,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3749,7 +4191,9 @@ export const flightsData = [
   {
     id: 169,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3765,6 +4209,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3774,7 +4219,9 @@ export const flightsData = [
   {
     id: 170,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3790,6 +4237,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3799,7 +4247,9 @@ export const flightsData = [
   {
     id: 171,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3815,6 +4265,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3824,7 +4275,9 @@ export const flightsData = [
   {
     id: 172,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3840,6 +4293,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3849,7 +4303,9 @@ export const flightsData = [
   {
     id: 173,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3865,6 +4321,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3874,7 +4331,9 @@ export const flightsData = [
   {
     id: 174,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3890,6 +4349,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3899,7 +4359,9 @@ export const flightsData = [
   {
     id: 175,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3915,6 +4377,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -3924,7 +4387,9 @@ export const flightsData = [
   {
     id: 176,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3940,6 +4405,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1500,
     airlines: {
       departure: "Turkish Airlines",
@@ -3949,7 +4415,9 @@ export const flightsData = [
   {
     id: 177,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3965,6 +4433,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 800,
     airlines: {
       departure: "Turkish Airlines",
@@ -3974,7 +4443,9 @@ export const flightsData = [
   {
     id: 178,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -3990,6 +4461,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 950,
     airlines: {
       departure: "Turkish Airlines",
@@ -3999,7 +4471,9 @@ export const flightsData = [
   {
     id: 179,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4015,6 +4489,7 @@ export const flightsData = [
     secondTransferStart: "15:00",
     secondTransferEnd: "16:00",
     transferCity: ["TUR", "BER"],
+    transferCityNames: ["Turkey", "Berlin"],
     price: 1100,
     airlines: {
       departure: "Turkish Airlines",
@@ -4024,7 +4499,9 @@ export const flightsData = [
   {
     id: 180,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4043,7 +4520,9 @@ export const flightsData = [
   {
     id: 181,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4062,7 +4541,9 @@ export const flightsData = [
   {
     id: 182,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4081,7 +4562,9 @@ export const flightsData = [
   {
     id: 183,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4100,7 +4583,9 @@ export const flightsData = [
   {
     id: 184,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4119,7 +4604,9 @@ export const flightsData = [
   {
     id: 185,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4138,7 +4625,9 @@ export const flightsData = [
   {
     id: 186,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4157,7 +4646,9 @@ export const flightsData = [
   {
     id: 187,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4176,7 +4667,9 @@ export const flightsData = [
   {
     id: 188,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4195,7 +4688,9 @@ export const flightsData = [
   {
     id: 189,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4214,7 +4709,9 @@ export const flightsData = [
   {
     id: 190,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4233,7 +4730,9 @@ export const flightsData = [
   {
     id: 191,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4252,7 +4751,9 @@ export const flightsData = [
   {
     id: 192,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4271,7 +4772,9 @@ export const flightsData = [
   {
     id: 193,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4290,7 +4793,9 @@ export const flightsData = [
   {
     id: 194,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4309,7 +4814,9 @@ export const flightsData = [
   {
     id: 195,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4328,7 +4835,9 @@ export const flightsData = [
   {
     id: 196,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4347,7 +4856,9 @@ export const flightsData = [
   {
     id: 197,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4366,7 +4877,9 @@ export const flightsData = [
   {
     id: 198,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4385,7 +4898,9 @@ export const flightsData = [
   {
     id: 199,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
@@ -4404,7 +4919,9 @@ export const flightsData = [
   {
     id: 200,
     from: "Tbilisi",
+    fromCityId: "TBS",
     to: "Hokaido",
+    toCityId: "HOK",
     departure: "2024-05-04",
     return: "2024-05-11",
     way: "Bilateral",
