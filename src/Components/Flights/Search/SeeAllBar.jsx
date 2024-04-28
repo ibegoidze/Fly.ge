@@ -12,7 +12,7 @@ function SeeAllBar({ flightsData }) {
   };
   return (
     <div>
-      <div className="SEEALL h-12 flex justify-between px-5 items-center ">
+      <div className="SEEALL h-12 flex justify-between px-5 items-center">
         <div className="flex gap-3">
           <div className="rounded-full bg-gray-50 border px-4 py-1.5 font-medium text-sm text-gray-500 cursor-pointer">
             {flightsData.class}
@@ -33,7 +33,7 @@ function SeeAllBar({ flightsData }) {
       </div>
       <div
         className={`EXTENTION  overflow-hidden transition-all ease-in duration-500 delay-0 ${
-          openFlightId === flightsData.id ? "max-h-screen" : "max-h-0"
+          openFlightId === flightsData.id ? "max-h-auto" : "max-h-0"
         }`}
       >
         <Extention flightsData={flightsData} />
