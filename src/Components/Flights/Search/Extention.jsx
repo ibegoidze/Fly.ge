@@ -21,11 +21,11 @@ function Extention({ flightsData }) {
           <span className="ml-1">
             <img src={Pin} alt="" />
           </span>
-          <span className="font-medium text-textDark">
+          <span className=" text-textDark font-medium">
             {flightsData.to} {`(${flightsData.toCityId})`}
           </span>
           <img src={Bed} alt="" />
-          <span>
+          <span className="text-sm text-gray-500 flex items-center font-medium">
             {calculateNights(flightsData.departure, flightsData.return)} nights
             stop
           </span>
@@ -39,7 +39,9 @@ function Extention({ flightsData }) {
           <span className="ml-1">
             <img src={Pin} alt="" />
           </span>
-          <span>{flightsData.from}</span>
+          <span className="font-medium">
+            {flightsData.from} {`(${flightsData.fromCityId})`}
+          </span>
         </div>
         <img src={midLine} alt="" />
       </div>
