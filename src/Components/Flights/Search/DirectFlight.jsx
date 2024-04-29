@@ -55,19 +55,19 @@ function DirectFlight({ flightsData, isReturn }) {
       </div>
       {/* DATE */}
       <div className="flex-none flex w-20 flex-col justify-center">
-        <div className="font-medium text-gray-500">
+        <div className="font-semibold text-gray-500">
           {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>
-        <span className="text-sm font-medium text-gray-500">
+        <span className="text-xs font-medium text-gray-500">
           {isReturn ? "Return" : "Departure"}
         </span>
       </div>
       {/* TIME / CITY */}
       <div className="flex-none flex flex-col w-20 justify-center">
-        <div className="font-medium text-textDark">
+        <div className="font-semibold text-textDark">
           {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
         </div>
-        <div className="text-sm font-medium text-gray-500 flex gap-1">
+        <div className="text-xs font-medium text-gray-500 flex gap-1">
           {isReturn ? flightsData.to : flightsData.from}{" "}
           <span>{` (${
             isReturn ? flightsData.toCityId : flightsData.fromCityId
@@ -129,10 +129,10 @@ function DirectFlight({ flightsData, isReturn }) {
         </div>
         {/* TIME / CITY */}
         <div className="flex flex-col justify-center w-20">
-          <div className="font-medium text-textDark">
+          <div className="font-semibold text-textDark">
             {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
           </div>
-          <span className="text-sm font-medium text-gray-500 flex gap-1">
+          <span className="text-xs font-medium text-gray-500 flex gap-1">
             {isReturn ? flightsData.from : flightsData.to}
             <span>{` (${
               isReturn ? flightsData.fromCityId : flightsData.toCityId

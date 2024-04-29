@@ -15,6 +15,8 @@ module.exports = {
         backgroundGray: "#f4f6f8",
         offerBlack: "#3c3f49",
         navBg: "#616C81",
+        orangeBrown: "#88680a",
+        longRed: "#ad3d47",
       },
       screens: {
         custom: "830px",

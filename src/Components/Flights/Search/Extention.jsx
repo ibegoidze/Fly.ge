@@ -14,20 +14,21 @@ function Extention({ flightsData }) {
 
   return (
     <div>
-      <div className="DESTINATION"></div>
       <ExtentionDeparture flightsData={flightsData} />
       <div>
         <img src={midLine} alt="" />
-        <div className="flex gap-5 ml-64 my-3">
+        <div className="flex gap-4 ml-64 my-3">
           <span className="ml-1">
             <img src={Pin} alt="" />
           </span>
-          <span>{flightsData.to}</span>
+          <span className="font-medium text-textDark">
+            {flightsData.to} {`(${flightsData.toCityId})`}
+          </span>
           <img src={Bed} alt="" />
           <span>
-            {calculateNights(flightsData.departure, flightsData.return)}
+            {calculateNights(flightsData.departure, flightsData.return)} nights
+            stop
           </span>
-          <span>nights</span>
         </div>
         <img src={midLine} alt="" />
       </div>

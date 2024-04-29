@@ -2,6 +2,8 @@ import TurkishAirlinesLogo from "../../../assets/Flights/Search/TurkishExtention
 import Circle from "../../../assets/Flights/Search/ExCircle.png";
 import Line from "../../../assets/Flights/Search/ExLine.png";
 import Clock from "../../../assets/Flights/Search/Clock.png";
+import LongTime from "../../../assets/Flights/Search/LongTime.png";
+
 import Luggage from "./Luggage";
 
 function ExtentionDeparture({ flightsData }) {
@@ -42,12 +44,16 @@ function ExtentionDeparture({ flightsData }) {
     firstTransferEnd,
     secondTransferStart,
     secondTransferEnd,
+    transferCityNames,
+    toCityId,
   } = flightsData;
 
   return (
-    <div className="ml-32 my-5">
+    <div className="ml-32 mb-5">
       {/* HEADER */}
-      <div className="RETURN text-lg font-medium mb-5">Departure</div>
+      <div className="RETURN text-medium font-semibold mb-5 text-textDark">
+        Departure
+      </div>
       {/* ONE WAY */}
       <div className="DEPDETAILS1 flex">
         {/* DATE AND IMAGE ON THE LEFT */}
@@ -62,25 +68,27 @@ function ExtentionDeparture({ flightsData }) {
         {/* LINE */}
         <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
           <img src={Circle} alt="" />
-          <img src={Line} alt="" className="h-28 w-0.5" />
+          <img src={Line} alt="" className="h-22 w-0.5" />
           <img src={Circle} alt="" />
         </div>
         {/* RIGHT SIDE */}
         <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
           {/* DEP START TIME AND CITY */}
-          <div>
+          <div className="flex items-center gap-2">
             <span className="text-textDark font-semibold">{depStartTime}</span>{" "}
-            {from} international airport {` (${flightsData.fromCityId})`}
+            <span className="text-sm">
+              {from} international airport {` (${flightsData.fromCityId})`}
+            </span>
           </div>
           {/* TIME BETWEEN DEP START AND DEPEND OR FIRST TRANSFER */}
-          <div className="text-sm flex items-center gap-5">
+          <div className="text-xs flex items-center gap-5">
             {transferWay === "departure"
               ? calculateTimeDifference(depStartTime, firstTransferStart)
               : calculateTimeDifference(depStartTime, depEndTime)}
             <Luggage flightsData={flightsData} small={true} />
           </div>
-          {/* DEPEND OR FIRST TRANSFER */}
-          <div>
+          {/* FIRST TRANSFER END*/}
+          <div className="flex items-center gap-2">
             {transferWay === "departure" ? (
               <span className="text-textDark font-semibold">
                 {firstTransferStart}
@@ -88,8 +96,15 @@ function ExtentionDeparture({ flightsData }) {
             ) : (
               <span className="text-textDark font-semibold">{depEndTime}</span>
             )}{" "}
-            {transferWay === "departure" ? transferCity[0] : to} international
-            airport
+            <span className="text-sm">
+              {transferWay === "departure" ? transferCityNames[0] : to}{" "}
+              international airport
+              {transferWay === "departure" ? (
+                <span className="text-sm">{` (${transferCity[0]})`}</span>
+              ) : (
+                <span className="text-sm">{` (${toCityId})`}</span>
+              )}
+            </span>
           </div>
         </div>
       </div>
@@ -97,20 +112,18 @@ function ExtentionDeparture({ flightsData }) {
       <div className="DEPTRANSFERTIME ml-28">
         {transferWay === "departure" ? (
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5">
-            <div className="flex">
+            <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
               <img src={Clock} alt="" className="mr-3" />
-              {calculateTimeDifference(
-                firstTransferStart,
-                firstTransferEnd
-              )}{" "}
-              {transferCity[0]}
+              {calculateTimeDifference(firstTransferStart, firstTransferEnd)}
+              <span>stop,</span>
+              {transferCityNames[0]} <span>{`(${transferCity[0]})`}</span>
             </div>
           </div>
         ) : (
           <div></div>
         )}
       </div>
-      {/* FIRST TRANSFER */}
+      {/* FIRST TRANSFER ---------------------------------------------------------------------------------------------------------------------- */}
       <div className="DEPEDETAILS2">
         {" "}
         {transferWay === "departure" ? (
@@ -122,19 +135,22 @@ function ExtentionDeparture({ flightsData }) {
             {/* LINE */}
             <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
               <img src={Circle} alt="" />
-              <img src={Line} alt="" className="h-28 w-0.5" />
+              <img src={Line} alt="" className="h-22 w-0.5" />
               <img src={Circle} alt="" />
             </div>
             {/* FIRST TRANSFER START TIME AND CITY */}
             <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
-              <div>
+              <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {firstTransferEnd}
                 </span>{" "}
-                {transferCity[0]} international airport
+                <span className="text-sm">
+                  {transferCityNames[0]} international airport{" "}
+                  {`(${transferCity[0]})`}
+                </span>
               </div>
               {/* TIME BETWEEN FIRST TRANSFER START AND END */}
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-5 text-xs">
                 {transfer === "1"
                   ? calculateTimeDifference(firstTransferEnd, depEndTime)
                   : calculateTimeDifference(
@@ -146,18 +162,23 @@ function ExtentionDeparture({ flightsData }) {
               {/* FIRST TRANSFER END */}
               <div>
                 {transferWay === "departure" && transfer === "1" ? (
-                  <div>
+                  <div className="flex items-center gap-2">
                     <span className="text-textDark font-semibold">
                       {depEndTime}
                     </span>{" "}
-                    {to} airport
+                    <span className="text-sm">
+                      {to} airport {`(${toCityId})`}
+                    </span>
                   </div>
                 ) : (
-                  <div>
+                  <div className="flex items-center gap-2">
                     <span className="text-textDark font-semibold">
                       {secondTransferStart}
                     </span>{" "}
-                    {transferCity[1]} airport
+                    <span className="text-sm">
+                      {transferCityNames[1]} international airport{" "}
+                      {`(${transferCity[1]})`}
+                    </span>
                   </div>
                 )}
               </div>
@@ -167,16 +188,32 @@ function ExtentionDeparture({ flightsData }) {
           <div></div>
         )}
       </div>
-      {/* SECOND TRANSFER*/}
+      {/* SECOND TRANSFER ---------------------------------------------------------------------------------------------------------------------- */}
       <div className="DEPEDETAILS3">
         {/* TRANSFER TIME IN ORANGE */}
         {transferWay === "departure" && transfer === "2" ? (
-          <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28">
-            <div className="flex">
-              <img src={Clock} alt="" className="mr-3" />
-              {calculateTimeDifference(secondTransferStart, secondTransferEnd)}
-            </div>{" "}
-            {transferCity[1]}
+          <div className="flex items-center gap-2 w-full">
+            <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28 w-full">
+              <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
+                <img src={Clock} alt="" className="mr-3" />
+                {calculateTimeDifference(
+                  secondTransferStart,
+                  secondTransferEnd
+                )}
+                <span>stop,</span>
+                {transferCityNames[1]} <span>{`(${transferCity[1]})`}</span>
+              </div>
+            </div>
+            {/* CHECK IF TRANSFER TAKES MORE THAN 1 HOUR AND DISPLAY LONG TRANSFER */}
+            {calculateTimeDifference(
+              secondTransferStart,
+              secondTransferEnd
+            ).includes("1 hr") ? (
+              <div className="bg-red-100 h-10 flex items-center w-1/4 rounded-sm justify-center gap-2 text-longRed font-medium text-sm">
+                <img src={LongTime} alt="" />
+                <span>Long</span>
+              </div>
+            ) : null}
           </div>
         ) : (
           <div></div>
@@ -190,30 +227,33 @@ function ExtentionDeparture({ flightsData }) {
             {/* LINE */}
             <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
               <img src={Circle} alt="" />
-              <img src={Line} alt="" className="h-28 w-0.5" />
+              <img src={Line} alt="" className="h-22 w-0.5" />
               <img src={Circle} alt="" />
             </div>
             {/* SECOND TRANSFER START */}
             <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
-              <div>
+              <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {secondTransferEnd}
                 </span>{" "}
-                {transferCity[1]} international airport
+                <span className="text-sm">
+                  {transferCityNames[1]} international airport{" "}
+                  <span>{`(${transferCity[1]})`}</span>
+                </span>
               </div>
               {/* TIME BETWEEN SECOND TRANSFER */}
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-5 text-xs">
                 {calculateTimeDifference(secondTransferEnd, depEndTime)}
                 <Luggage flightsData={flightsData} small={true} />
               </div>
               {/* SECOND TRANSFER END */}
-              <div>
+              <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {depEndTime}
                 </span>{" "}
-                {to}
-                {` `}
-                international airport
+                <span className="text-sm">
+                  {to} international airport <span>{`(${toCityId})`}</span>
+                </span>
               </div>
             </div>
           </div>
