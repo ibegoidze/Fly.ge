@@ -17,6 +17,9 @@ module.exports = {
         navBg: "#616C81",
         orangeBrown: "#88680a",
         longRed: "#ad3d47",
+        bogOrange: "#ff7a39",
+        tbcBlue: "#4ea0d8",
+        credoRed: "#ea4b37",
       },
       screens: {
         custom: "830px",

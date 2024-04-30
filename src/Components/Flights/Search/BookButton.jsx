@@ -15,7 +15,7 @@ function BookButton({ flightsData }) {
   return (
     <div className="flex flex-col items-center justify-between p-4 pt-12">
       <div className="PRICE text-2xl font-semibold">{calculatePrice()}$</div>
-      <button className="relative bg-blue-500 hover:bg-blue-700 text-md px-16  py-2 mt-8 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
+      <button className="relative bg-blue-500 hover:bg-blue-700 text-md px-16 transition-all duration-300 py-2 mt-8 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
         <span className="flex whitespace-nowrap">Reservation</span>
       </button>
     </div>
