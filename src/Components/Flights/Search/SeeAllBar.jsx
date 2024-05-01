@@ -2,13 +2,20 @@ import { useState } from "react";
 import Extention from "./Extention";
 import Luggage from "./Luggage";
 
-function SeeAllBar({ flightsData }) {
+function SeeAllBar({
+  flightsData,
+  openOverlay,
+  toggleOverlay,
+  setBlurredFlightId,
+}) {
   const [openFlightId, setOpenFlightId] = useState(null);
   const [hideLuggage, setHideLuggage] = useState(false);
-  // TOGGLE EXTENTION
+
   const toggleExtension = (flightId) => {
     setOpenFlightId(openFlightId === flightId ? null : flightId);
     setHideLuggage(!hideLuggage);
+    toggleOverlay(flightId); // Pass flightId to toggleOverlay
+    setBlurredFlightId(openFlightId === flightId ? null : flightId); // Update blurredFlightId
   };
 
   return (
@@ -29,8 +36,8 @@ function SeeAllBar({ flightsData }) {
         </div>
       </div>
       <div
-        className={`EXTENTION  overflow-hidden transition-all ease-in duration-500 delay-0 ${
-          openFlightId === flightsData.id ? "max-h-auto" : "max-h-0"
+        className={`EXTENTION  overflow-hidden transition-all ease-in duration-700 delay-0 ${
+          openFlightId === flightsData.id ? "maxHeight" : "max-h-0"
         }`}
       >
         <Extention flightsData={flightsData} />

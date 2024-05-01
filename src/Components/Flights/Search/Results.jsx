@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DirectFlight from "./DirectFlight";
 import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
 import BookButton from "./BookButton";
@@ -7,14 +7,30 @@ import TransferedFlight from "./TransferedFlight";
 import SeeAllBar from "./SeeAllBar";
 
 const Results = ({ flightsData }) => {
+  const [openOverlay, setOpenOverlay] = useState(null);
+  const [blurredFlightId, setBlurredFlightId] = useState(null);
+
+  const toggleOverlay = (flightId) => {
+    setOpenOverlay(openOverlay === flightId ? null : flightId);
+    setBlurredFlightId(openOverlay === flightId ? null : flightId);
+  };
+
   return (
-    <div className="bg-backgroundGray pt-10 ">
+    <div
+      className={`bg-backgroundGray pt-10  transition-all duration-700 ${
+        blurredFlightId !== null ? "bg-overlayGray " : ""
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="">
           {flightsData.map((flight) => (
             <div
               key={flight.id}
-              className="mb-4 rounded-lg p-4 bg-white shadow-md"
+              className={`mb-4 rounded-lg p-4 bg-white shadow-md ${
+                blurredFlightId !== null && blurredFlightId !== flight.id
+                  ? "bg-black opacity-70 transition-all duration-700"
+                  : ""
+              }`}
             >
               <ul>
                 <li>
@@ -24,7 +40,6 @@ const Results = ({ flightsData }) => {
                         <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
                           <div className="w-full">
                             {flight.transfer > 1 ? (
-                              // CONDITIONALLY RENDER TRANSFEREDFLIGHTS IF TRANSFER IS MORE THAN 1
                               <>
                                 {flight.transferWay === "departure" ? (
                                   <TransferedFlight
@@ -72,8 +87,13 @@ const Results = ({ flightsData }) => {
                           <BookButton flightsData={flight} />
                         </div>
                       </div>
-                      <Line />
-                      <SeeAllBar flightsData={flight} />
+                      <Line blurredFlightId={blurredFlightId} />
+                      <SeeAllBar
+                        flightsData={flight}
+                        openOverlay={openOverlay}
+                        toggleOverlay={toggleOverlay}
+                        setBlurredFlightId={setBlurredFlightId}
+                      />
                     </div>
                   </div>
                 </li>

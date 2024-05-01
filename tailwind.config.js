@@ -20,6 +20,7 @@ module.exports = {
         bogOrange: "#ff7a39",
         tbcBlue: "#4ea0d8",
         credoRed: "#ea4b37",
+        overlayGray: "#c9cbcf",
       },
       screens: {
         custom: "830px",
