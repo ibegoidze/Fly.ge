@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Extention from "./Extention";
 import Luggage from "./Luggage";
 
@@ -10,17 +10,58 @@ function SeeAllBar({
 }) {
   const [openFlightId, setOpenFlightId] = useState(null);
   const [hideLuggage, setHideLuggage] = useState(false);
+  const [seeAllText, setSeeAllText] = useState("See all");
+  const containerRef = useRef(null);
+  const liRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef.current &&
+        liRef.current &&
+        openFlightId &&
+        !isClickOnScrollbar(event) &&
+        !liRef.current.contains(event.target) &&
+        !containerRef.current.contains(event.target)
+      ) {
+        setOpenFlightId(null);
+        setHideLuggage(false);
+        toggleOverlay(null);
+        setBlurredFlightId(null);
+        setSeeAllText("See all");
+      }
+    };
+
+    const isClickOnScrollbar = (event) => {
+      if (event.target instanceof HTMLElement) {
+        return (
+          event.target.offsetWidth !== event.target.clientWidth ||
+          event.target.offsetHeight !== event.target.clientHeight
+        );
+      }
+      return false;
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [containerRef, toggleOverlay, setBlurredFlightId, openFlightId]);
 
   const toggleExtension = (flightId) => {
     setOpenFlightId(openFlightId === flightId ? null : flightId);
     setHideLuggage(!hideLuggage);
-    toggleOverlay(flightId); // Pass flightId to toggleOverlay
-    setBlurredFlightId(openFlightId === flightId ? null : flightId); // Update blurredFlightId
+    toggleOverlay(flightId);
+    setBlurredFlightId(openFlightId === flightId ? null : flightId);
+    setSeeAllText(openFlightId === flightId ? "See all" : "See less");
   };
 
   return (
-    <div>
-      <div className="SEEALL h-12 flex justify-between px-5 items-center">
+    <div ref={containerRef}>
+      <div
+        ref={liRef}
+        className="SEEALL h-12 flex justify-between px-5 items-center"
+      >
         <div
           className={`${
             hideLuggage ? "opacity-0" : "opacity-100"
@@ -32,7 +73,7 @@ function SeeAllBar({
           className="SEEALL h-12 flex justify-end items-center text-sm font-medium text-primaryBlue cursor-pointer"
           onClick={() => toggleExtension(flightsData.id)}
         >
-          See all
+          {seeAllText}
         </div>
       </div>
       <div

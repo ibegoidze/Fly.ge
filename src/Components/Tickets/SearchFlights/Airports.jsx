@@ -177,14 +177,14 @@ const Airports = () => {
   };
 
   // CONSOL LOG DATA WHEN BOTH AIRPORTS ARE SELECTED
-  useEffect(() => {
-    if (selectedFromAirport && selectedToAirport) {
-      const flightData = {
-        from: selectedFromAirport.name,
-        to: selectedToAirport.name,
-      };
-    }
-  }, [selectedFromAirport, selectedToAirport]);
+  // useEffect(() => {
+  //   if (selectedFromAirport && selectedToAirport) {
+  //     const flightData = {
+  //       from: selectedFromAirport.name,
+  //       to: selectedToAirport.name,
+  //     };
+  //   }
+  // }, [selectedFromAirport, selectedToAirport]);
 
   // RENDER FROM AIRPORT SWITCH ICON AND TO AIRPORT
   return (

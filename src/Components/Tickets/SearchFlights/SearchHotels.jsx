@@ -7,17 +7,17 @@ function SearchHotels() {
   const { t } = useTranslation();
 
   // COLLECT DATA FROM REDUX
-  const { selectedMonth: checkInMonth, selectedDay: checkInDay } = useSelector(
-    (state) => state.checkIn
-  );
-  const { selectedMonth: checkOutMonth, selectedDay: checkOutDay } =
-    useSelector((state) => state.checkOut);
+  // const { selectedMonth: checkInMonth, selectedDay: checkInDay } = useSelector(
+  //   (state) => state.checkIn
+  // );
+  // const { selectedMonth: checkOutMonth, selectedDay: checkOutDay } =
+  //   useSelector((state) => state.checkOut);
   const hotelDestination = useSelector((state) => state.hotelDestination.value);
 
   const city = encodeURIComponent(hotelDestination);
 
-  const checkin = `2024-${checkInMonth + 1}-${checkInDay}`;
-  const checkout = `2024-${checkOutMonth + 1}-${checkOutDay}`;
+  // const checkin = `2024-${checkInMonth + 1}-${checkInDay}`;
+  // const checkout = `2024-${checkOutMonth + 1}-${checkOutDay}`;
 
   const constructBookingURL = () => {
     return `https://www.booking.com/${city}`;

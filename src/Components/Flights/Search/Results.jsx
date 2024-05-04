@@ -18,7 +18,7 @@ const Results = ({ flightsData }) => {
   return (
     <div
       className={`bg-backgroundGray pt-10  transition-all duration-700 ${
-        blurredFlightId !== null ? "bg-overlayGray " : ""
+        blurredFlightId !== null ? " inset-0 bg-blue-950 bg-opacity-25   " : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@ const Results = ({ flightsData }) => {
               key={flight.id}
               className={`mb-4 rounded-lg p-4 bg-white shadow-md ${
                 blurredFlightId !== null && blurredFlightId !== flight.id
-                  ? "bg-black opacity-70 transition-all duration-700"
+                  ? "opacity-60 transition-all duration-700"
                   : ""
               }`}
             >

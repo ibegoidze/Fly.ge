@@ -4,7 +4,6 @@ import DateSelector from "../../Tickets/SearchFlights/DateSelector";
 import EconomyClass from "../../Tickets/SearchFlights/EconomyClass";
 import OneWay from "../../Tickets/SearchFlights/OneWay";
 import Passengers from "../../Tickets/SearchFlights/Passengers";
-import SearchDropdown from "./SearchDropdown";
 import FlightsButton from "./FlightsButton";
 import Results from "./Results";
 import TransferDropdown from "./TransferDropdown";
