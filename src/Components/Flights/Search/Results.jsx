@@ -47,7 +47,7 @@ const Results = ({ flightsData }) => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="">
+        <div className="pb-10">
           {currentFlights.map((flight, index) => (
             // RENDER EACH FLIGHT COMPONENT
             <div
@@ -128,7 +128,7 @@ const Results = ({ flightsData }) => {
             </div>
           ))}
           {/* RENDER PAGINATION COMPONENT */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-10">
             <div>
               <Pagination
                 count={Math.ceil(flightsData.length / pageSize)}
@@ -143,23 +143,20 @@ const Results = ({ flightsData }) => {
                   },
                   "& .Mui-selected": {
                     color: "#fff",
-                    backgroundColor: "#0275f0",
+                    backgroundColor: "#227bee",
                     "&:hover": {
                       backgroundColor: "#0056b3",
                     },
                   },
                   "& .MuiPaginationItem-page": {
-                    gap: "8px",
+                    gap: "5px",
                     fontWeight: "700",
                     borderColor: "#ddd",
                     padding: "12px 30px",
                   },
                   "& .MuiPaginationItem-ellipsis": {
-                    fontSize: "24px",
-                    display: "flex",
-                    alignItems: "center",
-                    textAlign: "center",
-                    justifyContent: "center",
+                    fontSize: "30px",
+                    margin: "0 0 15px 0",
                   },
                   "& .MuiPaginationItem-root, & .MuiButtonBase-root": {
                     padding: "18px 14px",
@@ -172,7 +169,10 @@ const Results = ({ flightsData }) => {
               />
             </div>
             {/* Render PageSizeDropdown component */}
-            <div>
+            <div className="flex items-center gap-5">
+              <span className="text-gray-500 font-medium text-sm">
+                Ticket quantity
+              </span>
               <PageSizeDropdown
                 pageSizeOptions={[10, 20, 50]}
                 pageSize={pageSize}
