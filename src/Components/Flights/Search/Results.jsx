@@ -1,6 +1,7 @@
 // IMPORT REACT AND USESTATE FROM REACT
 import React, { useState } from "react";
 import Advertisement from "../../../assets/Flights/Search/Advertisement.png";
+import BestOnes from "../../../assets/Flights/Search/BestOnes.png";
 
 // IMPORT COMPONENTS
 import DirectFlight from "./DirectFlight";
@@ -40,6 +41,9 @@ const Results = ({ flightsData }) => {
     setBlurredFlightId(null);
   };
 
+  // RESULTS QUANTITY
+  const resultsCount = flightsData.length;
+
   // RENDER RESULTS COMPONENT
   return (
     <div
@@ -50,6 +54,17 @@ const Results = ({ flightsData }) => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="pb-10">
+          <div className="flex justify-between">
+            <div className="text-md font-medium text-gray-600 mb-5">
+              Found {resultsCount} results
+            </div>
+            <div className="flex items-center mb-5 gap-2 text-md font-medium text-gray-600">
+              <img src={BestOnes} alt="" className="w-5 h-5" /> Best ones{" "}
+              <span className="material-symbols-outlined transform transition duration-300">
+                arrow_drop_down
+              </span>
+            </div>
+          </div>
           {currentFlights.map((flight, index) => (
             <React.Fragment key={`flight-${flight.id}`}>
               {/* RENDER EACH FLIGHT COMPONENT */}

@@ -20,10 +20,12 @@ const TimeDropdown = () => {
   );
   const { departureTime, returnTime } = useSelector((state) => state.times);
 
+  // FUNCTION TO TOGGLE DROPDOWN VISIBILITY
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  // CLICK OUTSIDE CLOSES THE DROPDOWN
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -37,17 +39,21 @@ const TimeDropdown = () => {
     };
   }, []);
 
+  // HANDLE DEPARTURE TIME CHANGE
   const handleDepartureChange = (event, newValue) => {
     dispatch(setDepartureTime(newValue));
   };
 
+  // HANDLE RETURN TIME CHANGE
   const handleReturnChange = (event, newValue) => {
     dispatch(setReturnTime(newValue));
   };
 
+  // FORMAT HOUR DISPLAY
   const formatHour = (value) => {
     return `${value < 10 ? "0" + value : value}:00`;
   };
+
   return (
     <div className="relative" ref={dropdownRef}>
       {/* SELECTOR */}
@@ -91,6 +97,7 @@ const TimeDropdown = () => {
                 {formatHour(departureTime[0])} - {formatHour(departureTime[1])}
               </span>
             </div>
+            {/* SLIDER FOR DEPARTURE TIME */}
             <Slider
               size="small"
               value={departureTime}
@@ -112,6 +119,7 @@ const TimeDropdown = () => {
                 {formatHour(returnTime[0])} - {formatHour(returnTime[1])}
               </span>
             </div>
+            {/* SLIDER FOR RETURN TIME */}
             <Slider
               size="small"
               value={returnTime}

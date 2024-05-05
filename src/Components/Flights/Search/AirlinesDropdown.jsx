@@ -86,7 +86,7 @@ const AirlinesDropdown = () => {
         <div className="h-96" style={{ maxHeight: "250px" }}>
           {/* CHECKBOX OPTIONS */}
           <div className="flex justify-between items-center px-4">
-            <div>All Airlines</div>
+            <div className="text-gray-500">All Airlines</div>
             <Switch
               id="Switch"
               value="checkedA"

@@ -8,7 +8,7 @@ const TransferDropdown = ({ selectorText }) => {
   const dropdownRef = useRef(null);
   const selectorRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [selectedTransfer, setSelectedTransfer] = useState(null);
+  const [selectedTransfer, setSelectedTransfer] = useState("Any");
 
   // TOGGLE DROPDOWN VISIBILITY
   const toggleDropdown = () => setIsOpen((prevState) => !prevState);
