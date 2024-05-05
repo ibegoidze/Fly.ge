@@ -1,5 +1,6 @@
 // IMPORT REACT AND USESTATE FROM REACT
 import React, { useState } from "react";
+import Advertisement from "../../../assets/Flights/Search/Advertisement.png";
 
 // IMPORT COMPONENTS
 import DirectFlight from "./DirectFlight";
@@ -9,7 +10,7 @@ import Line from "./Line";
 import TransferedFlight from "./TransferedFlight";
 import SeeAllBar from "./SeeAllBar";
 import { Pagination } from "@mui/material";
-import PageSizeDropdown from "./PageSizeDropdown"; // Import PageSizeDropdown component
+import PageSizeDropdown from "./PageSizeDropdown";
 
 // DEFINE RESULTS COMPONENT
 const Results = ({ flightsData }) => {
@@ -19,7 +20,7 @@ const Results = ({ flightsData }) => {
   const [page, setPage] = useState(1); // State for current page
   const [pageSize, setPageSize] = useState(10); // State for page size
 
-  // Constants for pagination
+  // PAGINATION VARIABLES
   const indexOfLastFlight = page * pageSize;
   const indexOfFirstFlight = indexOfLastFlight - pageSize;
   const currentFlights = flightsData.slice(
@@ -36,6 +37,7 @@ const Results = ({ flightsData }) => {
   // HANDLE PAGE CHANGE
   const handlePageChange = (event, value) => {
     setPage(value);
+    setBlurredFlightId(null);
   };
 
   // RENDER RESULTS COMPONENT
@@ -49,83 +51,106 @@ const Results = ({ flightsData }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="pb-10">
           {currentFlights.map((flight, index) => (
-            // RENDER EACH FLIGHT COMPONENT
-            <div
-              key={flight.id}
-              className={`mb-4 rounded-lg p-4 bg-white shadow-md ${
-                // ADDING OPACITY TRANSITION IF FLIGHT IS BLURRED
-                blurredFlightId !== null && blurredFlightId !== flight.id
-                  ? "opacity-60 transition-all duration-700"
-                  : ""
-              }`}
-            >
-              <ul>
-                <li>
-                  <div className="ENTIREDIV">
-                    <div className="TOPPART flex flex-col">
-                      <div className="flex">
-                        <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
-                          <div className="w-full">
-                            {flight.transfer > 1 ? (
-                              <>
-                                {flight.transferWay === "departure" ? (
-                                  <TransferedFlight
-                                    flightsData={flight}
-                                    isReturn={false}
-                                  />
-                                ) : (
+            <React.Fragment key={`flight-${flight.id}`}>
+              {/* RENDER EACH FLIGHT COMPONENT */}
+              <div
+                className={`mb-4 rounded-lg p-4 bg-white shadow-md ${
+                  // ADDING OPACITY TRANSITION IF FLIGHT IS BLURRED
+                  blurredFlightId !== null && blurredFlightId !== flight.id
+                    ? "opacity-60 transition-all duration-700"
+                    : ""
+                }`}
+              >
+                <ul>
+                  <li>
+                    <div className="ENTIREDIV">
+                      <div className="TOPPART flex flex-col">
+                        <div className="flex">
+                          <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
+                            <div className="w-full">
+                              {flight.transfer > 1 ? (
+                                <>
+                                  {flight.transferWay === "departure" ? (
+                                    <TransferedFlight
+                                      flightsData={flight}
+                                      isReturn={false}
+                                    />
+                                  ) : (
+                                    <DirectFlight
+                                      flightsData={flight}
+                                      isReturn={false}
+                                    />
+                                  )}
+                                  {flight.transferWay === "return" ? (
+                                    <TransferedFlight
+                                      flightsData={flight}
+                                      isReturn={true}
+                                    />
+                                  ) : (
+                                    <DirectFlight
+                                      flightsData={flight}
+                                      isReturn={true}
+                                    />
+                                  )}
+                                </>
+                              ) : (
+                                <>
                                   <DirectFlight
                                     flightsData={flight}
                                     isReturn={false}
                                   />
-                                )}
-                                {flight.transferWay === "return" ? (
-                                  <TransferedFlight
-                                    flightsData={flight}
-                                    isReturn={true}
-                                  />
-                                ) : (
                                   <DirectFlight
                                     flightsData={flight}
                                     isReturn={true}
                                   />
-                                )}
-                              </>
-                            ) : (
-                              <>
-                                <DirectFlight
-                                  flightsData={flight}
-                                  isReturn={false}
-                                />
-                                <DirectFlight
-                                  flightsData={flight}
-                                  isReturn={true}
-                                />
-                              </>
-                            )}
+                                </>
+                              )}
+                            </div>
+                            <img
+                              src={VerticalLine}
+                              className="h-32 w-0.5"
+                              alt=""
+                            />
                           </div>
-                          <img
-                            src={VerticalLine}
-                            className="h-32 w-0.5"
-                            alt=""
-                          />
+                          <div className="PRICEANDBOOK w-2/6 ">
+                            <BookButton flightsData={flight} />
+                          </div>
                         </div>
-                        <div className="PRICEANDBOOK w-2/6 ">
-                          <BookButton flightsData={flight} />
-                        </div>
+                        <Line blurredFlightId={blurredFlightId} />
+                        <SeeAllBar
+                          flightsData={flight}
+                          openOverlay={openOverlay}
+                          toggleOverlay={toggleOverlay}
+                          setBlurredFlightId={setBlurredFlightId}
+                        />
                       </div>
-                      <Line blurredFlightId={blurredFlightId} />
-                      <SeeAllBar
-                        flightsData={flight}
-                        openOverlay={openOverlay}
-                        toggleOverlay={toggleOverlay}
-                        setBlurredFlightId={setBlurredFlightId}
-                      />
                     </div>
+                  </li>
+                </ul>
+              </div>
+              {/* RENDER ADDITIONAL COMPONENT AFTER EVERY 7th ELEMENT */}
+              {index % 10 === 5 && index < currentFlights.length - 1 && (
+                <div
+                  key={`additional-component-${flight.id}`}
+                  className="ADDITIONAL-COMPONENT pb-5 relative"
+                >
+                  <img
+                    src={Advertisement}
+                    alt="advertisement"
+                    className="rounded-lg"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                  {/* Text container */}
+                  <div className="absolute inset-y-0 left-0 flex items-center w-1/2 pl-5">
+                    <span className="text-white font-medium text-xs sm:text-sm ">
+                      პოეტური დაბნეულია მხუთავის ნიუანსით ჭრაჭუნი დასავლელ,
+                      კინომონარქის ატრიალებდა, ეამა დანარჩენ ჯამაგირი დაამშვენა
+                      დავიხსომო მოუღებდნენ.
+                    </span>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              )}
+            </React.Fragment>
           ))}
           {/* RENDER PAGINATION COMPONENT */}
           <div className="flex items-center justify-between mt-10">
@@ -143,7 +168,7 @@ const Results = ({ flightsData }) => {
                   },
                   "& .Mui-selected": {
                     color: "#fff",
-                    backgroundColor: "#227bee",
+                    backgroundColor: "#2779e4",
                     "&:hover": {
                       backgroundColor: "#0056b3",
                     },
