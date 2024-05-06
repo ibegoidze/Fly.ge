@@ -1,7 +1,5 @@
-// IMPORT REACT AND USESTATE FROM REACT
 import React, { useState } from "react";
 import Advertisement from "../../../assets/Flights/Search/Advertisement.png";
-import BestOnes from "../../../assets/Flights/Search/BestOnes.png";
 
 // IMPORT COMPONENTS
 import DirectFlight from "./DirectFlight";
@@ -12,19 +10,33 @@ import TransferedFlight from "./TransferedFlight";
 import SeeAllBar from "./SeeAllBar";
 import { Pagination } from "@mui/material";
 import PageSizeDropdown from "./PageSizeDropdown";
+import SortDropdown from "./SortDropdown";
 
 // DEFINE RESULTS COMPONENT
 const Results = ({ flightsData }) => {
   // STATE FOR HANDLING OVERLAY AND BLURRED FLIGHT ID
   const [openOverlay, setOpenOverlay] = useState(null);
   const [blurredFlightId, setBlurredFlightId] = useState(null);
-  const [page, setPage] = useState(1); // State for current page
-  const [pageSize, setPageSize] = useState(10); // State for page size
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+  const [sortOption, setSortOption] = useState("");
+
+  // SORT RESULT ACCORDING TO SORTING DROPDOWN OPTION
+  let sortedFlightsData = [...flightsData];
+  if (sortOption === "Cheapest") {
+    sortedFlightsData.sort((a, b) => a.price - b.price);
+  } else if (sortOption === "Fastest") {
+    const NONE = "none";
+    sortedFlightsData.sort((a, b) => {
+      const transferOrder = { [NONE]: -1, 1: 0, 2: 1 };
+      return transferOrder[a.transfer] - transferOrder[b.transfer];
+    });
+  }
 
   // PAGINATION VARIABLES
   const indexOfLastFlight = page * pageSize;
   const indexOfFirstFlight = indexOfLastFlight - pageSize;
-  const currentFlights = flightsData.slice(
+  const currentFlights = sortedFlightsData.slice(
     indexOfFirstFlight,
     indexOfLastFlight
   );
@@ -44,26 +56,26 @@ const Results = ({ flightsData }) => {
   // RESULTS QUANTITY
   const resultsCount = flightsData.length;
 
+  // HANDLE SORT CHANGE
+  const handleSortChange = (selectedOption) => {
+    setSortOption(selectedOption);
+  };
+
   // RENDER RESULTS COMPONENT
   return (
     <div
-      className={`bg-backgroundGray pt-10  transition-all duration-700 ${
+      className={`bg-backgroundGray pt-5  transition-all duration-700 ${
         // ADDING BLURRED EFFECT IF FLIGHT IS BLURRED
         blurredFlightId !== null ? " inset-0 bg-blue-950 bg-opacity-25   " : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="pb-10">
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <div className="text-md font-medium text-gray-600 mb-5">
               Found {resultsCount} results
             </div>
-            <div className="flex items-center mb-5 gap-2 text-md font-medium text-gray-600">
-              <img src={BestOnes} alt="" className="w-5 h-5" /> Best ones{" "}
-              <span className="material-symbols-outlined transform transition duration-300">
-                arrow_drop_down
-              </span>
-            </div>
+            <SortDropdown handleSort={handleSortChange} />
           </div>
           {currentFlights.map((flight, index) => (
             <React.Fragment key={`flight-${flight.id}`}>
@@ -208,7 +220,7 @@ const Results = ({ flightsData }) => {
                 }}
               />
             </div>
-            {/* Render PageSizeDropdown component */}
+            {/* PAGE SIZE DROPDOWN */}
             <div className="flex items-center gap-5">
               <span className="text-gray-500 font-medium text-sm">
                 Ticket quantity
