@@ -34,27 +34,41 @@ function Extention({ flightsData }) {
           <span className=" text-textDark font-medium">
             {flightsData.to} {`(${flightsData.toCityId})`}
           </span>
-          <img src={Bed} alt="" />
-          <span className="text-sm text-gray-500 flex items-center font-medium">
-            {calculateNights(flightsData.departure, flightsData.return)} nights
-            stop
-          </span>
+          {flightsData.way === "Bilateral" ? (
+            <div className="flex gap-3">
+              <img src={Bed} alt="" />
+              <span className="text-sm text-gray-500 flex items-center font-medium">
+                {calculateNights(flightsData.departure, flightsData.return)}{" "}
+                nights stop
+              </span>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <img src={midLine} alt="" />
       </div>
-      <ExtentionReturn flightsData={flightsData} />
-      <div>
-        <img src={midLine} alt="" />
-        <div className="flex gap-5 ml-64 my-3">
-          <span className="ml-1">
-            <img src={Pin} alt="" />
-          </span>
-          <span className="font-medium">
-            {flightsData.from} {`(${flightsData.fromCityId})`}
-          </span>
+      {flightsData.way === "Bilateral" ? (
+        <ExtentionReturn flightsData={flightsData} />
+      ) : (
+        <></>
+      )}
+      {flightsData.way === "Bilateral" ? (
+        <div>
+          <img src={midLine} alt="" />
+          <div className="flex gap-5 ml-64 my-3">
+            <span className="ml-1">
+              <img src={Pin} alt="" />
+            </span>
+            <span className="font-medium">
+              {flightsData.from} {`(${flightsData.fromCityId})`}
+            </span>
+          </div>
+          <img src={midLine} alt="" />
         </div>
-        <img src={midLine} alt="" />
-      </div>
+      ) : (
+        <></>
+      )}
       <div className="LOAN mx-4 flex justify-between items-end">
         <ExtentionLoan />
         <div>

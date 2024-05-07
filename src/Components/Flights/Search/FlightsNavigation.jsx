@@ -10,7 +10,6 @@ function FlightsNavigation({ setActiveTab, activeTab, handleTabClick }) {
   const navigationRef = useRef(null);
 
   useEffect(() => {
-    // Calculate the height of the header
     const headerHeight = document.querySelector("header").offsetHeight;
     setTopPosition(headerHeight);
   }, []);

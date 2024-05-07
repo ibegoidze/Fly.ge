@@ -4,9 +4,7 @@ const SearchDropdown = ({ selectorText, dropdownOptions }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [selectedTransfer, setSelectedTransfer] = useState(
-    dropdownOptions[0] // Selecting the first option by default
-  );
+  const [selectedTransfer, setSelectedTransfer] = useState(dropdownOptions[0]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 

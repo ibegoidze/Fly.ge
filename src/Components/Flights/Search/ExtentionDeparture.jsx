@@ -123,7 +123,7 @@ function ExtentionDeparture({ flightsData }) {
           <div></div>
         )}
       </div>
-      {/* FIRST TRANSFER ---------------------------------------------------------------------------------------------------------------------- */}
+      {/* FIRST TRANSFER  */}
       <div className="DEPEDETAILS2">
         {" "}
         {transferWay === "departure" ? (
@@ -188,7 +188,7 @@ function ExtentionDeparture({ flightsData }) {
           <div></div>
         )}
       </div>
-      {/* SECOND TRANSFER ---------------------------------------------------------------------------------------------------------------------- */}
+      {/* SECOND TRANSFER */}
       <div className="DEPEDETAILS3">
         {/* TRANSFER TIME IN ORANGE */}
         {transferWay === "departure" && transfer === "2" ? (
