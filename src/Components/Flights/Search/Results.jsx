@@ -4,6 +4,7 @@ import Advertisement from "../../../assets/Flights/Search/Advertisement.png";
 // IMPORT COMPONENTS
 import DirectFlight from "./DirectFlight";
 import VerticalLine from "../../../assets/Flights/Search/VerticalLine.png";
+import UnilateralVerticalLine from "../../../assets/Flights/Search/UniVertical.png";
 import BookButton from "./BookButton";
 import Line from "./Line";
 import TransferedFlight from "./TransferedFlight";
@@ -95,8 +96,48 @@ const Results = ({ flightsData }) => {
                         <div className="flex">
                           <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
                             <div className="w-full">
-                              {flight.transfer > 1 ? (
-                                <>
+                              {/* BILATERAL FLIGHTS */}
+                              {flight.way === "Bilateral" ? (
+                                flight.transfer > 1 ? (
+                                  <>
+                                    {flight.transferWay === "departure" ? (
+                                      <TransferedFlight
+                                        flightsData={flight}
+                                        isReturn={false}
+                                      />
+                                    ) : (
+                                      <DirectFlight
+                                        flightsData={flight}
+                                        isReturn={false}
+                                      />
+                                    )}
+                                    {flight.transferWay === "return" ? (
+                                      <TransferedFlight
+                                        flightsData={flight}
+                                        isReturn={true}
+                                      />
+                                    ) : (
+                                      <DirectFlight
+                                        flightsData={flight}
+                                        isReturn={true}
+                                      />
+                                    )}
+                                  </>
+                                ) : (
+                                  <>
+                                    <DirectFlight
+                                      flightsData={flight}
+                                      isReturn={false}
+                                    />
+                                    <DirectFlight
+                                      flightsData={flight}
+                                      isReturn={true}
+                                    />
+                                  </>
+                                )
+                              ) : // UNILATERAL FLIGHTS
+                              flight.transfer > 1 ? (
+                                <div className=" mt-3">
                                   {flight.transferWay === "departure" ? (
                                     <TransferedFlight
                                       flightsData={flight}
@@ -108,36 +149,30 @@ const Results = ({ flightsData }) => {
                                       isReturn={false}
                                     />
                                   )}
-                                  {flight.transferWay === "return" ? (
-                                    <TransferedFlight
-                                      flightsData={flight}
-                                      isReturn={true}
-                                    />
-                                  ) : (
-                                    <DirectFlight
-                                      flightsData={flight}
-                                      isReturn={true}
-                                    />
-                                  )}
-                                </>
+                                </div>
                               ) : (
-                                <>
+                                <div className=" mt-3">
                                   <DirectFlight
                                     flightsData={flight}
                                     isReturn={false}
                                   />
-                                  <DirectFlight
-                                    flightsData={flight}
-                                    isReturn={true}
-                                  />
-                                </>
+                                </div>
                               )}
                             </div>
-                            <img
-                              src={VerticalLine}
-                              className="h-32 w-0.5"
-                              alt=""
-                            />
+                            {/* VERTICAL LINE */}
+                            {flight.way === "Bilateral" ? (
+                              <img
+                                src={VerticalLine}
+                                className="max-h-32 w-0.5"
+                                alt=""
+                              />
+                            ) : (
+                              <img
+                                src={UnilateralVerticalLine}
+                                className="max-h-20 w-0.5"
+                                alt=""
+                              />
+                            )}
                           </div>
                           <div className="PRICEANDBOOK w-2/6 ">
                             <BookButton flightsData={flight} />
@@ -155,11 +190,13 @@ const Results = ({ flightsData }) => {
                   </li>
                 </ul>
               </div>
-              {/* RENDER ADDITIONAL COMPONENT AFTER EVERY 7th ELEMENT */}
+              {/* ADVERTISEMENT COMPONENT AFTER EVERY 7th ELEMENT */}
               {index % 10 === 5 && index < currentFlights.length - 1 && (
                 <div
                   key={`additional-component-${flight.id}`}
-                  className="ADDITIONAL-COMPONENT pb-5 relative"
+                  className={`ADDITIONAL-COMPONENT pb-5 relative transition-all duration-300 ${
+                    blurredFlightId !== null ? "opacity-75" : ""
+                  }`}
                 >
                   <img
                     src={Advertisement}
@@ -179,7 +216,7 @@ const Results = ({ flightsData }) => {
               )}
             </React.Fragment>
           ))}
-          {/* RENDER PAGINATION COMPONENT */}
+          {/* PAGINATION COMPONENT */}
           <div className="flex items-center justify-between mt-10">
             <div>
               <Pagination
@@ -195,7 +232,9 @@ const Results = ({ flightsData }) => {
                   },
                   "& .Mui-selected": {
                     color: "#fff",
-                    backgroundColor: "#2779e4",
+                    backgroundColor: `${
+                      blurredFlightId !== null ? "#5686ce" : "#2779e4"
+                    }`,
                     "&:hover": {
                       backgroundColor: "#0056b3",
                     },
@@ -204,6 +243,7 @@ const Results = ({ flightsData }) => {
                     gap: "5px",
                     fontWeight: "700",
                     borderColor: "#ddd",
+                    zIndex: "10",
                     padding: "12px 30px",
                   },
                   "& .MuiPaginationItem-ellipsis": {
@@ -212,7 +252,10 @@ const Results = ({ flightsData }) => {
                   },
                   "& .MuiPaginationItem-root, & .MuiButtonBase-root": {
                     padding: "18px 14px",
-                    borderColor: "#ddd",
+                    borderColor: `${
+                      blurredFlightId !== null ? "#aaa9a9" : "#ddd"
+                    }`,
+
                     "&:hover": {
                       borderColor: "#ccc",
                     },
@@ -221,7 +264,7 @@ const Results = ({ flightsData }) => {
               />
             </div>
             {/* PAGE SIZE DROPDOWN */}
-            <div className="flex items-center gap-5">
+            <div className={`flex items-center gap-5 `}>
               <span className="text-gray-500 font-medium text-sm">
                 Ticket quantity
               </span>
@@ -238,5 +281,4 @@ const Results = ({ flightsData }) => {
   );
 };
 
-// EXPORT RESULTS COMPONENT
 export default Results;

@@ -64,7 +64,7 @@ const FlightsButton = ({ onSearchData }) => {
         flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
         flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
         flight.departure === dates.departure &&
-        flight.return === dates.return &&
+        (!flight.return || flight.return === dates.return) &&
         flight.way === stateMessage &&
         flight.class === classMessage &&
         (transferFilter === "Any" || flight.transfer === transferFilter) &&

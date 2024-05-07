@@ -35,9 +35,7 @@ const SortDropdown = ({ handleSort }) => {
       <div
         onClick={toggleDropdown}
         className={`flex items-center gap-2 justify-between cursor-pointer px-2 lg:px-4 py-2 text-sm font-medium text-gray-500 ${
-          isOpen
-            ? "bg-white text-primaryBlue rounded-t-md"
-            : "bg-backgroundGray rounded-md"
+          isOpen ? "bg-white text-primaryBlue rounded-t-md" : " rounded-md"
         }`}
       >
         <img src={BestOnes} alt="" className="w-6 h-6" />
