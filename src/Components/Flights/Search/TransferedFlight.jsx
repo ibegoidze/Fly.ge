@@ -71,9 +71,9 @@ function TransferedFlight({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                {flightsData.transferCity.length > 0
+                {/* {flightsData.transferCity.length > 0
                   ? `${flightsData.transferCity.length} Transfer`
-                  : "Direct"}
+                  : "Direct"} */}
               </span>
             </div>
             <img
