@@ -82,14 +82,14 @@ function ExtentionDeparture({ flightsData }) {
           </div>
           {/* TIME BETWEEN DEP START AND DEPEND OR FIRST TRANSFER */}
           <div className="text-xs flex items-center gap-5">
-            {transferWay === "departure"
+            {transferWay === "departure" || transferWay === "both"
               ? calculateTimeDifference(depStartTime, depFirstTransferStart)
               : calculateTimeDifference(depStartTime, depEndTime)}
             <Luggage flightsData={flightsData} small={true} />
           </div>
           {/* FIRST TRANSFER END*/}
           <div className="flex items-center gap-2">
-            {transferWay === "departure" ? (
+            {transferWay === "departure" || transferWay === "both" ? (
               <span className="text-textDark font-semibold">
                 {depFirstTransferStart}
               </span>
@@ -97,9 +97,11 @@ function ExtentionDeparture({ flightsData }) {
               <span className="text-textDark font-semibold">{depEndTime}</span>
             )}{" "}
             <span className="text-sm">
-              {transferWay === "departure" ? depTransferCityNames[0] : to}{" "}
+              {transferWay === "departure" || transferWay === "both"
+                ? depTransferCityNames[0]
+                : to}{" "}
               international airport
-              {transferWay === "departure" ? (
+              {transferWay === "departure" || transferWay === "both" ? (
                 <span className="text-sm">{` (${depTransferCity[0]})`}</span>
               ) : (
                 <span className="text-sm">{` (${toCityId})`}</span>
@@ -110,7 +112,7 @@ function ExtentionDeparture({ flightsData }) {
       </div>
       {/* TRANSFER TIME IN ORANGE */}
       <div className="DEPTRANSFERTIME ml-28">
-        {transferWay === "departure" ? (
+        {transferWay === "departure" || transferWay === "both" ? (
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5">
             <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
               <img src={Clock} alt="" className="mr-3" />
@@ -129,7 +131,7 @@ function ExtentionDeparture({ flightsData }) {
       {/* FIRST TRANSFER  */}
       <div className="DEPEDETAILS2">
         {" "}
-        {transferWay === "departure" ? (
+        {transferWay === "departure" || transferWay === "both" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINE LOGO */}
             <div className="AIRLINELOGO w-20 flex flex-col justify-center mr-14">
@@ -164,7 +166,8 @@ function ExtentionDeparture({ flightsData }) {
               </div>
               {/* FIRST TRANSFER END */}
               <div>
-                {transferWay === "departure" && transfer === "1" ? (
+                {transferWay === "departure" ||
+                (transferWay === "both" && transfer === "1") ? (
                   <div className="flex items-center gap-2">
                     <span className="text-textDark font-semibold">
                       {depEndTime}
@@ -194,7 +197,10 @@ function ExtentionDeparture({ flightsData }) {
       {/* SECOND TRANSFER */}
       <div className="DEPEDETAILS3">
         {/* TRANSFER TIME IN ORANGE */}
-        {transferWay === "departure" && transfer === "2" ? (
+        {transferWay === "departure" ||
+        (transferWay === "both" && transfer === "2") ||
+        transfer === "3" ||
+        transfer === "4" ? (
           <div className="flex items-center gap-2 w-full">
             <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28 w-full">
               <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
@@ -222,7 +228,10 @@ function ExtentionDeparture({ flightsData }) {
         ) : (
           <div></div>
         )}{" "}
-        {transferWay === "departure" && transfer === "2" ? (
+        {transferWay === "departure" ||
+        (transferWay === "both" && transfer === "2") ||
+        transfer === "3" ||
+        transfer === "4" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINES LOGO */}
             <div className="AIRLINELOGO w-20 flex flex-col justify-center mr-14">

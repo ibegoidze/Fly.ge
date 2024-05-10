@@ -100,27 +100,42 @@ const Results = ({ flightsData }) => {
                               {flight.way === "Bilateral" ? (
                                 flight.transfer > 1 ? (
                                   <>
-                                    {flight.transferWay === "departure" ? (
-                                      <TransferedFlight
-                                        flightsData={flight}
-                                        isReturn={false}
-                                      />
+                                    {flight.transferWay === "both" ? (
+                                      <>
+                                        <TransferedFlight
+                                          flightsData={flight}
+                                          isReturn={false}
+                                        />
+                                        <TransferedFlight
+                                          flightsData={flight}
+                                          isReturn={true}
+                                        />
+                                      </>
                                     ) : (
-                                      <DirectFlight
-                                        flightsData={flight}
-                                        isReturn={false}
-                                      />
-                                    )}
-                                    {flight.transferWay === "return" ? (
-                                      <TransferedFlight
-                                        flightsData={flight}
-                                        isReturn={true}
-                                      />
-                                    ) : (
-                                      <DirectFlight
-                                        flightsData={flight}
-                                        isReturn={true}
-                                      />
+                                      <div>
+                                        {flight.transferWay === "departure" ? (
+                                          <TransferedFlight
+                                            flightsData={flight}
+                                            isReturn={false}
+                                          />
+                                        ) : (
+                                          <DirectFlight
+                                            flightsData={flight}
+                                            isReturn={false}
+                                          />
+                                        )}
+                                        {flight.transferWay === "return" ? (
+                                          <TransferedFlight
+                                            flightsData={flight}
+                                            isReturn={true}
+                                          />
+                                        ) : (
+                                          <DirectFlight
+                                            flightsData={flight}
+                                            isReturn={true}
+                                          />
+                                        )}
+                                      </div>
                                     )}
                                   </>
                                 ) : (

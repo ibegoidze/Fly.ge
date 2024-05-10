@@ -97,7 +97,9 @@ function TransferedFlight({ flightsData, isReturn }) {
 
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
-                {flightsData.transferCity ? flightsData.transferCity[0] : "TUR"}
+                {isReturn
+                  ? flightsData.retTransferCity[0]
+                  : flightsData.depTransferCity[0]}
               </span>
             </div>
             <img
@@ -109,7 +111,13 @@ function TransferedFlight({ flightsData, isReturn }) {
             <div className="flex items-center justify-center">
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
-                {flightsData.transferCity ? flightsData.transferCity[1] : "DIR"}
+                {isReturn
+                  ? flightsData.retTransferCity
+                    ? flightsData.retTransferCity[1]
+                    : "DIR"
+                  : flightsData.depTransferCity
+                  ? flightsData.depTransferCity[1]
+                  : "DIR"}
               </span>
             </div>
             <img
