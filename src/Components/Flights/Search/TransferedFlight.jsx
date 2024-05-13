@@ -94,7 +94,6 @@ function TransferedFlight({ flightsData, isReturn }) {
                       flightsData.depEndTime
                     )}
               </span>
-
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
                 {isReturn

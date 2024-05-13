@@ -15,10 +15,20 @@ function DirectFlight({ flightsData, isReturn }) {
 
   // RENDER TRANSFER CITY ON BLUE POINTS
   const transferCity = () => {
-    if (flightsData.transferWay === "departure" && isReturn === false) {
-      return flightsData.transferCity ? flightsData.transferCity[0] : "DIR";
-    } else if (flightsData.transferWay === "return" && isReturn === true) {
-      return flightsData.transferCity ? flightsData.transferCity[0] : "DIR";
+    if (
+      flightsData.transferWay === "departure" ||
+      (flightsData.transferWay === "both" && isReturn === false)
+    ) {
+      return flightsData.depTransferCity
+        ? flightsData.depTransferCity[0]
+        : "DIR";
+    } else if (
+      flightsData.transferWay === "return" ||
+      (flightsData.transferWay === "both" && isReturn === true)
+    ) {
+      return flightsData.retTransferCity
+        ? flightsData.retTransferCity[0]
+        : "DIR";
     }
   };
 
@@ -115,7 +125,15 @@ function DirectFlight({ flightsData, isReturn }) {
               </span>
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
-                {transferCity() ? transferCity() : "DIR"}
+                {isReturn ? (
+                  flightsData.retFirsTransferStart ? (
+                    flightsData.retTransferCity[0]
+                  ) : (
+                    <div>{flightsData.depTransferCity[0]}</div>
+                  )
+                ) : (
+                  <>DIR</>
+                )}
               </span>
             </div>
             <img

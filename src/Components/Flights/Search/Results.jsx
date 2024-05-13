@@ -102,14 +102,55 @@ const Results = ({ flightsData }) => {
                                   <>
                                     {flight.transferWay === "both" ? (
                                       <>
-                                        <TransferedFlight
-                                          flightsData={flight}
-                                          isReturn={false}
-                                        />
-                                        <TransferedFlight
-                                          flightsData={flight}
-                                          isReturn={true}
-                                        />
+                                        {flight.transfer === "3" ? (
+                                          <>
+                                            {flight.depSecondTransferStart ? (
+                                              <>
+                                                <TransferedFlight
+                                                  flightsData={flight}
+                                                  isReturn={false}
+                                                />
+                                                <DirectFlight
+                                                  flightsData={flight}
+                                                  isReturn={true}
+                                                />
+                                              </>
+                                            ) : flight.retSecondTransferStart ? (
+                                              <>
+                                                <DirectFlight
+                                                  flightsData={flight}
+                                                  isReturn={false}
+                                                />
+                                                <TransferedFlight
+                                                  flightsData={flight}
+                                                  isReturn={true}
+                                                />
+                                              </>
+                                            ) : (
+                                              <>
+                                                <TransferedFlight
+                                                  flightsData={flight}
+                                                  isReturn={false}
+                                                />
+                                                <TransferedFlight
+                                                  flightsData={flight}
+                                                  isReturn={true}
+                                                />
+                                              </>
+                                            )}
+                                          </>
+                                        ) : (
+                                          <>
+                                            <TransferedFlight
+                                              flightsData={flight}
+                                              isReturn={false}
+                                            />
+                                            <TransferedFlight
+                                              flightsData={flight}
+                                              isReturn={true}
+                                            />
+                                          </>
+                                        )}
                                       </>
                                     ) : (
                                       <div>
@@ -248,7 +289,7 @@ const Results = ({ flightsData }) => {
                   "& .Mui-selected": {
                     color: "#fff",
                     backgroundColor: `${
-                      blurredFlightId !== null ? "#5686ce" : "#2779e4"
+                      blurredFlightId !== null ? "#5586ce" : "#2378e7"
                     }`,
                     "&:hover": {
                       backgroundColor: "#0056b3",
