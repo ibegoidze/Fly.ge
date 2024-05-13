@@ -126,13 +126,15 @@ function DirectFlight({ flightsData, isReturn }) {
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
                 {isReturn ? (
-                  flightsData.retFirsTransferStart ? (
+                  flightsData.retTransferCity ? (
                     flightsData.retTransferCity[0]
                   ) : (
-                    <div>{flightsData.depTransferCity[0]}</div>
+                    <div>DIR</div>
                   )
+                ) : flightsData.depTransferCity ? (
+                  flightsData.depTransferCity[0]
                 ) : (
-                  <>DIR</>
+                  <div>DIR</div>
                 )}
               </span>
             </div>
