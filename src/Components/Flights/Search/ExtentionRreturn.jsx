@@ -155,7 +155,7 @@ function ExtentionDetails({ flightsData }) {
               </div>
               {/* TIME BETWEEN FIRST TRANSFER START AND END */}
               <div className="flex items-center gap-5 text-xs">
-                {transfer === "1"
+                {retTransferCity
                   ? calculateTimeDifference(retFirstTransferEnd, retEndTime)
                   : calculateTimeDifference(
                       retFirstTransferEnd,
@@ -178,11 +178,17 @@ function ExtentionDetails({ flightsData }) {
                 ) : (
                   <div className="flex items-center gap-2">
                     <span className="text-textDark font-semibold">
-                      {retSecondTransferStart}
+                      {retSecondTransferStart
+                        ? retSecondTransferStart
+                        : retEndTime}
                     </span>{" "}
                     <span className="text-sm">
-                      {retTransferCityNames[1]} international airport{" "}
-                      {`(${retTransferCity[1]})`}
+                      {retTransferCityNames[1] ? retTransferCityNames[1] : to}{" "}
+                      international airport{" "}
+                      {retTransferCity[1]
+                        ? `(${retTransferCity[1]})`
+                        : `(${fromCityId})`}
+                      qqq
                     </span>
                   </div>
                 )}
@@ -195,11 +201,7 @@ function ExtentionDetails({ flightsData }) {
       </div>
       {/* SECOND TRANSFER*/}
       <div className="DEPEDETAILS3">
-        {/* TRANSFER TIME IN ORANGE */}
-        {transferWay === "return" ||
-        (transferWay === "both" && transfer === "2") ||
-        transfer === "3" ||
-        transfer === "4" ? (
+        {retSecondTransferStart ? (
           <div className="flex items-center gap-2 w-full">
             <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28 w-full">
               <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
@@ -227,10 +229,7 @@ function ExtentionDetails({ flightsData }) {
         ) : (
           <div></div>
         )}{" "}
-        {transferWay === "return" ||
-        (transferWay === "both" && transfer === "2") ||
-        transfer === "3" ||
-        transfer === "4" ? (
+        {retSecondTransferStart ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINES LOGO */}
             <div className="AIRLINELOGO flex flex-col w-20 justify-center mr-14">

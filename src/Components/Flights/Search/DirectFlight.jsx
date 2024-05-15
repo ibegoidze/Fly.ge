@@ -13,25 +13,6 @@ function DirectFlight({ flightsData, isReturn }) {
     return `${day} ${month}`;
   };
 
-  // RENDER TRANSFER CITY ON BLUE POINTS
-  const transferCity = () => {
-    if (
-      flightsData.transferWay === "departure" ||
-      (flightsData.transferWay === "both" && isReturn === false)
-    ) {
-      return flightsData.depTransferCity
-        ? flightsData.depTransferCity[0]
-        : "DIR";
-    } else if (
-      flightsData.transferWay === "return" ||
-      (flightsData.transferWay === "both" && isReturn === true)
-    ) {
-      return flightsData.retTransferCity
-        ? flightsData.retTransferCity[0]
-        : "DIR";
-    }
-  };
-
   // CONDITIONALLY SELECT IMAGE BASED ON FLIGHT DATA AND ISRETURN PROP
   const selectImage = () => {
     if (!isReturn) {
@@ -98,10 +79,12 @@ function DirectFlight({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                {flightsData.transfer === "1" &&
-                ((flightsData.transferWay === "departure" && !isReturn) ||
-                  (flightsData.transferWay === "return" && isReturn))
-                  ? `${flightsData.transfer} Transfer`
+                {isReturn
+                  ? flightsData.retTransferCity
+                    ? `${flightsData.retTransferCity.length} Stop`
+                    : "Direct"
+                  : flightsData.depTransferCity
+                  ? `${flightsData.retTransferCity.length} Stop`
                   : "Direct"}
               </span>
             </div>
