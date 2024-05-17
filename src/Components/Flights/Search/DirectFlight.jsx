@@ -84,7 +84,7 @@ function DirectFlight({ flightsData, isReturn }) {
                     ? `${flightsData.retTransferCity.length} Stop`
                     : "Direct"
                   : flightsData.depTransferCity
-                  ? `${flightsData.retTransferCity.length} Stop`
+                  ? `${flightsData.depTransferCity.length} Stop`
                   : "Direct"}
               </span>
             </div>

@@ -27,10 +27,17 @@ const Results = ({ flightsData }) => {
   if (sortOption === "Cheapest") {
     sortedFlightsData.sort((a, b) => a.price - b.price);
   } else if (sortOption === "Fastest") {
-    const NONE = "none";
+    const transferOrder = { none: 0, 1: 1, 2: 2, 3: 3, 4: 4 };
     sortedFlightsData.sort((a, b) => {
-      const transferOrder = { [NONE]: -1, 1: 0, 2: 1 };
-      return transferOrder[a.transfer] - transferOrder[b.transfer];
+      const transferA =
+        transferOrder[a.transfer] !== undefined
+          ? transferOrder[a.transfer]
+          : Number.MAX_SAFE_INTEGER;
+      const transferB =
+        transferOrder[b.transfer] !== undefined
+          ? transferOrder[b.transfer]
+          : Number.MAX_SAFE_INTEGER;
+      return transferA - transferB;
     });
   }
 
@@ -76,8 +83,21 @@ const Results = ({ flightsData }) => {
             <div className="text-md font-medium text-gray-600 mb-5">
               Found {resultsCount} results
             </div>
-            <SortDropdown handleSort={handleSortChange} />
+            <SortDropdown
+              handleSort={handleSortChange}
+              currentFlights={currentFlights}
+            />
           </div>
+          {/* CONDITIONALLY RENDER NO RESULTS IMAGE */}
+          {currentFlights.length === 0 && (
+            <div className="flex justify-center">
+              <img
+                src="https://old.fly.ge/wp-content/themes/fly-ge/img/FlightN.svg"
+                alt="No Results"
+                className="w-2/4"
+              />
+            </div>
+          )}
           {currentFlights.map((flight, index) => (
             <React.Fragment key={`flight-${flight.id}`}>
               {/* RENDER EACH FLIGHT COMPONENT */}
@@ -273,64 +293,70 @@ const Results = ({ flightsData }) => {
             </React.Fragment>
           ))}
           {/* PAGINATION COMPONENT */}
-          <div className="flex items-center justify-between mt-10">
-            <div>
-              <Pagination
-                count={Math.ceil(flightsData.length / pageSize)}
-                variant="outlined"
-                shape="rounded"
-                color="primary"
-                page={page}
-                onChange={handlePageChange}
-                sx={{
-                  "& .MuiPaginationItem-root": {
-                    color: "#000",
-                  },
-                  "& .Mui-selected": {
-                    color: "#fff",
-                    backgroundColor: `${
-                      blurredFlightId !== null ? "#5586ce" : "#2378e7"
-                    }`,
-                    "&:hover": {
-                      backgroundColor: "#0056b3",
+          {currentFlights.length === 0 ? (
+            <div></div>
+          ) : (
+            <div className="flex items-center justify-between mt-10">
+              <div>
+                <Pagination
+                  count={Math.ceil(flightsData.length / pageSize)}
+                  variant="outlined"
+                  shape="rounded"
+                  color="primary"
+                  page={page}
+                  onChange={handlePageChange}
+                  sx={{
+                    "& .MuiPaginationItem-root": {
+                      color: "#000",
                     },
-                  },
-                  "& .MuiPaginationItem-page": {
-                    gap: "5px",
-                    fontWeight: "700",
-                    borderColor: "#ddd",
-                    zIndex: "10",
-                    padding: "12px 30px",
-                  },
-                  "& .MuiPaginationItem-ellipsis": {
-                    fontSize: "30px",
-                    margin: "0 0 15px 0",
-                  },
-                  "& .MuiPaginationItem-root, & .MuiButtonBase-root": {
-                    padding: "18px 14px",
-                    borderColor: `${
-                      blurredFlightId !== null ? "#aaa9a9" : "#ddd"
-                    }`,
+                    "& .Mui-selected": {
+                      color: "#fff !important",
+                      backgroundColor: `${
+                        blurredFlightId !== null
+                          ? "#5586ce !important"
+                          : "#2378e7 !important"
+                      }`,
+                      "&:hover": {
+                        backgroundColor: "#0056b3 !important",
+                      },
+                    },
+                    "& .MuiPaginationItem-page": {
+                      gap: "5px",
+                      fontWeight: "700",
+                      borderColor: "#ddd",
+                      zIndex: "10",
+                      padding: "12px 30px",
+                    },
+                    "& .MuiPaginationItem-ellipsis": {
+                      fontSize: "30px",
+                      margin: "0 0 15px 0",
+                    },
+                    "& .MuiPaginationItem-root, & .MuiButtonBase-root": {
+                      padding: "18px 14px",
+                      borderColor: `${
+                        blurredFlightId !== null ? "#aaa9a9" : "#ddd"
+                      }`,
 
-                    "&:hover": {
-                      borderColor: "#ccc",
+                      "&:hover": {
+                        borderColor: "#ccc",
+                      },
                     },
-                  },
-                }}
-              />
+                  }}
+                />
+              </div>
+              {/* PAGE SIZE DROPDOWN */}
+              <div className={`flex items-center gap-5 `}>
+                <span className="text-gray-500 font-medium text-sm">
+                  Ticket quantity
+                </span>
+                <PageSizeDropdown
+                  pageSizeOptions={[10, 20, 50]}
+                  pageSize={pageSize}
+                  setPageSize={setPageSize}
+                />
+              </div>
             </div>
-            {/* PAGE SIZE DROPDOWN */}
-            <div className={`flex items-center gap-5 `}>
-              <span className="text-gray-500 font-medium text-sm">
-                Ticket quantity
-              </span>
-              <PageSizeDropdown
-                pageSizeOptions={[10, 20, 50]}
-                pageSize={pageSize}
-                setPageSize={setPageSize}
-              />
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ function TransferedFlight({ flightsData, isReturn }) {
   return (
     <div className="flex justify-between items-start mb-7 px-5">
       {/* IMAGE DIV */}
-      <div className="flex-none hidden sm:flex">
+      <div className="flex-none hidden lg:flex">
         <img
           src={isReturn ? DuckPic : PegasusPic}
           alt={isReturn ? "duck" : "pegasus"}
