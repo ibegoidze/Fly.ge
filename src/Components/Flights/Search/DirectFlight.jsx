@@ -39,13 +39,13 @@ function DirectFlight({ flightsData, isReturn }) {
   };
 
   return (
-    <div className="flex justify-between items-start mb-7 px-5">
+    <div className="flex justify-between items-start mb-7 md:px-5">
       {/* IMAGE DIV */}
       <div className="flex-none hidden sm:flex">
         <img src={selectImage()} alt={isReturn ? "duck" : "pegasus"} />
       </div>
       {/* DATE */}
-      <div className="flex-none flex w-20 flex-col justify-center">
+      <div className="flex-none hidden md:flex w-20 flex-col justify-center">
         <div className="font-semibold text-gray-500">
           {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>

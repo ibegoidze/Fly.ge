@@ -46,8 +46,6 @@ function ExtentionDetails({ flightsData }) {
     fromCityId,
   } = flightsData;
 
-  console.log(retSecondTransferEnd);
-
   return (
     <div className="ml-32 my-5">
       {/* HEADER */}

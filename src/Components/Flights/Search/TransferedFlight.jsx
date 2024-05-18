@@ -28,7 +28,7 @@ function TransferedFlight({ flightsData, isReturn }) {
   };
 
   return (
-    <div className="flex justify-between items-start mb-7 px-5">
+    <div className="flex justify-between items-start mb-7 md:px-5">
       {/* IMAGE DIV */}
       <div className="flex-none hidden lg:flex">
         <img
@@ -37,7 +37,7 @@ function TransferedFlight({ flightsData, isReturn }) {
         />
       </div>
       {/* DATE */}
-      <div className="flex-none flex w-20 flex-col justify-center">
+      <div className="hidden flex-none sm:flex w-20 flex-col justify-center">
         <div className="font-semibold text-gray-500">
           {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>
@@ -46,7 +46,7 @@ function TransferedFlight({ flightsData, isReturn }) {
         </span>
       </div>
       {/* TIME / CITY */}
-      <div className="flex-none flex flex-col w-20 justify-center">
+      <div className="flex-none  flex flex-col w-20 justify-center">
         <div className="font-semibold text-textDark">
           {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
         </div>
@@ -82,7 +82,7 @@ function TransferedFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-20 relative"
+              className="h-0.5 w-10 sm:w-20 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -107,7 +107,7 @@ function TransferedFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-7 relative"
+              className="h-0.5 w-10 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -125,7 +125,7 @@ function TransferedFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-10 relative"
+              className="h-0.5 w-10 sm:w-10 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />

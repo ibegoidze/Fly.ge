@@ -11,7 +11,7 @@ import AirlinesDropdown from "./AirlinesDropdown";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
-import TimeDropdown from "./TimeDropdown";
+// import TimeDropdown from "./TimeDropdown";
 
 function Search() {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ function Search() {
   };
   return (
     <div className="z-10 relative">
-      <div className=" bg-white h-auto w-full noto-sans-georgian shadow-lg">
+      <div className=" bg-white h-auto w-full noto-sans-georgian ">
         <div className="max-w-6xl mx-auto px-0 sm:px-6 lg:px-8">
           <div className="bg-white rounded-b-lg rounded-tr-lg p-4 h-auto ">
             <div className="sm:px-5 flex items-center justify-center lg:justify-start">
@@ -39,7 +39,7 @@ function Search() {
                 {" "}
                 <TransferDropdown selectorText="Transfer" />
                 <AirlinesDropdown />
-                <TimeDropdown />
+                {/* <TimeDropdown /> */}
               </div>
               <div>
                 {/* FILTER BUTTON */}

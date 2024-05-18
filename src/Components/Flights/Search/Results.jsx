@@ -113,8 +113,8 @@ const Results = ({ flightsData }) => {
                   <li>
                     <div className="ENTIREDIV">
                       <div className="TOPPART flex flex-col">
-                        <div className="flex">
-                          <div className="FLIGHINFORMATION flex pt-5 w-5/6 bg-white gap-5">
+                        <div className="flex flex-col md:flex-row">
+                          <div className="FLIGHINFORMATION flex pt-5 w-full md:w-5/6 bg-white gap-5">
                             <div className="w-full">
                               {/* BILATERAL FLIGHTS */}
                               {flight.way === "Bilateral" ? (
@@ -239,18 +239,18 @@ const Results = ({ flightsData }) => {
                             {flight.way === "Bilateral" ? (
                               <img
                                 src={VerticalLine}
-                                className="max-h-32 w-0.5"
+                                className="max-h-32 w-0.5 hidden md:flex"
                                 alt=""
                               />
                             ) : (
                               <img
                                 src={UnilateralVerticalLine}
-                                className="max-h-20 w-0.5"
+                                className="max-h-20 w-0.5 hidden md:flex"
                                 alt=""
                               />
                             )}
                           </div>
-                          <div className="PRICEANDBOOK w-2/6 ">
+                          <div className="PRICEANDBOOK w-full md:w-2/6 ">
                             <BookButton flightsData={flight} />
                           </div>
                         </div>

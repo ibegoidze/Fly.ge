@@ -15,11 +15,11 @@ function BookButton({ flightsData }) {
   return (
     <div
       className={`flex flex-col items-center justify-between ${
-        flightsData.way === "Bilateral" ? "p-4 pt-12" : "p-2 pt-5"
+        flightsData.way === "Bilateral" ? "md:p-4 md:pt-12" : "p-2 md:pt-5"
       }`}
     >
       <div className="PRICE text-2xl font-semibold">{calculatePrice()}$</div>
-      <button className="relative  hover:bg-blue-700 text-md px-5 md:px-16 transition-all duration-300 py-2 mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue">
+      <button className="relative  hover:bg-blue-700 text-md w-full lg:px-16 transition-all duration-300 py-2 mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue">
         <span className="flex whitespace-nowrap">Reservation</span>
       </button>
     </div>
