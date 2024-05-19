@@ -18,8 +18,10 @@ function BookButton({ flightsData }) {
         flightsData.way === "Bilateral" ? "md:p-4 md:pt-12" : "p-2 md:pt-5"
       }`}
     >
-      <div className="PRICE text-2xl font-semibold">{calculatePrice()}$</div>
-      <button className="relative  hover:bg-blue-700 text-md w-full lg:px-16 transition-all duration-300 py-2 mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue">
+      <div className="PRICE text-lg sm:text-2xl font-semibold">
+        {calculatePrice()}$
+      </div>
+      <button className="relative  hover:bg-blue-700 text-md w-full lg:px-16 transition-all duration-300 py-1.5 sm:py-2 mt-2 sm:mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue">
         <span className="flex whitespace-nowrap">Reservation</span>
       </button>
     </div>

@@ -27,7 +27,7 @@ function Extention({ flightsData }) {
       <ExtentionDeparture flightsData={flightsData} />
       <div>
         <img src={midLine} alt="" />
-        <div className="flex gap-4 ml-64 my-3">
+        <div className="flex gap-4 sm:ml-64 my-3">
           <span className="ml-1">
             <img src={Pin} alt="" />
           </span>
@@ -56,7 +56,7 @@ function Extention({ flightsData }) {
       {flightsData.way === "Bilateral" ? (
         <div>
           <img src={midLine} alt="" />
-          <div className="flex gap-5 ml-64 my-3">
+          <div className="flex gap-5 sm:ml-64 my-3">
             <span className="ml-1">
               <img src={Pin} alt="" />
             </span>
@@ -69,10 +69,10 @@ function Extention({ flightsData }) {
       ) : (
         <></>
       )}
-      <div className="LOAN mx-4 flex justify-between items-end">
+      <div className="LOAN sm:mx-4 flex flex-col sm:flex-row sm:justify-between sm:items-end">
         <ExtentionLoan />
         <div>
-          <button className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 text-md px-16 h-12 py-2 mt-8 my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
+          <button className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 w-full text-md px-16 sm:h-12 py-2 sm:mt-8 sm:my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
             <span className="flex whitespace-nowrap">
               Book {calculatePrice()}$
             </span>

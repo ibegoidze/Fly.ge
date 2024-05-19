@@ -270,7 +270,7 @@ const Results = ({ flightsData }) => {
               {index % 10 === 5 && index < currentFlights.length - 1 && (
                 <div
                   key={`additional-component-${flight.id}`}
-                  className={`ADDITIONAL-COMPONENT pb-5 relative transition-all duration-300 ${
+                  className={`ADDITIONAL-COMPONENT mb-5 relative transition-all duration-300 ${
                     blurredFlightId !== null ? "opacity-75" : ""
                   }`}
                 >
@@ -281,8 +281,8 @@ const Results = ({ flightsData }) => {
                     style={{ width: "100%", height: "auto" }}
                   />
                   {/* Text container */}
-                  <div className="absolute inset-y-0 left-0 flex items-center w-1/2 pl-5">
-                    <span className="text-white font-medium text-xs sm:text-sm ">
+                  <div className="absolute h-full inset-y-0 left-0 flex items-center w-1/2 pl-5 leading-tight ">
+                    <span className="text-white font-medium text-smallText sm:text-sm ">
                       პოეტური დაბნეულია მხუთავის ნიუანსით ჭრაჭუნი დასავლელ,
                       კინომონარქის ატრიალებდა, ეამა დანარჩენ ჯამაგირი დაამშვენა
                       დავიხსომო მოუღებდნენ.
@@ -326,17 +326,25 @@ const Results = ({ flightsData }) => {
                       borderColor: "#ddd",
                       zIndex: "10",
                       padding: "12px 30px",
+                      "@media (max-width: 768px)": {
+                        padding: "5px 15px", // ADD RESPONSIVE PADDING FOR SMALLER SCREENS
+                      },
                     },
                     "& .MuiPaginationItem-ellipsis": {
                       fontSize: "30px",
                       margin: "0 0 15px 0",
+                      "@media (max-width: 768px)": {
+                        fontSize: "16px", // ADJUST FONT SIZE FOR SMALLER SCREENS
+                      },
                     },
                     "& .MuiPaginationItem-root, & .MuiButtonBase-root": {
                       padding: "18px 14px",
                       borderColor: `${
                         blurredFlightId !== null ? "#aaa9a9" : "#ddd"
                       }`,
-
+                      "@media (max-width: 768px)": {
+                        padding: "8px 5px", // ADJUST PADDING FOR SMALLER SCREENS
+                      },
                       "&:hover": {
                         borderColor: "#ccc",
                       },
@@ -345,7 +353,7 @@ const Results = ({ flightsData }) => {
                 />
               </div>
               {/* PAGE SIZE DROPDOWN */}
-              <div className={`flex items-center gap-5 `}>
+              <div className={` items-center gap-5 hidden sm:flex`}>
                 <span className="text-gray-500 font-medium text-sm">
                   Ticket quantity
                 </span>

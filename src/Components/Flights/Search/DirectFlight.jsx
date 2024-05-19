@@ -41,11 +41,11 @@ function DirectFlight({ flightsData, isReturn }) {
   return (
     <div className="flex justify-between items-start mb-7 md:px-5">
       {/* IMAGE DIV */}
-      <div className="flex-none hidden sm:flex">
+      <div className="flex-none hidden md:flex">
         <img src={selectImage()} alt={isReturn ? "duck" : "pegasus"} />
       </div>
       {/* DATE */}
-      <div className="flex-none hidden md:flex w-20 flex-col justify-center">
+      <div className="flex-none hidden sm:flex w-20 flex-col justify-center">
         <div className="font-semibold text-gray-500">
           {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>
@@ -79,18 +79,28 @@ function DirectFlight({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                {isReturn
-                  ? flightsData.retTransferCity
-                    ? `${flightsData.retTransferCity.length} Stop`
-                    : "Direct"
-                  : flightsData.depTransferCity
-                  ? `${flightsData.depTransferCity.length} Stop`
-                  : "Direct"}
+                {isReturn ? (
+                  flightsData.retTransferCity ? (
+                    <div className="flex gap-1">
+                      {flightsData.retTransferCity.length}{" "}
+                      <span className="hidden xs:flex">Stops</span>
+                    </div>
+                  ) : (
+                    "Direct"
+                  )
+                ) : flightsData.depTransferCity ? (
+                  <div className="flex gap-1">
+                    {flightsData.depTransferCity.length}{" "}
+                    <span className="hidden xs:flex">Stops</span>
+                  </div>
+                ) : (
+                  "Direct"
+                )}
               </span>
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-20 relative"
+              className="h-0.5 w-10 xs:w-20 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -123,25 +133,25 @@ function DirectFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-20 relative"
+              className="h-0.5 w-10 xs:w-20 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
             <img src={BlueDot} alt="blue line" />
           </div>
         </div>
-        {/* TIME / CITY */}
-        <div className="flex flex-col justify-center w-20">
-          <div className="font-semibold text-textDark">
-            {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
-          </div>
-          <span className="text-xs font-medium text-gray-500 flex gap-1">
-            {isReturn ? flightsData.from : flightsData.to}
-            <span>{` (${
-              isReturn ? flightsData.fromCityId : flightsData.toCityId
-            }) `}</span>
-          </span>
+      </div>
+      {/* TIME / CITY */}
+      <div className="flex flex-col justify-center w-20">
+        <div className="font-semibold text-textDark">
+          {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
         </div>
+        <span className="text-xs font-medium text-gray-500 flex gap-1">
+          {isReturn ? flightsData.from : flightsData.to}
+          <span>{` (${
+            isReturn ? flightsData.fromCityId : flightsData.toCityId
+          }) `}</span>
+        </span>
       </div>
     </div>
   );

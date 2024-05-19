@@ -6,7 +6,7 @@ function Luggage({ flightsData, small }) {
   );
 
   return (
-    <div className={`flex ${small ? "gap-2" : "gap-2"}`}>
+    <div className={`flex gap-1 sm:gap-2`}>
       <div
         className={`rounded-full bg-gray-50 border px-${small ? "2" : "4"} py-${
           small ? "1" : "1.5"

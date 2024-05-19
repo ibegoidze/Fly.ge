@@ -30,7 +30,7 @@ function TransferedFlight({ flightsData, isReturn }) {
   return (
     <div className="flex justify-between items-start mb-7 md:px-5">
       {/* IMAGE DIV */}
-      <div className="flex-none hidden lg:flex">
+      <div className="flex-none hidden md:flex">
         <img
           src={isReturn ? DuckPic : PegasusPic}
           alt={isReturn ? "duck" : "pegasus"}
@@ -71,18 +71,28 @@ function TransferedFlight({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                {isReturn
-                  ? flightsData.retTransferCity
-                    ? `${flightsData.retTransferCity.length} Stops`
-                    : "Direct"
-                  : flightsData.depTransferCity
-                  ? `${flightsData.depTransferCity.length} Stops`
-                  : "Direct"}
+                {isReturn ? (
+                  flightsData.retTransferCity ? (
+                    <div className="flex gap-1">
+                      {flightsData.retTransferCity.length}{" "}
+                      <span className="hidden xs:flex">Stops</span>
+                    </div>
+                  ) : (
+                    "Direct"
+                  )
+                ) : flightsData.depTransferCity ? (
+                  <div className="flex gap-1">
+                    {flightsData.depTransferCity.length}{" "}
+                    <span className="hidden xs:flex">Stops</span>
+                  </div>
+                ) : (
+                  "Direct"
+                )}
               </span>
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-10 sm:w-20 relative"
+              className="h-0.5 w-6 xs:w-20 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -107,7 +117,7 @@ function TransferedFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-10 relative"
+              className="h-0.5 w-5 xs:w-8 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
@@ -125,25 +135,25 @@ function TransferedFlight({ flightsData, isReturn }) {
             </div>
             <img
               src={BlueLine}
-              className="h-0.5 w-10 sm:w-10 relative"
+              className="h-0.5 w-6 xs:w-8 relative"
               style={{ bottom: "5px" }}
               alt="blue line"
             />
             <img src={BlueDot} alt="blue line" />
           </div>
         </div>
-        {/* TIME / CITY */}
-        <div className="flex flex-col justify-center w-20">
-          <div className="font-semibold text-textDark">
-            {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
-          </div>
-          <span className="text-xs font-medium text-gray-500 flex gap-1">
-            {isReturn ? flightsData.from : flightsData.to}
-            <span>{` (${
-              isReturn ? flightsData.fromCityId : flightsData.toCityId
-            }) `}</span>
-          </span>
+      </div>
+      {/* TIME / CITY */}
+      <div className="flex flex-col justify-center w-20">
+        <div className="font-semibold text-textDark">
+          {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
         </div>
+        <span className="text-xs font-medium text-gray-500 flex gap-1">
+          {isReturn ? flightsData.from : flightsData.to}
+          <span>{` (${
+            isReturn ? flightsData.fromCityId : flightsData.toCityId
+          }) `}</span>
+        </span>
       </div>
     </div>
   );

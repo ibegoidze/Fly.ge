@@ -60,14 +60,14 @@ function SeeAllBar({
     <div ref={containerRef}>
       <div
         ref={liRef}
-        className="SEEALL h-12 flex justify-between px-5 items-center"
+        className="SEEALL h-12 flex justify-between sm:px-5 items-center"
       >
         <div
           className={`${
             hideLuggage ? "opacity-0" : "opacity-100"
           } transition-all duration-100`}
         >
-          <Luggage flightsData={flightsData} />
+          <Luggage flightsData={flightsData} small={true} />
         </div>
         <div
           className="SEEALL h-12 flex justify-end items-center text-sm font-medium text-primaryBlue cursor-pointer"

@@ -38,6 +38,9 @@ module.exports = {
       fontFamily: {
         "noto-sans-georgian": ['"Noto Sans Georgian"', "sans-serif"],
       },
+      fontSize: {
+        smallText: "7px",
+      },
       fontOpticalSizing: ["responsive"],
     },
   },

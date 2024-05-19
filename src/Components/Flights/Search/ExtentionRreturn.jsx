@@ -47,7 +47,7 @@ function ExtentionDetails({ flightsData }) {
   } = flightsData;
 
   return (
-    <div className="ml-32 my-5">
+    <div className="md:ml-32 my-5">
       {/* HEADER */}
       <div className="RETURN text-medium font-semibold mb-5 text-textDark">
         Return
@@ -55,26 +55,26 @@ function ExtentionDetails({ flightsData }) {
       {/* ONE WAY */}
       <div className="RETURN DETAILS flex">
         {/* DATE AND IMAGE ON THE LEFT */}
-        <div className="AIRLINELOGO flex flex-col mr-14">
+        <div className="AIRLINELOGO flex flex-col mr-5 sm:mr-14">
           <div className="font-medium text-gray-500 text-sm">
             {formatDate(flightsData.return)}
           </div>
-          <div className="h-full flex items-center w-20">
-            <img src={DuckLines} alt="" />
+          <div className="h-full flex w-14 sm:w-20 items-center">
+            <img src={DuckLines} alt="" className="w-full sm:w-20" />
           </div>
         </div>
         {/* LINE */}
         <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
           <img src={Circle} alt="" />
-          <img src={Line} alt="" className="h-22 w-0.5" />
+          <img src={Line} alt="" className="h-16 sm:h-22 w-0.5" />
           <img src={Circle} alt="" />
         </div>
         {/* RIGHT SIDE */}
-        <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
+        <div className="TIMES flex flex-col justify-between ml-2 sm:ml-5 text-gray-500 font-medium">
           {/* RETURN START TIME AND CITY */}
           <div className="flex items-center gap-2">
             <span className="text-textDark font-semibold">{retStartTime}</span>{" "}
-            <span className="text-sm">
+            <span className="text-xs sm:text-sm">
               {to} international airport {` (${flightsData.toCityId})`}
             </span>
           </div>
@@ -83,10 +83,12 @@ function ExtentionDetails({ flightsData }) {
             {transferWay === "return" || transferWay === "both"
               ? calculateTimeDifference(retStartTime, retFirstTransferStart)
               : calculateTimeDifference(retStartTime, retEndTime)}
-            <Luggage flightsData={flightsData} small={true} />
+            <div className="hidden sm:flex ">
+              <Luggage flightsData={flightsData} small={true} />
+            </div>
           </div>
           {/* RETEND OR FIRST TRANSFER */}
-          <div>
+          <div className="flex  items-center gap-2">
             {transferWay === "return" || transferWay === "both" ? (
               <span className="text-textDark font-semibold">
                 {retFirstTransferStart}
@@ -94,22 +96,22 @@ function ExtentionDetails({ flightsData }) {
             ) : (
               <span className="text-textDark font-semibold">{retEndTime}</span>
             )}{" "}
-            <span className="text-sm">
+            <span className="text-xs sm:text-sm">
               {transferWay === "return" || transferWay === "both"
-                ? flightsData.retTransferCityNames[0]
-                : from}{" "}
+                ? retTransferCityNames[0]
+                : to}{" "}
               international airport
               {transferWay === "return" || transferWay === "both" ? (
-                <span className="text-sm">{` (${retTransferCity[0]})`}</span>
+                <span className="text-xs sm:text-sm">{` (${retTransferCity[0]})`}</span>
               ) : (
-                <span className="text-sm">{` (${flightsData.fromCityId})`}</span>
+                <span className="text-sm">{` (${fromCityId})`}</span>
               )}
             </span>
           </div>
         </div>
       </div>
       {/* TRANSFER TIME IN ORANGE */}
-      <div className="DEPTRANSFERTIME ml-28">
+      <div className="DEPTRANSFERTIME sm:ml-28">
         {transferWay === "return" || transferWay === "both" ? (
           <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5">
             <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
@@ -131,22 +133,24 @@ function ExtentionDetails({ flightsData }) {
         {transferWay === "return" || transferWay === "both" ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINE LOGO */}
-            <div className="AIRLINELOGO flex flex-col w-20 justify-center mr-14">
-              <img src={DuckLines} alt="" />
+            <div className="AIRLINELOGO flex flex-col mr-5 sm:mr-14">
+              <div className="h-full flex w-14 sm:w-20 items-center">
+                <img src={DuckLines} alt="" className="w-full sm:w-20" />
+              </div>
             </div>
             {/* LINE */}
             <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
               <img src={Circle} alt="" />
-              <img src={Line} alt="" className="h-22 w-0.5" />
+              <img src={Line} alt="" className="h-16 sm:h-22 w-0.5" />
               <img src={Circle} alt="" />
             </div>
             {/* FIRST TRANSFER START TIME AND CITY */}
-            <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
+            <div className="TIMES flex flex-col justify-between ml-2 sm:ml-5 text-gray-500 font-medium">
               <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {retFirstTransferEnd}
                 </span>{" "}
-                <span className="text-sm">
+                <span className="text-xs sm:text-sm">
                   {retTransferCityNames[0]} international airport{" "}
                   {`(${retTransferCity[0]})`}
                 </span>
@@ -159,7 +163,9 @@ function ExtentionDetails({ flightsData }) {
                       retFirstTransferEnd,
                       retSecondTransferStart
                     )}
-                <Luggage flightsData={flightsData} small={true} />
+                <div className="hidden sm:flex ">
+                  <Luggage flightsData={flightsData} small={true} />
+                </div>
               </div>
               {/* FIRST TRANSFER END */}
               <div>
@@ -180,13 +186,12 @@ function ExtentionDetails({ flightsData }) {
                         ? retSecondTransferStart
                         : retEndTime}
                     </span>{" "}
-                    <span className="text-sm">
+                    <span className="text-xs sm:text-sm">
                       {retTransferCityNames[1] ? retTransferCityNames[1] : to}{" "}
                       international airport{" "}
                       {retTransferCity[1]
                         ? `(${retTransferCity[1]})`
                         : `(${fromCityId})`}
-                      qqq
                     </span>
                   </div>
                 )}
@@ -201,7 +206,7 @@ function ExtentionDetails({ flightsData }) {
       <div className="DEPEDETAILS3">
         {retSecondTransferStart ? (
           <div className="flex items-center gap-2 w-full">
-            <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 ml-28 w-full">
+            <div className="bg-orange-100 h-10 flex items-center pl-5 rounded-sm my-5 sm:ml-28 w-full">
               <div className="flex gap-1 text-sm items-center font-medium text-orangeBrown">
                 <img src={Clock} alt="" className="mr-3" />
                 {calculateTimeDifference(
@@ -230,22 +235,24 @@ function ExtentionDetails({ flightsData }) {
         {retSecondTransferStart ? (
           <div className="DEPDETAILS1 flex">
             {/* AIRLINES LOGO */}
-            <div className="AIRLINELOGO flex flex-col w-20 justify-center mr-14">
-              <img src={DuckLines} alt="" />
+            <div className="AIRLINELOGO flex flex-col mr-5 sm:mr-14">
+              <div className="h-full flex w-14 sm:w-20 items-center">
+                <img src={DuckLines} alt="" className="w-full sm:w-20" />
+              </div>
             </div>
             {/* LINE */}
             <div className="LINE flex flex-col items-center gap-1 pt-1 pb-1">
               <img src={Circle} alt="" />
-              <img src={Line} alt="" className="h-22 w-0.5" />
+              <img src={Line} alt="" className="h-16 sm:h-22 w-0.5" />
               <img src={Circle} alt="" />
             </div>
             {/* SECOND TRANSFER START */}
-            <div className="TIMES flex flex-col justify-between ml-5 text-gray-500 font-medium">
+            <div className="TIMES flex flex-col justify-between ml-2 sm:ml-5 text-gray-500 font-medium">
               <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {retSecondTransferEnd}
                 </span>{" "}
-                <span className="text-sm">
+                <span className="text-xs sm:text-sm">
                   {retTransferCityNames[1]} international airport{" "}
                   <span>{`(${retTransferCity[1]})`}</span>
                 </span>
@@ -253,14 +260,16 @@ function ExtentionDetails({ flightsData }) {
               {/* TIME BETWEEN SECOND TRANSFER */}
               <div className="flex items-center gap-5 text-xs">
                 {calculateTimeDifference(retSecondTransferEnd, retEndTime)}{" "}
-                <Luggage flightsData={flightsData} small={true} />
+                <div className="hidden sm:flex ">
+                  <Luggage flightsData={flightsData} small={true} />
+                </div>
               </div>
               {/* SECOND TRANSFER END */}
               <div className="flex items-center gap-2">
                 <span className="text-textDark font-semibold">
                   {retEndTime}
                 </span>{" "}
-                <span className="text-sm">
+                <span className="text-xs sm:text-sm">
                   {from} international airport <span>{`(${fromCityId})`}</span>
                 </span>
               </div>
