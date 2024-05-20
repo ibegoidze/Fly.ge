@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Advertisement from "../../../assets/Flights/Search/Advertisement.png";
+import { useTranslation } from "react-i18next";
 
 // IMPORT COMPONENTS
 import DirectFlight from "./DirectFlight";
@@ -21,6 +22,7 @@ const Results = ({ flightsData }) => {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [sortOption, setSortOption] = useState("");
+  const { t } = useTranslation();
 
   // SORT RESULT ACCORDING TO SORTING DROPDOWN OPTION
   let sortedFlightsData = [...flightsData];
@@ -81,7 +83,7 @@ const Results = ({ flightsData }) => {
         <div className="pb-10">
           <div className="flex justify-between items-center">
             <div className="text-md font-medium text-gray-600 mb-5">
-              Found {resultsCount} results
+              {t("found")} {resultsCount} {t("results")}
             </div>
             <SortDropdown
               handleSort={handleSortChange}
@@ -355,7 +357,7 @@ const Results = ({ flightsData }) => {
               {/* PAGE SIZE DROPDOWN */}
               <div className={` items-center gap-5 hidden sm:flex`}>
                 <span className="text-gray-500 font-medium text-sm">
-                  Ticket quantity
+                  {t("ticket quantity")}
                 </span>
                 <PageSizeDropdown
                   pageSizeOptions={[10, 20, 50]}

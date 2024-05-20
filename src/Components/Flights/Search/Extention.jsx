@@ -27,11 +27,11 @@ function Extention({ flightsData }) {
       <ExtentionDeparture flightsData={flightsData} />
       <div>
         <img src={midLine} alt="" />
-        <div className="flex gap-4 sm:ml-64 my-3">
+        <div className="flex gap-4 sm:ml-64 my-3 items-center">
           <span className="ml-1">
             <img src={Pin} alt="" />
           </span>
-          <span className=" text-textDark font-medium">
+          <span className=" text-textDark font-medium text-sm sm:text-md">
             {flightsData.to} {`(${flightsData.toCityId})`}
           </span>
           {flightsData.way === "Bilateral" ? (
@@ -56,11 +56,11 @@ function Extention({ flightsData }) {
       {flightsData.way === "Bilateral" ? (
         <div>
           <img src={midLine} alt="" />
-          <div className="flex gap-5 sm:ml-64 my-3">
+          <div className="flex gap-5 sm:ml-64 my-3 items-center">
             <span className="ml-1">
               <img src={Pin} alt="" />
             </span>
-            <span className="font-medium">
+            <span className="font-medium text-sm sm:text-md">
               {flightsData.from} {`(${flightsData.fromCityId})`}
             </span>
           </div>

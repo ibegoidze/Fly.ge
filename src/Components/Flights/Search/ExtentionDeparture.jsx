@@ -5,14 +5,16 @@ import Clock from "../../../assets/Flights/Search/Clock.png";
 import LongTime from "../../../assets/Flights/Search/LongTime.png";
 
 import Luggage from "./Luggage";
+import { useTranslation } from "react-i18next";
 
 function ExtentionDeparture({ flightsData }) {
+  const { t } = useTranslation();
   // FORMAT DATE
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.getDate();
     const month = date.toLocaleString("default", { month: "long" });
-    return `${day} ${month}`;
+    return `${day} ${t(month)}`;
   };
   // CALCULATE TIME DIFFERENCE
   const calculateTimeDifference = (start, end) => {
@@ -52,7 +54,7 @@ function ExtentionDeparture({ flightsData }) {
     <div className="md:ml-32 mb-5">
       {/* HEADER */}
       <div className="RETURN text-medium font-semibold mb-5 text-textDark">
-        Departure
+        {t("Departure")}
       </div>
       {/* ONE WAY */}
       <div className="DEPDETAILS1 flex">
@@ -77,7 +79,8 @@ function ExtentionDeparture({ flightsData }) {
           <div className="flex items-center gap-2">
             <span className="text-textDark font-semibold">{depStartTime}</span>{" "}
             <span className="text-xs sm:text-sm">
-              {from} international airport {` (${flightsData.fromCityId})`}
+              {t(from)} {t("international airport")}{" "}
+              {` (${flightsData.fromCityId})`}
             </span>
           </div>
           {/* TIME BETWEEN DEP START AND DEPEND OR FIRST TRANSFER */}

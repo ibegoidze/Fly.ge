@@ -70,7 +70,7 @@ function SeeAllBar({
           <Luggage flightsData={flightsData} small={true} />
         </div>
         <div
-          className="SEEALL h-12 flex justify-end items-center text-sm font-medium text-primaryBlue cursor-pointer"
+          className="SEEALL h-12 flex justify-end items-center text-xs sm:text-sm font-medium text-primaryBlue cursor-pointer"
           onClick={() => toggleExtension(flightsData.id)}
         >
           {seeAllText}

@@ -4,13 +4,16 @@ import PlaneLogo from "../../../assets/Flights/Search/PlaneLogo.png";
 import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 import DuckPic from "../../../assets/Flights/Search/Duck.png";
 
+import { useTranslation } from "react-i18next";
+
 function DirectFlight({ flightsData, isReturn }) {
+  const { t } = useTranslation();
   // FORMAT DATE
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.getDate();
     const month = date.toLocaleString("default", { month: "long" });
-    return `${day} ${month}`;
+    return `${day} ${t(month)}`;
   };
 
   // CONDITIONALLY SELECT IMAGE BASED ON FLIGHT DATA AND ISRETURN PROP
@@ -50,7 +53,7 @@ function DirectFlight({ flightsData, isReturn }) {
           {formatDate(isReturn ? flightsData.return : flightsData.departure)}
         </div>
         <span className="text-xs font-medium text-gray-500">
-          {isReturn ? "Return" : "Departure"}
+          {isReturn ? t("Return") : t("Departure")}
         </span>
       </div>
       {/* TIME / CITY */}
@@ -59,7 +62,7 @@ function DirectFlight({ flightsData, isReturn }) {
           {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
         </div>
         <div className="text-xs font-medium text-gray-500 flex gap-1">
-          {isReturn ? flightsData.to : flightsData.from}{" "}
+          {isReturn ? t(flightsData.to) : t(flightsData.from)}{" "}
           <span>{` (${
             isReturn ? flightsData.toCityId : flightsData.fromCityId
           }) `}</span>
@@ -83,18 +86,18 @@ function DirectFlight({ flightsData, isReturn }) {
                   flightsData.retTransferCity ? (
                     <div className="flex gap-1">
                       {flightsData.retTransferCity.length}{" "}
-                      <span className="hidden xs:flex">Stops</span>
+                      <span className="hidden xs:flex">{t("stop")}</span>
                     </div>
                   ) : (
-                    "Direct"
+                    t("direct")
                   )
                 ) : flightsData.depTransferCity ? (
                   <div className="flex gap-1">
                     {flightsData.depTransferCity.length}{" "}
-                    <span className="hidden xs:flex">Stops</span>
+                    <span className="hidden xs:flex">{t("stop")}</span>
                   </div>
                 ) : (
-                  "Direct"
+                  t("direct")
                 )}
               </span>
             </div>
@@ -147,7 +150,7 @@ function DirectFlight({ flightsData, isReturn }) {
           {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
         </div>
         <span className="text-xs font-medium text-gray-500 flex gap-1">
-          {isReturn ? flightsData.from : flightsData.to}
+          {isReturn ? t(flightsData.from) : t(flightsData.to)}
           <span>{` (${
             isReturn ? flightsData.fromCityId : flightsData.toCityId
           }) `}</span>
