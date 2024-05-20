@@ -11,6 +11,8 @@ const FlightsButton = ({ onSearchData }) => {
   const oneWayState = useSelector((state) => state.oneWay.oneWayState);
   const selectedClass = useSelector((state) => state.class.selectedClass);
   const { dates } = useSelector((state) => state.dateSelection);
+  const returnTime = useSelector((state) => state.times.returnTime);
+  const departureTime = useSelector((state) => state.times.departureTime);
   const { selectedFromAirport, selectedToAirport } = useSelector(
     (state) => state.airports
   );
@@ -48,9 +50,24 @@ const FlightsButton = ({ onSearchData }) => {
       : selectedClass === "Erste klasse" || selectedClass === "პირველი კლასი"
       ? "First class"
       : selectedClass;
+
+  // CONVERT NUMBER TO TIME STRING
+  const convertToTimeString = (num) => {
+    const hours = String(num).padStart(2, "0");
+    return `${hours}:00`;
+  };
+
   // CLICK TO FILTER AND DISPLAY IN RESULTS
   const handleSearchClick = () => {
+    const depStart = convertToTimeString(departureTime[0]);
+    const depEnd = convertToTimeString(departureTime[1]);
+    const retStart = convertToTimeString(returnTime[0]);
+    const retEnd = convertToTimeString(returnTime[1]);
+
     const filteredData = flightsData.filter((flight) => {
+      const depStartTime = flight.depStartTime;
+      const retStartTime = flight.retStartTime;
+
       const { departure, return: returnAirlines } = flight.airlines;
       const selectedAirlinesSet = new Set([...selectedAirlines]);
       const transferFilterValue =
@@ -69,7 +86,11 @@ const FlightsButton = ({ onSearchData }) => {
         (transferFilter === "Any" ||
           transferFilterValue.includes(flight.transfer)) &&
         (selectedAirlinesSet.has(departure) ||
-          selectedAirlinesSet.has(returnAirlines))
+          selectedAirlinesSet.has(returnAirlines)) &&
+        depStartTime >= depStart &&
+        depStartTime <= depEnd &&
+        retStartTime >= retStart &&
+        retStartTime <= retEnd
       );
     });
 

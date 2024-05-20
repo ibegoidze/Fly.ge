@@ -14,6 +14,16 @@ const TimeDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const dispatch = useDispatch();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // ON MOBILE RESPONSIVE DROPDOWN OPENS IN CENTER
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const { selectedFromAirport, selectedToAirport } = useSelector(
     (state) => state.airports
@@ -75,19 +85,23 @@ const TimeDropdown = () => {
       </div>
       {/* DROPDOWN */}
       <div
-        className={`absolute z-20 w-80 shadow-sm bg-gray-100 rounded-md overflow-y-hidden transition-all duration-300
+        className={`absolute z-20 w-64 sm:w-80 shadow-sm bg-gray-100 rounded-md overflow-y-hidden transition-all duration-300
         ${isOpen ? "pacity-100" : "opacity-0 pointer-events-none"}`}
         style={{
-          borderRadius: "0 0.375rem 0.375rem 0.375rem",
           maxHeight: "250px",
+          transform: windowWidth <= 768 ? "translateX(-71.5%)" : "none",
+          borderRadius:
+            windowWidth <= 768
+              ? "0 0 0.375rem 0.375rem"
+              : "0 0.375rem 0.375rem 0.375rem",
         }}
       >
         <div className="text-md font-medium text-gray-500 flex items-center gap-2 px-6 pt-5">
           {selectedFromAirport?.city || "Departure"} <img src={Arrows} alt="" />{" "}
           {selectedToAirport?.city || "Return"}
         </div>
-        <div className="px-6 py-5 ">
-          <div className="mb-4">
+        <div className="px-6 py-2 sm:py-5 ">
+          <div className="mb-2 sm:mb-4">
             <div className="flex items-center mb-3">
               <img src={DeparturePlane} alt="" className="mr-2" />
               <span className="text-gray-400 font-medium flex mx-1">

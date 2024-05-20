@@ -232,7 +232,7 @@ function ExtentionDeparture({ flightsData }) {
             ).includes("1 hr") ? (
               <div className="bg-red-100 h-10 flex items-center w-1/4 rounded-sm justify-center gap-2 text-longRed font-medium text-sm">
                 <img src={LongTime} alt="" />
-                <span>Long</span>
+                <span className="hidden sm:flex">Long</span>
               </div>
             ) : null}
           </div>

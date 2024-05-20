@@ -7,11 +7,11 @@ import Passengers from "../../Tickets/SearchFlights/Passengers";
 import FlightsButton from "./FlightsButton";
 import Results from "./Results";
 import TransferDropdown from "./TransferDropdown";
-// import AirlinesDropdown from "./AirlinesDropdown";
+import AirlinesDropdown from "./AirlinesDropdown";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
-// import TimeDropdown from "./TimeDropdown";
+import TimeDropdown from "./TimeDropdown";
 
 function Search() {
   const dispatch = useDispatch();
@@ -38,8 +38,8 @@ function Search() {
               <div className="text-sm text-gray-400 font-semibold flex gap-2">
                 {" "}
                 <TransferDropdown selectorText="Transfer" />
-                {/* <AirlinesDropdown /> */}
-                {/* <TimeDropdown /> */}
+                <AirlinesDropdown />
+                <TimeDropdown />
               </div>
               <div>
                 {/* FILTER BUTTON */}

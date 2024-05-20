@@ -89,7 +89,7 @@ const Results = ({ flightsData }) => {
             />
           </div>
           {/* CONDITIONALLY RENDER NO RESULTS IMAGE */}
-          {currentFlights.length === 0 && (
+          {flightsData.length === 0 && (
             <div className="flex justify-center">
               <img
                 src="https://old.fly.ge/wp-content/themes/fly-ge/img/FlightN.svg"
