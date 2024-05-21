@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setTransferFilter } from "../../../Store/SearchFlights/transferSlice";
+import { useTranslation } from "react-i18next";
 
 const TransferDropdown = ({ selectorText }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -57,7 +59,7 @@ const TransferDropdown = ({ selectorText }) => {
         } `}
         onClick={toggleDropdown}
       >
-        {selectorText}
+        {t(selectorText)}
         <span
           className="material-symbols-outlined transform transition duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -97,7 +99,7 @@ const TransferDropdown = ({ selectorText }) => {
               <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
             )}
           </div>
-          <span className="text-sm text-gray-600">Any quantity</span>
+          <span className="text-sm text-gray-600">{t("Any quantity")}</span>
         </div>
         <div
           className={`flex items-center px-4 py-2 cursor-pointer ${
@@ -117,7 +119,7 @@ const TransferDropdown = ({ selectorText }) => {
               <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
             )}
           </div>
-          <span className="text-sm text-gray-600">Without transfer</span>
+          <span className="text-sm text-gray-600">{t("Without transfer")}</span>
         </div>
         <div
           className={`flex items-center px-4 py-2 cursor-pointer ${
@@ -137,7 +139,7 @@ const TransferDropdown = ({ selectorText }) => {
               <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
             )}
           </div>
-          <span className="text-sm text-gray-600">1 or without</span>
+          <span className="text-sm text-gray-600">{t("1 or without")}</span>
         </div>
         <div
           className={`flex items-center px-4 py-2 cursor-pointer ${
@@ -157,7 +159,7 @@ const TransferDropdown = ({ selectorText }) => {
               <div className="bg-primaryBlue rounded-full w-3 h-3"></div>
             )}
           </div>
-          <span className="text-sm text-gray-600">2 or without</span>
+          <span className="text-sm text-gray-600">{t("2 or without")}</span>
         </div>
       </div>
     </div>

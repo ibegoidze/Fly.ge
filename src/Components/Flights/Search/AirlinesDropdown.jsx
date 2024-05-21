@@ -5,8 +5,10 @@ import {
   toggleAirlineSelection,
 } from "../../../Store/SearchFlights/airlinesSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const AirlinesDropdown = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const selectedAirlines = useSelector(
     (state) => state.airlines.selectedAirlines
@@ -66,7 +68,7 @@ const AirlinesDropdown = () => {
           setIsOpen((prevState) => !prevState);
         }}
       >
-        Airlines
+        {t("Airlines")}
         <span
           className="material-symbols-outlined transform transition duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -85,8 +87,10 @@ const AirlinesDropdown = () => {
       >
         <div className="h-96" style={{ maxHeight: "250px" }}>
           {/* CHECKBOX OPTIONS */}
-          <div className="flex justify-between items-center px-4">
-            <div className="text-gray-500">All Airlines</div>
+          <div className="flex justify-between items-center text-sm px-4">
+            <div className="text-gray-500 text-xs sm:text-sm ">
+              {t("All Airlines")}
+            </div>
             <Switch
               id="Switch"
               value="checkedA"

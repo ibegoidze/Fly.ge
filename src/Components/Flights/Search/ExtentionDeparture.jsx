@@ -27,10 +27,10 @@ function ExtentionDeparture({ flightsData }) {
     return hours === 0 && minutes === 0
       ? ""
       : hours === 0
-      ? `${minutes} min`
+      ? `${minutes} ${t("min")}`
       : minutes === 0
-      ? `${hours} hr`
-      : `${hours} hr, ${minutes}`;
+      ? `${hours} ${t("hr")}`
+      : `${hours} ${t("hr")}, ${minutes}`;
   };
 
   const {
@@ -103,9 +103,9 @@ function ExtentionDeparture({ flightsData }) {
             )}{" "}
             <span className="text-xs sm:text-sm">
               {transferWay === "departure" || transferWay === "both"
-                ? depTransferCityNames[0]
-                : to}{" "}
-              international airport
+                ? t(depTransferCityNames[0])
+                : t(to)}{" "}
+              {t("international airport")}
               {transferWay === "departure" || transferWay === "both" ? (
                 <span className="text-xs sm:text-sm">{` (${depTransferCity[0]})`}</span>
               ) : (
@@ -125,8 +125,9 @@ function ExtentionDeparture({ flightsData }) {
                 depFirstTransferStart,
                 depFirstTransferEnd
               )}
-              <span>stop,</span>
-              {depTransferCityNames[0]} <span>{`(${depTransferCity[0]})`}</span>
+              <span>{t("stop")},</span>
+              {t(depTransferCityNames[0])}{" "}
+              <span>{`(${t(depTransferCity[0])})`}</span>
             </div>
           </div>
         ) : (
@@ -160,7 +161,7 @@ function ExtentionDeparture({ flightsData }) {
                   {depFirstTransferEnd}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {depTransferCityNames[0]} international airport{" "}
+                  {t(depTransferCityNames[0])} {t("international airport")}{" "}
                   {`(${depTransferCity[0]})`}
                 </span>
               </div>
@@ -185,7 +186,7 @@ function ExtentionDeparture({ flightsData }) {
                       {depEndTime}
                     </span>{" "}
                     <span className="text-sm">
-                      {to} airport {`(${toCityId})`}
+                      {t(to)} airport {`(${toCityId})`}
                     </span>
                   </div>
                 ) : (
@@ -196,8 +197,10 @@ function ExtentionDeparture({ flightsData }) {
                         : depEndTime}
                     </span>{" "}
                     <span className="text-xs sm:text-sm">
-                      {depTransferCityNames[1] ? depTransferCityNames[1] : to}{" "}
-                      international airport{" "}
+                      {depTransferCityNames[1]
+                        ? t(depTransferCityNames[1])
+                        : t(to)}{" "}
+                      {t("international airport")}{" "}
                       {depTransferCity[1]
                         ? `(${depTransferCity[1]})`
                         : `(${toCityId})`}
@@ -223,8 +226,8 @@ function ExtentionDeparture({ flightsData }) {
                   depSecondTransferStart,
                   depSecondTransferEnd
                 )}
-                <span>stop,</span>
-                {depTransferCityNames[1]}{" "}
+                <span>{t("stop")},</span>
+                {t(depTransferCityNames[1])}{" "}
                 <span>{`(${depTransferCity[1]})`}</span>
               </div>
             </div>
@@ -235,7 +238,7 @@ function ExtentionDeparture({ flightsData }) {
             ).includes("1 hr") ? (
               <div className="bg-red-100 h-10 flex items-center w-1/4 rounded-sm justify-center gap-2 text-longRed font-medium text-sm">
                 <img src={LongTime} alt="" />
-                <span className="hidden sm:flex">Long</span>
+                <span className="hidden sm:flex">{t("Long")}</span>
               </div>
             ) : null}
           </div>
@@ -267,7 +270,7 @@ function ExtentionDeparture({ flightsData }) {
                   {depSecondTransferEnd}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {depTransferCityNames[1]} international airport{" "}
+                  {t(depTransferCityNames[1])} {t("international airport")}{" "}
                   <span>{`(${depTransferCity[1]})`}</span>
                 </span>
               </div>
@@ -284,7 +287,8 @@ function ExtentionDeparture({ flightsData }) {
                   {depEndTime}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {to} international airport <span>{`(${toCityId})`}</span>
+                  {t(to)} {t("international airport")}{" "}
+                  <span>{`(${toCityId})`}</span>
                 </span>
               </div>
             </div>

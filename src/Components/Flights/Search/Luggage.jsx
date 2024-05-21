@@ -30,7 +30,7 @@ function Luggage({ flightsData, small }) {
           small ? "xs" : "sm"
         } text-gray-500 cursor-pointer `}
       >
-        luggage
+        {t("luggage")}
       </div>
     </div>
   );

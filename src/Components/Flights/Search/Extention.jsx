@@ -1,13 +1,16 @@
 import ExtentionDeparture from "./ExtentionDeparture";
 import ExtentionReturn from "./ExtentionRreturn";
+import ExtentionLoan from "./ExtentionLoan";
 
 import midLine from "../../../assets/Flights/Search/midLIne.png";
 import Bed from "../../../assets/Flights/Search/Bed.png";
 import Pin from "../../../assets/Flights/Search/Pin.png";
-import ExtentionLoan from "./ExtentionLoan";
+
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function Extention({ flightsData }) {
+  const { t } = useTranslation();
   // CALCULATE NIGHTS BETWEEN DATES
   const calculateNights = (startDateStr, endDateStr) =>
     Math.floor(
@@ -32,14 +35,14 @@ function Extention({ flightsData }) {
             <img src={Pin} alt="" />
           </span>
           <span className=" text-textDark font-medium text-sm sm:text-md">
-            {flightsData.to} {`(${flightsData.toCityId})`}
+            {t(flightsData.to)} {`(${flightsData.toCityId})`}
           </span>
           {flightsData.way === "Bilateral" ? (
             <div className="flex gap-3">
               <img src={Bed} alt="" />
               <span className="text-sm text-gray-500 flex items-center font-medium">
                 {calculateNights(flightsData.departure, flightsData.return)}{" "}
-                nights stop
+                {t("nights stop")}
               </span>
             </div>
           ) : (
@@ -61,7 +64,7 @@ function Extention({ flightsData }) {
               <img src={Pin} alt="" />
             </span>
             <span className="font-medium text-sm sm:text-md">
-              {flightsData.from} {`(${flightsData.fromCityId})`}
+              {t(flightsData.from)} {`(${flightsData.fromCityId})`}
             </span>
           </div>
           <img src={midLine} alt="" />
@@ -72,9 +75,9 @@ function Extention({ flightsData }) {
       <div className="LOAN sm:mx-4 flex flex-col sm:flex-row sm:justify-between sm:items-end">
         <ExtentionLoan />
         <div>
-          <button className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 w-full text-md px-16 sm:h-12 py-2 sm:mt-8 sm:my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
+          <button className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 w-full text-md px-14 sm:h-10 py-2 sm:mt-8 sm:my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
             <span className="flex whitespace-nowrap">
-              Book {calculatePrice()}$
+              {t("Reservation")} {calculatePrice()}$
             </span>
           </button>
         </div>

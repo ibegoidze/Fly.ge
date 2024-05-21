@@ -5,8 +5,10 @@ import Clock from "../../../assets/Flights/Search/Clock.png";
 import LongTime from "../../../assets/Flights/Search/LongTime.png";
 
 import Luggage from "./Luggage";
+import { useTranslation } from "react-i18next";
 
 function ExtentionDetails({ flightsData }) {
+  const { t } = useTranslation();
   // FORMAT DATE
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -24,10 +26,10 @@ function ExtentionDetails({ flightsData }) {
     return hours === 0 && minutes === 0
       ? ""
       : hours === 0
-      ? `${minutes} min`
+      ? `${minutes} ${t("min")}`
       : minutes === 0
-      ? `${hours} hr`
-      : `${hours} hr, ${minutes}`;
+      ? `${hours} ${t("hr")}`
+      : `${hours} ${t("hr")}, ${minutes}`;
   };
 
   const {
@@ -50,7 +52,7 @@ function ExtentionDetails({ flightsData }) {
     <div className="md:ml-32 my-5">
       {/* HEADER */}
       <div className="RETURN text-medium font-semibold mb-5 text-textDark">
-        Return
+        {t("Return")}
       </div>
       {/* ONE WAY */}
       <div className="RETURN DETAILS flex">
@@ -75,7 +77,8 @@ function ExtentionDetails({ flightsData }) {
           <div className="flex items-center gap-2">
             <span className="text-textDark font-semibold">{retStartTime}</span>{" "}
             <span className="text-xs sm:text-sm">
-              {to} international airport {` (${flightsData.toCityId})`}
+              {t(to)} {t("international airport")}{" "}
+              {` (${flightsData.toCityId})`}
             </span>
           </div>
           {/* TIME BETWEEN RET START AND RETEND OR FIRST TRANSFER */}
@@ -98,8 +101,8 @@ function ExtentionDetails({ flightsData }) {
             )}{" "}
             <span className="text-xs sm:text-sm">
               {transferWay === "return" || transferWay === "both"
-                ? retTransferCityNames[0]
-                : to}{" "}
+                ? t(retTransferCityNames[0])
+                : t(to)}{" "}
               international airport
               {transferWay === "return" || transferWay === "both" ? (
                 <span className="text-xs sm:text-sm">{` (${retTransferCity[0]})`}</span>
@@ -120,8 +123,9 @@ function ExtentionDetails({ flightsData }) {
                 retFirstTransferStart,
                 retFirstTransferEnd
               )}
-              <span>stop,</span>
-              {retTransferCityNames[0]} <span>{`(${retTransferCity[0]})`}</span>
+              <span>{t("stop")},</span>
+              {t(retTransferCityNames[0])}{" "}
+              <span>{`(${t(retTransferCity[0])})`}</span>
             </div>
           </div>
         ) : (
@@ -151,7 +155,7 @@ function ExtentionDetails({ flightsData }) {
                   {retFirstTransferEnd}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {retTransferCityNames[0]} international airport{" "}
+                  {t(retTransferCityNames[0])} {t("international airport")}{" "}
                   {`(${retTransferCity[0]})`}
                 </span>
               </div>
@@ -176,7 +180,7 @@ function ExtentionDetails({ flightsData }) {
                       {retEndTime}
                     </span>{" "}
                     <span className="text-sm">
-                      {from} airport {`(${fromCityId})`}
+                      {t(from)} airport {`(${fromCityId})`}
                     </span>
                   </div>
                 ) : (
@@ -187,8 +191,10 @@ function ExtentionDetails({ flightsData }) {
                         : retEndTime}
                     </span>{" "}
                     <span className="text-xs sm:text-sm">
-                      {retTransferCityNames[1] ? retTransferCityNames[1] : to}{" "}
-                      international airport{" "}
+                      {retTransferCityNames[1]
+                        ? t(retTransferCityNames[1])
+                        : t(to)}{" "}
+                      {t("international airport")}{" "}
                       {retTransferCity[1]
                         ? `(${retTransferCity[1]})`
                         : `(${fromCityId})`}
@@ -213,8 +219,8 @@ function ExtentionDetails({ flightsData }) {
                   retSecondTransferStart,
                   retSecondTransferEnd
                 )}
-                <span>stop,</span>
-                {retTransferCityNames[1]}{" "}
+                <span>{t("stop")},</span>
+                {t(retTransferCityNames[1])}{" "}
                 <span>{`(${retTransferCity[1]})`}</span>
               </div>
             </div>
@@ -225,7 +231,7 @@ function ExtentionDetails({ flightsData }) {
             ).includes("1 hr") ? (
               <div className="bg-red-100 h-10 flex items-center w-1/4 rounded-sm justify-center gap-2 text-longRed font-medium text-sm">
                 <img src={LongTime} alt="" />
-                <span className="hidden sm:flex">Long</span>
+                <span className="hidden sm:flex">{t("Long")}</span>
               </div>
             ) : null}
           </div>
@@ -253,7 +259,7 @@ function ExtentionDetails({ flightsData }) {
                   {retSecondTransferEnd}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {retTransferCityNames[1]} international airport{" "}
+                  {t(retTransferCityNames[1])} {t("international airport")}{" "}
                   <span>{`(${retTransferCity[1]})`}</span>
                 </span>
               </div>
@@ -270,7 +276,8 @@ function ExtentionDetails({ flightsData }) {
                   {retEndTime}
                 </span>{" "}
                 <span className="text-xs sm:text-sm">
-                  {from} international airport <span>{`(${fromCityId})`}</span>
+                  {t(from)} {t("international airport")}{" "}
+                  <span>{`(${fromCityId})`}</span>
                 </span>
               </div>
             </div>

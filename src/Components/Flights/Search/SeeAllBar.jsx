@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Extention from "./Extention";
 import Luggage from "./Luggage";
 
@@ -13,6 +14,7 @@ function SeeAllBar({
   const [seeAllText, setSeeAllText] = useState("See all");
   const containerRef = useRef(null);
   const liRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -70,10 +72,10 @@ function SeeAllBar({
           <Luggage flightsData={flightsData} small={true} />
         </div>
         <div
-          className="SEEALL h-12 flex justify-end items-center text-xs sm:text-sm font-medium text-primaryBlue cursor-pointer"
+          className="SEEALL h-12 flex justify-end items-center text-xs font-medium text-primaryBlue cursor-pointer"
           onClick={() => toggleExtension(flightsData.id)}
         >
-          {seeAllText}
+          {t(seeAllText)}
         </div>
       </div>
       <div
