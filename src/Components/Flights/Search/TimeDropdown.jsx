@@ -6,6 +6,7 @@ import {
   setDepartureTime,
   setReturnTime,
 } from "../../../Store/SearchFlights/timesSlice";
+import { useClickOutside } from "../../../utility";
 
 import DeparturePlane from "../../../assets/Tickets/images/AirportFrom.png";
 import ReturnPlane from "../../../assets/Tickets/images/AirportTo.png";
@@ -37,19 +38,8 @@ const TimeDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  // CLICK OUTSIDE CLOSES THE DROPDOWN
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   // HANDLE DEPARTURE TIME CHANGE
   const handleDepartureChange = (event, newValue) => {
@@ -72,7 +62,7 @@ const TimeDropdown = () => {
       <div
         className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 w-22 ${
           isOpen ? "text-blue-500" : "text-gray-600"
-        } bg-gray-100 text-sm font-medium ${
+        } bg-gray-100 text-xs sm:text-sm font-medium ${
           isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
         } `}
         onClick={toggleDropdown}
@@ -91,7 +81,7 @@ const TimeDropdown = () => {
         ${isOpen ? "pacity-100" : "opacity-0 pointer-events-none"}`}
         style={{
           maxHeight: "250px",
-          transform: windowWidth <= 768 ? "translateX(-71.5%)" : "none",
+          transform: windowWidth <= 768 ? "translateX(-76%)" : "none",
           borderRadius:
             windowWidth <= 768
               ? "0 0 0.375rem 0.375rem"

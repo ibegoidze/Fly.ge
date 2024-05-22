@@ -5,17 +5,15 @@ import EconomyClass from "../../Tickets/SearchFlights/EconomyClass";
 import OneWay from "../../Tickets/SearchFlights/OneWay";
 import Passengers from "../../Tickets/SearchFlights/Passengers";
 import FlightsButton from "./FlightsButton";
-import Results from "./Results";
 import TransferDropdown from "./TransferDropdown";
 import AirlinesDropdown from "./AirlinesDropdown";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults";
 import TimeDropdown from "./TimeDropdown";
 
 function Search() {
   const dispatch = useDispatch();
-  const flightsData = useSelector((state) => state.searchResults);
 
   const handleSearchData = (data) => {
     dispatch(setSearchResults(data));
@@ -50,7 +48,6 @@ function Search() {
         </div>
       </div>
       {/* RESULTS COMPONENT */}
-      <Results flightsData={flightsData} />
     </div>
   );
 }

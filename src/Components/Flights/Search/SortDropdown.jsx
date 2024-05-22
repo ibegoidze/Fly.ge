@@ -53,7 +53,7 @@ const SortDropdown = ({ handleSort, currentFlights }) => {
             </span>
           </div>
           {isOpen && (
-            <div className="absolute top-full left-0 w-full bg-white shadow-md rounded-b-md -mt-px">
+            <div className="absolute top-full left-0 w-full bg-white shadow-sm rounded-b-md -mt-px">
               {selectedOption !== "Best" && (
                 <div
                   className={`px-4 py-2 text-sm pl-5 font-medium text-gray-500 hover:bg-gray-100 cursor-pointer ${

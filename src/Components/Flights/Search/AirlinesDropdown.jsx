@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Switch from "@mui/material/Switch";
 import {
   toggleAllAirlines,
@@ -6,6 +6,8 @@ import {
 } from "../../../Store/SearchFlights/airlinesSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "../../../utility";
+import { airlines } from "../../../static.js";
 
 const AirlinesDropdown = () => {
   const { t } = useTranslation();
@@ -15,44 +17,20 @@ const AirlinesDropdown = () => {
   );
   const selectorRef = useSelector((state) => state.airlines.selectorRef);
   const dispatch = useDispatch();
-
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
+  // TOGGLE SELECT ALL SWITCH IN DROPDOWN
   const toggleSwitch = () => {
     dispatch(toggleAllAirlines());
   };
 
+  // SELECTING EACH AIRLINE
   const handleAirlineSelection = (airline) => {
     dispatch(toggleAirlineSelection(airline));
   };
-
-  const airlines = [
-    "Pegasus",
-    "Turkish Airlines",
-    "Wizzair",
-    "Georgian Airways",
-    "Ryanair",
-    "Emirates",
-    "Lufthansa",
-    "Delta Air Lines",
-    "British Airways",
-    "Air France",
-    "Qatar Airways",
-    "Singapore Airlines",
-  ];
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -61,7 +39,7 @@ const AirlinesDropdown = () => {
         ref={selectorRef}
         className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 overflow-y-hidden ${
           isOpen ? "text-blue-500" : "text-gray-600"
-        } bg-gray-100 text-sm font-medium ${
+        } bg-gray-100 text-xs sm:text-sm font-medium ${
           isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
         } `}
         onClick={() => {
@@ -78,8 +56,9 @@ const AirlinesDropdown = () => {
       </div>
       {/* DROPDOWN */}
       <div
-        className={`absolute z-20 w-52 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden 
-        ${isOpen ? "pacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`absolute z-20 w-64 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-y-hidden ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        } sm:left-auto left-1/2 transform sm:transform-none -translate-x-1/2`}
         style={{
           maxHeight: "250px",
           borderRadius: "0 0.375rem 0.375rem 0.375rem",

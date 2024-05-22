@@ -6,33 +6,10 @@ import LongTime from "../../../assets/Flights/Search/LongTime.png";
 
 import Luggage from "./Luggage";
 import { useTranslation } from "react-i18next";
+import { formatDate, calculateTimeDifference } from "../../../utility";
 
 function ExtentionDeparture({ flightsData }) {
   const { t } = useTranslation();
-  // FORMAT DATE
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "long" });
-    return `${day} ${t(month)}`;
-  };
-  // CALCULATE TIME DIFFERENCE
-  const calculateTimeDifference = (start, end) => {
-    const startTime = new Date(`2024-01-01 ${start}`);
-    const endTime = new Date(`2024-01-01 ${end}`);
-    const difference = endTime.getTime() - startTime.getTime();
-    const hours = Math.floor(difference / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-
-    return hours === 0 && minutes === 0
-      ? ""
-      : hours === 0
-      ? `${minutes} ${t("min")}`
-      : minutes === 0
-      ? `${hours} ${t("hr")}`
-      : `${hours} ${t("hr")}, ${minutes}`;
-  };
-
   const {
     departure,
     depStartTime,

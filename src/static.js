@@ -36,6 +36,21 @@ export const months = [
   "December",
 ];
 
+export const airlines = [
+  "Pegasus",
+  "Turkish Airlines",
+  "Wizzair",
+  "Georgian Airways",
+  "Ryanair",
+  "Emirates",
+  "Lufthansa",
+  "Delta Air Lines",
+  "British Airways",
+  "Air France",
+  "Qatar Airways",
+  "Singapore Airlines",
+];
+
 export const flightsData = [
   {
     id: 1,

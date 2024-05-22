@@ -54,7 +54,7 @@ const TransferDropdown = ({ selectorText }) => {
         ref={selectorRef}
         className={`cursor-pointer flex items-center justify-between w-46 px-2 lg:px-4 ${
           isOpen ? "text-blue-500" : "text-gray-600"
-        } bg-gray-100 text-sm font-medium ${
+        } bg-gray-100 text-xs sm:text-sm font-medium ${
           isOpen ? "rounded-t-md py-2" : "rounded-md py-2"
         } `}
         onClick={toggleDropdown}
@@ -70,12 +70,12 @@ const TransferDropdown = ({ selectorText }) => {
       {/* DROPDOWN */}
       <div
         ref={dropdownRef}
-        className={`absolute z-20 w-42 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-hidden whitespace-nowrap ${
+        className={`absolute z-20 w-42 transition-all shadow-lg duration-300 bg-gray-100 rounded-md overflow-hidden whitespace-nowrap  ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         style={{
           left: windowWidth <= 768 ? "50%" : undefined,
-          transform: windowWidth <= 768 ? "translateX(-50%)" : "none",
+          transform: windowWidth <= 768 ? "translateX(-24.5%)" : "none",
           borderRadius: "0 0.375rem 0.375rem 0.375rem",
           maxHeight: "200px",
         }}

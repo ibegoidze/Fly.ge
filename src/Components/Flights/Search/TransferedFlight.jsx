@@ -5,30 +5,24 @@ import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 import DuckPic from "../../../assets/Flights/Search/Duck.png";
 
 import { useTranslation } from "react-i18next";
+import { formatDate, calculateTimeDifference } from "../../../utility";
 
 function TransferedFlight({ flightsData, isReturn }) {
   const { t } = useTranslation();
-  // FORMAT DATE
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "long" });
-    return `${day} ${t(month)}`;
-  };
 
-  // CALCULATE TIME DIFFERENCE
-  const calculateTimeDifference = (start, end) => {
-    const startTime = new Date(`2024-01-01 ${start}`);
-    const endTime = new Date(`2024-01-01 ${end}`);
-    const difference = endTime.getTime() - startTime.getTime();
-    const hours = Math.floor(difference / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    if (minutes === 0) {
-      return `${hours}hr`;
-    } else {
-      return `${hours}hr, ${minutes}`;
-    }
-  };
+  const {
+    departure,
+    retStartTime,
+    retEndTime,
+    depStartTime,
+    depEndTime,
+    to,
+    from,
+    toCityId,
+    fromCityId,
+    retTransferCity,
+    depTransferCity,
+  } = flightsData;
 
   return (
     <div className="flex justify-between items-start mb-7 md:px-5">
@@ -42,7 +36,7 @@ function TransferedFlight({ flightsData, isReturn }) {
       {/* DATE */}
       <div className="hidden flex-none sm:flex w-20 flex-col justify-center">
         <div className="font-semibold text-gray-500">
-          {formatDate(isReturn ? flightsData.return : flightsData.departure)}
+          {formatDate(isReturn ? flightsData.return : departure)}
         </div>
         <span className="text-xs font-medium text-gray-500">
           {isReturn ? t("Return") : t("Departure")}
@@ -51,13 +45,11 @@ function TransferedFlight({ flightsData, isReturn }) {
       {/* TIME / CITY */}
       <div className="flex-none  flex flex-col w-20 justify-center">
         <div className="font-semibold text-textDark">
-          {isReturn ? flightsData.retStartTime : flightsData.depStartTime}
+          {isReturn ? retStartTime : depStartTime}
         </div>
         <div className="text-xs font-medium text-gray-500 flex gap-1">
-          {isReturn ? t(flightsData.to) : t(flightsData.from)}
-          <span>{` (${
-            isReturn ? flightsData.toCityId : flightsData.fromCityId
-          }) `}</span>
+          {isReturn ? t(to) : t(from)}
+          <span>{` (${isReturn ? toCityId : fromCityId}) `}</span>
         </div>
       </div>
       {/* FLIGHT LINE */}
@@ -75,17 +67,17 @@ function TransferedFlight({ flightsData, isReturn }) {
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
                 {isReturn ? (
-                  flightsData.retTransferCity ? (
+                  retTransferCity ? (
                     <div className="flex gap-1">
-                      {flightsData.retTransferCity.length}{" "}
+                      {retTransferCity.length}{" "}
                       <span className="hidden xs:flex">{t("stop")}</span>
                     </div>
                   ) : (
                     "Direct"
                   )
-                ) : flightsData.depTransferCity ? (
+                ) : depTransferCity ? (
                   <div className="flex gap-1">
-                    {flightsData.depTransferCity.length}{" "}
+                    {depTransferCity.length}{" "}
                     <span className="hidden xs:flex">{t("stop")}</span>
                   </div>
                 ) : (
@@ -102,20 +94,12 @@ function TransferedFlight({ flightsData, isReturn }) {
             <div className="flex items-center justify-center">
               <span className="mb-8 absolute text-xs text-gray-500 font-medium">
                 {isReturn
-                  ? calculateTimeDifference(
-                      flightsData.retStartTime,
-                      flightsData.retEndTime
-                    )
-                  : calculateTimeDifference(
-                      flightsData.depStartTime,
-                      flightsData.depEndTime
-                    )}
+                  ? calculateTimeDifference(retStartTime, retEndTime)
+                  : calculateTimeDifference(depStartTime, depEndTime)}
               </span>
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
-                {isReturn
-                  ? flightsData.retTransferCity[0]
-                  : flightsData.depTransferCity[0]}
+                {isReturn ? retTransferCity[0] : depTransferCity[0]}
               </span>
             </div>
             <img
@@ -128,11 +112,11 @@ function TransferedFlight({ flightsData, isReturn }) {
               <img src={BlueDot} alt="blue line" />
               <span className="mt-9 absolute text-xs text-gray-400 font-medium">
                 {isReturn
-                  ? flightsData.retTransferCity
-                    ? flightsData.retTransferCity[1]
+                  ? retTransferCity
+                    ? retTransferCity[1]
                     : "DIR"
-                  : flightsData.depTransferCity
-                  ? flightsData.depTransferCity[1]
+                  : depTransferCity
+                  ? depTransferCity[1]
                   : "DIR"}
               </span>
             </div>
@@ -149,13 +133,11 @@ function TransferedFlight({ flightsData, isReturn }) {
       {/* TIME / CITY */}
       <div className="flex flex-col justify-center w-20">
         <div className="font-semibold text-textDark">
-          {isReturn ? flightsData.retEndTime : flightsData.depEndTime}
+          {isReturn ? retEndTime : depEndTime}
         </div>
         <span className="text-xs font-medium text-gray-500 flex gap-1">
-          {isReturn ? t(flightsData.from) : t(flightsData.to)}
-          <span>{` (${
-            isReturn ? flightsData.fromCityId : flightsData.toCityId
-          }) `}</span>
+          {isReturn ? t(from) : t(to)}
+          <span>{` (${isReturn ? fromCityId : toCityId}) `}</span>
         </span>
       </div>
     </div>
