@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "../../../utility";
 
 import BestOnes from "../../../assets/Flights/Search/BestOnes.png";
 
@@ -9,26 +10,18 @@ const SortDropdown = ({ handleSort, currentFlights }) => {
   const [selectedOption, setSelectedOption] = useState("Best");
   const dropdownRef = useRef(null);
 
+  // TOGGLE DROPDOWN
   const toggleDropdown = () => setIsOpen(!isOpen);
 
+  // SELECT EACH OPTION
   const handleOptionClick = (option) => {
     handleSort(option);
     setSelectedOption(option);
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   return (
     <div>

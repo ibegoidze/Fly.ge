@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedClass } from "../../../Store/SearchFlights/classSlice";
+import { useClickOutside } from "../../../utility";
 
 const EconomyClass = () => {
   const { t, ready } = useTranslation();
@@ -35,19 +36,8 @@ const EconomyClass = () => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  // CLASS SELECTION FROM DROPDOWN
-
-  // CLICK OUTSIDE THE COMPONENT CLOSES THE DROPDOWN
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   return (
     // SELECTOR

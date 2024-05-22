@@ -11,6 +11,7 @@ import {
   reset,
 } from "../../../Store/SearchFlights/passengerSlice";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "../../../utility";
 
 const Passengers = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,19 +45,8 @@ const Passengers = () => {
     Disabled: DisabledManSvg,
   };
 
-  // CLICK OUTSIDE CLOSES THE DROPDOWN
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   const renderPassengerOptions = () => {
     return Object.entries(passengers).map(([type, { count, description }]) => (

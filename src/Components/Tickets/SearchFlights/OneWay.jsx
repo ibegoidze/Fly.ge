@@ -4,6 +4,7 @@ import arrowTwoWay from "../../../assets/Tickets/images/arrowTwoWay.png";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import { setDropdownOption } from "../../../Store/SearchFlights/OneWaySlice";
+import { useClickOutside } from "../../../utility";
 
 const OneWay = () => {
   const { t, i18n } = useTranslation();
@@ -45,17 +46,8 @@ const OneWay = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // CLICK OUTSIDE CLOSES THE DROPDOWN
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   return (
     <div className="inline-block text-left relative" ref={dropdownRef}>

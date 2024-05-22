@@ -16,7 +16,6 @@ export const calculateTimeDifference = (start, end) => {
   const difference = endTime.getTime() - startTime.getTime();
   const hours = Math.floor(difference / (1000 * 60 * 60));
   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-
   return hours === 0 && minutes === 0
     ? ""
     : hours === 0
@@ -26,7 +25,7 @@ export const calculateTimeDifference = (start, end) => {
     : `${hours} ${t("hr")}, ${minutes}`;
 };
 
-// CLICK OUTSIDE CLOSING THE DROPDOWNS
+// CLICK OUTSIDE CLOSING THE DROPDOWNS // USED IN MOST OF DROPDOWNS
 export const useClickOutside = (ref, callback) => {
   useEffect(() => {
     const handleClick = (event) => {

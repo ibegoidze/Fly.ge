@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "../../../utility";
 
 const MonthDropdown = ({ currentMonth, onMonthChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,17 +10,8 @@ const MonthDropdown = ({ currentMonth, onMonthChange }) => {
   );
   const { t } = useTranslation();
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   const handleMonthSelect = (monthIndex) => {
     onMonthChange(monthIndex);

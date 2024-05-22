@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
+import { useClickOutside } from "../../../utility";
 
 const PageSizeDropdown = ({ pageSizeOptions, pageSize, setPageSize }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,16 +12,8 @@ const PageSizeDropdown = ({ pageSizeOptions, pageSize, setPageSize }) => {
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  useClickOutside(dropdownRef, setIsOpen);
 
   return (
     <div

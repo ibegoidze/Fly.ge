@@ -10,6 +10,19 @@ import { formatDate, calculateTimeDifference } from "../../../utility";
 function TransferedFlight({ flightsData, isReturn }) {
   const { t } = useTranslation();
 
+  // FUNCTION TO RENDER TRANSFER INFO
+  const renderTransferInfo = () => {
+    const transferCity = isReturn ? retTransferCity : depTransferCity;
+    return transferCity ? (
+      <div className="flex gap-1">
+        {transferCity.length}{" "}
+        <span className="hidden xs:flex">{t("stop")}</span>
+      </div>
+    ) : (
+      "Direct"
+    );
+  };
+
   const {
     departure,
     retStartTime,
@@ -66,23 +79,7 @@ function TransferedFlight({ flightsData, isReturn }) {
                 }}
               />
               <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
-                {isReturn ? (
-                  retTransferCity ? (
-                    <div className="flex gap-1">
-                      {retTransferCity.length}{" "}
-                      <span className="hidden xs:flex">{t("stop")}</span>
-                    </div>
-                  ) : (
-                    "Direct"
-                  )
-                ) : depTransferCity ? (
-                  <div className="flex gap-1">
-                    {depTransferCity.length}{" "}
-                    <span className="hidden xs:flex">{t("stop")}</span>
-                  </div>
-                ) : (
-                  "Direct"
-                )}
+                {renderTransferInfo()}
               </span>
             </div>
             <img
