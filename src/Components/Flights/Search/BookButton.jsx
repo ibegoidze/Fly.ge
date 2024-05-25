@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-function BookButton({ flightsData }) {
+function BookButton({ flightsData, onBookButtonClick }) {
   const { t } = useTranslation();
   const passengerSum = useSelector(
     (state) => state.passengerSummary.passengerCountSummary
@@ -22,7 +22,10 @@ function BookButton({ flightsData }) {
       <div className="PRICE text-lg sm:text-2xl font-semibold">
         {calculatePrice()}$
       </div>
-      <button className="relative  hover:bg-blue-700 text-md w-full sm:w-4/5 lg:px-16 transition-all duration-300 py-1.5 sm:py-2 mt-2 sm:mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue">
+      <button
+        className="relative  hover:bg-blue-700 text-md w-full sm:w-4/5 lg:px-16 transition-all duration-300 py-1.5 sm:py-2 mt-2 sm:mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue"
+        onClick={() => onBookButtonClick(flightsData)}
+      >
         <span className="flex whitespace-nowrap">{t("Reservation")}</span>
       </button>
     </div>

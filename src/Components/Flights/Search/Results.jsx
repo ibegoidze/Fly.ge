@@ -15,7 +15,7 @@ import PageSizeDropdown from "./PageSizeDropdown";
 import SortDropdown from "./SortDropdown";
 
 // DEFINE RESULTS COMPONENT
-const Results = ({ flightsData }) => {
+const Results = ({ flightsData, onBookButtonClick }) => {
   // STATE FOR HANDLING OVERLAY AND BLURRED FLIGHT ID
   const [openOverlay, setOpenOverlay] = useState(null);
   const [blurredFlightId, setBlurredFlightId] = useState(null);
@@ -253,7 +253,10 @@ const Results = ({ flightsData }) => {
                             )}
                           </div>
                           <div className="PRICEANDBOOK w-full md:w-2/6 ">
-                            <BookButton flightsData={flight} />
+                            <BookButton
+                              flightsData={flight}
+                              onBookButtonClick={onBookButtonClick}
+                            />
                           </div>
                         </div>
                         <Line blurredFlightId={blurredFlightId} />
