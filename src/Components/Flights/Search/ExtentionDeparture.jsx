@@ -27,7 +27,7 @@ function ExtentionDeparture({ flightsData }) {
     toCityId,
   } = flightsData;
 
-  console.log(depFirstTransferEnd, depEndTime);
+  console.log(depFirstTransferStart, depEndTime);
 
   return (
     <div className="md:ml-32 mb-5">
@@ -151,7 +151,7 @@ function ExtentionDeparture({ flightsData }) {
                       depFirstTransferEnd,
                       depSecondTransferStart
                     )
-                  : calculateTimeDifference(depStartTime, depEndTime)}
+                  : calculateTimeDifference(depFirstTransferEnd, depEndTime)}
                 <div className="hidden sm:flex ">
                   <Luggage flightsData={flightsData} small={true} />
                 </div>

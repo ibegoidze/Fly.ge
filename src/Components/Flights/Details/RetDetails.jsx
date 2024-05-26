@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { calculateTimeDifference, formatDateWeek } from "../../../utility";
 
-import CalendarPic from "../../../assets/Flights/Review/Calendar.png";
-import AirplanePic from "../../../assets/Flights/Review/Airplane.png";
-import VerticalPic from "../../../assets/Flights/Review/VerticalLine.png";
-import WaitClockGrayPic from "../../../assets/Flights/Review/WaitClockGray.png";
-import WaitClockOrangePic from "../../../assets/Flights/Review/WaitClockOrange.png";
-import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
+import CalendarPic from "../../../assets/Flights/Details/Calendar.png";
+import AirplanePic from "../../../assets/Flights/Details/Airplane.png";
+import PegasusPic from "../../../assets/Flights/Details/DuckLines.png";
+import VerticalPic from "../../../assets/Flights/Details/VerticalLine.png";
+import WaitClockGrayPic from "../../../assets/Flights/Details/WaitClockGray.png";
+import WaitClockOrangePic from "../../../assets/Flights/Details/WaitClockOrange.png";
 
 function RetDetails({ selectedFlight }) {
   const { t } = useTranslation();
@@ -52,7 +52,7 @@ function RetDetails({ selectedFlight }) {
             className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
           />
         </div>
-        <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+        <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
           <div className="retTIME flex flex-col justify-between">
             <span>
               {retStartTime} <span className="text-gray-500">{t(to)}</span>
@@ -133,7 +133,7 @@ function RetDetails({ selectedFlight }) {
                 className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+            <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
               <div className="retTIME flex flex-col justify-between">
                 <span>
                   {retFirstTransferEnd}{" "}
@@ -216,7 +216,7 @@ function RetDetails({ selectedFlight }) {
                 className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+            <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
               <div className="retTIME flex flex-col justify-between">
                 <span>
                   {retSecondTransferEnd}{" "}

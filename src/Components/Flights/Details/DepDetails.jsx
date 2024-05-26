@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { calculateTimeDifference, formatDateWeek } from "../../../utility";
 
-import CalendarPic from "../../../assets/Flights/Review/Calendar.png";
-import AirplanePic from "../../../assets/Flights/Review/Airplane.png";
-import VerticalPic from "../../../assets/Flights/Review/VerticalLine.png";
-import BedPic from "../../../assets/Flights/Review/Bed.png";
-import WaitClockGrayPic from "../../../assets/Flights/Review/WaitClockGray.png";
-import WaitClockOrangePic from "../../../assets/Flights/Review/WaitClockOrange.png";
+import CalendarPic from "../../../assets/Flights/Details/Calendar.png";
+import AirplanePic from "../../../assets/Flights/Details/Airplane.png";
+import VerticalPic from "../../../assets/Flights/Details/VerticalLine.png";
+import BedPic from "../../../assets/Flights/Details/Bed.png";
+import WaitClockGrayPic from "../../../assets/Flights/Details/WaitClockGray.png";
+import WaitClockOrangePic from "../../../assets/Flights/Details/WaitClockOrange.png";
 import PegasusPic from "../../../assets/Flights/Search/Pegasus.png";
 
 function DepDetails({ selectedFlight }) {
@@ -63,7 +63,7 @@ function DepDetails({ selectedFlight }) {
             className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
           />
         </div>
-        <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+        <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
           <div className="DEPTIME flex flex-col justify-between">
             <span>
               {depStartTime} <span className="text-gray-500">{t(from)}</span>
@@ -144,7 +144,7 @@ function DepDetails({ selectedFlight }) {
                 className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+            <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
               <div className="DEPTIME flex flex-col justify-between">
                 <span>
                   {depFirstTransferEnd}{" "}
@@ -228,7 +228,7 @@ function DepDetails({ selectedFlight }) {
                 className="relative w-5 h-5  top-20 right-0.5 transform -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="FIRST border border-1.5 border-gray-400 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
+            <div className="FIRST border border-1.5 border-gray-300 rounded-md w-full  mt-5 p-4 flex justify-between h-24">
               <div className="DEPTIME flex flex-col justify-between">
                 <span>
                   {depSecondTransferEnd}{" "}

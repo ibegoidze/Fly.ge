@@ -177,6 +177,8 @@ const resources = {
       Friday: "Friday",
       Saturday: "Saturday",
       Sunday: "Sunday",
+      informationalMessageAboutCheckin: "Informational message about check-in",
+      Total: "Total",
     },
   },
   // GEORGIAN
@@ -356,6 +358,9 @@ const resources = {
       Friday: "პარასკევი",
       Saturday: "შაბათი",
       Sunday: "კვირა",
+      informationalMessageAboutCheckin:
+        "ინფორმაციული შეტყობინება ჩექინის შესახებ",
+      Total: "სულ",
     },
   },
   // GERMAN
@@ -536,6 +541,9 @@ const resources = {
       Friday: "Freitag",
       Saturday: "Samstag",
       Sunday: "Sonntag",
+      informationalMessageAboutCheckin:
+        "Informationelle Nachricht über den Check-in",
+      Total: "Gesamt",
     },
   },
 };

@@ -3,7 +3,7 @@ import FlightsNavigation from "../Components/Flights/Search/FlightsNavigation";
 import Search from "../Components/Flights/Search/Search";
 import Results from "../Components/Flights/Search/Results";
 import { useSelector } from "react-redux";
-import TravelDetails from "../Components/Flights/Review/TravelDetails";
+import TravelDetails from "../Components/Flights/Details/TravelDetails";
 
 const Flight = () => {
   const flightsData = useSelector((state) => state.searchResults);

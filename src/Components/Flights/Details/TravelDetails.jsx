@@ -1,5 +1,5 @@
-import FlightDetails from "./FlightDetails";
 import Pricing from "./Pricing";
+import FlightDetails from "./FlightDetails";
 
 function TravelDetails({ selectedFlight }) {
   return (
