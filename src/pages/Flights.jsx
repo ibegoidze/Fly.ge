@@ -3,6 +3,7 @@ import FlightsNavigation from "../Components/Flights/Search/FlightsNavigation";
 import Search from "../Components/Flights/Search/Search";
 import Results from "../Components/Flights/Search/Results";
 import { useSelector } from "react-redux";
+import TravelDetails from "../Components/Flights/Review/TravelDetails";
 
 const Flight = () => {
   const flightsData = useSelector((state) => state.searchResults);
@@ -41,14 +42,8 @@ const Flight = () => {
           </div>
         )}
         {activeTab === "details" && (
-          <div>
-            <h2>Details Content</h2>
-            {selectedFlight && (
-              <div>
-                <p>Flight ID: {selectedFlight.id}</p>
-                <p>Flight Price: {selectedFlight.price}</p>
-              </div>
-            )}
+          <div className="bg-backgroundGray">
+            <TravelDetails selectedFlight={selectedFlight} />
           </div>
         )}
         {activeTab === "review" && <div>Other Content</div>}

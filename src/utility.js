@@ -8,6 +8,15 @@ export const formatDate = (dateString) => {
   const month = date.toLocaleString("default", { month: "long" });
   return `${day} ${t(month)}`;
 };
+export const formatDateWeek = (dateString) => {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.toLocaleString("default", { month: "long" });
+  const weekday = date.toLocaleString("default", { weekday: "long" });
+
+  // RETURN FORMATTED DATE INCLUDING THE WEEKDAY
+  return `${t(weekday)}, ${day} ${t(month)}`;
+};
 
 // CALCULATE TIME DIFFERENCE FUNCTION BETWEEN TWO STRING DATES // USED IN DirectFlights, TransferedFlights, ExtentionDeparture and ExtentionReturn
 export const calculateTimeDifference = (start, end) => {

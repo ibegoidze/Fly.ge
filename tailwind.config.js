@@ -21,6 +21,9 @@ module.exports = {
         tbcBlue: "#4ea0d8",
         credoRed: "#ea4b37",
         overlayGray: "#c9cbcf",
+        boxGray: "#f4f6f8",
+        boxOrange: "#FDF5E9",
+        bedDark: "#788193",
       },
       screens: {
         custom: "830px",
