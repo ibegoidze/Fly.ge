@@ -13,7 +13,7 @@ function FlightDetails({ selectedFlight }) {
         <DepDetails selectedFlight={selectedFlight} />
         <RetDetails selectedFlight={selectedFlight} />
       </div>
-      <div className="border border-solid border-primaryBlue text-primaryBlue mt-5 bg-boxBlue rounded-sm px-5 py-2 flex gap-2 items-center">
+      <div className="border border-solid border-primaryBlue text-primaryBlue mt-5 bg-boxBlue rounded-md px-5 py-2 flex gap-2 items-center">
         <img src={BlueCheckpointPic} alt="" className="h-5 w-5" />{" "}
         {t("informationalMessageAboutCheckin")}
       </div>

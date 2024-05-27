@@ -27,8 +27,6 @@ function ExtentionDeparture({ flightsData }) {
     toCityId,
   } = flightsData;
 
-  console.log(depFirstTransferStart, depEndTime);
-
   return (
     <div className="md:ml-32 mb-5">
       {/* HEADER */}

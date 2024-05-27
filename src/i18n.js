@@ -179,6 +179,15 @@ const resources = {
       Sunday: "Sunday",
       informationalMessageAboutCheckin: "Informational message about check-in",
       Total: "Total",
+      ResponsiblePerson: "Responsible Person",
+      physicalPerson: "Physical Person",
+      legalPerson: "Legal Person",
+      organizationName: "Organization Name",
+      postalCode: "Postal Code",
+      email: "Email",
+      phone: "Phone",
+      validationMessage:
+        "Make sure the information you enter is correct and accurate.",
     },
   },
   // GEORGIAN
@@ -361,6 +370,15 @@ const resources = {
       informationalMessageAboutCheckin:
         "ინფორმაციული შეტყობინება ჩექინის შესახებ",
       Total: "სულ",
+      ResponsiblePerson: "პასუხისმგებელი პირი",
+      physicalPerson: "ფიზიკური პირი",
+      legalPerson: "იურიდიული პირი",
+      organizationName: "ორგანიზაციის სახელი",
+      postalCode: "საფოსტო ინდექსი",
+      email: "ელფოსტა",
+      phone: "ტელეფონი",
+      validationMessage:
+        "დარწმუნდით, რომ ინფორმაცია რომელიც შეგყავს სწორი და ზუსტია.",
     },
   },
   // GERMAN
@@ -544,6 +562,15 @@ const resources = {
       informationalMessageAboutCheckin:
         "Informationelle Nachricht über den Check-in",
       Total: "Gesamt",
+      ResponsiblePerson: "Verantwortliche Person",
+      physicalPerson: "Physische Person",
+      legalPerson: "Juristische Person",
+      organizationName: "Organisationsname",
+      postalCode: "Postleitzahl",
+      email: "Email",
+      phone: "Telefon",
+      validationMessage:
+        "Stellen Sie sicher, dass die eingegebenen Informationen korrekt und genau sind.",
     },
   },
 };

@@ -5,7 +5,7 @@ import HorisontalLinePic from "../../../assets/Flights/Details/HorisontalLine.pn
 function Pricing() {
   const { t } = useTranslation();
   return (
-    <div className="relative">
+    <div className="relative mt-5 lg:mt-0 lg:ml-5">
       <div className="bg-white h-64 rounded-md relative overflow-hidden">
         {/* Content */}
         <div className="flex justify-center flex-col p-5">
