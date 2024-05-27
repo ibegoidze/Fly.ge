@@ -66,12 +66,12 @@ const ResponsiblePerson = () => {
     <div className="p-4 sm:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">
       {/* RESPONSIBLE PERSON TITLE */}
       <div className="text-lg font-semibold mb-7">{t("ResponsiblePerson")}</div>
-
       {/* TYPE SELECTION CHECKBOXES */}
       <div className="mb-4 flex flex-col space-y-2">
         {["physical", "legal"].map((type) => (
           <label key={type} className="flex items-center cursor-pointer">
             <input
+              name="person"
               type="checkbox"
               value={type}
               checked={selectedType === type}
@@ -99,13 +99,15 @@ const ResponsiblePerson = () => {
           </label>
         ))}
       </div>
-
       {/* FORM FIELDS BASED ON SELECTED TYPE */}
       {selectedType && (
-        <div className="grid grid-cols-2 gap-4 transition-all duration-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 transition-all duration-500">
           <div>
             {/* EMAIL FIELD */}
-            <label className="block mb-1 text-sm text-gray-500 font-semibold focus:outline-none">
+            <label
+              className="block mb-1 text-sm text-gray-500 font-semibold focus:outline-none"
+              htmlFor="email"
+            >
               {t("email")}{" "}
               <span
                 className={` ${
@@ -117,6 +119,8 @@ const ResponsiblePerson = () => {
             </label>
             <div className="relative">
               <input
+                id="email"
+                name="mail"
                 type="email"
                 placeholder="email@example.com"
                 value={email}
@@ -132,7 +136,10 @@ const ResponsiblePerson = () => {
           </div>
           <div>
             {/* PHONE FIELD */}
-            <label className="block mb-1 text-sm text-gray-500 font-semibold outline-none">
+            <label
+              className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
+              htmlFor="phone"
+            >
               {t("phone")}{" "}
               <span
                 className={` ${
@@ -144,6 +151,8 @@ const ResponsiblePerson = () => {
             </label>
             <div className="relative">
               <input
+                id="phone"
+                name="phone"
                 type="text"
                 placeholder="+995 555 555 5555"
                 value={phone}
@@ -161,7 +170,10 @@ const ResponsiblePerson = () => {
             <>
               <div>
                 {/* ORGANIZATION NAME FIELD */}
-                <label className="block mb-1 text-sm text-gray-500 font-semibold outline-none">
+                <label
+                  className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
+                  htmlFor="company"
+                >
                   {t("organizationName")}{" "}
                   <span
                     className={` ${
@@ -175,6 +187,9 @@ const ResponsiblePerson = () => {
                 </label>
                 <div className="relative">
                   <input
+                    id="company"
+                    autoComplete="organization"
+                    name="company"
                     type="text"
                     placeholder="Organization Name"
                     value={organizationName}
@@ -190,7 +205,10 @@ const ResponsiblePerson = () => {
               </div>
               <div>
                 {/* POSTAL CODE FIELD */}
-                <label className="block mb-1 text-sm text-gray-500 font-semibold outline-none">
+                <label
+                  className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
+                  htmlFor="postCode"
+                >
                   {t("postalCode")}{" "}
                   <span
                     className={` ${
@@ -202,6 +220,9 @@ const ResponsiblePerson = () => {
                 </label>
                 <div className="relative">
                   <input
+                    id="postCode"
+                    autoComplete="off"
+                    name="postCode"
                     type="text"
                     placeholder="12345"
                     value={postalCode}
