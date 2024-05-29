@@ -51,6 +51,21 @@ export const airlines = [
   "Singapore Airlines",
 ];
 
+export const daysData = Array.from({ length: 31 }, (_, i) =>
+  (i + 1).toString()
+);
+export const yearsData = Array.from({ length: 100 }, (_, i) =>
+  (new Date().getFullYear() - i).toString()
+);
+export const countriesData = [
+  "United States",
+  "Canada",
+  "Mexico",
+  "United Kingdom",
+  "Australia",
+];
+export const genderData = ["Male", "Female", "Other"];
+
 export const flightsData = [
   {
     id: 1,

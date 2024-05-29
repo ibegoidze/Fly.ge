@@ -48,3 +48,26 @@ export const useClickOutside = (ref, callback) => {
     };
   }, [ref, callback]);
 };
+
+// FUNCTION TO CHECK IF TEXT CONSISTS ONLY OF LETTERS AND IS MORE THAN 3 LETTERS
+export const isValidName = (name) => {
+  const regex = /^[a-zA-Z]{4,}$/;
+  return regex.test(name);
+};
+
+// EMAIL VALIDATION FUNCTION
+export const isValidEmail = (input) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(input);
+};
+
+// FUNCTION TO CHECK IF INPUT CONSISTS ONLY OF NUMBERS AND HAS MINIMUM LENGTH
+export const isValidNumber = (input, minLength) => {
+  const regex = new RegExp(`^[0-9]{${minLength},}$`);
+  return regex.test(input);
+};
+
+// CHECK IF MAINPASSENGER IS MORE THAN 18
+export const isValidBirthDate = (birthMonth, birthDay, birthYear) => {
+  return birthMonth && birthDay && birthYear && birthYear < 2006;
+};

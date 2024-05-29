@@ -1,6 +1,7 @@
 import Pricing from "./Pricing";
 import FlightDetails from "./FlightDetails";
 import ResponsiblePerson from "./ResponsiblePerson";
+import MainPassenger from "./MainPassenger";
 
 function TravelDetails({ selectedFlight }) {
   return (
@@ -13,10 +14,12 @@ function TravelDetails({ selectedFlight }) {
           <Pricing />
         </div>
       </div>
-      <div className="PERSONINCHARGE pb-7 ">
+      <div className="PERSONINCHARGE  ">
         <ResponsiblePerson />
       </div>
-      <div className="MAINPASSENGER"></div>
+      <div className="MAINPASSENGER pb-7">
+        <MainPassenger />
+      </div>
       <div className="INSURANCE"></div>
     </div>
   );

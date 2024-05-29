@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+// IMPORT FUNCTIONS
+import { isValidEmail } from "../../../utility";
+
 // IMPORTING IMAGES
 import MailPic from "../../../assets/Flights/Details/MailPic.png";
 import PhonePic from "../../../assets/Flights/Details/PhonePic.png";
@@ -22,12 +25,6 @@ const ResponsiblePerson = () => {
   const [postalCode, setPostalCode] = useState("");
   const [isPostalCodeValid, setIsPostalCodeValid] = useState(false);
 
-  // EMAIL VALIDATION FUNCTION
-  const validateEmail = (input) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(input);
-  };
-
   // PHONE VALIDATION FUNCTION
   const validatePhone = (input) => {
     const phoneRegex = /^[\d+\s]+$/;
@@ -38,7 +35,7 @@ const ResponsiblePerson = () => {
   const handleEmailChange = (e) => {
     const inputEmail = e.target.value;
     setEmail(inputEmail);
-    setIsEmailValid(validateEmail(inputEmail));
+    setIsEmailValid(isValidEmail(inputEmail));
   };
 
   // HANDLER FOR PHONE CHANGE

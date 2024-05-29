@@ -12,6 +12,7 @@ import passengerSummaryReducer from "./SearchFlights/currentPassengersSlice";
 import transferReducer from "./SearchFlights/transferSlice";
 import airlinesReducer from "./SearchFlights/airlinesSlice";
 import timesReducer from "./SearchFlights/timesSlice";
+import mainPassengerReducer from "./User/mainPassengerSlice";
 
 export const store = configureStore({
   reducer: {
@@ -29,5 +30,6 @@ export const store = configureStore({
     transferFilter: transferReducer,
     airlines: airlinesReducer,
     times: timesReducer,
+    mainPassenger: mainPassengerReducer,
   },
 });
