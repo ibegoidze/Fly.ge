@@ -12,10 +12,13 @@ import {
   setPassportExpiryMonth,
   setPassportExpiryDay,
   setPassportExpiryYear,
+  setPassportIssuingAuthority,
 } from "../../../Store/User/mainPassengerSlice";
 import { useClickOutside } from "../../../utility";
+import { useTranslation } from "react-i18next";
 
 const Dropdown = ({ title, options, type, size = "w-full" }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const selectedValue = useSelector((state) => state.mainPassenger[type]);
   const dropdownRef = useRef(null);
@@ -59,6 +62,9 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
       case "passportExpiryYear":
         dispatch(setPassportExpiryYear(value));
         break;
+      case "passportIssuingAuthority":
+        dispatch(setPassportIssuingAuthority(value));
+        break;
       default:
         break;
     }
@@ -75,7 +81,7 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
         }`}
         onClick={toggleDropdown}
       >
-        {selectedValue || `${title}`}
+        {t(selectedValue) || `${t(title)}`}
         <span
           className="material-symbols-outlined transform duration-300"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -100,7 +106,7 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
             onClick={() => handleChange(option)}
             className="px-3 py-2 hover:bg-gray-200 cursor-pointer"
           >
-            {option}
+            {t(option)}
           </div>
         ))}
       </div>

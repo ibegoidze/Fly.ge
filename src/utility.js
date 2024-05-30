@@ -71,3 +71,29 @@ export const isValidNumber = (input, minLength) => {
 export const isValidBirthDate = (birthMonth, birthDay, birthYear) => {
   return birthMonth && birthDay && birthYear && birthYear < 2006;
 };
+
+// IF ALL DATES ARE SELECTED PASSPORT ISSUE DATE IS VALID
+export const isValidPassportIssueDate = (issueMonth, issueDay, issueYear) => {
+  return issueMonth && issueDay && issueYear;
+};
+
+// ALL DATES SELECTED AND ISSUE YEAR/MONTH/DAY <= EXPIRE YEAR/MONTH/DAY ? VALID
+export const isValidPassportExpireDate = (
+  expireMonth,
+  expireDay,
+  expireYear,
+  issueMonth,
+  issueDay,
+  issueYear
+) =>
+  !expireMonth || !expireDay || !expireYear
+    ? false
+    : expireYear > issueYear
+    ? true
+    : expireYear === issueYear
+    ? expireMonth > issueMonth
+      ? true
+      : expireMonth === issueMonth
+      ? expireDay >= issueDay
+      : false
+    : false;

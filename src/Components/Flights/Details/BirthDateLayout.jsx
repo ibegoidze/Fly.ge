@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
+import { useTranslation } from "react-i18next";
 
 import {
   months,
@@ -24,6 +25,7 @@ const isValidGender = (gender) => {
 };
 
 function BirthDateLayout() {
+  const { t } = useTranslation();
   const birthMonth = useSelector((state) => state.mainPassenger.birthMonth);
   const birthDay = useSelector((state) => state.mainPassenger.birthDay);
   const birthYear = useSelector((state) => state.mainPassenger.birthYear);
@@ -47,10 +49,10 @@ function BirthDateLayout() {
   }, [gender]);
 
   return (
-    <div className="gap-10 my-5 flex items-center">
+    <div className="gap-10 mb-5 flex items-center">
       <div>
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
-          <span>Birth date</span>
+          <span>{t("birthDate")}</span>
           <span
             className={`${
               isBirthDateValid ? "text-green-500" : "text-red-500"
@@ -63,13 +65,13 @@ function BirthDateLayout() {
           <div className="flex w-1/2">
             <div className="flex gap-2.5">
               <Dropdown
-                title={"Month"}
+                title={t("Month")}
                 options={months}
                 type="birthMonth"
                 size="w-32"
               />
               <Dropdown
-                title={"Day"}
+                title={t("Day")}
                 options={daysData}
                 type="birthDay"
                 size="w-20"
@@ -87,7 +89,7 @@ function BirthDateLayout() {
       <div className="flex gap-2.5 w-full">
         <div>
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
-            <span>Citizenship</span>
+            <span>{t("citizenship")}</span>
             <span
               className={`${
                 isCountryValid ? "text-green-500" : "text-red-500"
@@ -113,7 +115,7 @@ function BirthDateLayout() {
             </span>
           </div>
           <Dropdown
-            title={"Gender"}
+            title={t("Gender")}
             options={genderData}
             type="sex"
             size="w-28"

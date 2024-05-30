@@ -6,7 +6,7 @@ import InfoPic from "../../../assets/Flights/Details/InformationIcon.png";
 
 function PersonName() {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-10 my-3">
       <InputTemplate
         title={"name"}
         placeholder={"name"}

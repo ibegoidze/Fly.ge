@@ -14,6 +14,7 @@ function InputTemplate({
   icon,
   validationFunction,
   inputType,
+  width = "1/2",
 }) {
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ function InputTemplate({
   };
 
   return (
-    <div className="w-1/2">
+    <div className={`w-${width}`}>
       <div>
         <label
           className="mb-1 text-sm text-gray-500 font-semibold outline-none"

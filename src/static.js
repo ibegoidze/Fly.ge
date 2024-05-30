@@ -66,6 +66,21 @@ export const countriesData = [
 ];
 export const genderData = ["Male", "Female", "Other"];
 
+export const passportIssueAuthority = [
+  "Department of State",
+  "Postal Service (USPS)",
+  "Clerk of Courts",
+  "Passport Information Center",
+  "Embassies and Consulates",
+];
+
+export const countryCode = [
+  { name: "Georgia", code: "GE", dialCode: "995", flag: "🇬🇪" },
+  { name: "United States", code: "US", dialCode: "1", flag: "🇺🇸" },
+  { name: "United Kingdom", code: "GB", dialCode: "44", flag: "🇬🇧" },
+  // ADD MORE COUNTRIES AS NEEDED
+];
+
 export const flightsData = [
   {
     id: 1,
