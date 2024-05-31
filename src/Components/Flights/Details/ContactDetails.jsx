@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import InputTemplate from "./InputTemplate";
-import { isValidEmail, useClickOutside } from "../../../utility";
+import { isValidEmail, useClickOutside, isValidNumber } from "../../../utility";
 import { setMainPassengerPhone } from "../../../Store/User/mainPassengerSlice";
 import { useTranslation } from "react-i18next";
 
@@ -24,6 +24,7 @@ function ContactDetails() {
   );
   const [selectedCountry, setSelectedCountry] = useState(countryCode[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isValid, setIsValid] = useState(false);
   const dropdownRef = useRef(null);
   const selectorRef = useRef(null);
 
@@ -38,10 +39,23 @@ function ContactDetails() {
   const handlePhoneNumberChange = (event) => {
     const input = event.target.value;
     const dialCode = `+${selectedCountry.dialCode}`;
-    if (input.startsWith(dialCode)) {
-      dispatch(setMainPassengerPhone(input.slice(dialCode.length)));
-    } else {
-      dispatch(setMainPassengerPhone(input.replace(/\D/g, "")));
+    let phoneNumber = input.startsWith(dialCode)
+      ? input.slice(dialCode.length)
+      : input.replace(/\D/g, "");
+
+    // VALIDATE PHONE NUMBER WITH MINIMUM LENGTH OF 6
+    setIsValid(isValidNumber(phoneNumber, 6));
+    dispatch(setMainPassengerPhone(phoneNumber));
+  };
+
+  const handleKeyDown = (event) => {
+    const input = event.target.value;
+    const dialCode = `+${selectedCountry.dialCode}`;
+    if (
+      input === dialCode &&
+      (event.key === "Backspace" || event.key === "Delete")
+    ) {
+      event.preventDefault();
     }
   };
 
@@ -60,8 +74,8 @@ function ContactDetails() {
       <div className="w-1/2">
         <label className="mb-1 text-sm text-gray-500 font-semibold outline-none">
           {t("phoneNumber")}{" "}
-          <span className={`${true ? "text-green-500" : "text-red-500"}`}>
-            {true ? "✓" : "*"}
+          <span className={`${isValid ? "text-green-500" : "text-red-500"}`}>
+            {isValid ? "✓" : "*"}
           </span>
         </label>
         <div
@@ -90,6 +104,7 @@ function ContactDetails() {
             placeholder="Phone number"
             value={`+${selectedCountry.dialCode}${mainPassengerPhone}`}
             onChange={handlePhoneNumberChange}
+            onKeyDown={handleKeyDown}
             className="w-full px-3 h-full rounded-md text-sm focus:outline-none pr-10"
           />
           <div

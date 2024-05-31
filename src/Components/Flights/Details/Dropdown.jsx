@@ -97,14 +97,13 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
         }`}
         style={{
           top: "100%",
-          padding: "0.5rem 0",
         }}
       >
         {options.map((option, index) => (
           <div
             key={index}
             onClick={() => handleChange(option)}
-            className="px-3 py-2 hover:bg-gray-200 cursor-pointer"
+            className="px-3 py-2 hover:bg-blue-50 cursor-pointer"
           >
             {t(option)}
           </div>

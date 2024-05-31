@@ -51,7 +51,8 @@ export const useClickOutside = (ref, callback) => {
 
 // FUNCTION TO CHECK IF TEXT CONSISTS ONLY OF LETTERS AND IS MORE THAN 3 LETTERS
 export const isValidName = (name) => {
-  const regex = /^[a-zA-Z]{4,}$/;
+  const regex =
+    /^[a-zA-Z\u00C0-\u00FF\u0100-\u017F\u0410-\u044F\u10A0-\u10FF]{4,}$/;
   return regex.test(name);
 };
 

@@ -3,13 +3,7 @@ import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
 import { useTranslation } from "react-i18next";
 
-import {
-  months,
-  daysData,
-  yearsData,
-  countriesData,
-  genderData,
-} from "../../../static";
+import { months, daysData, yearsData, countriesData } from "../../../static";
 
 // Validation functions
 const isValidBirthDate = (birthMonth, birthDay, birthYear) => {
@@ -31,6 +25,7 @@ function BirthDateLayout() {
   const birthYear = useSelector((state) => state.mainPassenger.birthYear);
   const country = useSelector((state) => state.mainPassenger.country);
   const gender = useSelector((state) => state.mainPassenger.sex);
+  const genderData = [t("male"), t("female"), t("other")];
 
   const [isBirthDateValid, setIsBirthDateValid] = useState(false);
   const [isCountryValid, setIsCountryValid] = useState(false);
@@ -107,7 +102,7 @@ function BirthDateLayout() {
         </div>
         <div>
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
-            <span>Gender</span>
+            <span>{t("Gender")}</span>
             <span
               className={`${isGenderValid ? "text-green-500" : "text-red-500"}`}
             >
