@@ -234,6 +234,8 @@ const resources = {
       "Chloé Lefevre": "Chloé Lefevre",
       "Thomas Roux": "Thomas Roux",
       "Élise Dubois": "Élise Dubois",
+      enterDetails:
+        "Please enter your name and surname as it appears in your documents (passport/ID card) to avoid discrepancies when purchasing tickets.",
     },
   },
   // GEORGIAN
@@ -442,7 +444,7 @@ const resources = {
       Year: "წელი",
       passportNumber: "პასპორტის ნომერი",
       passportExpireDate: "პასპორტის ვადის გასვლის თარიღი",
-      unitedStates: "ამერიკის შეერთებული შტატები",
+      unitedStates: "აშშ",
       canada: "კანადა",
       mexico: "მექსიკა",
       unitedKingdom: "გაერთიანებული სამეფო",
@@ -455,7 +457,7 @@ const resources = {
       "Clerk of Courts": "სასამართლოს კლერკი",
       "Passport Information Center": "პასპორტის ინფორმაციის ცენტრი",
       "Embassies and Consulates": "ელჩი და საკონსულოები",
-      "United States": "ამერიკის შეერთებული შტატები",
+      "United States": "აშშ",
       Canada: "კანადა",
       Mexico: "მექსიკა",
       "United Kingdom": "გაერთიანებული სამეფო",
@@ -471,6 +473,8 @@ const resources = {
       "Chloé Lefevre": "ქლოე ლეფევრი",
       "Thomas Roux": "ტომა რუქსი",
       "Élise Dubois": "ელისე დუბუა",
+      enterDetails:
+        "გთხოვთ სახელი და გვარი შეიყვანოთ ისე როგორც მოცემულია თვქენს საბუთებში (პასპორტსი / პირადობის მოწმობაში) იმისათვის რომ ავირიდოთ უზუსტობები ბილეთის შეძენის დროს",
     },
   },
   // GERMAN
@@ -710,6 +714,8 @@ const resources = {
       "Chloé Lefevre": "Chloé Lefevre",
       "Thomas Roux": "Thomas Roux",
       "Élise Dubois": "Élise Dubois",
+      enterDetails:
+        "Bitte geben Sie Ihren Namen und Nachnamen so ein, wie er in Ihren Dokumenten (Reisepass/Personalausweis) erscheint, um Unstimmigkeiten beim Ticketkauf zu vermeiden.",
     },
   },
 };

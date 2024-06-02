@@ -5,7 +5,7 @@ import { isValidPassportExpireDate } from "../../../utility";
 import {
   months,
   daysData,
-  yearsData,
+  expireYearsData,
   passportIssueAuthority,
 } from "../../../static";
 import { useTranslation } from "react-i18next";
@@ -87,7 +87,7 @@ function PassportExpireDate() {
               />
               <Dropdown
                 title={"Year"}
-                options={yearsData}
+                options={expireYearsData}
                 type="passportExpiryYear"
                 size="w-24"
               />

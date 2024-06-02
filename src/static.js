@@ -54,9 +54,14 @@ export const airlines = [
 export const daysData = Array.from({ length: 31 }, (_, i) =>
   (i + 1).toString()
 );
-export const yearsData = Array.from({ length: 100 }, (_, i) =>
+
+export const yearsData = Array.from({ length: 80 }, (_, i) =>
   (new Date().getFullYear() - i).toString()
 );
+export const expireYearsData = Array.from({ length: 2040 - 2020 + 1 }, (_, i) =>
+  (2040 - i).toString()
+);
+
 export const countriesData = [
   "United States",
   "Canada",
@@ -91,7 +96,7 @@ export const templateNames = [
   "Louis Petit",
   "Chloé Lefevre",
   "Thomas Roux",
-   "Élise Dubois"
+  "Élise Dubois",
 ];
 
 export const flightsData = [
