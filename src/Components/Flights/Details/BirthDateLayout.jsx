@@ -44,7 +44,7 @@ function BirthDateLayout() {
   }, [gender]);
 
   return (
-    <div className="gap-10 mb-5 flex items-center">
+    <div className="sm:gap-10 gap-2 sm:mb-5 flex flex-col sm:flex-row sm:items-center">
       <div>
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("birthDate")}</span>

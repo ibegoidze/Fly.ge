@@ -74,7 +74,7 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className={`relative ${size}`} ref={dropdownRef}>
+    <div className={`relative ${size}  mt-1`} ref={dropdownRef}>
       <div
         className={`w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none cursor-pointer flex justify-between items-center ${
           isOpen ? "text-blue-500" : "text-gray-700"

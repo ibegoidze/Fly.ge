@@ -60,7 +60,7 @@ function InputTemplate({
             {isValid ? "✓" : "*"}
           </span>
         </label>
-        <div className="relative">
+        <div className="relative mt-1">
           <input
             id={inputType}
             name={inputType}

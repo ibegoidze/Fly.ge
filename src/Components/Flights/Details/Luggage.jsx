@@ -21,19 +21,19 @@ function Luggage() {
 
   const luggageOptions = [
     {
-      title: "Standart luggage",
+      title: t("standardLuggage"),
       size: "60 x 20 x 40 cm, 10kg",
       price: 0,
       pic: BackPackPic,
     },
     {
-      title: "Medium luggage",
+      title: t("mediumLuggage"),
       size: "70 x 25 x 50 cm, 15kg",
       price: 40,
       pic: HandBagPic,
     },
     {
-      title: "Large luggage",
+      title: t("largeLuggage"),
       size: "78 x 28 x 52 cm, 20kg",
       price: 50,
       pic: CasePic,
@@ -49,8 +49,8 @@ function Luggage() {
   return (
     <div className="mt-10">
       <div className="flex flex-col gap-5 mb-4">
-        <span className="font-medium">Luggage</span>
-        <span className="text-sm text-gray-500">Choose one option</span>
+        <span className="font-medium">{t("luggage")}</span>
+        <span className="text-sm text-gray-500">{t("chooseOneOption")}</span>
       </div>
       <div className="luggage-options">
         {luggageOptions.map((option) => (
@@ -79,7 +79,7 @@ function Luggage() {
                 ) : null}
               </div>
               <img src={option.pic} alt="" className="w-5 h-5" />
-              <span className="text-sm text-gray-600 w-32 font-medium hidden sm:flex">
+              <span className="text-sm text-gray-600 w-44 font-medium hidden sm:flex">
                 {option.title}
               </span>
             </div>

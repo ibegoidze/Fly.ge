@@ -32,7 +32,13 @@ function PassportExpireDate() {
     (state) => state.mainPassenger.passportIssueYear
   );
 
+  const passportAuthority = useSelector(
+    (state) => state.mainPassenger.passportIssuingAuthority
+  );
+
   const [isPassportExpireDateValid, setIsPassportExpireDateValid] =
+    useState(false);
+  const [isPassportAuthorityValid, setIsPassportAuthorityValid] =
     useState(false);
 
   useEffect(() => {
@@ -55,19 +61,25 @@ function PassportExpireDate() {
     passportIssueYear,
   ]);
 
-  console.log(isPassportExpireDateValid);
+  useEffect(() => {
+    setIsPassportAuthorityValid(!!passportAuthority);
+  }, [passportAuthority]);
+
+  console.log(isPassportExpireDateValid, isPassportAuthorityValid);
 
   return (
-    <div className="gap-10 my-5 flex items-center">
+    <div className="sm:gap-10 gap-2 my-5 flex flex-col sm:flex-row sm:items-center">
       <div>
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("passportExpireDate")}</span>
           <span
             className={`${
-              isPassportExpireDateValid ? "text-green-500" : "text-red-500"
+              isPassportExpireDateValid && isPassportAuthorityValid
+                ? "text-green-500"
+                : "text-red-500"
             }`}
           >
-            {isPassportExpireDateValid ? "✓" : "*"}
+            {isPassportExpireDateValid && isPassportAuthorityValid ? "✓" : "*"}
           </span>
         </div>
         <div className="flex gap-10">
@@ -101,10 +113,14 @@ function PassportExpireDate() {
             <span>{t("passportIssuingAuthority")}</span>
             <span
               className={`${
-                isPassportExpireDateValid ? "text-green-500" : "text-red-500"
+                isPassportExpireDateValid && isPassportAuthorityValid
+                  ? "text-green-500"
+                  : "text-red-500"
               }`}
             >
-              {isPassportExpireDateValid ? "✓" : "*"}
+              {isPassportExpireDateValid && isPassportAuthorityValid
+                ? "✓"
+                : "*"}
             </span>
           </div>
           <Dropdown

@@ -62,16 +62,16 @@ function ContactDetails() {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="flex gap-10 mb-5">
+    <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mb-5">
       <InputTemplate
         title={"mail"}
         placeholder={"mail"}
         icon={MailPic}
         validationFunction={isValidEmail}
         inputType="email"
-        width="1/2"
+        width="w-full sm:w-1/2"
       />
-      <div className="w-1/2">
+      <div className="w-full sm:w-1/2">
         <label className="mb-1 text-sm text-gray-500 font-semibold outline-none">
           {t("phoneNumber")}{" "}
           <span className={`${isValid ? "text-green-500" : "text-red-500"}`}>
@@ -79,7 +79,7 @@ function ContactDetails() {
           </span>
         </label>
         <div
-          className="flex items-center border border-gray-300 rounded relative"
+          className="flex items-center border border-gray-300 rounded relative mt-1"
           ref={dropdownRef}
         >
           <div

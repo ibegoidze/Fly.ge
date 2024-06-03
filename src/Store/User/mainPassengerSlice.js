@@ -18,8 +18,9 @@ const initialState = {
   passportExpiryYear: "",
   passportIssuingAuthority: "",
   mainPassengerPhone: "",
-  mainPassengerLuggage: "", // ADD MAIN PASSENGER LUGGAGE
-  mainPassengerLuggagePrice: 0, // ADD MAIN PASSENGER LUGGAGE PRICE
+  mainPassengerLuggage: "",
+  mainPassengerLuggagePrice: 0,
+  mainPassengerInsurance: "",
 };
 
 const mainPassengerSlice = createSlice({
@@ -79,10 +80,13 @@ const mainPassengerSlice = createSlice({
     },
     setMainPassengerLuggage: (state, action) => {
       state.mainPassengerLuggage = action.payload;
-    }, // ADD SET MAIN PASSENGER LUGGAGE
+    },
     setMainPassengerLuggagePrice: (state, action) => {
       state.mainPassengerLuggagePrice = action.payload;
-    }, // ADD SET MAIN PASSENGER LUGGAGE PRICE
+    },
+    setMainPassengerInsurance: (state, action) => {
+      state.mainPassengerInsurance = action.payload;
+    },
   },
 });
 
@@ -106,5 +110,7 @@ export const {
   setMainPassengerPhone,
   setMainPassengerLuggage,
   setMainPassengerLuggagePrice,
+  setMainPassengerInsurance,
 } = mainPassengerSlice.actions;
+
 export default mainPassengerSlice.reducer;
