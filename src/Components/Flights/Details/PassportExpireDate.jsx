@@ -65,8 +65,6 @@ function PassportExpireDate() {
     setIsPassportAuthorityValid(!!passportAuthority);
   }, [passportAuthority]);
 
-  console.log(isPassportExpireDateValid, isPassportAuthorityValid);
-
   return (
     <div className="sm:gap-10 gap-2 my-5 flex flex-col sm:flex-row sm:items-center">
       <div>

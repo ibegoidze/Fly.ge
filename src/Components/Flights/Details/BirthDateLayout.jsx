@@ -44,8 +44,8 @@ function BirthDateLayout() {
   }, [gender]);
 
   return (
-    <div className="sm:gap-10 gap-2 sm:mb-5 flex flex-col sm:flex-row sm:items-center">
-      <div>
+    <div className="md:gap-10 gap-2 md:mb-5 flex flex-col md:flex-row md:items-center">
+      <div className="w-full sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("birthDate")}</span>
           <span
@@ -69,19 +69,19 @@ function BirthDateLayout() {
                 title={t("Day")}
                 options={daysData}
                 type="birthDay"
-                size="w-20"
+                size="1/4"
               />
               <Dropdown
                 title={"Year"}
                 options={yearsData}
                 type="birthYear"
-                size="w-24"
+                size="1/4"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex gap-2.5 w-full">
+      <div className="flex gap-2.5 w-full sm:w-1/2">
         <div>
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
             <span>{t("citizenship")}</span>

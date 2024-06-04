@@ -60,7 +60,7 @@ const ResponsiblePerson = () => {
   };
 
   return (
-    <div className="p-4 sm:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">
+    <div className="p-4 w-full sm:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">
       {/* RESPONSIBLE PERSON TITLE */}
       <div className="text-lg font-semibold mb-7">{t("ResponsiblePerson")}</div>
       {/* TYPE SELECTION CHECKBOXES */}
@@ -68,6 +68,7 @@ const ResponsiblePerson = () => {
         {["physical", "legal"].map((type) => (
           <label key={type} className="flex items-center cursor-pointer">
             <input
+              autoComplete="off"
               name="person"
               type="checkbox"
               value={type}
@@ -103,7 +104,7 @@ const ResponsiblePerson = () => {
             {/* EMAIL FIELD */}
             <label
               className="block mb-1 text-sm text-gray-500 font-semibold focus:outline-none"
-              htmlFor="email"
+              htmlFor="email_responsiblePerson"
             >
               {t("email")}{" "}
               <span
@@ -116,7 +117,8 @@ const ResponsiblePerson = () => {
             </label>
             <div className="relative">
               <input
-                id="email"
+                autoComplete="off"
+                id="email_responsiblePerson"
                 name="mail"
                 type="email"
                 placeholder="email@example.com"
@@ -135,7 +137,7 @@ const ResponsiblePerson = () => {
             {/* PHONE FIELD */}
             <label
               className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
-              htmlFor="phone"
+              htmlFor="phone_responsiblePerson"
             >
               {t("phone")}{" "}
               <span
@@ -148,7 +150,8 @@ const ResponsiblePerson = () => {
             </label>
             <div className="relative">
               <input
-                id="phone"
+                autoComplete="off"
+                id="phone_responsiblePerson"
                 name="phone"
                 type="text"
                 placeholder="+995 555 555 5555"
@@ -169,7 +172,7 @@ const ResponsiblePerson = () => {
                 {/* ORGANIZATION NAME FIELD */}
                 <label
                   className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
-                  htmlFor="company"
+                  htmlFor="company_responsiblePerson"
                 >
                   {t("organizationName")}{" "}
                   <span
@@ -184,7 +187,7 @@ const ResponsiblePerson = () => {
                 </label>
                 <div className="relative">
                   <input
-                    id="company"
+                    id="company_responsiblePerson"
                     autoComplete="organization"
                     name="company"
                     type="text"
@@ -204,7 +207,7 @@ const ResponsiblePerson = () => {
                 {/* POSTAL CODE FIELD */}
                 <label
                   className="block mb-1 text-sm text-gray-500 font-semibold outline-none"
-                  htmlFor="postCode"
+                  htmlFor="postCode_responsiblePerson"
                 >
                   {t("postalCode")}{" "}
                   <span
@@ -217,7 +220,7 @@ const ResponsiblePerson = () => {
                 </label>
                 <div className="relative">
                   <input
-                    id="postCode"
+                    id="postCode_responsiblePerson"
                     autoComplete="off"
                     name="postCode"
                     type="text"

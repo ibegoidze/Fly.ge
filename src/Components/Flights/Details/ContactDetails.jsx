@@ -72,7 +72,10 @@ function ContactDetails() {
         width="w-full sm:w-1/2"
       />
       <div className="w-full sm:w-1/2">
-        <label className="mb-1 text-sm text-gray-500 font-semibold outline-none">
+        <label
+          className="mb-1 text-sm text-gray-500 font-semibold outline-none"
+          htmlFor="MainPassengerPhone" // CORRECTED: MATCHES THE INPUT ID
+        >
           {t("phoneNumber")}{" "}
           <span className={`${isValid ? "text-green-500" : "text-red-500"}`}>
             {isValid ? "✓" : "*"}
@@ -95,11 +98,10 @@ function ContactDetails() {
               arrow_drop_down
             </span>
           </div>
-          <label htmlFor="MainPassengerPhone"></label>
           <input
-            id="MainPassengerPhone"
+            id="MainPassengerPhone" // CORRECTED: MATCHES THE LABEL FOR ATTRIBUTE
             name="MainPassengerPhone"
-            autoComplete="none"
+            autoComplete="tel" // UPDATED: AUTOCOMPLETE ATTRIBUTE
             type="text"
             placeholder="Phone number"
             value={`+${selectedCountry.dialCode}${mainPassengerPhone}`}

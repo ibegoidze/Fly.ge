@@ -26,7 +26,7 @@ function TravelInsurance() {
     <div className="bg-white p-5 mb-5 rounded-lg shadow-lg flex flex-col">
       <div className="TITLE flex justify-between">
         <div className="text-lg font-semibold mb-5">{t("travelInsurance")}</div>
-        <div className="hidden sm:flex  text-gray-500 text-sm font-medium gap-3 ">
+        <div className="hidden md:flex  text-gray-500 text-sm font-medium gap-3 ">
           <span>{t("textLabel")}</span>{" "}
           <img src={GrayInformationPic} alt="" className="w-5 h-5" />
         </div>
@@ -41,9 +41,10 @@ function TravelInsurance() {
         </span>
       </div>
       {/* OPTIONS */}
-      <div className="HERE flex justify-between mt-5 border rounded py-2 border-gray-300 gap-6">
+      <div className="HERE flex sm:text-xs xl:text:md justify-between mt-5 border rounded py-2 border-gray-300 gap-6">
         <label className="flex items-center w-1/3 ml-11 gap-2">
           <input
+            autoComplete="off"
             className="w-4 h-4"
             type="radio"
             name="insurance"
@@ -57,8 +58,9 @@ function TravelInsurance() {
             <span className="text-green-500">+150$</span>
           </div>
         </label>
-        <label className="hidden sm:flex items-center w-1/3 ml-11 gap-2">
+        <label className="hidden md:flex items-center w-1/3 ml-11 gap-2">
           <input
+            autoComplete="off"
             className="w-4 h-4"
             type="radio"
             name="insurance"
@@ -72,8 +74,9 @@ function TravelInsurance() {
             <span className="text-green-500">+20$</span>
           </div>
         </label>
-        <label className="hidden sm:flex items-center w-1/3 ml-11 gap-2">
+        <label className="hidden md:flex items-center w-1/3 ml-11 gap-2">
           <input
+            autoComplete="off"
             className="w-4 h-4"
             type="radio"
             name="insurance"
@@ -89,37 +92,38 @@ function TravelInsurance() {
         </label>
       </div>
       {/* BOXES */}
-      <div className="flex flex-col sm:flex-row justify-between gap-6 mt-5 ">
-        <div className="sm:w-1/3 rounded-lg bg-insuranceGray  flex justify-center flex-col px-10 py-10 gap-5">
-          <div className="text-sm text-white flex gap-5 ">
+      <div className="flex flex-col md:flex-row justify-between gap-6 mt-5 ">
+        <div className="md:w-1/3 rounded-lg bg-insuranceGray  flex justify-center flex-col px-10 py-10 gap-5">
+          <div className="text-xs xl:text-sm text-white flex gap-5 ">
             <img src={CircleCkeckWhite} alt="" className="w-5 h-5" />
             <span>{t("medicalHelp")}</span>
           </div>
-          <div className="text-sm text-white flex gap-5 ">
+          <div className="text-xs xl:text-sm text-white flex gap-5 ">
             <img src={CircleCkeckWhite} alt="" className="w-5 h-5" />
             <span>
               <span>{t("travelCancellation")}</span>
             </span>
           </div>
-          <div className="text-sm text-white flex gap-5 ">
+          <div className="text-xs xl:text-sm text-white flex gap-5 ">
             <img src={CircleCkeckWhite} alt="" className="w-5 h-5" />
             <span>{t("assistanceService")}</span>
           </div>
-          <div className="text-sm text-white flex gap-5 ">
+          <div className="text-xs xl:text-sm text-white flex gap-5 ">
             <img src={CircleCkeckWhite} alt="" className="w-5 h-5" />
             <span>{t("lostLuggage")}</span>
           </div>
-          <div className="text-sm text-white flex gap-5 ">
+          <div className="text-xs xl:text-sm text-white flex gap-5 ">
             <img src={CircleCkeckWhite} alt="" className="w-5 h-5" />
             <span>{t("flightInsurance")}</span>
           </div>
         </div>
-        <div className="HERE flex sm:hidden border rounded py-2 border-gray-300">
-          <label className="flex  items-center w-1/3 ml-11 gap-2">
+        <div className="HERE flex md:hidden border rounded py-2 border-gray-300">
+          <label className="flex  items-center w-1/3 ml-11 gap-2 sm:text-xs xl:text:md">
             <input
+              autoComplete="off"
               className="w-4 h-4"
               type="radio"
-              name="insurance"
+              name="insuranceMob"
               value="standard"
               checked={selectedInsurance === "standard"}
               onChange={() => handleInsuranceChange("standard")}
@@ -131,28 +135,29 @@ function TravelInsurance() {
             </div>
           </label>
         </div>
-        <div className="sm:w-1/3 rounded-lg bg-lightBlue text-primaryBlue  flex flex-col px-10 py-10 gap-5">
-          <div className="text-sm  flex gap-5 ">
+        <div className="md:w-1/3 rounded-lg bg-lightBlue text-primaryBlue  flex flex-col px-10 py-10 gap-5">
+          <div className="text-xs xl:text-sm  flex gap-5 ">
             <img src={CircleCheckBlue} alt="" className="w-5 h-5" />
             <span>{t("assistanceService")}</span>
           </div>
-          <div className="text-sm  flex gap-5 ">
+          <div className="text-xs xl:text-sm  flex gap-5 ">
             <img src={CircleCheckBlue} alt="" className="w-5 h-5" />
             <span>
               <span>{t("lostLuggage")}</span>
             </span>
           </div>
-          <div className="text-sm  flex gap-5 ">
+          <div className="text-xs xl:text-sm  flex gap-5 ">
             <img src={CircleCheckBlue} alt="" className="w-5 h-5" />
             <span>{t("flightInsurance")}</span>
           </div>
         </div>
-        <div className="HERE flex sm:hidden border rounded py-2 border-gray-300">
-          <label className="flex items-center ml-11 gap-2">
+        <div className="HERE flex md:hidden border rounded py-2 border-gray-300">
+          <label className="flex items-center ml-11 gap-2 sm:text-xs xl:text:md">
             <input
+              autoComplete="off"
               className="w-4 h-4"
               type="radio"
-              name="insurance"
+              name="insuranceMob"
               value="withoutInsurance"
               checked={selectedInsurance === "withoutInsurance"}
               onChange={() => handleInsuranceChange("withoutInsurance")}
@@ -164,7 +169,7 @@ function TravelInsurance() {
             </div>
           </label>
         </div>
-        <div className="sm:w-1/3 rounded-lg "></div>
+        <div className="md:w-1/3 rounded-lg "></div>
       </div>
       <div className="mt-5 text-sm text-gray-400 font-semibol">
         {t("validationMessage")}

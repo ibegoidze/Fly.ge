@@ -62,6 +62,7 @@ function InputTemplate({
         </label>
         <div className="relative mt-1">
           <input
+            autoComplete="off"
             id={inputType}
             name={inputType}
             type="text"

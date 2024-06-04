@@ -21,7 +21,7 @@ function MainPassenger() {
   }, [mainPassenger]);
 
   return (
-    <div className="p-4 sm:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">
+    <div className="p-4 xl:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">
       <div className="text-lg font-semibold mb-10">1. {t("MainPassenger")}</div>
       <div className="bg-boxBlue border rounded-lg p-5 flex gap-5 border-tbcBlue mt-10">
         <img src={BlueInformationPic} alt="" className="w-5 h-5" />
