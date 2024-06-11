@@ -253,6 +253,7 @@ const resources = {
       mediumLuggage: "Medium luggage",
       largeLuggage: "Large luggage",
       chooseOneOption: "Choose one option",
+      Insurance: "Insurance"
     },
   },
   // GEORGIAN
@@ -510,6 +511,7 @@ const resources = {
       mediumLuggage: "საშუალო ბარგი",
       largeLuggage: "დიდი ბარგი",
       chooseOneOption: "აირჩიე ერთი ვარიანტი",
+      Insurance : "დაზღვევა"
     },
   },
   // GERMAN
@@ -768,6 +770,7 @@ const resources = {
       mediumLuggage: "Mittleres Gepäck",
       largeLuggage: "Großes Gepäck",
       chooseOneOption: "Wählen Sie eine Option",
+      Insurance : "Insurance"
     },
   },
 };

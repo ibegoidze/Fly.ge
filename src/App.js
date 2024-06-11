@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Outlet />}>
             <Route index path="/" element={<Tickets />} />
-            <Route path="/Flights" element={<Flights />} />
+            <Route path="/Flights/*" element={<Flights />} />
           </Route>
           <Route path="/Offers" element={<Offers />} />
           <Route path="/Blog" element={<Blog />} />

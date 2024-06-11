@@ -63,7 +63,7 @@ function SearchButton() {
     const summary = calculatePassengerCountSummary();
     dispatch(setPassengerCountSummary(summary));
     dispatch(setSearchResults(filteredData));
-    navigate("/Flights");
+    navigate("/Flights/search");
   };
 
   return (

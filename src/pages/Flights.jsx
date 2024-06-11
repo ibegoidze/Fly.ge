@@ -1,55 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import FlightsNavigation from "../Components/Flights/Search/FlightsNavigation";
 import Search from "../Components/Flights/Search/Search";
 import Results from "../Components/Flights/Search/Results";
-import { useSelector } from "react-redux";
 import TravelDetails from "../Components/Flights/Details/TravelDetails";
 
-const Flight = () => {
+const Flights = () => {
   const flightsData = useSelector((state) => state.searchResults);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // TABS
   const [activeTab, setActiveTab] = useState("search");
-
-  // SELECTED FLIGHT
   const [selectedFlight, setSelectedFlight] = useState(null);
+
+  useEffect(() => {
+    const currentTab = location.pathname.split("/").pop();
+    setActiveTab(currentTab || "search");
+  }, [location]);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    navigate(`/Flights/${tab}`);
   };
 
   const handleBookButtonClick = (flight) => {
     setSelectedFlight(flight);
-    setActiveTab("details");
+    navigate(`/Flights/details`);
   };
 
   return (
-    <div className="noto-sans-georgian">
+    <div className="noto-sans-georgian bg-backgroundGray">
       <FlightsNavigation
         handleTabClick={handleTabClick}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-      {/* CONTENT */}
       <div className="tab-content">
-        {activeTab === "search" && (
-          <div>
-            <Search />
-            <Results
-              flightsData={flightsData}
-              onBookButtonClick={handleBookButtonClick}
-            />
-          </div>
-        )}
-        {activeTab === "details" && (
-          <div className="bg-backgroundGray">
-            <TravelDetails selectedFlight={selectedFlight} />
-          </div>
-        )}
-        {activeTab === "review" && <div>Other Content</div>}
+        <Routes>
+          <Route
+            path="search"
+            element={
+              <div>
+                <Search />
+                <Results
+                  flightsData={flightsData}
+                  onBookButtonClick={handleBookButtonClick}
+                />
+              </div>
+            }
+          />
+          <Route
+            path="details"
+            element={
+              selectedFlight ? (
+                <TravelDetails selectedFlight={selectedFlight} />
+              ) : (
+                <div>No flight selected</div>
+              )
+            }
+          />
+          <Route path="review" element={<div>Other Content</div>} />
+          <Route path="/" element={<div>Select a tab</div>} />
+        </Routes>
       </div>
     </div>
   );
 };
 
-export default Flight;
+export default Flights;

@@ -38,7 +38,7 @@ const Header = () => {
       : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300 ";
 
   const isTicketsActive =
-    location.pathname === "/" || location.pathname === "/Flights";
+    location.pathname === "/" || location.pathname === "/Flights" || location.pathname === "/Flights/search" || location.pathname === "/Flights/details"|| location.pathname === "/Flights/review";
 
   return (
     <header className={`sticky top-0 bg-white z-50`}>

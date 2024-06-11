@@ -12,7 +12,7 @@ function TravelDetails({ selectedFlight }) {
           <FlightDetails selectedFlight={selectedFlight} />
         </div>
         <div className="PRICING w-full md:w-1/3">
-          <Pricing />
+          <Pricing selectedFlight={selectedFlight} />
         </div>
       </div>
       <div className="PERSONINCHARGE  ">
