@@ -18,9 +18,9 @@ const initialState = {
   passportExpiryYear: "",
   passportIssuingAuthority: "",
   mainPassengerPhone: "",
-  mainPassengerLuggage: "",
+  mainPassengerLuggage: "სტანდარტული ბარგი",
   mainPassengerLuggagePrice: 0,
-  mainPassengerInsurance: "",
+  mainPassengerInsurance: "standard",
 };
 
 const mainPassengerSlice = createSlice({

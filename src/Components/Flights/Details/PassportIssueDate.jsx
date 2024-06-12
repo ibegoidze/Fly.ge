@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
 import InputTemplate from "./InputTemplate";
-import { isValidPassportIssueDate, isValidNumber } from "../../../utility";
+import {
+  isValidPassportIssueDate,
+  isValidNumber,
+} from "../../../Store/SearchFlights/validationSlice";
 import { months, daysData, yearsData } from "../../../static";
 import InfoPic from "../../../assets/Flights/Details/InformationIcon.png";
 import { useTranslation } from "react-i18next";
@@ -49,19 +52,19 @@ function PassportIssueDate() {
           <div className="flex w-1/2">
             <div className="flex gap-2.5">
               <Dropdown
-                title={"Month"}
+                title={t("Month")}
                 options={months}
                 type="passportIssueMonth"
                 size="w-32"
               />
               <Dropdown
-                title={"Day"}
+                title={t("Day")}
                 options={daysData}
                 type="passportIssueDay"
                 size="w-20"
               />
               <Dropdown
-                title={"Year"}
+                title={t("Year")}
                 options={yearsData}
                 type="passportIssueYear"
                 size="w-24"
@@ -77,7 +80,7 @@ function PassportIssueDate() {
             placeholder={t("passportNumber")}
             icon={InfoPic}
             validationFunction={(input) => isValidNumber(input, 9)}
-            inputType="passportNumber"
+            inputType="text" // ENSURE INPUT TYPE IS CORRECT
             width="full"
           />
         </div>

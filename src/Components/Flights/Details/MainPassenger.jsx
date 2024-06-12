@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import SelectPassengerTemplate from "./SelectPassengerTemplate";
@@ -14,11 +13,6 @@ import BlueInformationPic from "../../../assets/Flights/Details/BlueInformation.
 
 function MainPassenger() {
   const { t } = useTranslation();
-  const mainPassenger = useSelector((state) => state.mainPassenger);
-
-  useEffect(() => {
-    console.log("Current Main Passenger Information:", mainPassenger);
-  }, [mainPassenger]);
 
   return (
     <div className="p-4 xl:w-2/3 bg-white mb-5 rounded-lg shadow-lg transition-all duration-300">

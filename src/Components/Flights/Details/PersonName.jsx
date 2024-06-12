@@ -1,5 +1,5 @@
 import InputTemplate from "./InputTemplate";
-import { isValidName } from "../../../utility";
+import { isValidName } from "../../../Store/SearchFlights/validationSlice";
 
 import UserPic from "../../../assets/Flights/Details/UserIcon.png";
 import InfoPic from "../../../assets/Flights/Details/InformationIcon.png";

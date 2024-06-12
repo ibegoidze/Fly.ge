@@ -1,7 +1,9 @@
+// src/components/PassportExpireDate.jsx
+
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
-import { isValidPassportExpireDate } from "../../../utility";
+import { isValidPassportExpireDate } from "../../../Store/SearchFlights/validationSlice";
 import {
   months,
   daysData,
@@ -72,12 +74,10 @@ function PassportExpireDate() {
           <span>{t("passportExpireDate")}</span>
           <span
             className={`${
-              isPassportExpireDateValid && isPassportAuthorityValid
-                ? "text-green-500"
-                : "text-red-500"
+              isPassportExpireDateValid ? "text-green-500" : "text-red-500"
             }`}
           >
-            {isPassportExpireDateValid && isPassportAuthorityValid ? "✓" : "*"}
+            {isPassportExpireDateValid ? "✓" : "*"}
           </span>
         </div>
         <div className="flex gap-10">
@@ -111,14 +111,10 @@ function PassportExpireDate() {
             <span>{t("passportIssuingAuthority")}</span>
             <span
               className={`${
-                isPassportExpireDateValid && isPassportAuthorityValid
-                  ? "text-green-500"
-                  : "text-red-500"
+                isPassportAuthorityValid ? "text-green-500" : "text-red-500"
               }`}
             >
-              {isPassportExpireDateValid && isPassportAuthorityValid
-                ? "✓"
-                : "*"}
+              {isPassportAuthorityValid ? "✓" : "*"}
             </span>
           </div>
           <Dropdown

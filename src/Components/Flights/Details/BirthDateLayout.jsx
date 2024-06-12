@@ -2,21 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
 import { useTranslation } from "react-i18next";
+import {
+  isValidBirthDate,
+  isValidCountry,
+  isValidGender,
+} from "../../../Store/SearchFlights/validationSlice";
 
 import { months, daysData, yearsData, countriesData } from "../../../static";
-
-// Validation functions
-const isValidBirthDate = (birthMonth, birthDay, birthYear) => {
-  return birthMonth && birthDay && birthYear && birthYear < 2006;
-};
-
-const isValidCountry = (country) => {
-  return !!country;
-};
-
-const isValidGender = (gender) => {
-  return !!gender;
-};
 
 function BirthDateLayout() {
   const { t } = useTranslation();
@@ -69,13 +61,13 @@ function BirthDateLayout() {
                 title={t("Day")}
                 options={daysData}
                 type="birthDay"
-                size="1/4"
+                size="w-20"
               />
               <Dropdown
                 title={"Year"}
                 options={yearsData}
                 type="birthYear"
-                size="1/4"
+                size="w-24"
               />
             </div>
           </div>

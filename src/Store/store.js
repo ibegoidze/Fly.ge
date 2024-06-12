@@ -13,6 +13,7 @@ import transferReducer from "./SearchFlights/transferSlice";
 import airlinesReducer from "./SearchFlights/airlinesSlice";
 import timesReducer from "./SearchFlights/timesSlice";
 import mainPassengerReducer from "./User/mainPassengerSlice";
+import validationReducer from "./SearchFlights/validationSlice";
 
 export const store = configureStore({
   reducer: {
@@ -31,5 +32,6 @@ export const store = configureStore({
     airlines: airlinesReducer,
     times: timesReducer,
     mainPassenger: mainPassengerReducer,
+    validation: validationReducer,
   },
 });

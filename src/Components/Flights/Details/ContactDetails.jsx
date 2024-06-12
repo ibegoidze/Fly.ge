@@ -1,9 +1,13 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import InputTemplate from "./InputTemplate";
-import { isValidEmail, useClickOutside, isValidNumber } from "../../../utility";
+import {
+  isValidEmail,
+  isValidNumber,
+} from "../../../Store/SearchFlights/validationSlice";
 import { setMainPassengerPhone } from "../../../Store/User/mainPassengerSlice";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "../../../utility";
 
 import MailPic from "../../../assets/Flights/Details/MailPic.png";
 import GeoFlag from "../../../assets/Global/images/flag.png";
@@ -34,6 +38,7 @@ function ContactDetails() {
     setSelectedCountry(country);
     dispatch(setMainPassengerPhone(""));
     setIsOpen(false);
+    setIsValid(false);
   };
 
   const handlePhoneNumberChange = (event) => {
@@ -74,7 +79,7 @@ function ContactDetails() {
       <div className="w-full sm:w-1/2">
         <label
           className="mb-1 text-sm text-gray-500 font-semibold outline-none"
-          htmlFor="MainPassengerPhone" // CORRECTED: MATCHES THE INPUT ID
+          htmlFor="MainPassengerPhone"
         >
           {t("phoneNumber")}{" "}
           <span className={`${isValid ? "text-green-500" : "text-red-500"}`}>
@@ -99,9 +104,9 @@ function ContactDetails() {
             </span>
           </div>
           <input
-            id="MainPassengerPhone" // CORRECTED: MATCHES THE LABEL FOR ATTRIBUTE
+            id="MainPassengerPhone"
             name="MainPassengerPhone"
-            autoComplete="tel" // UPDATED: AUTOCOMPLETE ATTRIBUTE
+            autoComplete="tel"
             type="text"
             placeholder="Phone number"
             value={`+${selectedCountry.dialCode}${mainPassengerPhone}`}
