@@ -9,7 +9,7 @@ import Pin from "../../../assets/Flights/Search/Pin.png";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-function Extention({ flightsData }) {
+function Extention({ flightsData, onBookButtonClick }) {
   const { t } = useTranslation();
   // CALCULATE NIGHTS BETWEEN DATES
   const calculateNights = (startDateStr, endDateStr) =>
@@ -75,7 +75,10 @@ function Extention({ flightsData }) {
       <div className="LOAN sm:mx-4 flex flex-col sm:flex-row sm:justify-between sm:items-end">
         <ExtentionLoan />
         <div>
-          <button className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 w-full text-md px-14 sm:h-10 py-2 sm:mt-8 sm:my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14">
+          <button
+            onClick={() => onBookButtonClick(flightsData)}
+            className="relative bg-blue-500 hover:bg-blue-700 transition-all duration-300 w-full text-md px-14 sm:h-10 py-2 sm:mt-8 sm:my-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 min-w-14"
+          >
             <span className="flex whitespace-nowrap">
               {t("Reservation")} {calculatePrice()}$
             </span>

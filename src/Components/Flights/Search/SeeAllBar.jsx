@@ -8,6 +8,7 @@ function SeeAllBar({
   openOverlay,
   toggleOverlay,
   setBlurredFlightId,
+  onBookButtonClick,
 }) {
   const [openFlightId, setOpenFlightId] = useState(null);
   const [hideLuggage, setHideLuggage] = useState(false);
@@ -83,7 +84,10 @@ function SeeAllBar({
           openFlightId === flightsData.id ? "maxHeight" : "max-h-0"
         }`}
       >
-        <Extention flightsData={flightsData} />
+        <Extention
+          flightsData={flightsData}
+          onBookButtonClick={onBookButtonClick}
+        />
       </div>
     </div>
   );

@@ -265,6 +265,7 @@ const Results = ({ flightsData, onBookButtonClick }) => {
                           openOverlay={openOverlay}
                           toggleOverlay={toggleOverlay}
                           setBlurredFlightId={setBlurredFlightId}
+                          onBookButtonClick={onBookButtonClick}
                         />
                       </div>
                     </div>

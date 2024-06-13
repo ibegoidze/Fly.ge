@@ -13,6 +13,7 @@ import {
   setPassportExpiryDay,
   setPassportExpiryYear,
   setPassportIssuingAuthority,
+  setMainPassengerTemplate,
 } from "../../../Store/User/mainPassengerSlice";
 import { useClickOutside } from "../../../utility";
 import { useTranslation } from "react-i18next";
@@ -65,6 +66,9 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
       case "passportIssuingAuthority":
         dispatch(setPassportIssuingAuthority(value));
         break;
+      case "mainPassengerTemplate":
+        dispatch(setMainPassengerTemplate(value));
+        break;
       default:
         break;
     }
@@ -103,7 +107,9 @@ const Dropdown = ({ title, options, type, size = "w-full" }) => {
           <div
             key={index}
             onClick={() => handleChange(option)}
-            className="px-3 py-2 hover:bg-blue-50 cursor-pointer"
+            className={`px-3 py-2 hover:bg-blue-50 transition-all duration-100 cursor-pointer ${
+              selectedValue === option ? "text-blue-600 bg-blue-50" : ""
+            }`}
           >
             {t(option)}
           </div>

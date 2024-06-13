@@ -91,7 +91,7 @@ function ContactDetails() {
           ref={dropdownRef}
         >
           <div
-            className="border-r pl-2 pr-4 py-2.5 cursor-pointer flex items-center"
+            className="border-r pl-2 pr-4  cursor-pointer flex items-center"
             onClick={toggleDropdown}
             ref={selectorRef}
           >
@@ -112,10 +112,10 @@ function ContactDetails() {
             value={`+${selectedCountry.dialCode}${mainPassengerPhone}`}
             onChange={handlePhoneNumberChange}
             onKeyDown={handleKeyDown}
-            className="w-full px-3 h-full rounded-md text-sm focus:outline-none pr-10"
+            className="w-full px-3 py-3 py-full  h-full  text-sm focus:outline-none pr-10"
           />
           <div
-            className={`absolute text-sm shadow-md z-50 bg-white rounded-lg transition-all duration-300 overflow-hidden ${
+            className={`absolute text-sm shadow-md z-50 rounded-lg transition-all duration-300 overflow-hidden ${
               isOpen
                 ? "opacity-100 max-h-64 overflow-y-auto custom-scrollbar"
                 : "opacity-0 max-h-0"
@@ -135,7 +135,7 @@ function ContactDetails() {
               <div
                 key={country.code}
                 onClick={() => handleCountryChange(country)}
-                className="px-3 py-2 hover:bg-gray-200 cursor-pointer flex items-center"
+                className="px-3 py-2 hover:bg-gray-200 cursor-pointer flex items-center bg-white"
               >
                 <img src={country.flag} alt="" className="w-5 h-5" />
               </div>

@@ -27,6 +27,7 @@ const Flights = () => {
   const handleBookButtonClick = (flight) => {
     setSelectedFlight(flight);
     navigate(`/Flights/details`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

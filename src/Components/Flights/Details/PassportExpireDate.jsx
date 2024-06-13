@@ -1,5 +1,3 @@
-// src/components/PassportExpireDate.jsx
-
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "./Dropdown";
@@ -69,7 +67,7 @@ function PassportExpireDate() {
 
   return (
     <div className="sm:gap-10 gap-2 my-5 flex flex-col sm:flex-row sm:items-center">
-      <div>
+      <div className="sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("passportExpireDate")}</span>
           <span
@@ -105,7 +103,7 @@ function PassportExpireDate() {
           </div>
         </div>
       </div>
-      <div className="flex gap-2.5 w-full">
+      <div className="flex gap-2.5 sm:w-1/2">
         <div className="w-full">
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
             <span>{t("passportIssuingAuthority")}</span>

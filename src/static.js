@@ -87,16 +87,11 @@ export const countryCode = [
 ];
 
 export const templateNames = [
-  "Jean Dupont",
-  "Marie Curie",
-  "Pierre Martin",
-  "Sophie Bernard",
-  "Jacques Durand",
-  "Claire Moreau",
-  "Louis Petit",
-  "Chloé Lefevre",
-  "Thomas Roux",
-  "Élise Dubois",
+  "Irakli Begoidze",
+  "Steve Jobs",
+  "Bill Gates",
+  "Mark Zuckerberg",
+  "Jeff Bezos",
 ];
 
 export const flightsData = [

@@ -7,6 +7,7 @@ import {
   isValidEmail,
   isValidCountry,
   isValidNumber,
+  isValidBirthDate,
   isValidPassportIssueDate,
   isValidPassportExpireDate,
 } from "../../../Store/SearchFlights/validationSlice";
@@ -56,6 +57,12 @@ function Pricing({ selectedFlight }) {
       email: isValidEmail(mainPassenger.email),
       country: isValidCountry(mainPassenger.country),
       phone: isValidNumber(mainPassenger.mainPassengerPhone, 6),
+      passportNumber: isValidNumber(mainPassenger.passportNumber, 6),
+      birthDate: isValidBirthDate(
+        mainPassenger.birthDay,
+        mainPassenger.birthMonth,
+        mainPassenger.birthYear
+      ),
       passportIssueDate: isValidPassportIssueDate(
         mainPassenger.passportIssueMonth,
         mainPassenger.passportIssueDay,
@@ -71,12 +78,18 @@ function Pricing({ selectedFlight }) {
       ),
     };
 
-    const allValidationsPassed = Object.values(validations).every(Boolean);
+    const failedValidations = Object.entries(validations)
+      .filter(([key, isValid]) => !isValid)
+      .map(([key]) => key);
 
-    if (allValidationsPassed) {
+    if (failedValidations.length === 0) {
       alert("All validations passed, proceed with booking!");
     } else {
-      alert("Validation failed, check details!");
+      const failedMessage =
+        "Validation failed for: " +
+        failedValidations.join(", ") +
+        ". Check details!";
+      alert(failedMessage);
     }
   };
 

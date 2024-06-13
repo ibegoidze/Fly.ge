@@ -21,6 +21,7 @@ const initialState = {
   mainPassengerLuggage: "სტანდარტული ბარგი",
   mainPassengerLuggagePrice: 0,
   mainPassengerInsurance: "standard",
+  mainPassengerTemplate: "Name, Surname",
 };
 
 const mainPassengerSlice = createSlice({
@@ -87,6 +88,9 @@ const mainPassengerSlice = createSlice({
     setMainPassengerInsurance: (state, action) => {
       state.mainPassengerInsurance = action.payload;
     },
+    setMainPassengerTemplate: (state, action) => {
+      state.mainPassengerTemplate = action.payload;
+    },
   },
 });
 
@@ -111,6 +115,7 @@ export const {
   setMainPassengerLuggage,
   setMainPassengerLuggagePrice,
   setMainPassengerInsurance,
+  setMainPassengerTemplate,
 } = mainPassengerSlice.actions;
 
 export default mainPassengerSlice.reducer;
