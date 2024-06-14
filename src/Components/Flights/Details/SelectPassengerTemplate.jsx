@@ -57,7 +57,7 @@ function SelectPassengerTemplate() {
           dispatch(setName("Steve"));
           dispatch(setSurname("Jobs"));
           dispatch(setEmail("steveJobs123@apple.com"));
-          dispatch(setPassportNumber("12345678910"));
+          dispatch(setPassportNumber("1234567891033"));
           dispatch(setBirthMonth("February"));
           dispatch(setBirthDay("24"));
           dispatch(setBirthYear("1955"));
@@ -76,7 +76,7 @@ function SelectPassengerTemplate() {
           dispatch(setName("Bill"));
           dispatch(setSurname("Gates"));
           dispatch(setEmail("billGates@microsoft.com"));
-          dispatch(setPassportNumber("24624623523"));
+          dispatch(setPassportNumber("2462462352322"));
           dispatch(setBirthMonth("Octomber"));
           dispatch(setBirthDay("28"));
           dispatch(setBirthYear("1955"));
@@ -95,7 +95,7 @@ function SelectPassengerTemplate() {
           dispatch(setName("Mark"));
           dispatch(setSurname("Zuckerberg"));
           dispatch(setEmail("markZuckerberg@meta.com"));
-          dispatch(setPassportNumber("362436347324"));
+          dispatch(setPassportNumber("36243634732422"));
           dispatch(setBirthMonth("May"));
           dispatch(setBirthDay("14"));
           dispatch(setBirthYear("1984"));
@@ -113,7 +113,7 @@ function SelectPassengerTemplate() {
           dispatch(setName("Jeff"));
           dispatch(setSurname("Bezos"));
           dispatch(setEmail("markZuckerberg@meta.com"));
-          dispatch(setPassportNumber("362436347324"));
+          dispatch(setPassportNumber("36243634732435"));
           dispatch(setBirthMonth("May"));
           dispatch(setBirthDay("14"));
           dispatch(setBirthYear("1984"));

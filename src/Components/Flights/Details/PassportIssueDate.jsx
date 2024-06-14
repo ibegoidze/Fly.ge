@@ -36,7 +36,7 @@ function PassportIssueDate() {
   }, [passportIssueMonth, passportIssueDay, passportIssueYear]);
 
   return (
-    <div className="sm:gap-10 gap-2 my-3 sm:my-5 flex flex-col sm:flex-row sm:items-center">
+    <div className="sm:gap-5 gap-2 my-3 sm:my-5 flex flex-col sm:flex-row sm:items-center">
       <div className=" sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("passportIssueDate")}</span>

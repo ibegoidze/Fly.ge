@@ -26,6 +26,7 @@ module.exports = {
         bedDark: "#788193",
         boxBlue: "#F0F6FD",
         insuranceGray: "#616C81",
+        warningRed: "#E85D5D",
       },
       screens: {
         custom: "830px",

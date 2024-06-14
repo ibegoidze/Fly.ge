@@ -87,7 +87,7 @@ function ContactDetails() {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mb-3 sm:mb-5">
+    <div className="flex flex-col sm:flex-row gap-2 sm:gap-5 mb-3 sm:mb-5">
       <InputTemplate
         title={"mail"}
         placeholder={"mail"}

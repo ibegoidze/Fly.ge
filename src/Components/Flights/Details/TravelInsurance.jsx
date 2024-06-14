@@ -54,7 +54,7 @@ function TravelInsurance() {
           />
           <div className="flex  items-center gap-2  font-medium">
             <img src={GoldShieldPic} alt="" className="w-5 h-5" />
-            <span className=""> {t("premium")}</span>
+            <span className="text-sm sm:text-md"> {t("premium")}</span>
             <span className="text-green-500">+150$</span>
           </div>
         </label>
@@ -70,7 +70,7 @@ function TravelInsurance() {
           />
           <div className="flex  items-center gap-2  font-medium">
             <img src={BlueShildPic} alt="" className="w-5 h-5" />
-            <span className=""> {t("standard")}</span>
+            <span className="text-sm"> {t("standard")}</span>
             <span className="text-green-500">+20$</span>
           </div>
         </label>
@@ -86,7 +86,7 @@ function TravelInsurance() {
           />
           <div className="flex  items-center gap-2  font-medium">
             <img src={GrayShieldPic} alt="" className="w-5 h-5" />
-            <span className=""> {t("withoutInsurance")}</span>
+            <span className="text-sm"> {t("withoutInsurance")}</span>
             <span className="text-gray-500">+0$</span>
           </div>
         </label>
@@ -130,7 +130,7 @@ function TravelInsurance() {
             />
             <div className="flex  items-center gap-2  font-medium">
               <img src={BlueShildPic} alt="" className="w-5 h-5" />
-              <span className=""> {t("standard")}</span>
+              <span className="text-sm sm:text-md"> {t("standard")}</span>
               <span className="text-green-500">+20$</span>
             </div>
           </label>
@@ -164,7 +164,10 @@ function TravelInsurance() {
             />
             <div className="flex  items-center gap-2  font-medium">
               <img src={GrayShieldPic} alt="" className="w-5 h-5" />
-              <span className=""> {t("withoutInsurance")}</span>
+              <span className="text-sm sm:text-md">
+                {" "}
+                {t("withoutInsurance")}
+              </span>
               <span className="text-gray-500">+0$</span>
             </div>
           </label>

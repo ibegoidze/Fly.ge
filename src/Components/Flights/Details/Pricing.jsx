@@ -12,7 +12,7 @@ import {
   isValidPassportExpireDate,
 } from "../../../Store/SearchFlights/validationSlice";
 
-function Pricing({ selectedFlight }) {
+function Pricing({ selectedFlight, mainPassengerRef, setValidationError }) {
   const { t } = useTranslation();
   const mainPassenger = useSelector((state) => state.mainPassenger);
   const passengers = useSelector((state) => state.passengers.passengers);
@@ -82,12 +82,15 @@ function Pricing({ selectedFlight }) {
 
     if (failedValidations.length === 0) {
       alert("All validations passed, proceed with booking!");
+      setValidationError(false);
     } else {
-      const failedMessage =
-        "Validation failed for: " +
-        failedValidations.join(", ") +
-        ". Check details!";
-      alert(failedMessage);
+      // const failedMessage =
+      //   "Validation failed for: " +
+      //   failedValidations.join(", ") +
+      //   ". Check details!";
+      // alert(failedMessage);
+      setValidationError(true);
+      mainPassengerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 

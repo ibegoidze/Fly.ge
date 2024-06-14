@@ -272,6 +272,8 @@ const resources = {
       Zuckerberg: "Zuckerberg",
       Jeff: "Jeff",
       Bezos: "Bezos",
+      fillFormsCorrectly:
+        "Please make sure to fill out all forms correctly to proceed with your booking.",
     },
   },
   // GEORGIAN
@@ -548,6 +550,8 @@ const resources = {
       Zuckerberg: "ზუკერბერგი",
       Jeff: "ჯეფი",
       Bezos: "ბეზოსი",
+      fillFormsCorrectly:
+        "გთხოვთ, გადაამოწმეთ ყველა ფორმა სწორად, რათა გაგრძელოთ ჯავშნის პროცესი.",
     },
   },
   // GERMAN
@@ -825,6 +829,8 @@ const resources = {
       Zuckerberg: "Zuckerberg",
       Jeff: "Jeff",
       Bezos: "Bezos",
+      fillFormsCorrectly:
+        "Bitte stellen Sie sicher, dass alle Formulare korrekt ausgefüllt sind, um mit Ihrer Buchung fortzufahren.",
     },
   },
 };
