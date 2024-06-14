@@ -67,7 +67,7 @@ function InputTemplate({
             name={inputType}
             type="text"
             placeholder={t(placeholder)}
-            value={inputValue}
+            value={t(inputValue)}
             onChange={handleInputChange}
             className="w-full px-3 py-3 border border-gray-300 rounded-md text-sm focus:outline-none pr-10"
           />

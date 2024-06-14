@@ -66,7 +66,7 @@ function PassportExpireDate() {
   }, [passportAuthority]);
 
   return (
-    <div className="sm:gap-10 gap-2 my-5 flex flex-col sm:flex-row sm:items-center">
+    <div className="sm:gap-10 gap-2 sm:my-5 flex flex-col sm:flex-row sm:items-center">
       <div className="sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("passportExpireDate")}</span>
@@ -79,26 +79,28 @@ function PassportExpireDate() {
           </span>
         </div>
         <div className="flex gap-10">
-          <div className="flex w-1/2">
-            <div className="flex gap-2.5">
+          <div className="flex w-full w-1/2">
+            <div className="flex gap-2.5  w-full">
               <Dropdown
                 title={"Month"}
                 options={months}
                 type="passportExpiryMonth"
-                size="w-32"
+                size="w-2/4 min-w-32"
               />
-              <Dropdown
-                title={"Day"}
-                options={daysData}
-                type="passportExpiryDay"
-                size="w-20"
-              />
-              <Dropdown
-                title={"Year"}
-                options={expireYearsData}
-                type="passportExpiryYear"
-                size="w-24"
-              />
+              <div className="w-1/2 flex gap-2.5">
+                <Dropdown
+                  title={"Day"}
+                  options={daysData}
+                  type="passportExpiryDay"
+                  size="w-1/2"
+                />
+                <Dropdown
+                  title={"Year"}
+                  options={expireYearsData}
+                  type="passportExpiryYear"
+                  size="w-1/2"
+                />
+              </div>
             </div>
           </div>
         </div>

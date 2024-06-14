@@ -48,8 +48,6 @@ function Pricing({ selectedFlight }) {
     return basePrice + insurancePrice;
   };
 
-  console.log(mainPassenger);
-
   const handleButtonClick = () => {
     const validations = {
       name: isValidName(mainPassenger.name),

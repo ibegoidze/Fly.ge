@@ -87,6 +87,7 @@ export const countryCode = [
 ];
 
 export const templateNames = [
+  "---",
   "Irakli Begoidze",
   "Steve Jobs",
   "Bill Gates",

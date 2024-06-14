@@ -36,8 +36,8 @@ function BirthDateLayout() {
   }, [gender]);
 
   return (
-    <div className="md:gap-10 gap-2 md:mb-5 flex flex-col md:flex-row md:items-center">
-      <div className="w-full sm:w-1/2">
+    <div className="md:gap-10 gap-2 md:mb-5 flex flex-col sm:flex-row md:items-center w-full">
+      <div className="sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("birthDate")}</span>
           <span
@@ -49,32 +49,34 @@ function BirthDateLayout() {
           </span>
         </div>
         <div className="flex gap-10">
-          <div className="flex w-1/2">
-            <div className="flex gap-2.5">
+          <div className="flex w-full w-1/2">
+            <div className="flex gap-2.5  w-full">
               <Dropdown
                 title={t("Month")}
                 options={months}
                 type="birthMonth"
-                size="w-32"
+                size="w-2/4 min-w-32"
               />
-              <Dropdown
-                title={t("Day")}
-                options={daysData}
-                type="birthDay"
-                size="w-20"
-              />
-              <Dropdown
-                title={"Year"}
-                options={yearsData}
-                type="birthYear"
-                size="w-24"
-              />
+              <div className="w-1/2 flex gap-2.5">
+                <Dropdown
+                  title={t("Day")}
+                  options={daysData}
+                  type="birthDay"
+                  size="w-1/2"
+                />
+                <Dropdown
+                  title={"Year"}
+                  options={yearsData}
+                  type="birthYear"
+                  size="w-1/2"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className="flex gap-2.5 w-full sm:w-1/2">
-        <div>
+        <div className="w-2/4 ">
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
             <span>{t("citizenship")}</span>
             <span
@@ -89,10 +91,10 @@ function BirthDateLayout() {
             title={"Country"}
             options={countriesData}
             type="country"
-            size="w-52"
+            size=""
           />
         </div>
-        <div>
+        <div className="w-2/4">
           <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
             <span>{t("Gender")}</span>
             <span
@@ -105,7 +107,7 @@ function BirthDateLayout() {
             title={t("Gender")}
             options={genderData}
             type="sex"
-            size="w-28"
+            size=""
           />
         </div>
       </div>

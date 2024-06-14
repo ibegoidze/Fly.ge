@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react"; // IMPORT USEEFFECT
 import { useDispatch, useSelector } from "react-redux";
 import InputTemplate from "./InputTemplate";
 import {
@@ -26,6 +26,9 @@ function ContactDetails() {
   const mainPassengerPhone = useSelector(
     (state) => state.mainPassenger.mainPassengerPhone
   );
+  const mainPassengerTemplate = useSelector(
+    (state) => state.mainPassenger.mainPassengerTemplate
+  );
   const [selectedCountry, setSelectedCountry] = useState(countryCode[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [isValid, setIsValid] = useState(false);
@@ -33,6 +36,23 @@ function ContactDetails() {
   const selectorRef = useRef(null);
 
   useClickOutside(dropdownRef, () => setIsOpen(false));
+
+  // HANDLE TEMPLATE CHANGES
+  useEffect(() => {
+    if (
+      ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Jeff Bezos"].includes(
+        mainPassengerTemplate
+      )
+    ) {
+      const usa = countryCode.find(
+        (country) => country.name === "United States"
+      );
+      setSelectedCountry(usa);
+    } else if (mainPassengerTemplate === "Irakli Begoidze") {
+      const geo = countryCode.find((country) => country.name === "Georgia");
+      setSelectedCountry(geo);
+    }
+  }, [mainPassengerTemplate, dispatch]);
 
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
@@ -67,7 +87,7 @@ function ContactDetails() {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mb-5">
+    <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mb-3 sm:mb-5">
       <InputTemplate
         title={"mail"}
         placeholder={"mail"}

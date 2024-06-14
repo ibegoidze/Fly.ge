@@ -36,8 +36,8 @@ function PassportIssueDate() {
   }, [passportIssueMonth, passportIssueDay, passportIssueYear]);
 
   return (
-    <div className="sm:gap-10 gap-2 my-5 flex flex-col sm:flex-row sm:items-center">
-      <div className="sm:w-1/2">
+    <div className="sm:gap-10 gap-2 my-3 sm:my-5 flex flex-col sm:flex-row sm:items-center">
+      <div className=" sm:w-1/2">
         <div className="mb-1 text-sm text-gray-500 font-semibold outline-none flex gap-2">
           <span>{t("passportIssueDate")}</span>
           <span
@@ -49,31 +49,33 @@ function PassportIssueDate() {
           </span>
         </div>
         <div className="flex gap-10">
-          <div className="flex w-1/2">
-            <div className="flex gap-2.5">
+          <div className="flex w-full w-1/2">
+            <div className="flex gap-2.5  w-full">
               <Dropdown
                 title={t("Month")}
                 options={months}
                 type="passportIssueMonth"
-                size="w-32"
+                size="w-2/4 min-w-32"
               />
-              <Dropdown
-                title={t("Day")}
-                options={daysData}
-                type="passportIssueDay"
-                size="w-20"
-              />
-              <Dropdown
-                title={t("Year")}
-                options={yearsData}
-                type="passportIssueYear"
-                size="w-24"
-              />
+              <div className="w-1/2 flex gap-2.5">
+                <Dropdown
+                  title={t("Day")}
+                  options={daysData}
+                  type="passportIssueDay"
+                  size="w-1/2"
+                />
+                <Dropdown
+                  title={t("Year")}
+                  options={yearsData}
+                  type="passportIssueYear"
+                  size="w-1/2"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex gap-2.5 sm:w-1/2">
+      <div className="flex sm:w-1/2">
         <div className="w-full">
           <InputTemplate
             title={t("passportNumber")}
