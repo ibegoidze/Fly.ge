@@ -5,6 +5,7 @@ import FlightsNavigation from "../Components/Flights/Search/FlightsNavigation";
 import Search from "../Components/Flights/Search/Search";
 import Results from "../Components/Flights/Search/Results";
 import TravelDetails from "../Components/Flights/Details/TravelDetails";
+import FlightReview from "../Components/Flights/Review/FlightReview";
 
 const Flights = () => {
   const flightsData = useSelector((state) => state.searchResults);
@@ -24,9 +25,17 @@ const Flights = () => {
     navigate(`/Flights/${tab}`);
   };
 
+  // USED IN SEARCH
   const handleBookButtonClick = (flight) => {
     setSelectedFlight(flight);
     navigate(`/Flights/details`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // USED IN DETAILS PRICING
+  const handleContinueButtonClick = (flight) => {
+    setSelectedFlight(flight);
+    navigate(`/Flights/review`);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -55,13 +64,19 @@ const Flights = () => {
             path="details"
             element={
               selectedFlight ? (
-                <TravelDetails selectedFlight={selectedFlight} />
+                <TravelDetails
+                  selectedFlight={selectedFlight}
+                  handleContinueButtonClick={handleContinueButtonClick}
+                />
               ) : (
                 <div>No flight selected</div>
               )
             }
           />
-          <Route path="review" element={<div>Other Content</div>} />
+          <Route
+            path="review"
+            element={<FlightReview selectedFlight={selectedFlight} />}
+          />
           <Route path="/" element={<div>Select a tab</div>} />
         </Routes>
       </div>

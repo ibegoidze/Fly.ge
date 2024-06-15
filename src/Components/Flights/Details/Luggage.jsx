@@ -25,24 +25,27 @@ function Luggage() {
       size: "60 x 20 x 40 cm, 10kg",
       price: 0,
       pic: BackPackPic,
+      state: "Standard", // MAKE SURE THIS IS A NON-TRANSLATABLE KEY
     },
     {
       title: t("mediumLuggage"),
       size: "70 x 25 x 50 cm, 15kg",
       price: 40,
       pic: HandBagPic,
+      state: "Medium", // MAKE SURE THIS IS A NON-TRANSLATABLE KEY
     },
     {
       title: t("largeLuggage"),
       size: "78 x 28 x 52 cm, 20kg",
       price: 50,
       pic: CasePic,
+      state: "Large", // MAKE SURE THIS IS A NON-TRANSLATABLE KEY
     },
   ];
 
   const handleSelectLuggage = (option) => {
-    setSelectedLuggage(option.title);
-    dispatch(setMainPassengerLuggage(option.title));
+    setSelectedLuggage(option.state); // USE STATE INSTEAD OF TITLE FOR INTERNAL STATE MANAGEMENT
+    dispatch(setMainPassengerLuggage(option.state)); // DISPATCH NON-TRANSLATABLE STATE KEY
     dispatch(setMainPassengerLuggagePrice(option.price));
   };
 
@@ -55,9 +58,9 @@ function Luggage() {
       <div className="luggage-options">
         {luggageOptions.map((option) => (
           <div
-            key={option.title}
+            key={option.state} // USE STATE AS KEY TO AVOID ISSUES WITH RE-RENDERS
             className={`luggage-option border rounded-md p-2.5 flex justify-between items-center mb-2.5 cursor-pointer ${
-              selectedLuggage === option.title
+              selectedLuggage === option.state
                 ? "border-blue-300 bg-blue-50"
                 : "border-gray-300"
             }`}
@@ -66,13 +69,12 @@ function Luggage() {
             <div className="flex gap-5 items-center ml-2">
               <div
                 className={`w-4 h-4 rounded-sm border-2 p-1 ${
-                  selectedLuggage === option.title
+                  selectedLuggage === option.state
                     ? "border-blue-500 text-blue-500"
                     : "border-gray-300 text-blue-500"
                 } flex justify-center items-center`}
-                onClick={() => handleSelectLuggage(option)}
               >
-                {selectedLuggage === option.title ? (
+                {selectedLuggage === option.state ? (
                   <span className="text-blue-500 font-semibold  text-xl left-0.5 bottom-1 relative">
                     &#10003;
                   </span>

@@ -64,10 +64,9 @@ export const expireYearsData = Array.from({ length: 2040 - 2020 + 1 }, (_, i) =>
 
 export const countriesData = [
   "United States",
-  "Canada",
-  "Mexico",
+  "Georgia",
+  "Germany",
   "United Kingdom",
-  "Australia",
 ];
 export const genderData = ["Male", "Female", "Other"];
 

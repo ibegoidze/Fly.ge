@@ -18,9 +18,11 @@ function TravelInsurance() {
     (state) => state.mainPassenger.mainPassengerInsurance
   );
 
-  const handleInsuranceChange = (insuranceType) => {
-    dispatch(setMainPassengerInsurance(insuranceType));
+  const handleInsuranceChange = (selectedInsurance) => {
+    dispatch(setMainPassengerInsurance(selectedInsurance));
   };
+
+  // console.log(selectedInsurance);
 
   return (
     <div className="bg-white p-5 mb-5 rounded-lg shadow-lg flex flex-col">

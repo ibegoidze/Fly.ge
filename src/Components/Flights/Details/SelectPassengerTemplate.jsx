@@ -32,7 +32,7 @@ function SelectPassengerTemplate() {
 
   const handleTemplateChange = useCallback(
     (selectedTemplate) => {
-      console.log("Selected template:", selectedTemplate);
+      // console.log("Selected template:", selectedTemplate);
       switch (selectedTemplate) {
         case "Irakli Begoidze":
           dispatch(setName(t("Irakli")));

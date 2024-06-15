@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"; // IMPORT USEEFFECT
+import React, { useRef, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import InputTemplate from "./InputTemplate";
 import {
@@ -10,14 +10,16 @@ import { useTranslation } from "react-i18next";
 import { useClickOutside } from "../../../utility";
 
 import MailPic from "../../../assets/Flights/Details/MailPic.png";
+import USFlag from "../../../assets/Global/images/world.png";
 import GeoFlag from "../../../assets/Global/images/flag.png";
 import UKFlag from "../../../assets/Global/images/united-kingdom.png";
 import GerFlag from "../../../assets/Global/images/german-flag.png";
 
 const countryCode = [
   { name: "Georgia", code: "GE", dialCode: "995", flag: GeoFlag },
-  { name: "United States", code: "US", dialCode: "1", flag: UKFlag },
-  { name: "Germany", code: "GER", dialCode: "44", flag: GerFlag },
+  { name: "United States", code: "US", dialCode: "1", flag: USFlag },
+  { name: "United Kingdom", code: "UK", dialCode: "44", flag: UKFlag },
+  { name: "Germany", code: "GER", dialCode: "49", flag: GerFlag },
 ];
 
 function ContactDetails() {
@@ -58,8 +60,15 @@ function ContactDetails() {
     setSelectedCountry(country);
     dispatch(setMainPassengerPhone(""));
     setIsOpen(false);
-    setIsValid(false);
+    mainPassengerPhone.length > 6 ? setIsValid(true) : setIsValid(false);
   };
+  useEffect(() => {
+    if (mainPassengerPhone.length > 6) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  }, [mainPassengerPhone]);
 
   const handlePhoneNumberChange = (event) => {
     const input = event.target.value;

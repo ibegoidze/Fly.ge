@@ -5,10 +5,14 @@ import RetDetails from "./RetDetails";
 
 import BlueCheckpointPic from "../../../assets/Flights/Details/BlueCheckpoint.png";
 
-function FlightDetails({ selectedFlight }) {
+function FlightDetails({ selectedFlight, rounded }) {
   const { t } = useTranslation();
   return (
-    <div className="bg-white rounded-lg p-5">
+    <div
+      className={`bg-white p-5 ${
+        rounded ? "rounded-lg" : "rounded-tl-lg rounded-tr-lg"
+      } `}
+    >
       <div className="flex flex-col md:flex-row gap-5">
         <DepDetails selectedFlight={selectedFlight} />
         <RetDetails selectedFlight={selectedFlight} />

@@ -18,7 +18,7 @@ const initialState = {
   passportExpiryYear: "",
   passportIssuingAuthority: "",
   mainPassengerPhone: "",
-  mainPassengerLuggage: "სტანდარტული ბარგი",
+  mainPassengerLuggage: "Standard",
   mainPassengerLuggagePrice: 0,
   mainPassengerInsurance: "standard",
   mainPassengerTemplate: "Name, Surname",

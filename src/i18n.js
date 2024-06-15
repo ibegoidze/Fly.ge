@@ -242,6 +242,9 @@ const resources = {
         "Choose the insurance package that suits you and fly worry-free",
       covidCoverage: "Covers COVID-19 and related treatments",
       standard: "Standard",
+      Standard: "Standard",
+      Medium: "Medium",
+      Large: "Large",
       premium: "Premium",
       withoutInsurance: "Without insurance",
       medicalHelp: "Medical help",
@@ -273,7 +276,9 @@ const resources = {
       Jeff: "Jeff",
       Bezos: "Bezos",
       fillFormsCorrectly:
-        "Please make sure to fill out all forms correctly to proceed with your booking.",
+        "Please make sure to fill all forms correctly to proceed with your booking.",
+      Georgia: "Georgia",
+      Germany: "Germany",
     },
   },
   // GEORGIAN
@@ -520,6 +525,9 @@ const resources = {
       covidCoverage:
         "ვრცელდება კოვიდ-19-სა და მასთან დაკავშირებულ მკურნალობაზე",
       standard: "სტანდარტული",
+      Standard: "სტანდარტული",
+      Medium: "საშუალო",
+      Large: "დიდი",
       premium: "პრემიუმი",
       withoutInsurance: "დაზღვევის გარეშე",
       medicalHelp: "სამედიცინო დახმარება",
@@ -551,7 +559,9 @@ const resources = {
       Jeff: "ჯეფი",
       Bezos: "ბეზოსი",
       fillFormsCorrectly:
-        "გთხოვთ, გადაამოწმეთ ყველა ფორმა სწორად, რათა გაგრძელოთ ჯავშნის პროცესი.",
+        "გთხოვთ, შეავსოთ ყველა ფორმა სწორად, რათა გაგრძელოთ ჯავშნის პროცესი.",
+      Georgia: "საქართველო",
+      Germany: "გერმანია",
     },
   },
   // GERMAN
@@ -799,6 +809,9 @@ const resources = {
         "Wählen Sie das passende Versicherungspaket und fliegen Sie sorgenfrei",
       covidCoverage: "Deckt COVID-19 und damit verbundene Behandlungen ab",
       standard: "Standard",
+      Standard: "Standard",
+      Medium: "Mittel",
+      Large: "Groß",
       premium: "Premium",
       withoutInsurance: "Ohne Versicherung",
       medicalHelp: "Medizinische Hilfe",
@@ -831,6 +844,8 @@ const resources = {
       Bezos: "Bezos",
       fillFormsCorrectly:
         "Bitte stellen Sie sicher, dass alle Formulare korrekt ausgefüllt sind, um mit Ihrer Buchung fortzufahren.",
+      Georgia: "Georgien",
+      Germany: "Deutschland",
     },
   },
 };
