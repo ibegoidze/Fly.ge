@@ -56,7 +56,7 @@ function Payment({ selectedFlight }) {
 
   return (
     <div className="relative mt-5 lg:mt-0 lg:ml-5 ">
-      <div className="bg-white rounded-md relative overflow-hidden ">
+      <div className="bg-white rounded-md relative overflow-hidden h-96 ">
         <div className="flex justify-center flex-col p-5">
           {Object.entries(passengers).map(
             ([key, value]) =>

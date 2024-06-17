@@ -4,7 +4,7 @@ const initialState = {
   newSelectedDate: null,
   currentDepartureDate: null,
   isDepartureNext: true,
-  dates: { departure: null, return: null },
+  dates: { departure: "2024-06-22", return: "2024-06-29" },
 };
 
 export const dateSelectionSlice = createSlice({

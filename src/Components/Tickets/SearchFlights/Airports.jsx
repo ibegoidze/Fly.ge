@@ -176,6 +176,8 @@ const Airports = () => {
     }
   };
 
+  dispatch(setSelectedFromAirport(airports[0]));
+  dispatch(setSelectedToAirport(airports[1]));
   // RENDER FROM AIRPORT SWITCH ICON AND TO AIRPORT
   return (
     // FLIGHT FROM SEARCHBAR
