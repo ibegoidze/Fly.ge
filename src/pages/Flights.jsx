@@ -75,7 +75,13 @@ const Flights = () => {
           />
           <Route
             path="review"
-            element={<FlightReview selectedFlight={selectedFlight} />}
+            element={
+              selectedFlight ? (
+                <FlightReview selectedFlight={selectedFlight} />
+              ) : (
+                <div>not selected</div>
+              )
+            }
           />
           <Route path="/" element={<div>Select a tab</div>} />
         </Routes>

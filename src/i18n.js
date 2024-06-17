@@ -279,6 +279,11 @@ const resources = {
         "Please make sure to fill all forms correctly to proceed with your booking.",
       Georgia: "Georgia",
       Germany: "Germany",
+      agree: "I agree",
+      disclaimer:
+        "I understand that the responsibility for the timings and dates in the ticket does not rest with fly.ge.",
+      TermsOfService: "terms of service",
+      "Select a Bank": "Select a Bank",
     },
   },
   // GEORGIAN
@@ -562,6 +567,11 @@ const resources = {
         "გთხოვთ, შეავსოთ ყველა ფორმა სწორად, რათა გაგრძელოთ ჯავშნის პროცესი.",
       Georgia: "საქართველო",
       Germany: "გერმანია",
+      agree: "ვეთანხმები",
+      disclaimer:
+        "ვაცნობიერებ, რომ ბილეთში დროებისა და თარიღების შესახებ პასუხისმგებლობა არ ეკისრება fly.ge-ს.",
+      TermsOfService: "წესებსა და პირობებს",
+      "Select a Bank": "აირჩიეთ ბანკი",
     },
   },
   // GERMAN
@@ -846,6 +856,11 @@ const resources = {
         "Bitte stellen Sie sicher, dass alle Formulare korrekt ausgefüllt sind, um mit Ihrer Buchung fortzufahren.",
       Georgia: "Georgien",
       Germany: "Deutschland",
+      agree: "Ich stimme zu",
+      disclaimer:
+        "Ich bin mir bewusst, dass die Verantwortung für die Zeiten und Daten im Ticket nicht bei fly.ge liegt.",
+      TermsOfService: "den Allgemeinen Geschäftsbedingungen",
+      "Select a Bank": "Wählen Sie eine Bank aus",
     },
   },
 };
