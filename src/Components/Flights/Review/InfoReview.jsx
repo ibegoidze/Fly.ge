@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import FlightDetails from "../Details/FlightDetails";
 import { useTranslation } from "react-i18next";
 
 import GoldShieldPic from "../../../assets/Flights/Review/GoldShield.png";
@@ -57,91 +56,86 @@ function InfoReview({ selectedFlight }) {
     return months[month.toLowerCase()] || "Unknown";
   };
 
-  console.log(mainPassengerLuggage);
-
   return (
-    <div className="w-full lg:w-2/3 shadow-lg rounded-lg bg-backgroundGray">
-      <FlightDetails selectedFlight={selectedFlight} />
-      <div className="flex flex-col sm:flex-row sm:justify-between gap-3 bg-white rounded-bl-lg rounded-br-lg p-4">
-        <div className="flex flex-col  space-y-4">
-          {/* LEFT SIDE */}
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img
-              className="w-5 h-5"
-              src={
-                country === "United States"
-                  ? USFlag
-                  : country === "Georgia"
-                  ? GeoFlag
-                  : country === "Germany"
-                  ? GerFlag
-                  : country === "United Kingdom"
-                  ? UKFlag
-                  : GeoFlag
-              }
-              alt="Country"
-            />
-            <div>
-              {t(name)} {t(surname)}
-            </div>
-            <span className="text-xs text-gray-400 font-light">
-              {birthDay}-{monthToNumber(birthMonth)}-{birthYear}
-            </span>
+    <div className="flex flex-col sm:flex-row sm:justify-between gap-3 bg-white rounded-bl-lg rounded-br-lg p-4 shadow-lg rounded-lg">
+      <div className="flex flex-col  space-y-4">
+        {/* LEFT SIDE */}
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img
+            className="w-5 h-5"
+            src={
+              country === "United States"
+                ? USFlag
+                : country === "Georgia"
+                ? GeoFlag
+                : country === "Germany"
+                ? GerFlag
+                : country === "United Kingdom"
+                ? UKFlag
+                : GeoFlag
+            }
+            alt="Country"
+          />
+          <div>
+            {t(name)} {t(surname)}
           </div>
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img
-              className="w-5 h-5"
-              src={PassportNumberPic}
-              alt="Passport Icon"
-            />
-            <div>{passportNumber}</div>
-            <span className="text-xs text-gray-400 font-light">
-              {passportIssueDay}-{monthToNumber(passportIssueMonth)}-
-              {passportIssueYear}
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img className="w-5 h-5" src={MailPic} alt="Email Icon" />
-            <div>{email}</div>
-          </div>
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img className="w-5 h-5" src={SmartPhonePic} alt="Phone Icon" />
-            <div>{mainPassengerPhone}</div>
-          </div>
+          <span className="text-xs text-gray-400 font-light">
+            {birthDay}-{monthToNumber(birthMonth)}-{birthYear}
+          </span>
         </div>
-        <div className="flex flex-col space-y-4">
-          {/* RIGHT SIDE */}
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img
-              className="w-5 h-5"
-              src={
-                mainPassengerInsurance === "premium"
-                  ? GoldShieldPic
-                  : mainPassengerInsurance === "standard"
-                  ? BlueShieldPic
-                  : GrayShieldPic
-              }
-              alt="Insurance Icon"
-            />
-            <div>{t(mainPassengerInsurance)}</div>
-          </div>
-          <div className="flex items-center gap-2 text-gray-500 font-medium">
-            <img
-              className="w-5 h-5"
-              src={
-                mainPassengerLuggage === "Standard"
-                  ? BackPackPic
-                  : mainPassengerLuggage === "Medium"
-                  ? HandBagPic
-                  : mainPassengerLuggage === "Large"
-                  ? CasePic
-                  : null
-              }
-              alt="Luggage Icon"
-            />
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img
+            className="w-5 h-5"
+            src={PassportNumberPic}
+            alt="Passport Icon"
+          />
+          <div>{passportNumber}</div>
+          <span className="text-xs text-gray-400 font-light">
+            {passportIssueDay}-{monthToNumber(passportIssueMonth)}-
+            {passportIssueYear}
+          </span>
+        </div>
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img className="w-5 h-5" src={MailPic} alt="Email Icon" />
+          <div>{email}</div>
+        </div>
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img className="w-5 h-5" src={SmartPhonePic} alt="Phone Icon" />
+          <div>{mainPassengerPhone}</div>
+        </div>
+      </div>
+      <div className="flex flex-col space-y-4">
+        {/* RIGHT SIDE */}
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img
+            className="w-5 h-5"
+            src={
+              mainPassengerInsurance === "premium"
+                ? GoldShieldPic
+                : mainPassengerInsurance === "standard"
+                ? BlueShieldPic
+                : GrayShieldPic
+            }
+            alt="Insurance Icon"
+          />
+          <div>{t(mainPassengerInsurance)}</div>
+        </div>
+        <div className="flex items-center gap-2 text-gray-500 font-medium">
+          <img
+            className="w-5 h-5"
+            src={
+              mainPassengerLuggage === "Standard"
+                ? BackPackPic
+                : mainPassengerLuggage === "Medium"
+                ? HandBagPic
+                : mainPassengerLuggage === "Large"
+                ? CasePic
+                : null
+            }
+            alt="Luggage Icon"
+          />
 
-            <div>{t(mainPassengerLuggage)}</div>
-          </div>
+          <div>{t(mainPassengerLuggage)}</div>
         </div>
       </div>
     </div>

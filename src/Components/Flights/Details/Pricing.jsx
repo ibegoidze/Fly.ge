@@ -2,24 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import HorisontalLinePic from "../../../assets/Flights/Details/HorisontalLine.png";
-import {
-  isValidName,
-  isValidEmail,
-  isValidCountry,
-  isValidNumber,
-  isValidBirthDate,
-  isValidPassportIssueDate,
-  isValidPassportExpireDate,
-} from "../../../Store/SearchFlights/validationSlice";
 
-function Pricing({
-  selectedFlight,
-  mainPassengerRef,
-  setValidationError,
-  handleContinueButtonClick,
-}) {
+function Pricing({ selectedFlight, handleButtonClick }) {
   const { t } = useTranslation();
-  const mainPassenger = useSelector((state) => state.mainPassenger);
   const passengers = useSelector((state) => state.passengers.passengers);
   const insuranceType = useSelector(
     (state) => state.mainPassenger.mainPassengerInsurance
@@ -51,52 +36,6 @@ function Pricing({
     }
 
     return basePrice + insurancePrice;
-  };
-
-  const handleButtonClick = () => {
-    const validations = {
-      name: isValidName(mainPassenger.name),
-      surname: isValidName(mainPassenger.surname),
-      email: isValidEmail(mainPassenger.email),
-      country: isValidCountry(mainPassenger.country),
-      phone: isValidNumber(mainPassenger.mainPassengerPhone, 6),
-      passportNumber: isValidNumber(mainPassenger.passportNumber, 6),
-      birthDate: isValidBirthDate(
-        mainPassenger.birthDay,
-        mainPassenger.birthMonth,
-        mainPassenger.birthYear
-      ),
-      passportIssueDate: isValidPassportIssueDate(
-        mainPassenger.passportIssueMonth,
-        mainPassenger.passportIssueDay,
-        mainPassenger.passportIssueYear
-      ),
-      passportExpiryDate: isValidPassportExpireDate(
-        mainPassenger.passportExpiryMonth,
-        mainPassenger.passportExpiryDay,
-        mainPassenger.passportExpiryYear,
-        mainPassenger.passportIssueMonth,
-        mainPassenger.passportIssueDay,
-        mainPassenger.passportIssueYear
-      ),
-    };
-
-    const failedValidations = Object.entries(validations)
-      .filter(([key, isValid]) => !isValid)
-      .map(([key]) => key);
-
-    if (failedValidations.length === 0) {
-      handleContinueButtonClick(selectedFlight);
-      setValidationError(false);
-    } else {
-      // const failedMessage =
-      //   "Validation failed for: " +
-      //   failedValidations.join(", ") +
-      //   ". Check details!";
-      // alert(failedMessage);
-      setValidationError(true);
-      mainPassengerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   return (

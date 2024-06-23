@@ -109,9 +109,9 @@ function Payment({ selectedFlight }) {
           />
           <button
             onClick={handleButtonClick}
-            className={`mb-5 text-md w-full lg:px-16 transition-all duration-300 py-1.5 sm:py-2 mt-2 sm:mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-${
-              selectedBank ? selectedBank.textClass : "primaryBlue"
-            }`}
+            className={`mb-5 text-md w-full lg:px-16 transition-all duration-300 py-1.5 sm:py-2 mt-2 sm:mt-4 rounded-md text-white font-semibold flex items-center justify-center gap-4 ${
+              selectedBank ? `bg-${selectedBank.textClass}` : "bg-primaryBlue"
+            } bg-primaryBlue`}
           >
             <span className="flex whitespace-nowrap">{t("continue")}</span>
           </button>
