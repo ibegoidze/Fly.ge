@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  selectedClass: "ეკონომ კლასი",
+  selectedClass: "",
 };
 
 export const classSlice = createSlice({

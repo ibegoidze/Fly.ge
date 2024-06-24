@@ -99,6 +99,20 @@ const FlightsButton = ({ onSearchData }) => {
     dispatch(setPassengerCountSummary(summary));
     // PASS INFO TO PARENT TO DISPLAY IT IN RESULTS
     onSearchData(filteredData, summary);
+
+    // UPDATE THE URL WITH QUERY PARAMETERS
+    const searchParams = new URLSearchParams();
+    searchParams.set(
+      "from",
+      selectedFromAirport ? selectedFromAirport.name : ""
+    );
+    searchParams.set("to", selectedToAirport ? selectedToAirport.name : "");
+    searchParams.set("checkin", dates.departure);
+    searchParams.set("checkout", dates.return);
+
+    const newRelativePathQuery =
+      window.location.pathname + "?" + searchParams.toString();
+    window.history.pushState(null, "", newRelativePathQuery);
   };
 
   return (

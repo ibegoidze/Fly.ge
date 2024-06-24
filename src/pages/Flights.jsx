@@ -28,14 +28,14 @@ const Flights = () => {
   // USED IN SEARCH
   const handleBookButtonClick = (flight) => {
     setSelectedFlight(flight);
-    navigate(`/Flights/details`);
+    navigate(`/Flights/details?flightId=${flight.id}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // USED IN DETAILS PRICING
   const handleContinueButtonClick = (flight) => {
     setSelectedFlight(flight);
-    navigate(`/Flights/review`);
+    navigate(`/Flights/review?flightId=${flight.id}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -52,7 +52,7 @@ const Flights = () => {
             path="search"
             element={
               <div>
-                <Search />
+                <Search flightsData={flightsData} />
                 <Results
                   flightsData={flightsData}
                   onBookButtonClick={handleBookButtonClick}

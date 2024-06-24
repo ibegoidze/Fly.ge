@@ -27,6 +27,7 @@ function SearchButton() {
     }
     return countSummary;
   };
+
   // CLICK FILTERS DATA AND DIRECTS USER TO FLIGHT FLIGHTS PAGE
   const handleSearchClick = () => {
     // TRANSLATE CURRENT STATE TO ENGLISH
@@ -48,22 +49,39 @@ function SearchButton() {
         : selectedClass === "Erste klasse" || selectedClass === "პირველი კლასი"
         ? "First class"
         : selectedClass;
+
     // FILTER
     const filteredData = flightsData.filter((flight) => {
       return (
         flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
         flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
         flight.departure === dates.departure &&
-        flight.return === dates.return &&
+        (!flight.return || flight.return === dates.return) &&
         flight.way === stateMessage &&
         flight.class === classMessage
       );
     });
+
     // SET FILTERED DATA TO RESULTS AND NAVIGATE TO FLIGHT
     const summary = calculatePassengerCountSummary();
     dispatch(setPassengerCountSummary(summary));
     dispatch(setSearchResults(filteredData));
-    navigate("/Flights/search");
+
+    // UPDATE THE URL WITH QUERY PARAMETERS
+    const searchParams = new URLSearchParams();
+    searchParams.set(
+      "from",
+      selectedFromAirport ? selectedFromAirport.name : ""
+    );
+    searchParams.set("to", selectedToAirport ? selectedToAirport.name : "");
+    searchParams.set("checkin", dates.departure);
+    searchParams.set("checkout", dates.return);
+
+    // BUILD THE NEW URL
+    const newRelativePathQuery = `/Flights/search?${searchParams.toString()}`;
+
+    // NAVIGATE TO THE NEW URL
+    navigate(newRelativePathQuery);
   };
 
   return (
