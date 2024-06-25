@@ -14,7 +14,7 @@ function BurgerMenu() {
       : "text-gray-500 hover:text-primaryBlue hover:bg-blue-50 p-4";
 
   return (
-    <div>
+    <div className="w-20">
       {/* BURGER MENU 3 LINES */}
       <div
         className="block lg:hidden cursor-pointer"

@@ -38,7 +38,11 @@ const Header = () => {
       : "text-textDark font-medium text-gray-500 hover:text-primaryBlue transition duration-300 ";
 
   const isTicketsActive =
-    location.pathname === "/" || location.pathname === "/Flights" || location.pathname === "/Flights/search" || location.pathname === "/Flights/details"|| location.pathname === "/Flights/review";
+    location.pathname === "/" ||
+    location.pathname === "/Flights" ||
+    location.pathname === "/Flights/search" ||
+    location.pathname === "/Flights/details" ||
+    location.pathname === "/Flights/review";
 
   return (
     <header className={`sticky top-0 bg-white z-50`}>
@@ -78,7 +82,7 @@ const Header = () => {
             </nav>
             <LanguageDropDown />
             <button
-              className="text-blue-500 border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-medium transition ease-in duration-150 noto-sans-georgian"
+              className="text-blue-500 w-20 sm:w-auto border text-xs sm:text-sm border-blue-500 hover:bg-blue-50 px-2 py-2 sm:px-6 sm:py-3 rounded font-medium transition ease-in duration-150 noto-sans-georgian"
               style={{ borderRadius: "8px" }}
             >
               {t("Sign in")}

@@ -10,7 +10,7 @@ function OfferCard({ imageUrl, sale, city, price }) {
   const { t } = useTranslation();
   return (
     <div className=" p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl ">
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-32 sm:h-72 overflow-hidden">
         <div
           className="bg-cover bg-center h-full w-full cursor-pointer transition-transform duration-700 transform scale-100 hover:scale-105"
           style={{ backgroundImage: `url(${imageUrl})` }}

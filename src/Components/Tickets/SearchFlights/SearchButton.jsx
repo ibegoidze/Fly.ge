@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 import ObjectGenerator from "../../../objectGenerator";
 import { flightsData } from "../../../static.js";
 
-import SearchIcon from "../../../assets/Tickets/images/search.png";
-
 function SearchButton() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -125,9 +123,9 @@ function SearchButton() {
   return (
     <button
       onClick={handleSearchClick}
-      className="bg-blue-500 hover:bg-blue-700 text-lg px-5 py-3 rounded-md text-white font-medium flex items-center justify-center gap-4 min-w-14 min-h-14"
+      className="bg-blue-500 hover:bg-blue-700 text-lg  rounded-full sm:px-5 sm:py-3 md:rounded-md text-white font-medium flex items-center justify-center gap-4 min-w-10 min-h-10 sm:min-w-14 sm:min-h-14 touch-none md:touch-auto"
     >
-      <img src={SearchIcon} alt="search icon" className="h-5 w-5" />
+      <span class="material-symbols-outlined">search</span>
       <span className="hidden md:flex whitespace-nowrap">
         {t("Search for tickets")}
       </span>

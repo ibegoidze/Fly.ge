@@ -357,7 +357,7 @@ const resources = {
       "Flights to Europe": "ფრენები ევროპის მიმართულებით",
       "Low-cost flights from Georgia to Europe":
         "დაბალბიუჯეტიანი ფრენები საქართველოდან ევროპის მიმართულებით",
-      "See all": "ყველას ნახვა",
+      "See all": "ყველა",
       Paris: "პარიზი",
       London: "ლონდონი",
       Berlin: "ბერლინი",

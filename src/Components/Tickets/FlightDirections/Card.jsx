@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import planeql from "../../../assets/Tickets/images/planeTrail.png";
 
-const Card = ({ imageUrl, city, height, description }) => {
+const Card = ({ imageUrl, city, tailwindHeight, description }) => {
   const { t } = useTranslation();
 
   // OVERLAY APPEARS ON HOVER
@@ -16,8 +16,7 @@ const Card = ({ imageUrl, city, height, description }) => {
 
   return (
     <div
-      className={`p-4 bg-white rounded shadow-lg`}
-      style={{ height: `${height}px` }}
+      className={`p-4 bg-white rounded shadow-lg ${tailwindHeight}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -56,9 +55,9 @@ const Card = ({ imageUrl, city, height, description }) => {
               </div>
             </div>
 
-            <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-2 px-7 rounded flex items-center">
+            {/* <button className="relative bg-blue-500 hover:bg-blue-700 text-white text-sm font-medium py-2 px-7 rounded flex items-center">
               {t("Reserve")}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

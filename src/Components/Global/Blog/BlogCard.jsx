@@ -6,12 +6,12 @@ function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
   return (
     <div className="p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl">
       <div
-        className="bg-cover pt-4 bg-center h-64 cursor-pointer transition-background-size duration-300 hover:bg-zoom"
+        className="bg-cover pt-4 bg-center h-32 sm:h-64 cursor-pointer transition-background-size duration-300 hover:bg-zoom"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         {" "}
       </div>
-      <div className="flex flex-col xs:flex-row gap-3 text-sm py-3">
+      <div className="flex xs:flex-row gap-3 text-sm py-3">
         <span className="bg-backgroundGray text-xs px-2 py-1.5  rounded font-semibold text-gray-500 cursor-pointer">
           {technology}
         </span>
@@ -19,8 +19,8 @@ function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
           {technology}
         </span>
       </div>
-      <div className="font-bold text-lg">{title}</div>
-      <div className="py-2 font-semibold text-gray-400 text-sm  pb-5">
+      <div className="font-bold text-sm sm:text-base text-lg">{title}</div>
+      <div className="py-2 font-semibold text-gray-400 text-xs sm:text-sm  pb-5">
         {text}
       </div>
       <div className="flex-grow"></div>{" "}

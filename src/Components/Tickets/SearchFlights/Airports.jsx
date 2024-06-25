@@ -91,7 +91,7 @@ const AirportSelector = ({
         borderBottom: isScreenWidthBelow1024 ? "1px solid #d1d5db" : "none",
       }}
     >
-      <div className="py-3 pl-2">
+      <div className="py-1 sm:py-3 sm:pl-2">
         <label
           htmlFor={labelKey}
           className="block text-xs font-medium text-gray-500 px-3"

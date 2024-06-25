@@ -34,11 +34,11 @@ function SearchFlight() {
     <div className="bg-book-flight-cover bg-cover bg-center h-auto w-full noto-sans-georgian">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* TITLE */}
-        <div className="title text-white font-semibold text-3xl py-14 noto-sans-georgian">
+        <div className="title text-white font-semibold text-xl sm:text-3xl py-10 sm:py-14 noto-sans-georgian">
           {t("Happiness gained from traveling")}
         </div>
         {/* FLIGHT BOOKING CONTAINER */}
-        <div className="pb-16">
+        <div className="pb-10 sm:pb-16">
           {/* TABS CONTAINER */}
           <div className="flex">
             {/* TAB 1 */}
@@ -110,7 +110,7 @@ function SearchFlight() {
           </div>
 
           {/* TAB 1 CONTENT */}
-          <div className="bg-white rounded-b-lg rounded-tr-lg p-4 h-auto lg:h-64">
+          <div className="bg-white rounded-b-lg rounded-tr-lg p-2 sm:p-4 h-auto lg:h-64">
             {activeTab === "tab1" && (
               <div className="">
                 <div className="px-5 flex items-center justify-center lg:justify-start">
@@ -118,12 +118,12 @@ function SearchFlight() {
                   <Passengers />
                   <EconomyClass />
                 </div>
-                <div className="px-5 py-2 flex gap-4 flex-col lg:flex-row ">
+                <div className="px-2 sm:px-5 sm:py-2 flex gap-2 sm:gap-4 flex-col lg:flex-row ">
                   <Airports />
                   <DateSelector />
                 </div>
-                <div className="px-5 py-5 flex justify-between items-end">
-                  <div className="text-sm text-gray-400 font-medium">
+                <div className="sm:p-5 p-2 flex justify-between items-end">
+                  <div className="text-xs sm:text-sm text-gray-400 font-medium">
                     {t("Search, book and purchase tickets for free in minutes")}
                   </div>
                   <SearchButton />
