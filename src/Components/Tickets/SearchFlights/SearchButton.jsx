@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchResults } from "../../../Store/SearchFlights/searchResults.js";
 import { setPassengerCountSummary } from "../../../Store/SearchFlights/currentPassengersSlice.js";
-import { flightsData } from "../../../static.js";
 import { useNavigate } from "react-router-dom";
+
+import ObjectGenerator from "../../../objectGenerator";
+import { flightsData } from "../../../static.js";
+
 import SearchIcon from "../../../assets/Tickets/images/search.png";
 
 function SearchButton() {
@@ -19,6 +22,21 @@ function SearchButton() {
   );
   const passengers = useSelector((state) => state.passengers.passengers);
 
+  // STATE TO STORE GENERATED OBJECTS
+  const [generatedFlights, setGeneratedFlights] = useState([]);
+
+  useEffect(() => {
+    // CREATE AN INSTANCE OF THE OBJECT GENERATOR CLASS
+    const from = selectedFromAirport ? selectedFromAirport.name : "New York";
+    const to = selectedToAirport ? selectedToAirport.name : "Los Angeles";
+    const departure = dates.departure || "2024-07-01";
+    const returnDate = dates.return || "2024-07-10";
+
+    const generator = new ObjectGenerator(from, to, departure, returnDate);
+    const generatedObjects = generator.generateObjects();
+    setGeneratedFlights(generatedObjects);
+  }, [selectedFromAirport, selectedToAirport, dates]);
+
   // CALCULATE PASSENGERS QUANTITY TO DISPLAY IT IN RESULT
   const calculatePassengerCountSummary = () => {
     let countSummary = 0;
@@ -28,9 +46,8 @@ function SearchButton() {
     return countSummary;
   };
 
-  // CLICK FILTERS DATA AND DIRECTS USER TO FLIGHT FLIGHTS PAGE
-  const handleSearchClick = () => {
-    // TRANSLATE CURRENT STATE TO ENGLISH
+  // TRANSLATE STATE AND CLASS TO ENGLISH FOR CONSISTENT FILTERING
+  const translateStateAndClass = () => {
     const stateMessage =
       oneWayState === "ცალმხრივი"
         ? "Unilateral"
@@ -49,9 +66,15 @@ function SearchButton() {
         : selectedClass === "Erste klasse" || selectedClass === "პირველი კლასი"
         ? "First class"
         : selectedClass;
+    return { stateMessage, classMessage };
+  };
 
-    // FILTER
-    const filteredData = flightsData.filter((flight) => {
+  // FILTER FLIGHTS DATA AND NAVIGATE TO FLIGHTS PAGE
+  const handleSearchClick = () => {
+    const { stateMessage, classMessage } = translateStateAndClass();
+
+    // FILTER FLIGHTSDATA FIRST
+    let filteredData = flightsData.filter((flight) => {
       return (
         flight.from === (selectedFromAirport ? selectedFromAirport.name : "") &&
         flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
@@ -61,6 +84,21 @@ function SearchButton() {
         flight.class === classMessage
       );
     });
+
+    // IF NO FLIGHTS FOUND, USE GENERATED OBJECTS
+    if (filteredData.length === 0) {
+      filteredData = generatedFlights.filter((flight) => {
+        return (
+          flight.from ===
+            (selectedFromAirport ? selectedFromAirport.name : "") &&
+          flight.to === (selectedToAirport ? selectedToAirport.name : "") &&
+          flight.departure === dates.departure &&
+          (!flight.return || flight.return === dates.return) &&
+          flight.way === stateMessage &&
+          flight.class === classMessage
+        );
+      });
+    }
 
     // SET FILTERED DATA TO RESULTS AND NAVIGATE TO FLIGHT
     const summary = calculatePassengerCountSummary();

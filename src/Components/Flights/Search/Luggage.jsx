@@ -12,21 +12,25 @@ function Luggage({ flightsData, small }) {
       <div
         className={`rounded-full bg-gray-50 border px-${small ? "2" : "4"} py-${
           small ? "1" : "1.5"
-        } font-medium text-${small ? "xs" : "sm"} text-gray-500 cursor-pointer`}
+        } font-medium text-xxs sm:text-${
+          small ? "xs" : "sm"
+        } text-gray-500 cursor-pointer`}
       >
         {t(flightsData.class)}
       </div>
       <div
         className={`rounded-full bg-gray-50 border px-${small ? "2" : "4"} py-${
           small ? "1" : "1.5"
-        } font-medium text-${small ? "xs" : "sm"} text-gray-500 cursor-pointer`}
+        } font-medium text-xxs sm:text-${
+          small ? "xs" : "sm"
+        } text-gray-500 cursor-pointer`}
       >
         {passengerSum} {passengerSum > 1 ? t("Passenger") : t("Passenger")}
       </div>
       <div
         className={`rounded-full bg-gray-50 border px-${small ? "2" : "4"} py-${
           small ? "1" : "1.5"
-        } font-medium text-${
+        } font-medium text-xxs sm:text-${
           small ? "xs" : "sm"
         } text-gray-500 cursor-pointer `}
       >

@@ -10,15 +10,15 @@ export const airports = [
   { id: "AMS", name: "Schiphol", city: "Schiphol" },
   { id: "MAD", name: "Madrid", city: "Madrid" },
   { id: "IST", name: "Istanbul ", city: "Istanbul" },
-  { id: "BCN", name: "Josep Tarradellas Barcelona–El Prat", city: "Barcelona" },
+  { id: "BCN", name: "Barcelona", city: "Barcelona" },
   { id: "BVD", name: "Bavendam ", city: "Bavendam" },
   { id: "CSP", name: "Caspia City ", city: "Caspia" },
   { id: "DRF", name: "Drefus ", city: "Drefus" },
   { id: "ELN", name: "Elenski ", city: "Elenski" },
   { id: "FRG", name: "Froberg", city: "Froberg" },
   { id: "GRN", name: "Graniton ", city: "Graniton" },
-  { id: "HSL", name: "Helsar Regional", city: "Helsar" },
-  { id: "ISC", name: "Istel City", city: "Istel" },
+  { id: "HSL", name: "Helsar", city: "Helsar" },
+  { id: "ISC", name: "Istel", city: "Istel" },
 ];
 
 export const months = [

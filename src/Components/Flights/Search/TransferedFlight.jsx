@@ -47,8 +47,8 @@ function TransferedFlight({ flightsData, isReturn }) {
         />
       </div>
       {/* DATE */}
-      <div className="hidden flex-none sm:flex w-20 flex-col justify-center">
-        <div className="font-semibold text-gray-500">
+      <div className="hidden flex-none sm:flex w-20 sm:w-32  flex-col justify-center">
+        <div className="font-semibold text-xs sm:text-base text-gray-500">
           {formatDate(isReturn ? flightsData.return : departure)}
         </div>
         <span className="text-xs font-medium text-gray-500">
@@ -56,11 +56,11 @@ function TransferedFlight({ flightsData, isReturn }) {
         </span>
       </div>
       {/* TIME / CITY */}
-      <div className="flex-none  flex flex-col w-20 justify-center">
+      <div className="flex-none  flex flex-col w-20 sm:w-32 justify-center">
         <div className="font-semibold text-textDark">
           {isReturn ? retStartTime : depStartTime}
         </div>
-        <div className="text-xs font-medium text-gray-500 flex gap-1">
+        <div className="text-xxs sm:text-xs font-medium text-gray-500 flex gap-1">
           {isReturn ? t(to) : t(from)}
           <span>{` (${isReturn ? toCityId : fromCityId}) `}</span>
         </div>
@@ -78,7 +78,7 @@ function TransferedFlight({ flightsData, isReturn }) {
                   top: "2px",
                 }}
               />
-              <span className="absolute ml-6 text-xs mt-0.5 text-gray-500 font-medium">
+              <span className="absolute ml-6 text-xxs sm:text-xs mt-0.5 text-gray-500 font-medium">
                 {renderTransferInfo()}
               </span>
             </div>
@@ -95,7 +95,7 @@ function TransferedFlight({ flightsData, isReturn }) {
                   : calculateTimeDifference(depStartTime, depEndTime)}
               </span>
               <img src={BlueDot} alt="blue line" />
-              <span className="mt-9 absolute text-xs text-gray-400 font-medium">
+              <span className="mt-9 absolute text-xxs sm:text-xs text-gray-400 font-medium">
                 {isReturn ? retTransferCity[0] : depTransferCity[0]}
               </span>
             </div>
@@ -107,7 +107,7 @@ function TransferedFlight({ flightsData, isReturn }) {
             />
             <div className="flex items-center justify-center">
               <img src={BlueDot} alt="blue line" />
-              <span className="mt-9 absolute text-xs text-gray-400 font-medium">
+              <span className="mt-9 absolute text-xxs sm:text-xs text-gray-400 font-medium">
                 {isReturn
                   ? retTransferCity
                     ? retTransferCity[1]
@@ -128,11 +128,11 @@ function TransferedFlight({ flightsData, isReturn }) {
         </div>
       </div>
       {/* TIME / CITY */}
-      <div className="flex flex-col justify-center w-20">
+      <div className="flex flex-col justify-center w-20 sm:w-32">
         <div className="font-semibold text-textDark">
           {isReturn ? retEndTime : depEndTime}
         </div>
-        <span className="text-xs font-medium text-gray-500 flex gap-1">
+        <span className="text-xxs sm:text-xs font-medium text-gray-500 flex gap-1">
           {isReturn ? t(from) : t(to)}
           <span>{` (${isReturn ? fromCityId : toCityId}) `}</span>
         </span>

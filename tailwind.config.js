@@ -46,6 +46,7 @@ module.exports = {
       },
       fontSize: {
         smallText: "7px",
+        xxs: "7px",
       },
       fontOpticalSizing: ["responsive"],
     },
