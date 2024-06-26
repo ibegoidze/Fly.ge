@@ -65,7 +65,7 @@ function AllDirections() {
             <Card
               imageUrl={Parispic}
               city={t("Paris")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Sep 28 from $520")}
               dates={["2024-09-28", "2024-10-05"]}
               onClick={() =>
@@ -75,7 +75,7 @@ function AllDirections() {
             <Card
               imageUrl={LondonPic}
               city={t("London")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Feb 2 from $570")}
               dates={["2024-10-02", "2024-10-09"]}
               onClick={() =>
@@ -85,7 +85,7 @@ function AllDirections() {
             <Card
               imageUrl={BerlinPic}
               city={t("Berlin")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Oct 30 from $520")}
               dates={["2024-10-30", "2024-11-06"]}
               onClick={() =>
@@ -107,7 +107,7 @@ function AllDirections() {
             <Card
               imageUrl={TbilisiPic}
               city={t("Tbilisi")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Nov 3 from $720")}
               dates={["2024-11-03", "2024-11-10"]}
               onClick={() =>
@@ -131,7 +131,7 @@ function AllDirections() {
             <Card
               imageUrl={AthenPic}
               city={t("Athen")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Oct 30 from $520")}
               dates={["2024-10-30", "2024-11-06"]}
               onClick={() =>
@@ -143,7 +143,7 @@ function AllDirections() {
             <Card
               imageUrl={PraguePic}
               city={t("Prague")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Sep 28 from $520")}
               dates={["2024-09-28", "2024-10-05"]}
               onClick={() =>
@@ -153,7 +153,7 @@ function AllDirections() {
             <Card
               imageUrl={RomePic}
               city={t("Rome")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Dec 3 from $720")}
               dates={["2024-12-03", "2024-12-10"]}
               onClick={() =>
@@ -163,7 +163,7 @@ function AllDirections() {
             <Card
               imageUrl={BarcelonaPic}
               city={t("Barcelona")}
-              tailwindHeight="h-44"
+              tailwindHeight="h-32 sm:h-44"
               description={t("Dec 15 from $570")}
               dates={["2024-12-15", "2024-12-22"]}
               onClick={() =>
