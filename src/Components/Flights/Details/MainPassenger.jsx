@@ -20,7 +20,7 @@ function MainPassenger({ validationError }) {
 
       {validationError ? (
         <div className="bg-red-50 border rounded-lg p-5 flex gap-5 border-warningRed mt-10">
-          <span class="material-symbols-outlined text-red-500 w-5 h-5">
+          <span className="material-symbols-outlined text-red-500 w-5 h-5">
             info
           </span>
           <span className="text-sm text-warningRed font-medium">

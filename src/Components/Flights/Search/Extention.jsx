@@ -39,7 +39,7 @@ function Extention({ flightsData, onBookButtonClick }) {
           </span>
           {flightsData.way === "Bilateral" ? (
             <div className="flex gap-3">
-              <img src={Bed} alt="" />
+              <img src={Bed} alt="" className="w-5 h-5" />
               <span className="text-sm text-gray-500 flex items-center font-medium">
                 {calculateNights(flightsData.departure, flightsData.return)}{" "}
                 {t("nights stop")}

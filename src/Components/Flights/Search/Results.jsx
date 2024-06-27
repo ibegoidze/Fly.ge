@@ -104,7 +104,7 @@ const Results = ({ flightsData, onBookButtonClick }) => {
             <React.Fragment key={`flight-${flight.id}`}>
               {/* RENDER EACH FLIGHT COMPONENT */}
               <div
-                className={`mb-4 rounded-lg p-4 bg-white shadow-md ${
+                className={`mb-4 rounded-lg p-4 bg-white shadow-md  ${
                   // ADDING OPACITY TRANSITION IF FLIGHT IS BLURRED
                   blurredFlightId !== null && blurredFlightId !== flight.id
                     ? "opacity-60 transition-all duration-700"
@@ -115,8 +115,8 @@ const Results = ({ flightsData, onBookButtonClick }) => {
                   <li>
                     <div className="ENTIREDIV">
                       <div className="TOPPART flex flex-col">
-                        <div className="flex flex-col md:flex-row">
-                          <div className="FLIGHINFORMATION flex pt-5 w-full md:w-5/6 bg-white gap-5">
+                        <div className="flex flex-col lg:flex-row">
+                          <div className="FLIGHINFORMATION flex sm:pt-5 w-full lg:w-5/6 bg-white gap-5">
                             <div className="w-full">
                               {/* BILATERAL FLIGHTS */}
                               {flight.way === "Bilateral" ? (
@@ -241,18 +241,18 @@ const Results = ({ flightsData, onBookButtonClick }) => {
                             {flight.way === "Bilateral" ? (
                               <img
                                 src={VerticalLine}
-                                className="max-h-32 w-0.5 hidden md:flex"
+                                className="max-h-32 w-0.5 hidden lg:flex"
                                 alt=""
                               />
                             ) : (
                               <img
                                 src={UnilateralVerticalLine}
-                                className="max-h-20 w-0.5 hidden md:flex"
+                                className="max-h-20 w-0.5 hidden lg:flex"
                                 alt=""
                               />
                             )}
                           </div>
-                          <div className="PRICEANDBOOK w-full md:w-2/6 ">
+                          <div className="PRICEANDBOOK w-full lg:w-2/6 ">
                             <BookButton
                               flightsData={flight}
                               onBookButtonClick={onBookButtonClick}

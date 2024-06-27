@@ -26,7 +26,7 @@ function DirectFlight({ flightsData, isReturn }) {
   } = flightsData;
 
   return (
-    <div className="flex justify-between items-start mb-7 md:px-5">
+    <div className="flex justify-between items-start mb-4 sm:mb-7 md:px-5">
       {/* IMAGE DIV */}
       <div className="flex-none hidden md:flex">
         <img

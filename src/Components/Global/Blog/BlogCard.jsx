@@ -4,7 +4,7 @@ import BlogFavPic from "../../../assets/Tickets/images/BlogFav.png";
 function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
   const { t } = useTranslation();
   return (
-    <div className="p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl">
+    <div className="p-2 sm:p-3 bg-white w-full md:w-1/3 flex flex-col rounded-lg shadow-xl">
       <div
         className="bg-cover pt-4 bg-center h-32 sm:h-64 cursor-pointer transition-background-size duration-300 hover:bg-zoom"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -20,12 +20,12 @@ function OfferCard({ imageUrl, title, text, technology, seen, comment }) {
         </span>
       </div>
       <div className="font-bold text-sm sm:text-base text-lg">{title}</div>
-      <div className="py-2 font-semibold text-gray-400 text-xs sm:text-sm  pb-5">
+      <div className="py-2 font-semibold text-gray-400 text-xs sm:text-sm  sm:pb-5">
         {text}
       </div>
       <div className="flex-grow"></div>{" "}
       <div className="flex justify-between items-center border-t-2">
-        <div className="flex gap-4 text-sm pt-3 pb-2 text-gray-400 font-semibold">
+        <div className="flex gap-4 text-sm sm:py-2 text-gray-400 font-semibold">
           <div>
             {seen} {t("seen")}
           </div>

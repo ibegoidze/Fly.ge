@@ -21,19 +21,19 @@ function Footer() {
               {t("network")}
             </div>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("airlines")}
+              {t("airlines")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("airports")}
+              {t("airports")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("regions")}
+              {t("regions")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("countries")}
+              {t("countries")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("cities")}
+              {t("cities")}
             </span>
           </div>
           <div className="flex flex-col  w-1/2 whitespace-nowrap">
@@ -41,19 +41,19 @@ function Footer() {
               {t("company")}
             </div>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("whyUs")}
+              {t("whyUs")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("aboutUs")}
+              {t("aboutUs")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("benefits")}
+              {t("benefits")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("start")}
+              {t("start")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("plans")}
+              {t("plans")}
             </span>
           </div>
         </div>
@@ -63,19 +63,19 @@ function Footer() {
               {t("help")}
             </div>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("helpCenter")}
+              {t("helpCenter")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("covidSupport")}
+              {t("covidSupport")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("pressCenter")}
+              {t("pressCenter")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("termsAndConditions")}
+              {t("termsAndConditions")}
             </span>
             <span className="text-sm font-medium text-gray-400 pb-4 cursor-pointer ">
-              • {t("confidentiality")}
+              {t("confidentiality")}
             </span>
           </div>
           <div className="flex flex-col gap-3  md:w-1/2">

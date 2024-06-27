@@ -30,13 +30,13 @@ function ExtentionDetails({ flightsData }) {
     <div className="md:ml-32 my-5">
       {/* HEADER */}
       <div className="RETURN text-medium font-semibold mb-5 text-textDark">
-        {t("Return")}
+        {t("Return")} {formatDate(flightsData.return)}
       </div>
       {/* ONE WAY */}
       <div className="RETURN DETAILS flex">
         {/* DATE AND IMAGE ON THE LEFT */}
         <div className="AIRLINELOGO flex flex-col mr-5 sm:mr-14">
-          <div className="font-medium text-gray-500 text-sm">
+          <div className="font-medium text-gray-500 hidden sm:flex text-sm">
             {formatDate(flightsData.return)}
           </div>
           <div className="h-full flex w-14 sm:w-20 items-center">

@@ -18,9 +18,7 @@ function CovidRegulations() {
         <img src={CovidPic} alt="" />
         <div className="text-xs sm:text-sm font-medium text-gray-600 flex flex-col justify-between">
           <span>
-            ინფორმაცია ევროკავშირის/შენგენის ზონის წევრ-სახელმწიფოებსა და
-            ევროპის სხვა ქვეყნებში გამგზავრების მსურველი საქართველოს
-            მოქალაქეებისათვის
+            ინფორმაცია გამგზავრების მსურველი საქართველოს მოქალაქეებისათვის
           </span>
           <span>www.geoconsul.gov.ge</span>
         </div>

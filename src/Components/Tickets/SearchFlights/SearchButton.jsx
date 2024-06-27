@@ -125,7 +125,7 @@ function SearchButton() {
       onClick={handleSearchClick}
       className="bg-blue-500 hover:bg-blue-700 text-lg  rounded-full sm:px-5 sm:py-3 md:rounded-md text-white font-medium flex items-center justify-center gap-4 min-w-10 min-h-10 sm:min-w-14 sm:min-h-14 touch-none md:touch-auto"
     >
-      <span class="material-symbols-outlined">search</span>
+      <span className="material-symbols-outlined">search</span>
       <span className="hidden md:flex whitespace-nowrap">
         {t("Search for tickets")}
       </span>

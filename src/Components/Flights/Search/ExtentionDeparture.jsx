@@ -31,13 +31,13 @@ function ExtentionDeparture({ flightsData }) {
     <div className="md:ml-32 mb-5">
       {/* HEADER */}
       <div className="RETURN text-medium font-semibold mb-5 text-textDark">
-        {t("Departure")}
+        {t("Departure")} {formatDate(departure)}
       </div>
       {/* ONE WAY */}
       <div className="DEPDETAILS1 flex">
         {/* DATE AND IMAGE ON THE LEFT */}
         <div className="AIRLINELOGO flex flex-col mr-5 sm:mr-14">
-          <div className="font-medium text-gray-500 text-sm">
+          <div className="font-medium hidden sm:flex text-gray-500 sm:text-sm">
             {formatDate(departure)}
           </div>
           <div className="h-full flex w-14 sm:w-20 items-center">
