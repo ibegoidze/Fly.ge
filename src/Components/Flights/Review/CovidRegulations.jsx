@@ -20,7 +20,7 @@ function CovidRegulations() {
           <span>
             ინფორმაცია გამგზავრების მსურველი საქართველოს მოქალაქეებისათვის
           </span>
-          <span>www.geoconsul.gov.ge</span>
+          <span>www.geocons.gov.ge</span>
         </div>
       </div>
     </div>
