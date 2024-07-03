@@ -8,18 +8,16 @@ function CovidRegulations() {
         <span className="h-8 w-8 bg-primaryBlue rounded flex items-center justify-center">
           <img
             src={FaceMaskPic}
-            alt="Face Mask"
+            alt="Face Ma k"
             className="h-6 w-6 object-cover"
           />
         </span>
-        <span className="text-lg font-medium">Covid-19 Regulations</span>
+        <span className="text-lg font-medium">Covid-19 Regulations </span>
       </div>
       <div className="bg-backgroundGray rounded flex gap-5 mt-5 p-2">
         <img src={CovidPic} alt="" />
         <div className="text-xs sm:text-sm font-medium text-gray-600 flex flex-col justify-between">
-          <span>
-            ინფორმაცია გამგზავრების მსურველი საქართველოს მოქალაქეებისათვის
-          </span>
+          <span>ინფორმაცია გამგზავრების მსურველი მოქალაქეებისათვის</span>
           <span>www.geocons.gov.ge</span>
         </div>
       </div>
