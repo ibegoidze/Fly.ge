@@ -18,6 +18,8 @@ import { store } from "./Store/store";
 import "./i18n";
 import Tickets from "./pages/Tickets";
 import Flights from "./pages/Flights";
+import OffersList from "./Components/Offers/List/OffersList";
+import OffersDetails from "./Components/Offers/Details/OffersDetails";
 
 function App() {
   return (
@@ -29,7 +31,10 @@ function App() {
             <Route index path="/" element={<Tickets />} />
             <Route path="/Flights/*" element={<Flights />} />
           </Route>
-          <Route path="/Offers" element={<Offers />} />
+          <Route path="/Offers" element={<Offers />}>
+            <Route path="list" element={<OffersList />} />{" "}
+            <Route path="details" element={<OffersDetails />} />{" "}
+          </Route>
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Error />} />

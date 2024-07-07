@@ -17,6 +17,7 @@ function Payment({ selectedFlight }) {
   );
   const [selectedBank, setSelectedBank] = useState(null);
 
+  // BANKS DATA
   const banks = [
     { name: "Bank of Georgia", image: BOG, textClass: "bogOrange" },
     { name: "TBC Bank", image: TBC, textClass: "tbcBlue" },
@@ -31,6 +32,7 @@ function Payment({ selectedFlight }) {
     Newborn: flightPrice,
   };
 
+  // TOTAL PRICE
   const calculateTotalPrice = () => {
     const basePrice = Object.entries(passengers).reduce((acc, [key, value]) => {
       return acc + value.count * prices[key];

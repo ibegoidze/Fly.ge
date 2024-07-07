@@ -8,11 +8,13 @@ const SearchDropdown = ({ selectorText, dropdownOptions }) => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
+  // SELECT THE TRANSFER
   const handleTransferChange = (transferName) => {
     setSelectedTransfer(transferName);
     setIsOpen(false);
   };
 
+  // MANAGE WINDOW RESIZE
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -21,6 +23,7 @@ const SearchDropdown = ({ selectorText, dropdownOptions }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // CLICK OUTSIDE CLOSES THE DROPDOWN
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

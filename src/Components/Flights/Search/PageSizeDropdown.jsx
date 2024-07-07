@@ -12,7 +12,7 @@ const PageSizeDropdown = ({ pageSizeOptions, pageSize, setPageSize }) => {
     setIsOpen(false);
   };
 
-  // USEEFFECT CLICK OUTSIDE CLOSING THE DROPDOWN
+  // CLICK OUTSIDE CLOSING THE DROPDOWN
   useClickOutside(dropdownRef, setIsOpen);
 
   return (

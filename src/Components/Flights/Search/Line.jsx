@@ -1,4 +1,5 @@
 import HoizontalLine from "../../../assets/Flights/Search/Line.png";
+
 function Line({ blurredFlightId }) {
   return (
     <div className="IMAGE  h-2 flex items-center">

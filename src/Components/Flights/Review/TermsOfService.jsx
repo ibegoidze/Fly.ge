@@ -14,6 +14,7 @@ function TermsOfService() {
     setShowModal(!showModal);
   };
 
+  // CLICK OUTSIDE CLOSING
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {

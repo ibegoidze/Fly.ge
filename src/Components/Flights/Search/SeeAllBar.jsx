@@ -17,6 +17,7 @@ function SeeAllBar({
   const liRef = useRef(null);
   const { t } = useTranslation();
 
+  // CLICK OUTSIDE CLOSES THE BAR
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -34,7 +35,6 @@ function SeeAllBar({
         setSeeAllText("See all");
       }
     };
-
     const isClickOnScrollbar = (event) => {
       if (event.target instanceof HTMLElement) {
         return (
@@ -51,6 +51,7 @@ function SeeAllBar({
     };
   }, [containerRef, toggleOverlay, setBlurredFlightId, openFlightId]);
 
+  // TOGGLE THE EXTENTION
   const toggleExtension = (flightId) => {
     setOpenFlightId(openFlightId === flightId ? null : flightId);
     setHideLuggage(!hideLuggage);
