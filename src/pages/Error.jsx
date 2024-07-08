@@ -1,7 +1,7 @@
 function Error() {
   return (
     <div>
-      <h1>ERROR - Starting to work as a personal project</h1>
+      <h1>ERROR</h1>
     </div>
   );
 }

@@ -284,6 +284,8 @@ const resources = {
         "I understand that the responsibility for the timings and dates in the ticket does not rest with fly.ge.",
       TermsOfService: "terms of service",
       "Select a Bank": "Select a Bank",
+      Details: "Details",
+      returnBack: "Return",
     },
   },
   // GEORGIAN
@@ -572,6 +574,8 @@ const resources = {
         "ვაცნობიერებ, რომ ბილეთში დროებისა და თარიღების შესახებ პასუხისმგებლობა არ ეკისრება fly.ge-ს.",
       TermsOfService: "წესებსა და პირობებს",
       "Select a Bank": "აირჩიეთ ბანკი",
+      Details: "დეტალები",
+      returnBack: "დაბრუნება",
     },
   },
   // GERMAN
@@ -861,6 +865,8 @@ const resources = {
         "Ich bin mir bewusst, dass die Verantwortung für die Zeiten und Daten im Ticket nicht bei fly.ge liegt.",
       TermsOfService: "den Allgemeinen Geschäftsbedingungen",
       "Select a Bank": "Wählen Sie eine Bank aus",
+      Details: "Details",
+      returnBack: "Zurückkehren",
     },
   },
 };

@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 function OfferCard({ imageUrl, sale, city, price }) {
   const { t } = useTranslation();
   return (
-    <div className="p-1.5 sm:p-3 bg-white w-full md:w-1/3 flex  sm:flex-col rounded-lg shadow-xl ">
+    <div className="p-1.5 sm:p-3 bg-white  flex  sm:flex-col rounded-lg shadow-xl ">
       <div className="relative  sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden">
         <div
           className="bg-cover bg-center h-full w-full cursor-pointer transition-transform duration-700 transform scale-100 hover:scale-105"

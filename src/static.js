@@ -1,3 +1,15 @@
+import Helsinki from "./assets/Offers/OffersPage/Helsinki.png";
+import Vilnius from "./assets/Offers/OffersPage/Vilnius.png";
+import Islamabad from "./assets/Offers/OffersPage/Islamabad.png";
+import Monaco from "./assets/Offers/OffersPage/Monaco.png";
+import Washington from "./assets/Offers/OffersPage/Washington.png";
+import Reykjavik from "./assets/Offers/OffersPage/Reykjavik.png";
+import Edinburgh from "./assets/Offers/OffersPage/Edinburgh.png";
+import Oslo from "./assets/Offers/OffersPage/Oslo.png";
+import Beirut from "./assets/Offers/OffersPage/Beirut.png";
+import Ottawa from "./assets/Offers/OffersPage/Ottawa.png";
+import Lisbon from "./assets/Offers/OffersPage/Lisbon.png";
+
 // AIRPORTS DATA
 export const airports = [
   { id: "TBC", name: "Tbilisi", city: "Tbilisi" },
@@ -92,6 +104,438 @@ export const templateNames = [
   "Bill Gates",
   "Mark Zuckerberg",
   "Jeff Bezos",
+];
+
+export const offersData = [
+  {
+    id: 1, // UNIQUE ID
+    card: {
+      image: Helsinki, // PATH TO CARD IMAGE
+      salePercentage: 20, // SALE PERCENTAGE
+      cityName: "Helsinki", // CITY NAME
+      days: 7, // NUMBER OF DAYS
+      oldPrice: 1000, // OLD PRICE
+      newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Helsinki Airport", // AIRPORT NAME
+      hotel: "Hotel Helsinki", // HOTEL NAME
+      dates: {
+        departure: "2024-07-10", // DEPARTURE DATE
+        return: "2024-07-17", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Explore the beautiful city of Helsinki with our exclusive offer!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 2, // UNIQUE ID
+    card: {
+      image: Lisbon, // PATH TO CARD IMAGE
+      salePercentage: 25, // SALE PERCENTAGE
+      cityName: "Lisbon", // CITY NAME
+      days: 10, // NUMBER OF DAYS
+      oldPrice: 1200, // OLD PRICE
+      newPrice: 900, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Lisbon Airport", // AIRPORT NAME
+      hotel: "Hotel Lisbon", // HOTEL NAME
+      dates: {
+        departure: "2024-07-15", // DEPARTURE DATE
+        return: "2024-07-25", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Discover the vibrant culture of Lisbon with our special deal!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 3, // UNIQUE ID
+    card: {
+      image: Vilnius, // PATH TO CARD IMAGE
+      salePercentage: 15, // SALE PERCENTAGE
+      cityName: "Vilnius", // CITY NAME
+      days: 5, // NUMBER OF DAYS
+      oldPrice: 800, // OLD PRICE
+      newPrice: 680, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Vilnius Airport", // AIRPORT NAME
+      hotel: "Hotel Vilnius", // HOTEL NAME
+      dates: {
+        departure: "2024-07-20", // DEPARTURE DATE
+        return: "2024-07-25", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Enjoy the historic charm of Vilnius with our exclusive package!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 4, // UNIQUE ID
+    card: {
+      image: Islamabad, // PATH TO CARD IMAGE
+      salePercentage: 30, // SALE PERCENTAGE
+      cityName: "Islamabad", // CITY NAME
+      days: 8, // NUMBER OF DAYS
+      oldPrice: 1100, // OLD PRICE
+      newPrice: 770, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Islamabad Airport", // AIRPORT NAME
+      hotel: "Hotel Islamabad", // HOTEL NAME
+      dates: {
+        departure: "2024-07-25", // DEPARTURE DATE
+        return: "2024-08-02", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Experience the rich culture of Islamabad with our amazing offer!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 5, // UNIQUE ID
+    card: {
+      image: Monaco, // PATH TO CARD IMAGE
+      salePercentage: 22, // SALE PERCENTAGE
+      cityName: "Monaco", // CITY NAME
+      days: 12, // NUMBER OF DAYS
+      oldPrice: 2000, // OLD PRICE
+      newPrice: 1560, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Monaco Heliport", // AIRPORT NAME
+      hotel: "Hotel Monaco", // HOTEL NAME
+      dates: {
+        departure: "2024-07-30", // DEPARTURE DATE
+        return: "2024-08-11", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Indulge in the luxury of Monaco with our exclusive discount!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 6, // UNIQUE ID
+    card: {
+      image: Washington, // PATH TO CARD IMAGE
+      salePercentage: 18, // SALE PERCENTAGE
+      cityName: "Washington", // CITY NAME
+      days: 9, // NUMBER OF DAYS
+      oldPrice: 1500, // OLD PRICE
+      newPrice: 1230, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Washington Dulles International Airport", // AIRPORT NAME
+      hotel: "Hotel Washington", // HOTEL NAME
+      dates: {
+        departure: "2024-08-05", // DEPARTURE DATE
+        return: "2024-08-14", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Explore the capital city with our exclusive Washington offer!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 7, // UNIQUE ID
+    card: {
+      image: Reykjavik, // PATH TO CARD IMAGE
+      salePercentage: 27, // SALE PERCENTAGE
+      cityName: "Reykjavik", // CITY NAME
+      days: 6, // NUMBER OF DAYS
+      oldPrice: 1300, // OLD PRICE
+      newPrice: 949, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Keflavik International Airport", // AIRPORT NAME
+      hotel: "Hotel Reykjavik", // HOTEL NAME
+      dates: {
+        departure: "2024-08-10", // DEPARTURE DATE
+        return: "2024-08-16", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Discover the stunning landscapes of Reykjavik with our offer!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 8, // UNIQUE ID
+    card: {
+      image: Edinburgh, // PATH TO CARD IMAGE
+      salePercentage: 20, // SALE PERCENTAGE
+      cityName: "Edinburgh", // CITY NAME
+      days: 5, // NUMBER OF DAYS
+      oldPrice: 900, // OLD PRICE
+      newPrice: 720, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Edinburgh Airport", // AIRPORT NAME
+      hotel: "Hotel Edinburgh", // HOTEL NAME
+      dates: {
+        departure: "2024-08-15", // DEPARTURE DATE
+        return: "2024-08-20", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Experience the historic beauty of Edinburgh with our special deal!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 9, // UNIQUE ID
+    card: {
+      image: Oslo, // PATH TO CARD IMAGE
+      salePercentage: 24, // SALE PERCENTAGE
+      cityName: "Oslo", // CITY NAME
+      days: 7, // NUMBER OF DAYS
+      oldPrice: 1100, // OLD PRICE
+      newPrice: 836, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Oslo Airport", // AIRPORT NAME
+      hotel: "Hotel Oslo", // HOTEL NAME
+      dates: {
+        departure: "2024-08-20", // DEPARTURE DATE
+        return: "2024-08-27", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Explore the scenic beauty of Oslo with our exclusive offer!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 10, // UNIQUE ID
+    card: {
+      image: Beirut, // PATH TO CARD IMAGE
+      salePercentage: 28, // SALE PERCENTAGE
+      cityName: "Beirut", // CITY NAME
+      days: 10, // NUMBER OF DAYS
+      oldPrice: 1400, // OLD PRICE
+      newPrice: 1008, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Beirut-Rafic Hariri International Airport", // AIRPORT NAME
+      hotel: "Hotel Beirut", // HOTEL NAME
+      dates: {
+        departure: "2024-08-25", // DEPARTURE DATE
+        return: "2024-09-04", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Experience the vibrant culture of Beirut with our special deal!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 11, // UNIQUE ID
+    card: {
+      image: Ottawa, // PATH TO CARD IMAGE
+      salePercentage: 30, // SALE PERCENTAGE
+      cityName: "Ottawa", // CITY NAME
+      days: 12, // NUMBER OF DAYS
+      oldPrice: 1800, // OLD PRICE
+      newPrice: 1260, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Ottawa International Airport", // AIRPORT NAME
+      hotel: "Hotel Ottawa", // HOTEL NAME
+      dates: {
+        departure: "2024-08-30", // DEPARTURE DATE
+        return: "2024-09-11", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      text: "Discover the charm of Ottawa with our exclusive package!", // TEXT
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
 ];
 
 export const flightsData = [

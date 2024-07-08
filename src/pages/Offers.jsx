@@ -1,20 +1,25 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import OffersNavigation from "../Components/Offers/Offers/OffersNavigation";
+import OffersPage from "../Components/Offers/Offers/OffersPage";
 
 function Offers() {
+  const [activeTab, setActiveTab] = useState("search");
+  const navigate = useNavigate();
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    navigate(tab === "search" ? "/Offers" : `/Offers/${tab}`);
+  };
+
   return (
-    <div>
-      <h1>OFFERS</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="list">LIST</Link>
-          </li>
-          <li>
-            <Link to="details">DETAILS</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className="bg-bgGray">
+      <OffersNavigation
+        handleTabClick={handleTabClick}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      <OffersPage />
       <Outlet />
     </div>
   );

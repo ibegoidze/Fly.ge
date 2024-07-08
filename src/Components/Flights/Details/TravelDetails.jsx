@@ -5,6 +5,7 @@ import FlightDetails from "./FlightDetails";
 import ResponsiblePerson from "./ResponsiblePerson";
 import MainPassenger from "./MainPassenger";
 import TravelInsurance from "./TravelInsurance";
+import { useNavigate } from "react-router-dom";
 import {
   isValidName,
   isValidEmail,
@@ -21,6 +22,7 @@ function TravelDetails({ selectedFlight, handleContinueButtonClick }) {
   const mainPassengerRef = useRef(null);
   const [validationError, setValidationError] = useState(false);
   const mainPassenger = useSelector((state) => state.mainPassenger);
+  const navigate = useNavigate();
 
   // CONTINIUE BUTTON TWICE IN PRICING AND END OF DETAILS
   const handleButtonClick = () => {
@@ -63,6 +65,12 @@ function TravelDetails({ selectedFlight, handleContinueButtonClick }) {
       mainPassengerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // NAVIGATE BACK ONE PAGE
+  const handleBack = () => {
+    navigate(-1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row py-7">
@@ -88,7 +96,13 @@ function TravelDetails({ selectedFlight, handleContinueButtonClick }) {
       <div className="INSURANCE  ">
         <TravelInsurance />
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-between">
+        <button
+          onClick={handleBack}
+          className="hover:bg-blue-700 mb-5 text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
+        >
+          <span className="flex whitespace-nowrap">{t("returnBack")}</span>
+        </button>
         <button
           onClick={handleButtonClick}
           className="hover:bg-blue-700 mb-5 text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
