@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import ArrowPic from "../../../assets/Flights/Search/Arrow.png";
 import ActiveArrowPic from "../../../assets/Flights/Search/ActiveArrow.png";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 function OffersNavigation({ setActiveTab, activeTab, handleTabClick }) {
   const { t } = useTranslation();
@@ -9,11 +10,21 @@ function OffersNavigation({ setActiveTab, activeTab, handleTabClick }) {
   const navigationRef = useRef(null);
   const activeTabRef = useRef(null);
   const triangleRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const headerHeight = document.querySelector("header").offsetHeight;
     setTopPosition(headerHeight);
   }, []);
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path.includes("/Offers/details")) {
+      setActiveTab("details");
+    } else {
+      setActiveTab("search");
+    }
+  }, [location.pathname, setActiveTab]);
 
   useEffect(() => {
     if (activeTabRef.current && triangleRef.current) {
@@ -60,12 +71,6 @@ function OffersNavigation({ setActiveTab, activeTab, handleTabClick }) {
           onClick={() => handleTabClick("details")}
         >
           <span>{t("Details")}</span>
-          {/* {activeTab === "details" && (
-            <img src={ActiveArrowPic} alt="Active Arrow" className="w-5" />
-          )} */}
-          {/* {activeTab !== "details" && (
-            <img src={ArrowPic} alt="Arrow" className="w-5" />
-          )} */}
         </div>
       </div>
       {/* TRIANGLE */}

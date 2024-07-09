@@ -119,6 +119,10 @@ export const offersData = [
       newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Rio de janeiro", // AIRPORT NAME
       hotel: "Hotel Rio de janeiro", // HOTEL NAME
       dates: {
@@ -159,6 +163,10 @@ export const offersData = [
       newPrice: 900, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Lisbon Airport", // AIRPORT NAME
       hotel: "Hotel Lisbon", // HOTEL NAME
       dates: {
@@ -198,6 +206,10 @@ export const offersData = [
       newPrice: 680, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Vilnius Airport", // AIRPORT NAME
       hotel: "Hotel Vilnius", // HOTEL NAME
       dates: {
@@ -238,6 +250,10 @@ export const offersData = [
       newPrice: 770, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Islamabad Airport", // AIRPORT NAME
       hotel: "Hotel Islamabad", // HOTEL NAME
       dates: {
@@ -278,6 +294,10 @@ export const offersData = [
       newPrice: 1560, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Monaco Heliport", // AIRPORT NAME
       hotel: "Hotel Monaco", // HOTEL NAME
       dates: {
@@ -317,6 +337,10 @@ export const offersData = [
       newPrice: 1230, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Washington Dulles International Airport", // AIRPORT NAME
       hotel: "Hotel Washington", // HOTEL NAME
       dates: {
@@ -356,6 +380,10 @@ export const offersData = [
       newPrice: 949, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Keflavik International Airport", // AIRPORT NAME
       hotel: "Hotel Reykjavik", // HOTEL NAME
       dates: {
@@ -395,6 +423,10 @@ export const offersData = [
       newPrice: 720, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Edinburgh Airport", // AIRPORT NAME
       hotel: "Hotel Edinburgh", // HOTEL NAME
       dates: {
@@ -435,6 +467,10 @@ export const offersData = [
       newPrice: 836, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Oslo Airport", // AIRPORT NAME
       hotel: "Hotel Oslo", // HOTEL NAME
       dates: {
@@ -474,6 +510,10 @@ export const offersData = [
       newPrice: 1008, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Beirut-Rafic Hariri International Airport", // AIRPORT NAME
       hotel: "Hotel Beirut", // HOTEL NAME
       dates: {
@@ -514,6 +554,10 @@ export const offersData = [
       newPrice: 1260, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Ottawa International Airport", // AIRPORT NAME
       hotel: "Hotel Ottawa", // HOTEL NAME
       dates: {
@@ -553,6 +597,10 @@ export const offersData = [
       newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
+      text1:
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      text2:
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
       airport: "Helsinki Airport", // AIRPORT NAME
       hotel: "Hotel Helsinki", // HOTEL NAME
       dates: {

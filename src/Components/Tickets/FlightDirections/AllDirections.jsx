@@ -50,14 +50,6 @@ function AllDirections() {
             {t("Low-cost flights from Georgia to Europe")}
           </div>
         </div>
-        <div className="text-primaryBlue text-sm sm:text-md font-medium flex justify-end items-end gap-1 whitespace-nowrap">
-          <div className="flex text-xs items-center cursor-pointer">
-            {t("See all")}
-            <span className="material-symbols-outlined text-sm">
-              chevron_right
-            </span>
-          </div>
-        </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-3">
         <div className="max-w-6xl mx-auto  flex  sm:flex-row gap-3 w-full sm:w-1/2">

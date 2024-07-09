@@ -346,6 +346,13 @@ const resources = {
         "Special packages for family vacations.",
       "Last-minute deals on a wide range of destinations.":
         "Last-minute deals on a wide range of destinations.",
+      Offer: "Offer",
+      "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.":
+        "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
+      "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.":
+        "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
+      "Purchase a package": "Purchase a package",
+      contains: "contains",
     },
   },
   // GEORGIAN
@@ -695,6 +702,13 @@ const resources = {
         "სპეციალური პაკეტები ოჯახურ შვებულებებისთვის.",
       "Last-minute deals on a wide range of destinations.":
         "სასურველი შეთავაზებები ფართო მიმართულებებზე.",
+      Offer: "შეთავაზება",
+      "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.":
+        "გამოცადეთ რიო დე ჟანეიროს ცოცხალი კულტურა ჩვენი ექსკლუზიური შეთავაზებით. ისიამოვნეთ შვიდი დღით მომაჯადოებელი პლაჟებით, საინტერესო ღამის ცხოვრებით და ისტორიული ნიშანებით. დაგემოვნეთ ადგილობრივი სამზარეულო, ეწვიეთ ცნობილ ადგილებს და შექმენით დაუვიწყარი მოგონებები ამ ლამაზ ქალაქში.",
+      "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.":
+        "აღმოაჩინეთ რიო დე ჟანეიროს საუკეთესო ჩვენთან ერთად სპეციალური შეთავაზებით. ისიამოვნეთ პლაჟებით, ღამის ცხოვრებით და მდიდარი კულტურული მემკვიდრეობით.",
+      "Purchase a package": "პაკეტის შეძენა",
+      contains: "შეიცავს",
     },
   },
   // GERMAN
@@ -1045,6 +1059,13 @@ const resources = {
         "Sonderangebote für Familienurlaube.",
       "Last-minute deals on a wide range of destinations.":
         "Last-Minute-Angebote für eine Vielzahl von Zielen.",
+      Offer: "Offer",
+      "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.":
+        "Erleben Sie die lebendige Kultur von Rio de Janeiro mit unserem exklusiven Angebot. Genießen Sie sieben Tage atemberaubende Strände, aufregendes Nachtleben und historische Sehenswürdigkeiten. Genießen Sie die lokale Küche, besuchen Sie berühmte Orte und schaffen Sie unvergessliche Erinnerungen in dieser wunderschönen Stadt.",
+      "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.":
+        "Entdecken Sie das Beste von Rio de Janeiro mit unserem Sonderangebot. Genießen Sie die Strände, das Nachtleben und das reiche kulturelle Erbe.",
+      "Purchase a package": "Kaufen Sie ein Paket",
+      contains: "enthält",
     },
   },
 };

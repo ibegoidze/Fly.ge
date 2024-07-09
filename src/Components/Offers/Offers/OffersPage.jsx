@@ -44,6 +44,7 @@ function OffersPage() {
         {offersData.map((offer) => (
           <OfferCard
             key={offer.id}
+            offer={offer}
             imageUrl={offer.card.image}
             sale={`${offer.card.salePercentage}%`}
             city={t(offer.card.cityName)}

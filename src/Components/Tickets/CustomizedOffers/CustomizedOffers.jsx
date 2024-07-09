@@ -1,8 +1,9 @@
 import OfferCard from "./OfferCard";
 import { useTranslation } from "react-i18next";
-
+import { useNavigate } from "react-router-dom";
 import { offersData } from "../../../static";
 function CustomizedOffers() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   return (
     <div className="w-full bg-backgroundGray py-4 pb-9 noto-sans-georgian">
@@ -16,7 +17,13 @@ function CustomizedOffers() {
           </div>
         </div>
         <div className="text-primaryBlue text-sm sm:text-md font-medium flex justify-end items-end gap-1 whitespace-nowrap ">
-          <div className="flex text-xs items-center cursor-pointer">
+          <div
+            className="flex text-xs items-center cursor-pointer"
+            onClick={() => {
+              navigate("/Offers");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             {t("See all")}
             <span className="material-symbols-outlined text-sm">
               chevron_right
@@ -29,6 +36,7 @@ function CustomizedOffers() {
           {offersData.slice(0, 3).map((offer) => (
             <OfferCard
               key={offer.id}
+              offer={offer}
               imageUrl={offer.card.image}
               sale={`${offer.card.salePercentage}%`}
               city={t(offer.card.cityName)}
