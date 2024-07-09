@@ -1,8 +1,7 @@
 import OfferCard from "./OfferCard";
-import HimalayPic from "../../../assets/Tickets/images/HimalayOffers.png";
-import PraguePic from "../../../assets/Tickets/images/PragueOffers.png";
-import ViennaPic from "../../../assets/Tickets/images/ViennaOffers.png";
 import { useTranslation } from "react-i18next";
+
+import { offersData } from "../../../static";
 function CustomizedOffers() {
   const { t } = useTranslation();
   return (
@@ -25,25 +24,20 @@ function CustomizedOffers() {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-5">
-        <OfferCard
-          imageUrl={HimalayPic}
-          sale={"35%"}
-          city={t("Himalay")}
-          price={"$305"}
-        />
-        <OfferCard
-          imageUrl={PraguePic}
-          sale={"45%"}
-          city={t("Prague")}
-          price={"$420"}
-        />{" "}
-        <OfferCard
-          imageUrl={ViennaPic}
-          sale={"45%"}
-          city={t("Vienna")}
-          price={"$505"}
-        />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {offersData.slice(0, 3).map((offer) => (
+            <OfferCard
+              key={offer.id}
+              imageUrl={offer.card.image}
+              sale={`${offer.card.salePercentage}%`}
+              city={t(offer.card.cityName)}
+              price={`$${offer.card.newPrice}`}
+              days={offer.card.days}
+              cardText={offer.page.cardText}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

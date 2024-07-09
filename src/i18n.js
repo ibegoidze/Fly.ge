@@ -286,6 +286,66 @@ const resources = {
       "Select a Bank": "Select a Bank",
       Details: "Details",
       returnBack: "Return",
+      helsinki: "Helsinki",
+      "Helsinki Airport": "Helsinki Airport",
+      "Explore the beautiful city of Helsinki with our exclusive offer!":
+        "Explore the beautiful city of Helsinki with our exclusive offer!",
+      lisbon: "Lisbon",
+      "Lisbon Airport": "Lisbon Airport",
+      "Discover the vibrant culture of Lisbon with our special deal!":
+        "Discover the vibrant culture of Lisbon with our special deal!",
+      vilnius: "Vilnius",
+      "Vilnius Airport": "Vilnius Airport",
+      "Enjoy the historic charm of Vilnius with our exclusive package!":
+        "Enjoy the historic charm of Vilnius with our exclusive package!",
+      islamabad: "Islamabad",
+      "Islamabad Airport": "Islamabad Airport",
+      "Experience the rich culture of Islamabad with our amazing offer!":
+        "Experience the rich culture of Islamabad with our amazing offer!",
+      monaco: "Monaco",
+      "Monaco Heliport": "Monaco Heliport",
+      "Indulge in the luxury of Monaco with our exclusive discount!":
+        "Indulge in the luxury of Monaco with our exclusive discount!",
+      washington: "Washington",
+      "Washington Dulles International Airport":
+        "Washington Dulles International Airport",
+      "Explore the capital city with our exclusive Washington offer!":
+        "Explore the capital city with our exclusive Washington offer!",
+      reykjavik: "Reykjavik",
+      "Keflavik International Airport": "Keflavik International Airport",
+      "Discover the stunning landscapes of Reykjavik with our offer!":
+        "Discover the stunning landscapes of Reykjavik with our offer!",
+      edinburgh: "Edinburgh",
+      "Edinburgh Airport": "Edinburgh Airport",
+      "Experience the historic beauty of Edinburgh with our special deal!":
+        "Experience the historic beauty of Edinburgh with our special deal!",
+      oslo: "Oslo",
+      "Oslo Airport": "Oslo Airport",
+      "Explore the scenic beauty of Oslo with our exclusive offer!":
+        "Explore the scenic beauty of Oslo with our exclusive offer!",
+      beirut: "Beirut",
+      "Beirut-Rafic Hariri International Airport":
+        "Beirut-Rafic Hariri International Airport",
+      "Experience the vibrant culture of Beirut with our special deal!":
+        "Experience the vibrant culture of Beirut with our special deal!",
+      ottawa: "Ottawa",
+      "Ottawa International Airport": "Ottawa International Airport",
+      "Discover the charm of Ottawa with our exclusive package!":
+        "Discover the charm of Ottawa with our exclusive package!",
+      "Rio de janeiro": "Rio de janeiro",
+      "Rio de janeiro Airport": "Rio de janeiro Airport",
+      "Hotel Rio de janeiro": "Hotel Rio de janeiro",
+      "Explore the beautiful city of Rio de janeiro with our exclusive offer!":
+        "Explore the beautiful city of Rio de janeiro with our exclusive offer!",
+      "Offers and sales": "Offers and sales",
+      "Discover amazing deals and discounts on a variety of travel packages and services. Whether you're planning a vacation or a business trip, our offers are designed to provide you with the best value for your money.":
+        "Discover amazing deals and discounts on a variety of travel packages and services. Whether you're planning a vacation or a business trip, our offers are designed to provide you with the best value for your money.",
+      "Exclusive discounts on flights and hotels.":
+        "Exclusive discounts on flights and hotels.",
+      "Special packages for family vacations.":
+        "Special packages for family vacations.",
+      "Last-minute deals on a wide range of destinations.":
+        "Last-minute deals on a wide range of destinations.",
     },
   },
   // GEORGIAN
@@ -576,6 +636,65 @@ const resources = {
       "Select a Bank": "აირჩიეთ ბანკი",
       Details: "დეტალები",
       returnBack: "დაბრუნება",
+      Helsinki: "ჰელსინკი",
+      "Helsinki Airport": "ჰელსინკის აეროპორტი",
+      "Explore the beautiful city of Helsinki with our exclusive offer!":
+        "გამოიკვლიეთ ლამაზი ქალაქი ჰელსინკი ჩვენი ექსკლუზიური შეთავაზებით!",
+      "Lisbon Airport": "ლისაბონის აეროპორტი",
+      "Discover the vibrant culture of Lisbon with our special deal!":
+        "აღმოაჩინეთ ლისაბონის მბზინავი კულტურა ჩვენი სპეციალური შეთავაზებით!",
+      Vilnius: "ვილნიუსი",
+      "Vilnius Airport": "ვილნიუსის აეროპორტი",
+      "Enjoy the historic charm of Vilnius with our exclusive package!":
+        "ისიამოვნეთ ვილნიუსის ისტორიული შარმი ჩვენი ექსკლუზიური პაკეტით!",
+      Islamabad: "ისლამაბადი",
+      "Islamabad Airport": "ისლამაბადის აეროპორტი",
+      "Experience the rich culture of Islamabad with our amazing offer!":
+        "გამოცადეთ ისლამაბადის მდიდარი კულტურა ჩვენი საოცარი შეთავაზებით!",
+      Monaco: "მონაკო",
+      "Monaco Heliport": "მონაკოს ჰელიპორტი",
+      "Indulge in the luxury of Monaco with our exclusive discount!":
+        "დაიმსახურეთ მონაკოს ფუფუნება ჩვენი ექსკლუზიური ფასდაკლებით!",
+      Washington: "ვაშინგტონი",
+      "Washington Dulles International Airport":
+        "ვაშინგტონის დალისის საერთაშორისო აეროპორტი",
+      "Explore the capital city with our exclusive Washington offer!":
+        "გამოიკვლიეთ დედაქალაქი ჩვენი ექსკლუზიური ვაშინგტონის შეთავაზებით!",
+      Reykjavik: "რეიკიავიკი",
+      "Keflavik International Airport": "კეფლავიკის საერთაშორისო აეროპორტი",
+      "Discover the stunning landscapes of Reykjavik with our offer!":
+        "აღმოაჩინეთ რეიკიავიკის მშვენიერი ლანდშაფტები ჩვენი შეთავაზებით!",
+      Edinburgh: "ედინბურგი",
+      "Edinburgh Airport": "ედინბურგის აეროპორტი",
+      "Experience the historic beauty of Edinburgh with our special deal!":
+        "გამოცადეთ ედინბურგის ისტორიული სილამაზე ჩვენი სპეციალური შეთავაზებით!",
+      Oslo: "ოსლო",
+      "Oslo Airport": "ოსლოს აეროპორტი",
+      "Explore the scenic beauty of Oslo with our exclusive offer!":
+        "გამოიკვლიეთ ოსლოს ბუნების სილამაზე ჩვენი ექსკლუზიური შეთავაზებით!",
+      Beirut: "ბეირუთი",
+      "Beirut-Rafic Hariri International Airport":
+        "ბეირუთ-რაფიკ ჰარირის საერთაშორისო აეროპორტი",
+      "Experience the vibrant culture of Beirut with our special deal!":
+        "გამოცადეთ ბეირუთის მბზინავი კულტურა ჩვენი სპეციალური შეთავაზებით!",
+      Ottawa: "ოტავა",
+      "Ottawa International Airport": "ოტავას საერთაშორისო აეროპორტი",
+      "Discover the charm of Ottawa with our exclusive package!":
+        "აღმოაჩინეთ ოტავას ხიბლი ჩვენი ექსკლუზიური პაკეტით!",
+      "Rio de janeiro": "რიო დე ჟანეირო",
+      "Rio de janeiro Airport": "რიო დე ჟანეირო აეროპორტი",
+      "Hotel Rio de janeiro": "სასტუმრო რიო დე ჟანეირო",
+      "Explore the beautiful city of Rio de janeiro with our exclusive offer!":
+        "აღმოაჩინე რიო დე ჟანეიროს ლამაზი ქალაქი ჩვენი ექსკლუზიური შეთავაზებით!",
+      "Offers and sales": "შეთავაზებები და ფასდაკლებები",
+      "Discover amazing deals and discounts on a variety of travel packages and services. Whether you're planning a vacation or a business trip, our offers are designed to provide you with the best value for your money.":
+        "აღმოაჩინე საოცარი შეთავაზებები და ფასდაკლებები სხვადასხვა მოგზაურობის პაკეტებსა და მომსახურებებზე. თუკი გეგმავ შვებულებას ან საქმიანი მოგზაურობას, ჩვენი შეთავაზებები საუკეთესო ფასდაკლებებს გაგიწევს.",
+      "Exclusive discounts on flights and hotels.":
+        "ექსკლუზიური ფასდაკლებები ფრენებზე და სასტუმროებზე.",
+      "Special packages for family vacations.":
+        "სპეციალური პაკეტები ოჯახურ შვებულებებისთვის.",
+      "Last-minute deals on a wide range of destinations.":
+        "სასურველი შეთავაზებები ფართო მიმართულებებზე.",
     },
   },
   // GERMAN
@@ -867,6 +986,65 @@ const resources = {
       "Select a Bank": "Wählen Sie eine Bank aus",
       Details: "Details",
       returnBack: "Zurückkehren",
+      helsinki: "Helsinki",
+      "Helsinki Airport": "Flughafen Helsinki",
+      "Explore the beautiful city of Helsinki with our exclusive offer!":
+        "Erkunden Sie die schöne Stadt Helsinki mit unserem exklusiven Angebot!",
+      "Lisbon Airport": "Flughafen Lissabon",
+      "Discover the vibrant culture of Lisbon with our special deal!":
+        "Entdecken Sie die lebendige Kultur von Lissabon mit unserem Sonderangebot!",
+      Vilnius: "Vilnius",
+      "Vilnius Airport": "Flughafen Vilnius",
+      "Enjoy the historic charm of Vilnius with our exclusive package!":
+        "Genießen Sie den historischen Charme von Vilnius mit unserem exklusiven Paket!",
+      Islamabad: "Islamabad",
+      "Islamabad Airport": "Flughafen Islamabad",
+      "Experience the rich culture of Islamabad with our amazing offer!":
+        "Erleben Sie die reiche Kultur von Islamabad mit unserem fantastischen Angebot!",
+      Monaco: "Monaco",
+      "Monaco Heliport": "Hubschrauberlandeplatz Monaco",
+      "Indulge in the luxury of Monaco with our exclusive discount!":
+        "Genießen Sie den Luxus von Monaco mit unserem exklusiven Rabatt!",
+      Washington: "Washington",
+      "Washington Dulles International Airport":
+        "Washington Dulles Internationaler Flughafen",
+      "Explore the capital city with our exclusive Washington offer!":
+        "Erkunden Sie die Hauptstadt mit unserem exklusiven Washington-Angebot!",
+      Reykjavik: "Reykjavik",
+      "Keflavik International Airport": "Internationaler Flughafen Keflavik",
+      "Discover the stunning landscapes of Reykjavik with our offer!":
+        "Entdecken Sie die atemberaubenden Landschaften von Reykjavik mit unserem Angebot!",
+      Edinburgh: "Edinburgh",
+      "Edinburgh Airport": "Flughafen Edinburgh",
+      "Experience the historic beauty of Edinburgh with our special deal!":
+        "Erleben Sie die historische Schönheit von Edinburgh mit unserem Sonderangebot!",
+      Oslo: "Oslo",
+      "Oslo Airport": "Flughafen Oslo",
+      "Explore the scenic beauty of Oslo with our exclusive offer!":
+        "Erkunden Sie die landschaftliche Schönheit von Oslo mit unserem exklusiven Angebot!",
+      Beirut: "Beirut",
+      "Beirut-Rafic Hariri International Airport":
+        "Beirut-Rafic Hariri Internationaler Flughafen",
+      "Experience the vibrant culture of Beirut with our special deal!":
+        "Erleben Sie die lebendige Kultur von Beirut mit unserem Sonderangebot!",
+      Ottawa: "Ottawa",
+      "Ottawa International Airport": "Internationaler Flughafen Ottawa",
+      "Discover the charm of Ottawa with our exclusive package!":
+        "Entdecken Sie den Charme von Ottawa mit unserem exklusiven Paket!",
+      "Rio de janeiro": "Rio de janeiro",
+      "Rio de janeiro Airport": "Flughafen Rio de janeiro",
+      "Hotel Rio de janeiro": "Hotel Rio de janeiro",
+      "Explore the beautiful city of Rio de janeiro with our exclusive offer!":
+        "Erkunden Sie die schöne Stadt Rio de Janeiro mit unserem exklusiven Angebot!",
+      "Offers and sales": "Angebote und Verkäufe",
+      "Discover amazing deals and discounts on a variety of travel packages and services. Whether you're planning a vacation or a business trip, our offers are designed to provide you with the best value for your money.":
+        "Entdecken Sie erstaunliche Angebote und Rabatte für eine Vielzahl von Reisepaketen und Dienstleistungen. Ob Sie einen Urlaub oder eine Geschäftsreise planen, unsere Angebote bieten Ihnen das beste Preis-Leistungs-Verhältnis.",
+      "Exclusive discounts on flights and hotels.":
+        "Exklusive Rabatte auf Flüge und Hotels.",
+      "Special packages for family vacations.":
+        "Sonderangebote für Familienurlaube.",
+      "Last-minute deals on a wide range of destinations.":
+        "Last-Minute-Angebote für eine Vielzahl von Zielen.",
     },
   },
 };

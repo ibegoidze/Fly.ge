@@ -6,11 +6,22 @@ import Time from "../../../assets/Tickets/images/OffersTime.png";
 
 import { useTranslation } from "react-i18next";
 
-function OfferCard({ imageUrl, sale, city, price }) {
+// FUNCTION TO TRUNCATE TEXT IF IT EXCEEDS 50 CHARACTERS
+const truncateText = (text, maxLength = 65) => {
+  if (text.length <= maxLength) return text;
+  return (
+    <span>
+      {text.substring(0, maxLength)}
+      <span className="text-gray-400 cursor-pointer">...</span>
+    </span>
+  );
+};
+
+function OfferCard({ imageUrl, sale, city, price, days, cardText }) {
   const { t } = useTranslation();
   return (
-    <div className="p-1.5 sm:p-3 bg-white  flex  sm:flex-col rounded-lg shadow-xl ">
-      <div className="relative  sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden">
+    <div className="p-1.5 sm:p-3 bg-white flex sm:flex-col rounded-lg shadow-xl ">
+      <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden">
         <div
           className="bg-cover bg-center h-full w-full cursor-pointer transition-transform duration-700 transform scale-100 hover:scale-105"
           style={{ backgroundImage: `url(${imageUrl})` }}
@@ -19,12 +30,12 @@ function OfferCard({ imageUrl, sale, city, price }) {
           {t("Top offers")}
         </span>
       </div>
-      <div className="w-2/3 sm:w-full">
+      <div className="w-2/3 sm:w-full sm:mt-2">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-          <div className="pl-4 flex items-center font-semibold text-sm bg-center w-20 h-7 sm:mt-5 sale-frame cursor-pointer">
+          <div className="pl-4 flex items-center font-semibold text-sm bg-center w-20 h-7 sale-frame cursor-pointer">
             {sale}
           </div>
-          <div className=" hidden sm:flex mt-2 sm:mt-5 gap-2">
+          <div className="hidden sm:flex sm:mt gap-2">
             <img src={Plane} alt="plane" className="w-8 h-8 cursor-pointer" />
             <img src={Car} alt="car" className="w-8 h-8 cursor-pointer" />
             <img
@@ -40,26 +51,26 @@ function OfferCard({ imageUrl, sale, city, price }) {
           </div>
         </div>
         <div className="border-b-2 border-gray-200 border-solid pb-4 ml-2 sm:ml-0">
-          <div className="font-semibold  sm:text-lg mt-1 sm:mt-4 text-gray-500 pb-1">
-            {city}
+          <div className="font-semibold sm:text-md mt-1 sm:mt-2 text-gray-800 pb-1">
+            {t(city)}
           </div>
           <div className="text-xs sm:text-sm font-medium text-gray-400">
-            {t("Promotional text that helps you")}
+            {truncateText(t(cardText))}
           </div>
         </div>
         <div className="flex justify-end sm:justify-between sm:items-center">
           <div className="hidden sm:flex items-center gap-2 mt-4 border border-orange-500 border-solid bg-orange-100 rounded px-2 py-1 cursor-pointer">
             <img src={Time} alt="Clock" />
             <span className="text-sm font-medium text-orange-500">
-              5 {t("Days")}
+              {days ? days : 5} {t("Days")}
             </span>
           </div>
           <div className="flex gap-4 items-end mt-2 sm:mt-5">
             <div className="relative">
               <div className="font-medium text-gray-400">1500</div>
-              <div className="absolute inset-y-1/2 left-0 right-0 bottom-2.5 border-b border-solid  border-gray-400"></div>
+              <div className="absolute inset-y-1/2 left-0 right-0 bottom-2.5 border-b border-solid border-gray-400"></div>
             </div>
-            <div className="sm:text-2xl font-semibold text-gray-500">
+            <div className="sm:text-2xl font-semibold text-gray-600">
               {price}
             </div>
           </div>

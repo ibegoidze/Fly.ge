@@ -19,8 +19,7 @@ function Offers() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-      <OffersPage />
-      <Outlet />
+      {activeTab === "offers" ? <OffersPage /> : <Outlet />}
     </div>
   );
 }

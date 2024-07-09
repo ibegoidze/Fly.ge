@@ -1,14 +1,15 @@
-import Helsinki from "./assets/Offers/OffersPage/Helsinki.png";
+import Rio from "./assets/Offers/OffersPage/Rio.jpg";
+import Helsinki from "./assets/Offers/OffersPage/Helsinki1.png";
 import Vilnius from "./assets/Offers/OffersPage/Vilnius.png";
-import Islamabad from "./assets/Offers/OffersPage/Islamabad.png";
+import Islamabad from "./assets/Offers/OffersPage/Islamabad1.png";
 import Monaco from "./assets/Offers/OffersPage/Monaco.png";
-import Washington from "./assets/Offers/OffersPage/Washington.png";
-import Reykjavik from "./assets/Offers/OffersPage/Reykjavik.png";
-import Edinburgh from "./assets/Offers/OffersPage/Edinburgh.png";
-import Oslo from "./assets/Offers/OffersPage/Oslo.png";
-import Beirut from "./assets/Offers/OffersPage/Beirut.png";
-import Ottawa from "./assets/Offers/OffersPage/Ottawa.png";
-import Lisbon from "./assets/Offers/OffersPage/Lisbon.png";
+import Washington from "./assets/Offers/OffersPage/Washington1.png";
+import Reykjavik from "./assets/Offers/OffersPage/Reykjavik1.png";
+import Edinburgh from "./assets/Offers/OffersPage/Edinburgh1.png";
+import Oslo from "./assets/Offers/OffersPage/Oslo1.png";
+import Beirut from "./assets/Offers/OffersPage/Beirut1.png";
+import Ottawa from "./assets/Offers/OffersPage/Ottawa1.png";
+import Lisbon1 from "./assets/Offers/OffersPage/Lisabon1.jpg";
 
 // AIRPORTS DATA
 export const airports = [
@@ -110,16 +111,16 @@ export const offersData = [
   {
     id: 1, // UNIQUE ID
     card: {
-      image: Helsinki, // PATH TO CARD IMAGE
+      image: Rio, // PATH TO CARD IMAGE
       salePercentage: 20, // SALE PERCENTAGE
-      cityName: "Helsinki", // CITY NAME
+      cityName: "Rio de janeiro", // CITY NAME
       days: 7, // NUMBER OF DAYS
       oldPrice: 1000, // OLD PRICE
       newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
     },
     page: {
-      airport: "Helsinki Airport", // AIRPORT NAME
-      hotel: "Hotel Helsinki", // HOTEL NAME
+      airport: "Rio de janeiro", // AIRPORT NAME
+      hotel: "Hotel Rio de janeiro", // HOTEL NAME
       dates: {
         departure: "2024-07-10", // DEPARTURE DATE
         return: "2024-07-17", // RETURN DATE
@@ -131,7 +132,8 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Explore the beautiful city of Helsinki with our exclusive offer!", // TEXT
+      cardText:
+        "Explore the beautiful city of Rio de janeiro with our exclusive offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -149,7 +151,7 @@ export const offersData = [
   {
     id: 2, // UNIQUE ID
     card: {
-      image: Lisbon, // PATH TO CARD IMAGE
+      image: Lisbon1, // PATH TO CARD IMAGE
       salePercentage: 25, // SALE PERCENTAGE
       cityName: "Lisbon", // CITY NAME
       days: 10, // NUMBER OF DAYS
@@ -170,7 +172,7 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Discover the vibrant culture of Lisbon with our special deal!", // TEXT
+      cardText: "Discover the vibrant culture of Lisbon with our special deal!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -209,7 +211,8 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Enjoy the historic charm of Vilnius with our exclusive package!", // TEXT
+      cardText:
+        "Enjoy the historic charm of Vilnius with our exclusive package!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -248,7 +251,8 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Experience the rich culture of Islamabad with our amazing offer!", // TEXT
+      cardText:
+        "Experience the rich culture of Islamabad with our amazing offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -287,7 +291,7 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Indulge in the luxury of Monaco with our exclusive discount!", // TEXT
+      cardText: "Indulge in the luxury of Monaco with our exclusive discount!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -326,7 +330,7 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Explore the capital city with our exclusive Washington offer!", // TEXT
+      cardText: "Explore the capital city with our exclusive Washington offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -365,7 +369,7 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Discover the stunning landscapes of Reykjavik with our offer!", // TEXT
+      cardText: "Discover the stunning landscapes of Reykjavik with our offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -404,7 +408,8 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Experience the historic beauty of Edinburgh with our special deal!", // TEXT
+      cardText:
+        "Experience the historic beauty of Edinburgh with our special deal!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -443,7 +448,7 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Explore the scenic beauty of Oslo with our exclusive offer!", // TEXT
+      cardText: "Explore the scenic beauty of Oslo with our exclusive offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -482,7 +487,8 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Experience the vibrant culture of Beirut with our special deal!", // TEXT
+      cardText:
+        "Experience the vibrant culture of Beirut with our special deal!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",
@@ -521,7 +527,47 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ], // HOTEL IMAGES
-      text: "Discover the charm of Ottawa with our exclusive package!", // TEXT
+      cardText: "Discover the charm of Ottawa with our exclusive package!", // cardText
+      cityImages: [
+        "path_to_city_image1",
+        "path_to_city_image2",
+        "path_to_city_image3",
+        "path_to_city_image4",
+        "path_to_city_image5",
+        "path_to_city_image6",
+        "path_to_city_image7",
+        "path_to_city_image8",
+        "path_to_city_image9",
+        "path_to_city_image10",
+      ], // CITY IMAGES
+    },
+  },
+  {
+    id: 12, // UNIQUE ID
+    card: {
+      image: Helsinki, // PATH TO CARD IMAGE
+      salePercentage: 20, // SALE PERCENTAGE
+      cityName: "Helsinki", // CITY NAME
+      days: 7, // NUMBER OF DAYS
+      oldPrice: 1000, // OLD PRICE
+      newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
+    },
+    page: {
+      airport: "Helsinki Airport", // AIRPORT NAME
+      hotel: "Hotel Helsinki", // HOTEL NAME
+      dates: {
+        departure: "2024-07-10", // DEPARTURE DATE
+        return: "2024-07-17", // RETURN DATE
+      },
+      hotelImages: [
+        "path_to_hotel_image1",
+        "path_to_hotel_image2",
+        "path_to_hotel_image3",
+        "path_to_hotel_image4",
+        "path_to_hotel_image5",
+      ], // HOTEL IMAGES
+      cardText:
+        "Explore the beautiful city of Helsinki with our exclusive offer!", // cardText
       cityImages: [
         "path_to_city_image1",
         "path_to_city_image2",

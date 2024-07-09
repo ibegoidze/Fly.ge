@@ -19,6 +19,7 @@ import "./i18n";
 import Tickets from "./pages/Tickets";
 import Flights from "./pages/Flights";
 import OffersDetails from "./Components/Offers/Details/OffersDetails";
+import OffersPage from "./Components/Offers/Offers/OffersPage";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
             <Route path="/Flights/*" element={<Flights />} />
           </Route>
           <Route path="/Offers" element={<Offers />}>
-            <Route path="details" element={<OffersDetails />} />{" "}
+            <Route index element={<OffersPage />} />
+            <Route path="details" element={<OffersDetails />} />
           </Route>
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Contact" element={<Contact />} />
