@@ -33,9 +33,9 @@ function OfferCard({ offer }) {
       className="p-1.5 sm:p-3 bg-white flex sm:flex-col rounded-lg shadow-xl cursor-pointer"
       onClick={handleCardClick}
     >
-      <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden">
+      <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden rounded-md">
         <div
-          className="bg-cover bg-center h-full w-full transition-transform duration-700 transform scale-100 hover:scale-105"
+          className="bg-cover bg-center h-full w-full transition-transform duration-700 transform scale-100 hover:scale-110 rounded-md"
           style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
