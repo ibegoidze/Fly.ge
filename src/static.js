@@ -11,6 +11,23 @@ import Beirut from "./assets/Offers/OffersPage/Beirut1.png";
 import Ottawa from "./assets/Offers/OffersPage/Ottawa1.png";
 import Lisbon1 from "./assets/Offers/OffersPage/Lisabon1.jpg";
 
+import Wifi from "./assets/Offers/Details/Wifi.png";
+import DoubleBad from "./assets/Offers/Details/DoubleBed.png";
+import Bed from "./assets/Offers/Details/Bed.png";
+import Shower from "./assets/Offers/Details/Shower.png";
+import Bathtub from "./assets/Offers/Details/Bathtub.png";
+import Fridge from "./assets/Offers/Details/Fridge.png";
+import Fork from "./assets/Offers/Details/Fork.png";
+import Telephone from "./assets/Offers/Details/Telephone.png";
+
+import Health from "./assets/Offers/Details/Health.png";
+import Pool from "./assets/Offers/Details/Pool.png";
+import Ball from "./assets/Offers/Details/Ball.png";
+import Bar from "./assets/Offers/Details/Bar.png";
+import Beer from "./assets/Offers/Details/Beer.png";
+import Bike from "./assets/Offers/Details/Bike.png";
+import Fitness from "./assets/Offers/Details/Fitness.png";
+
 // AIRPORTS DATA
 export const airports = [
   { id: "TBC", name: "Tbilisi", city: "Tbilisi" },
@@ -629,6 +646,76 @@ export const offersData = [
         "path_to_city_image10",
       ],
     },
+  },
+];
+
+export const roomsData = [
+  {
+    image: Wifi,
+    text: "Free Internet",
+  },
+  {
+    image: DoubleBad,
+    text: "Double Bed",
+  },
+  {
+    image: Bed,
+    text: "Children's Bed",
+  },
+  {
+    image: Shower,
+    text: "Shower",
+  },
+  {
+    image: Bathtub,
+    text: "Bathroom",
+  },
+  {
+    image: Fridge,
+    text: "Refrigerator",
+  },
+  {
+    image: Fork,
+    text: "Dishes",
+  },
+  {
+    image: Telephone,
+    text: "Telephone",
+  },
+];
+
+export const establishmentData = [
+  {
+    image: Health,
+    text: "First Aid",
+  },
+  {
+    image: Pool,
+    text: "Pool",
+  },
+  {
+    image: Ball,
+    text: "Football Field",
+  },
+  {
+    image: Bar,
+    text: "Bar",
+  },
+  {
+    image: Beer,
+    text: "Pub",
+  },
+  {
+    image: Bike,
+    text: "Bike Trail",
+  },
+  {
+    image: Fitness,
+    text: "Fitness Center",
+  },
+  {
+    image: Wifi,
+    text: "Free Internet",
   },
 ];
 
