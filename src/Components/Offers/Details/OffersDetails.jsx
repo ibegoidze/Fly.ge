@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { offersData } from "../../../static";
 import BannerContainer from "./BannerContainer";
+import Transfer from "./Transfer";
 
 function OffersDetails() {
   const { id } = useParams();
@@ -12,8 +13,9 @@ function OffersDetails() {
   const offer = offersData.find((offer) => offer.id === parseInt(id));
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 noto-sans-georgian py-5">
+    <div className="max-w-6xl mx-auto flex flex-col gap-5 px-4 sm:px-6 lg:px-8 noto-sans-georgian py-5">
       <BannerContainer offer={offer} />
+      <Transfer offer={offer} />
     </div>
   );
 }

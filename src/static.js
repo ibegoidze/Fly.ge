@@ -109,25 +109,25 @@ export const templateNames = [
 
 export const offersData = [
   {
-    id: 1, // UNIQUE ID
+    id: 1,
     card: {
-      image: Rio, // PATH TO CARD IMAGE
-      salePercentage: 20, // SALE PERCENTAGE
-      cityName: "Rio de janeiro", // CITY NAME
-      days: 7, // NUMBER OF DAYS
-      oldPrice: 1000, // OLD PRICE
-      newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Rio,
+      salePercentage: 20,
+      cityName: "Rio de janeiro",
+      days: 7,
+      oldPrice: 1000,
+      newPrice: 800,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Rio de janeiro", // AIRPORT NAME
-      hotel: "Hotel Rio de janeiro", // HOTEL NAME
+      airport: "Rio de janeiro Airport",
+      hotel: "Hotel Rio de janeiro",
       dates: {
-        departure: "2024-07-10", // DEPARTURE DATE
-        return: "2024-07-17", // RETURN DATE
+        departure: "2024-07-10",
+        return: "2024-07-17",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -135,7 +135,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Explore the beautiful city of Rio de janeiro with our exclusive offer!", // cardText
       cityImages: [
@@ -149,29 +149,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 2, // UNIQUE ID
+    id: 2,
     card: {
-      image: Lisbon1, // PATH TO CARD IMAGE
-      salePercentage: 25, // SALE PERCENTAGE
-      cityName: "Lisbon", // CITY NAME
-      days: 10, // NUMBER OF DAYS
-      oldPrice: 1200, // OLD PRICE
-      newPrice: 900, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Lisbon1,
+      salePercentage: 25,
+      cityName: "Lisbon",
+      days: 10,
+      oldPrice: 1200,
+      newPrice: 900,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Lisbon Airport", // AIRPORT NAME
-      hotel: "Hotel Lisbon", // HOTEL NAME
+      airport: "Lisbon Airport",
+      hotel: "Hotel Lisbon",
       dates: {
-        departure: "2024-07-15", // DEPARTURE DATE
-        return: "2024-07-25", // RETURN DATE
+        departure: "2024-07-15",
+        return: "2024-07-25",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -179,7 +179,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Discover the vibrant culture of Lisbon with our special deal!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -192,29 +192,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 3, // UNIQUE ID
+    id: 3,
     card: {
-      image: Vilnius, // PATH TO CARD IMAGE
-      salePercentage: 15, // SALE PERCENTAGE
-      cityName: "Vilnius", // CITY NAME
-      days: 5, // NUMBER OF DAYS
-      oldPrice: 800, // OLD PRICE
-      newPrice: 680, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Vilnius,
+      salePercentage: 15,
+      cityName: "Vilnius",
+      days: 5,
+      oldPrice: 800,
+      newPrice: 680,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Vilnius Airport", // AIRPORT NAME
-      hotel: "Hotel Vilnius", // HOTEL NAME
+      airport: "Vilnius Airport",
+      hotel: "Hotel Vilnius",
       dates: {
-        departure: "2024-07-20", // DEPARTURE DATE
-        return: "2024-07-25", // RETURN DATE
+        departure: "2024-07-20",
+        return: "2024-07-25",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -222,7 +222,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Enjoy the historic charm of Vilnius with our exclusive package!", // cardText
       cityImages: [
@@ -236,29 +236,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 4, // UNIQUE ID
+    id: 4,
     card: {
-      image: Islamabad, // PATH TO CARD IMAGE
-      salePercentage: 30, // SALE PERCENTAGE
-      cityName: "Islamabad", // CITY NAME
-      days: 8, // NUMBER OF DAYS
-      oldPrice: 1100, // OLD PRICE
-      newPrice: 770, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Islamabad,
+      salePercentage: 30,
+      cityName: "Islamabad",
+      days: 8,
+      oldPrice: 1100,
+      newPrice: 770,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Islamabad Airport", // AIRPORT NAME
-      hotel: "Hotel Islamabad", // HOTEL NAME
+      airport: "Islamabad Airport",
+      hotel: "Hotel Islamabad",
       dates: {
-        departure: "2024-07-25", // DEPARTURE DATE
-        return: "2024-08-02", // RETURN DATE
+        departure: "2024-07-25",
+        return: "2024-08-02",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -266,7 +266,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Experience the rich culture of Islamabad with our amazing offer!", // cardText
       cityImages: [
@@ -280,29 +280,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 5, // UNIQUE ID
+    id: 5,
     card: {
-      image: Monaco, // PATH TO CARD IMAGE
-      salePercentage: 22, // SALE PERCENTAGE
-      cityName: "Monaco", // CITY NAME
-      days: 12, // NUMBER OF DAYS
-      oldPrice: 2000, // OLD PRICE
-      newPrice: 1560, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Monaco,
+      salePercentage: 22,
+      cityName: "Monaco",
+      days: 12,
+      oldPrice: 2000,
+      newPrice: 1560,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Monaco Heliport", // AIRPORT NAME
-      hotel: "Hotel Monaco", // HOTEL NAME
+      airport: "Monaco Heliport",
+      hotel: "Hotel Monaco",
       dates: {
-        departure: "2024-07-30", // DEPARTURE DATE
-        return: "2024-08-11", // RETURN DATE
+        departure: "2024-07-30",
+        return: "2024-08-11",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -310,7 +310,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Indulge in the luxury of Monaco with our exclusive discount!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -323,29 +323,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 6, // UNIQUE ID
+    id: 6,
     card: {
-      image: Washington, // PATH TO CARD IMAGE
-      salePercentage: 18, // SALE PERCENTAGE
-      cityName: "Washington", // CITY NAME
-      days: 9, // NUMBER OF DAYS
-      oldPrice: 1500, // OLD PRICE
-      newPrice: 1230, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Washington,
+      salePercentage: 18,
+      cityName: "Washington",
+      days: 9,
+      oldPrice: 1500,
+      newPrice: 1230,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Washington Dulles International Airport", // AIRPORT NAME
-      hotel: "Hotel Washington", // HOTEL NAME
+      airport: "Washington Dulles International Airport",
+      hotel: "Hotel Washington",
       dates: {
-        departure: "2024-08-05", // DEPARTURE DATE
-        return: "2024-08-14", // RETURN DATE
+        departure: "2024-08-05",
+        return: "2024-08-14",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -353,7 +353,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Explore the capital city with our exclusive Washington offer!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -366,29 +366,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 7, // UNIQUE ID
+    id: 7,
     card: {
-      image: Reykjavik, // PATH TO CARD IMAGE
-      salePercentage: 27, // SALE PERCENTAGE
-      cityName: "Reykjavik", // CITY NAME
-      days: 6, // NUMBER OF DAYS
-      oldPrice: 1300, // OLD PRICE
-      newPrice: 949, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Reykjavik,
+      salePercentage: 27,
+      cityName: "Reykjavik",
+      days: 6,
+      oldPrice: 1300,
+      newPrice: 949,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Keflavik International Airport", // AIRPORT NAME
-      hotel: "Hotel Reykjavik", // HOTEL NAME
+      airport: "Keflavik International Airport",
+      hotel: "Hotel Reykjavik",
       dates: {
-        departure: "2024-08-10", // DEPARTURE DATE
-        return: "2024-08-16", // RETURN DATE
+        departure: "2024-08-10",
+        return: "2024-08-16",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -396,7 +396,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Discover the stunning landscapes of Reykjavik with our offer!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -409,29 +409,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 8, // UNIQUE ID
+    id: 8,
     card: {
-      image: Edinburgh, // PATH TO CARD IMAGE
-      salePercentage: 20, // SALE PERCENTAGE
-      cityName: "Edinburgh", // CITY NAME
-      days: 5, // NUMBER OF DAYS
-      oldPrice: 900, // OLD PRICE
-      newPrice: 720, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Edinburgh,
+      salePercentage: 20,
+      cityName: "Edinburgh",
+      days: 5,
+      oldPrice: 900,
+      newPrice: 720,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Edinburgh Airport", // AIRPORT NAME
-      hotel: "Hotel Edinburgh", // HOTEL NAME
+      airport: "Edinburgh Airport",
+      hotel: "Hotel Edinburgh",
       dates: {
-        departure: "2024-08-15", // DEPARTURE DATE
-        return: "2024-08-20", // RETURN DATE
+        departure: "2024-08-15",
+        return: "2024-08-20",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -439,7 +439,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Experience the historic beauty of Edinburgh with our special deal!", // cardText
       cityImages: [
@@ -453,29 +453,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 9, // UNIQUE ID
+    id: 9,
     card: {
-      image: Oslo, // PATH TO CARD IMAGE
-      salePercentage: 24, // SALE PERCENTAGE
-      cityName: "Oslo", // CITY NAME
-      days: 7, // NUMBER OF DAYS
-      oldPrice: 1100, // OLD PRICE
-      newPrice: 836, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Oslo,
+      salePercentage: 24,
+      cityName: "Oslo",
+      days: 7,
+      oldPrice: 1100,
+      newPrice: 836,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Oslo Airport", // AIRPORT NAME
-      hotel: "Hotel Oslo", // HOTEL NAME
+      airport: "Oslo Airport",
+      hotel: "Hotel Oslo",
       dates: {
-        departure: "2024-08-20", // DEPARTURE DATE
-        return: "2024-08-27", // RETURN DATE
+        departure: "2024-08-20",
+        return: "2024-08-27",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -483,7 +483,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Explore the scenic beauty of Oslo with our exclusive offer!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -496,29 +496,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 10, // UNIQUE ID
+    id: 10,
     card: {
-      image: Beirut, // PATH TO CARD IMAGE
-      salePercentage: 28, // SALE PERCENTAGE
-      cityName: "Beirut", // CITY NAME
-      days: 10, // NUMBER OF DAYS
-      oldPrice: 1400, // OLD PRICE
-      newPrice: 1008, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Beirut,
+      salePercentage: 28,
+      cityName: "Beirut",
+      days: 10,
+      oldPrice: 1400,
+      newPrice: 1008,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Beirut-Rafic Hariri International Airport", // AIRPORT NAME
-      hotel: "Hotel Beirut", // HOTEL NAME
+      airport: "Beirut-Rafic Hariri International Airport",
+      hotel: "Hotel Beirut",
       dates: {
-        departure: "2024-08-25", // DEPARTURE DATE
-        return: "2024-09-04", // RETURN DATE
+        departure: "2024-08-25",
+        return: "2024-09-04",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -526,7 +526,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Experience the vibrant culture of Beirut with our special deal!", // cardText
       cityImages: [
@@ -540,29 +540,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 11, // UNIQUE ID
+    id: 11,
     card: {
-      image: Ottawa, // PATH TO CARD IMAGE
-      salePercentage: 30, // SALE PERCENTAGE
-      cityName: "Ottawa", // CITY NAME
-      days: 12, // NUMBER OF DAYS
-      oldPrice: 1800, // OLD PRICE
-      newPrice: 1260, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Ottawa,
+      salePercentage: 30,
+      cityName: "Ottawa",
+      days: 12,
+      oldPrice: 1800,
+      newPrice: 1260,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Ottawa International Airport", // AIRPORT NAME
-      hotel: "Hotel Ottawa", // HOTEL NAME
+      airport: "Ottawa International Airport",
+      hotel: "Hotel Ottawa",
       dates: {
-        departure: "2024-08-30", // DEPARTURE DATE
-        return: "2024-09-11", // RETURN DATE
+        departure: "2024-08-30",
+        return: "2024-09-11",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -570,7 +570,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText: "Discover the charm of Ottawa with our exclusive package!", // cardText
       cityImages: [
         "path_to_city_image1",
@@ -583,29 +583,29 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
   {
-    id: 12, // UNIQUE ID
+    id: 12,
     card: {
-      image: Helsinki, // PATH TO CARD IMAGE
-      salePercentage: 20, // SALE PERCENTAGE
-      cityName: "Helsinki", // CITY NAME
-      days: 7, // NUMBER OF DAYS
-      oldPrice: 1000, // OLD PRICE
-      newPrice: 800, // NEW PRICE BASED ON SALE PERCENTAGE
+      image: Helsinki,
+      salePercentage: 20,
+      cityName: "Helsinki",
+      days: 7,
+      oldPrice: 1000,
+      newPrice: 800,
     },
     page: {
       text1:
         "Experience the vibrant culture of Rio de Janeiro with our exclusive offer. Enjoy seven days of stunning beaches, exciting nightlife, and historical landmarks. Indulge in local cuisine, visit famous sites, and create unforgettable memories in this beautiful city.",
       text2:
         "Discover the best of Rio de Janeiro with our special deal. Enjoy the beaches, nightlife, and rich cultural heritage.",
-      airport: "Helsinki Airport", // AIRPORT NAME
-      hotel: "Hotel Helsinki", // HOTEL NAME
+      airport: "Helsinki Airport",
+      hotel: "Hotel Helsinki",
       dates: {
-        departure: "2024-07-10", // DEPARTURE DATE
-        return: "2024-07-17", // RETURN DATE
+        departure: "2024-07-10",
+        return: "2024-07-17",
       },
       hotelImages: [
         "path_to_hotel_image1",
@@ -613,7 +613,7 @@ export const offersData = [
         "path_to_hotel_image3",
         "path_to_hotel_image4",
         "path_to_hotel_image5",
-      ], // HOTEL IMAGES
+      ],
       cardText:
         "Explore the beautiful city of Helsinki with our exclusive offer!", // cardText
       cityImages: [
@@ -627,7 +627,7 @@ export const offersData = [
         "path_to_city_image8",
         "path_to_city_image9",
         "path_to_city_image10",
-      ], // CITY IMAGES
+      ],
     },
   },
 ];

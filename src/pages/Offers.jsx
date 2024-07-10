@@ -13,7 +13,7 @@ function Offers() {
   };
 
   return (
-    <div className="bg-bgGray">
+    <div className="bg-backgroundGray">
       <OffersNavigation
         handleTabClick={handleTabClick}
         activeTab={activeTab}
