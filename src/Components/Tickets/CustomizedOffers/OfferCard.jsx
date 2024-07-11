@@ -26,6 +26,7 @@ function OfferCard({ offer }) {
     navigate(
       `/Offers/details/${offer.id}/${encodeURIComponent(offer.card.cityName)}`
     );
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

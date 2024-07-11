@@ -36,7 +36,7 @@ function AllDirections() {
     navigate(
       `/Flights/search?from=Tbilisi&to=${city}&checkin=${departure}&checkout=${returnDate}`
     );
-    window.scrollTo({ top: 300, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
