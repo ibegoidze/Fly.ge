@@ -34,7 +34,7 @@ function BannerContainer({ offer }) {
         </div>
         <div className="TEXT text-gray-500 text-sm font-medium flex flex-col gap-5 mt-5">
           <p>{t(offer.page.text1)}</p>
-          <p>{t(offer.page.text2)}</p>-
+          <p>{t(offer.page.text2)}</p>
         </div>
         <div className="ICONS flex justify-between mt-10">
           <button className="text-sm sm:text-md bg-primaryBlue text-white rounded-md px-3 sm:px-5 py-3 hover:bg-blue-700 transition-all duration-300 font-medium">
