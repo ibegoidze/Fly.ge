@@ -1,15 +1,13 @@
 import React from "react";
-// import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { offersData } from "../../../static";
 import BannerContainer from "./BannerContainer";
 import Transfer from "./Transfer";
 import Hotel from "./Hotel";
+import Trip from "./Trip";
 
 function OffersDetails() {
   const { id } = useParams();
-  // const { t } = useTranslation();
-
   // CURRENT OFFER
   const offer = offersData.find((offer) => offer.id === parseInt(id));
 
@@ -18,6 +16,7 @@ function OffersDetails() {
       <BannerContainer offer={offer} />
       <Transfer offer={offer} />
       <Hotel offer={offer} />
+      <Trip offer={offer} />
     </div>
   );
 }
