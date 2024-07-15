@@ -80,7 +80,7 @@ function Trip({ offer }) {
   ];
 
   return (
-    <div className="p-5 bg-white flex flex-col sm:w-2/3 rounded shadow-lg gap-5">
+    <div className="p-5 bg-white flex flex-col sm:w-2/3 rounded shadow-lg gap-5 mb-10">
       {/* LEFT SIDE */}
       <div className="sm:w-1/2 flex flex-col justify-between">
         <div className="HEADING flex items-center gap-5">
@@ -99,7 +99,7 @@ function Trip({ offer }) {
           <img
             src={mainImage}
             alt="Main"
-            className="w-full h-44 sm:h-96 object-cover transition-all duration-700  rounded-md "
+            className="w-full h-44 sm:h-96 object-cover transition-all duration-700 rounded-md"
           />
         </div>
         {/* THUMBNAILS */}
@@ -127,19 +127,65 @@ function Trip({ offer }) {
         {tripData.map((item) => (
           <div
             key={item.id}
-            className="border border-gray-300 p-4 flex flex-col "
+            className="border border-gray-300 p-2.5 flex flex-col rounded-md"
           >
             <img
               src={item.image}
               alt={t(item.titleKey)}
-              className="w-5 h-5 mb-4"
+              className="w-5 h-5 mb-2"
             />
-            <div className="font-bold mb-2">{t(item.titleKey)}</div>
-            <p className="text-sm text-gray-500 font-medium">
+            <div className="font-semibold text-sm mb-2">{t(item.titleKey)}</div>
+            <p className="text-xs text-gray-500 font-medium">
               {t(item.textKey)}
             </p>
           </div>
         ))}
+      </div>
+      <div className="ACTIVITIES">
+        <div className="font-semibold mb-2">{t("important_activities")}</div>
+        <div className="flex flex-col gap-1">
+          <p className="text-sm text-gray-500 font-medium">
+            • {t("maracana_visit")}
+          </p>
+          <p className="text-sm text-gray-500 font-medium">
+            • {t("taj_mahal_speech")}
+          </p>
+          <p className="text-sm text-gray-500 font-medium">
+            • {t("resurrection_ritual")}
+          </p>
+          <p className="text-sm text-gray-500 font-medium">
+            • {t("museum_discount_voucher")}
+          </p>
+        </div>
+      </div>
+      <div className="HERE">
+        {/* ADDITION OF THE TIMELINE COMPONENT DIRECTLY HERE */}
+        <div className="">
+          {[
+            { time: "05:00", text: t("Leave") },
+            { time: "08:00", text: t("world_largest_football_stadium") },
+            { time: "09:00", text: t("taj_mahal_3_minute_speech") },
+            { time: "11:00", text: t("3_hour_journey") },
+            { time: "01:00", text: t("dining") },
+            { time: "03:00", text: t("hotel_return") },
+          ].map((activity, index) => (
+            <div className=" flex items-center space-x-2" key={index}>
+              {/* TIME ELEMENT */}
+              <div className="w-10 text-sm text-gray-700 font-medium">
+                {activity.time}
+              </div>
+
+              {/* TEXT ELEMENT */}
+              <div
+                className={`w-full p-3 rounded-sm text-sm text-gray-700 font-medium ${
+                  index % 2 === 0 ? "bg-gray-100" : ""
+                }`}
+              >
+                {activity.text}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
