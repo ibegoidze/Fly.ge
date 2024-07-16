@@ -32,12 +32,12 @@ function Trip({ offer }) {
     Rio8,
   ]);
 
-  // HANDLE IMAGE CLICK AND SWAP
+  //  CLICK AND SWAP
   const handleThumbnailClick = (clickedImage) => {
     setThumbnails(
       thumbnails.map((image) => (image === clickedImage ? mainImage : image))
-    ); // SWAP CLICKED IMAGE WITH MAIN IMAGE
-    setMainImage(clickedImage); // UPDATE MAIN IMAGE
+    );
+    setMainImage(clickedImage);
   };
 
   const tripData = [

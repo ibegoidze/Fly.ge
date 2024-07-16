@@ -5,6 +5,7 @@ import BannerContainer from "./BannerContainer";
 import Transfer from "./Transfer";
 import Hotel from "./Hotel";
 import Trip from "./Trip";
+import Pricing from "./Pricing";
 
 function OffersDetails() {
   const { id } = useParams();
@@ -16,7 +17,10 @@ function OffersDetails() {
       <BannerContainer offer={offer} />
       <Transfer offer={offer} />
       <Hotel offer={offer} />
-      <Trip offer={offer} />
+      <div className="flex flex-col sm:flex-row">
+        <Trip offer={offer} />
+        <Pricing offer={offer} />
+      </div>
     </div>
   );
 }
