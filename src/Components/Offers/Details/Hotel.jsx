@@ -133,7 +133,7 @@ function Hotel() {
                 className="w-4 h-4 object-cover rounded-md"
               />
               <div className=" mt-2 text-sm text-gray-500 font-medium">
-                {/* {t(item.text)} */}
+                {t(item.text)}
               </div>
             </div>
           ))}
