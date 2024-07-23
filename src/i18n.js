@@ -563,7 +563,7 @@ const resources = {
       results: "შედეგი",
       "ticket quantity": "ბილეთის რაოდენობა",
       Hokaido: "ჰოკაიდო",
-      direct: "პირდაპირი",
+      direct: "პირ",
       stop: "გაჩერება",
       "international airport": "საერთაშორისო აეროპორტი",
       Turkey: "თურქეთი",
