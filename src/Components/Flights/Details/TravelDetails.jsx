@@ -96,16 +96,16 @@ function TravelDetails({ selectedFlight, handleContinueButtonClick }) {
       <div className="INSURANCE  ">
         <TravelInsurance />
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-5">
         <button
           onClick={handleBack}
-          className="hover:bg-blue-700 mb-5 text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
+          className="hover:bg-blue-700 mb-5 text-sm sm:text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
         >
           <span className="flex whitespace-nowrap">{t("returnBack")}</span>
         </button>
         <button
           onClick={handleButtonClick}
-          className="hover:bg-blue-700 mb-5 text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
+          className="hover:bg-blue-700 mb-5 text-sm sm:text-md lg:px-16 transition-all duration-300 py-1.5 sm:py-2 rounded-md text-white font-semibold flex items-center justify-center gap-4 bg-primaryBlue w-full sm:w-52"
         >
           <span className="flex whitespace-nowrap">{t("continue")}</span>
         </button>

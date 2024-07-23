@@ -41,7 +41,7 @@ function BannerContainer({ offer }) {
             {t("Purchase a package")}
           </button>
           <div className="flex items-center gap-2 sm:gap-5">
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-sm text-gray-500 font-medium hidden sm:flex">
               {t("contains")}
             </span>
             <div className="flex gap-2">

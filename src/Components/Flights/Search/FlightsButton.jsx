@@ -122,10 +122,10 @@ const FlightsButton = ({ onSearchData }) => {
   return (
     <button
       onClick={handleSearchClick}
-      className="bg-blue-500 hover:bg-blue-700 text-lg px-5 py-3 rounded-md text-white font-medium flex items-center justify-center gap-4 min-w-14 min-h-14"
+      className="bg-blue-500 hover:bg-blue-700 text-lg px-5 py-3 rounded-md text-white font-medium flex items-center justify-center gap-4"
     >
       <img src={SearchIcon} alt="search icon" className="h-5 w-5" />
-      <span className="hidden md:flex whitespace-nowrap">
+      <span className="text-sm sm:text-md whitespace-nowrap">
         {t("Search for tickets")}
       </span>
     </button>
