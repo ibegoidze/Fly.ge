@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 
 import WhiteAirplane from "../../../assets/Offers/Details/WhiteAirplane.png";
 import BlackAirplane from "../../../assets/Offers/Details/BlackAirplane.png";
-import RioSm1 from "../../../assets/Offers/Details/RioSm1.png";
-import RioSm2 from "../../../assets/Offers/Details/RioSm2.png";
 import Arrows from "../../../assets/Offers/Details/Arrows.png";
 import BlueLine from "../../../assets/Offers/Details/BlueLine.png";
 import UsersPic from "../../../assets/Offers/Details/Users.png";
@@ -12,6 +10,9 @@ import Plane from "../../../assets/Tickets/images/OffersPlane.png";
 import Car from "../../../assets/Tickets/images/OffersCar.png";
 import City from "../../../assets/Tickets/images/OffersBuilding.png";
 import Compass from "../../../assets/Tickets/images/OffersCompas.png";
+
+import Rio7 from "../../../assets/Offers/Details/Rio7.jpg";
+import Rio8 from "../../../assets/Offers/Details/Rio8.jpg";
 
 function BannerContainer({ offer }) {
   const { t } = useTranslation();
@@ -106,8 +107,16 @@ function BannerContainer({ offer }) {
           </div>
         </div>
         <div className="IMAGES flex justify-between mt-5">
-          <img src={RioSm2} alt="" className="w-1/2 max-h-40 rounded-md" />
-          <img src={RioSm1} alt="" className="w-1/2 ml-4 max-h-40 rounded-md" />
+          <img
+            src={offer.page.cityImages[0] ? offer.page.cityImages[0] : Rio7}
+            alt=""
+            className="w-1/2 max-h-40 rounded-md"
+          />
+          <img
+            src={offer.page.cityImages[1] ? offer.page.cityImages[1] : Rio8}
+            alt=""
+            className="w-1/2 ml-4 max-h-40 rounded-md"
+          />
         </div>
       </div>
     </div>

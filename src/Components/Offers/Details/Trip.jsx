@@ -20,16 +20,18 @@ import Backpack from "../../../assets/Offers/Details/Backpack.png";
 
 function Trip({ offer }) {
   const { t } = useTranslation();
-  const [mainImage, setMainImage] = useState(Rio1);
+  const [mainImage, setMainImage] = useState(
+    offer.page.cityImages[0] ? offer.page.cityImages[0] : Rio8
+  );
 
   const [thumbnails, setThumbnails] = useState([
-    Rio2,
-    Rio3,
-    Rio4,
-    Rio5,
-    Rio6,
-    Rio7,
-    Rio8,
+    offer.page.cityImages[1] ? offer.page.cityImages[1] : Rio1,
+    offer.page.cityImages[2] ? offer.page.cityImages[2] : Rio2,
+    offer.page.cityImages[3] ? offer.page.cityImages[3] : Rio3,
+    offer.page.cityImages[4] ? offer.page.cityImages[4] : Rio4,
+    offer.page.cityImages[5] ? offer.page.cityImages[5] : Rio5,
+    offer.page.cityImages[6] ? offer.page.cityImages[6] : Rio6,
+    offer.page.cityImages[7] ? offer.page.cityImages[7] : Rio7,
   ]);
 
   //  CLICK AND SWAP

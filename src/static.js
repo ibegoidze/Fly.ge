@@ -1,6 +1,5 @@
 import Rio from "./assets/Offers/OffersPage/Rio.jpg";
 import Helsinki from "./assets/Offers/OffersPage/Helsinki1.png";
-import Vilnius from "./assets/Offers/OffersPage/Vilnius.png";
 import Islamabad from "./assets/Offers/OffersPage/Islamabad1.png";
 import Monaco from "./assets/Offers/OffersPage/Monaco.png";
 import Washington from "./assets/Offers/OffersPage/Washington1.png";
@@ -9,7 +8,7 @@ import Edinburgh from "./assets/Offers/OffersPage/Edinburgh1.png";
 import Oslo from "./assets/Offers/OffersPage/Oslo1.png";
 import Beirut from "./assets/Offers/OffersPage/Beirut1.png";
 import Ottawa from "./assets/Offers/OffersPage/Ottawa1.png";
-import Lisbon1 from "./assets/Offers/OffersPage/Lisabon1.jpg";
+import Lisabon1 from "./assets/Offers/OffersPage/Lisabon1.jpg";
 
 import Wifi from "./assets/Offers/Details/Wifi.png";
 import DoubleBad from "./assets/Offers/Details/DoubleBed.png";
@@ -27,6 +26,38 @@ import Bar from "./assets/Offers/Details/Bar.png";
 import Beer from "./assets/Offers/Details/Beer.png";
 import Bike from "./assets/Offers/Details/Bike.png";
 import Fitness from "./assets/Offers/Details/Fitness.png";
+
+import RioTop1 from "./assets/Offers/Details/RioSm1.png";
+import RioTop2 from "./assets/Offers/Details/RioSm2.png";
+import Rio1 from "./assets/Offers/Details/Rio1.jpg";
+import Rio2 from "./assets/Offers/Details/Rio2.jpg";
+import Rio3 from "./assets/Offers/Details/Rio3.jpg";
+import Rio4 from "./assets/Offers/Details/Rio4.jpg";
+import Rio5 from "./assets/Offers/Details/Rio5.jpg";
+import Rio6 from "./assets/Offers/Details/Rio6.jpg";
+import Rio7 from "./assets/Offers/Details/Rio7.jpg";
+import Rio8 from "./assets/Offers/Details/Rio8.jpg";
+
+import LisbonTop1 from "./assets/Offers/Details/LisbonTop1.png";
+import LisbonTop2 from "./assets/Offers/Details/LisbonTop2.png";
+import Lisbon1 from "./assets/Offers/Details/Lisbon1.jpg";
+import Lisbon2 from "./assets/Offers/Details/Lisbon2.jpg";
+import Lisbon3 from "./assets/Offers/Details/Lisbon3.jpg";
+import Lisbon4 from "./assets/Offers/Details/Lisbon4.jpg";
+import Lisbon5 from "./assets/Offers/Details/Lisbon5.jpg";
+import Lisbon6 from "./assets/Offers/Details/Lisbon6.jpg";
+import Lisbon7 from "./assets/Offers/Details/Lisbon7.jpg";
+import Lisbon8 from "./assets/Offers/Details/Lisbon8.jpg";
+
+import BerlinMain from "./assets/Offers/Details/BerlinMain.jpg";
+import BerlinTop1 from "./assets/Offers/Details/BerlinTop1.jpg";
+import BerlinTop2 from "./assets/Offers/Details/BerlinTop2.jpg";
+import Berlin1 from "./assets/Offers/Details/Berlin1.jpg";
+import Berlin2 from "./assets/Offers/Details/Berlin2.jpg";
+import Berlin3 from "./assets/Offers/Details/Berlin3.jpg";
+import Berlin4 from "./assets/Offers/Details/Berlin4.jpg";
+import Berlin5 from "./assets/Offers/Details/Berlin5.jpg";
+import Berlin6 from "./assets/Offers/Details/Berlin6.jpg";
 
 // AIRPORTS DATA
 export const airports = [
@@ -154,25 +185,25 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText:
-        "Explore the beautiful city of Rio de janeiro with our exclusive offer!", // cardText
+        "Explore the beautiful city of Rio de janeiro with our exclusive offer!",
       cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
+        RioTop1,
+        RioTop2,
+        Rio1,
+        Rio2,
+        Rio3,
+        Rio4,
+        Rio5,
+        Rio6,
+        Rio7,
+        Rio8,
       ],
     },
   },
   {
     id: 2,
     card: {
-      image: Lisbon1,
+      image: Lisabon1,
       salePercentage: 25,
       cityName: "Lisbon",
       days: 10,
@@ -197,27 +228,27 @@ export const offersData = [
         "path_to_hotel_image4",
         "path_to_hotel_image5",
       ],
-      cardText: "Discover the vibrant culture of Lisbon with our special deal!", // cardText
+      cardText: "Discover the vibrant culture of Lisbon with our special deal!",
       cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
+        LisbonTop1,
+        LisbonTop2,
+        Lisbon1,
+        Lisbon2,
+        Lisbon3,
+        Lisbon4,
+        Lisbon5,
+        Lisbon6,
+        Lisbon7,
+        Lisbon8,
       ],
     },
   },
   {
     id: 3,
     card: {
-      image: Vilnius,
+      image: BerlinMain,
       salePercentage: 15,
-      cityName: "Vilnius",
+      cityName: "Berlin",
       days: 5,
       oldPrice: 800,
       newPrice: 680,
@@ -241,18 +272,16 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText:
-        "Enjoy the historic charm of Vilnius with our exclusive package!", // cardText
+        "Enjoy the historic charm of Vilnius with our exclusive package!",
       cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
+        BerlinTop1,
+        BerlinTop2,
+        Berlin1,
+        Berlin2,
+        Berlin3,
+        Berlin4,
+        Berlin5,
+        Berlin6,
       ],
     },
   },
@@ -286,18 +315,7 @@ export const offersData = [
       ],
       cardText:
         "Experience the rich culture of Islamabad with our amazing offer!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -329,18 +347,7 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText: "Indulge in the luxury of Monaco with our exclusive discount!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -372,18 +379,7 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText: "Explore the capital city with our exclusive Washington offer!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -415,18 +411,7 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText: "Discover the stunning landscapes of Reykjavik with our offer!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -459,18 +444,7 @@ export const offersData = [
       ],
       cardText:
         "Experience the historic beauty of Edinburgh with our special deal!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -502,18 +476,7 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText: "Explore the scenic beauty of Oslo with our exclusive offer!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -546,18 +509,7 @@ export const offersData = [
       ],
       cardText:
         "Experience the vibrant culture of Beirut with our special deal!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -589,18 +541,7 @@ export const offersData = [
         "path_to_hotel_image5",
       ],
       cardText: "Discover the charm of Ottawa with our exclusive package!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
   {
@@ -633,18 +574,7 @@ export const offersData = [
       ],
       cardText:
         "Explore the beautiful city of Helsinki with our exclusive offer!", // cardText
-      cityImages: [
-        "path_to_city_image1",
-        "path_to_city_image2",
-        "path_to_city_image3",
-        "path_to_city_image4",
-        "path_to_city_image5",
-        "path_to_city_image6",
-        "path_to_city_image7",
-        "path_to_city_image8",
-        "path_to_city_image9",
-        "path_to_city_image10",
-      ],
+      cityImages: [],
     },
   },
 ];
