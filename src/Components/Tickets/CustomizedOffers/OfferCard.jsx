@@ -13,7 +13,7 @@ const truncateText = (text, maxLength = 50) => {
   return (
     <span>
       {text.substring(0, maxLength)}
-      <span className="text-gray-400 cursor-pointer">...See all</span>
+      <span className="text-blue-400 cursor-pointer">...See all</span>
     </span>
   );
 };
@@ -34,9 +34,9 @@ function OfferCard({ offer }) {
       className="p-1.5 sm:p-3 bg-white flex sm:flex-col rounded-lg shadow-xl cursor-pointer"
       onClick={handleCardClick}
     >
-      <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden rounded-md">
+      <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden ">
         <div
-          className="bg-cover bg-center h-full w-full transition-transform duration-700 transform scale-100 hover:scale-110 rounded-md"
+          className="bg-cover bg-center h-full w-full transition-transform duration-700 transform scale-100 hover:scale-110 sm:rounded-tr-md rounded-tl-md rounded-br-md rounded-bl-md"
           style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
@@ -59,7 +59,7 @@ function OfferCard({ offer }) {
           <div className="font-semibold sm:text-md mt-1 sm:mt-2 text-gray-800 pb-1">
             {t(offer.card.cityName)}
           </div>
-          <div className="text-xs sm:text-sm font-medium text-gray-400">
+          <div className="text-xs sm:text-sm font-medium text-gray-500">
             {truncateText(t(offer.page.cardText))}
           </div>
         </div>
@@ -72,7 +72,9 @@ function OfferCard({ offer }) {
           </div>
           <div className="flex gap-4 items-end mt-2 sm:mt-5">
             <div className="relative">
-              <div className="font-medium text-gray-400">1500</div>
+              <div className="font-medium text-gray-400">
+                ${offer.card.oldPrice}
+              </div>
               <div className="absolute inset-y-1/2 left-0 right-0 bottom-2.5 border-b border-solid border-gray-400"></div>
             </div>
             <div className="sm:text-2xl font-semibold text-gray-600">
