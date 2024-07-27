@@ -57,7 +57,7 @@ function OfferCard({ offer }) {
         </div>
         <div className="border-b-2 border-gray-200 border-solid pb-4 ml-2 sm:ml-0">
           <div className="font-semibold sm:text-md mt-1 sm:mt-2 text-gray-800 pb-1">
-            {/* {t(offer.card.cityName)} */}
+            {t(offer.card.cityName)}
           </div>
           <div className="text-xs sm:text-sm font-medium text-gray-500">
             {truncateText(t(offer.page.cardText))}
@@ -67,7 +67,7 @@ function OfferCard({ offer }) {
           <div className="hidden sm:flex items-center gap-2 mt-4 border border-orange-500 border-solid bg-orange-100 rounded px-2 py-1">
             <img src={Time} alt="Clock" />
             <span className="text-sm font-medium text-orange-500">
-              {/* {offer.card.days ? offer.card.days : 5} {t("Days")} */}
+              {offer.card.days ? offer.card.days : 5} {t("Days")}
             </span>
           </div>
           <div className="flex gap-4 items-end mt-2 sm:mt-5">
