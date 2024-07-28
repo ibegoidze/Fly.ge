@@ -37,7 +37,7 @@ function OfferCard({ offer }) {
       <div className="relative sm:h-44 w-1/2 sm:w-full sm:h-72 overflow-hidden ">
         <div
           className="bg-cover bg-center h-full w-full transition-transform duration-700 transform scale-100 hover:scale-110 sm:rounded-tr-md rounded-tl-md rounded-br-md rounded-bl-md"
-          // style={{ backgroundImage: `url(${offer.card.image})` }}
+          style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
           {t("Top offers")}
