@@ -40,13 +40,13 @@ function OfferCard({ offer }) {
           style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
-          {t("Top offers")}
+          {/* {t("Top offers")} */}
         </span>
       </div>
       <div className="w-2/3 sm:w-full sm:mt-2">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
           <div className="pl-4 flex items-center font-semibold text-sm bg-center w-20 h-7 sale-frame">
-            {/* {`${offer.card.salePercentage}%`} */}
+            {`${offer.card.salePercentage}%`}
           </div>
           <div className="hidden sm:flex sm:mt gap-2">
             <img src={Plane} alt="plane" className="w-8 h-8" />
