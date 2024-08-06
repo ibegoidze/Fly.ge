@@ -40,7 +40,7 @@ function OfferCard({ offer }) {
           style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
-          {/* {t("Top offers")} */}
+          {t("Top offers")}
         </span>
       </div>
       <div className="w-2/3 sm:w-full sm:mt-2">
@@ -57,7 +57,7 @@ function OfferCard({ offer }) {
         </div>
         <div className="border-b-2 border-gray-200 border-solid pb-4 ml-2 sm:ml-0">
           <div className="font-semibold sm:text-md mt-1 sm:mt-2 text-gray-800 pb-1">
-            {t(offer.card.cityName)}
+            {/* {t(offer.card.cityName)} */}
           </div>
           <div className="text-xs sm:text-sm font-medium text-gray-500">
             {truncateText(t(offer.page.cardText))}
