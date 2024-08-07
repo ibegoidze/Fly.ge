@@ -57,7 +57,7 @@ function OfferCard({ offer }) {
         </div>
         <div className="border-b-2 border-gray-200 border-solid pb-4 ml-2 sm:ml-0">
           <div className="font-semibold sm:text-md mt-1 sm:mt-2 text-gray-800 pb-1">
-            {t(offer.card.cityName)}
+            {/* {t(offer.card.cityName)} */}
           </div>
           <div className="text-xs sm:text-sm font-medium text-gray-500">
             {truncateText(t(offer.page.cardText))}
