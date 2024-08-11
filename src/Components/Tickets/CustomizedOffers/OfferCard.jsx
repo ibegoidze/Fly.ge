@@ -46,7 +46,7 @@ function OfferCard({ offer }) {
       <div className="w-2/3 sm:w-full sm:mt-2">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
           <div className="pl-4 flex items-center font-semibold text-sm bg-center w-20 h-7 sale-frame">
-            {`${offer.card.salePercentage}%`}
+            {/* {`${offer.card.salePercentage}%`} */}
           </div>
           <div className="hidden sm:flex sm:mt gap-2">
             <img src={Plane} alt="plane" className="w-8 h-8" />
