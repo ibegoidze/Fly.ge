@@ -40,7 +40,7 @@ function OfferCard({ offer }) {
           style={{ backgroundImage: `url(${offer.card.image})` }}
         ></div>
         <span className="absolute top-4 bg-offerBlack text-white text-xs sm:text-sm font-semibold px-2 sm:px-4 py-2 rounded-tr-md rounded-br-md">
-          {/* {t("Top offers")} */}
+          {t("Top offers")}
         </span>
       </div>
       <div className="w-2/3 sm:w-full sm:mt-2">
