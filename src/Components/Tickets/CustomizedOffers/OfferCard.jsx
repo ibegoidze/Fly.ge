@@ -73,7 +73,7 @@ function OfferCard({ offer }) {
           <div className="flex gap-4 items-end mt-2 sm:mt-5">
             <div className="relative">
               <div className="font-medium text-gray-400">
-                {/* ${offer.card.oldPrice} */}
+                ${offer.card.oldPrice}
               </div>
               <div className="absolute inset-y-1/2 left-0 right-0 bottom-2.5 border-b border-solid border-gray-400"></div>
             </div>
