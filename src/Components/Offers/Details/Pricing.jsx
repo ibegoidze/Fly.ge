@@ -66,7 +66,7 @@ function Pricing({ offer }) {
 
           <div className="mt-7 flex justify-between">
             <div className="pl-4 flex items-center font-semibold text-sm bg-center w-20 h-7 sale-frame">
-              -{offer.card.salePercentage}
+              -{offer.card.salePercentage}%
             </div>
             <div className="flex gap-4 items-end">
               <div className="relative">
