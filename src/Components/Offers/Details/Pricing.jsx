@@ -42,7 +42,7 @@ function Pricing({ offer }) {
             <div className="flex gap-2 items-center">
               <span className="font-semibold text-lg">1x</span>
               <span className="font-medium text-sm text-gray-500">
-                {t("HOTEL_TICKET")}
+                {/* {t("HOTEL_TICKET")} */}
               </span>
             </div>
             <span className="font-semibold text-lg">
