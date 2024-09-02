@@ -17,7 +17,7 @@ function CovidRegulations() {
       <div className="bg-backgroundGray rounded flex gap-5 mt-5 p-2">
         <img src={CovidPic} alt="" />
         <div className="text-xs sm:text-sm font-medium text-gray-600 flex flex-col justify-between">
-          <span>ინფორმაცია გამგზავრების მსურველი მოქალაქეებისათვის</span>
+          {/* <span>ინფორმაცია გამგზავრების მსურველი მოქალაქეებისათვის</span> */}
           <span>www.geocons.gov.ge</span>
         </div>
       </div>
