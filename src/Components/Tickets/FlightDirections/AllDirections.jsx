@@ -47,7 +47,7 @@ function AllDirections() {
             {t("Flights to all directions")}
           </div>
           <div className="font-medium text-gray-500 hidden sm:flex">
-            {t("Low-cost flights from Georgia to Europe")}
+            {/* {t("Low-cost flights from Georgia to Europe")} */}
           </div>
         </div>
       </div>
